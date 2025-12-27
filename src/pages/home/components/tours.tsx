@@ -67,7 +67,7 @@ function Tours() {
               <button
               onClick={() => 
                 window.open(
-      "https://wa.me/525580343878?text=Hola%2C%20quiero%20información%20sobre%20el%20tour%20" +
+      "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20el%20tour%20" +
         tour.title,
       "_blank"
     )

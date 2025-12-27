@@ -19,7 +19,7 @@ function Footer() {
                         <a href="#" aria-label="Instagram"><FaInstagram /></a>
                         <a href="#" aria-label="TikTok"><FaTiktok /></a>
                         <a
-                            href="https://wa.me/525580343878"
+                            href="https://wa.me/529841681263"
                             target="_blank"
                             aria-label="WhatsApp"
                             rel="noreferrer"
