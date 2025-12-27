@@ -1,0 +1,18 @@
+:root {
+  /* Brand */
+  --green-main: #002914;
+  --green-secondary: #1E5F43;
+
+  /* Warm backgrounds */
+  --sand-light: #FFE3A3;
+  --orange-soft: #FFB25C;
+  --orange-sunset: #FF9A4D;
+
+  /* Fresh accent */
+  --blue-caribbean: #2FA4A9;
+
+  /* Neutrals */
+  --text-main: #1B1B1B;
+  --text-secondary: #4A4A4A;
+  --white-soft: #FAFAF7;
+}
