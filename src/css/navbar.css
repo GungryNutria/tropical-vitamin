@@ -41,8 +41,8 @@
   color: #f4c430;
 }
 
-.cta {
-  background: #f4c430;
+.cta-hero {
+  background: var(--orange-sunset);
   color: #002914;
   padding: 8px 16px;
   border-radius: 4px;

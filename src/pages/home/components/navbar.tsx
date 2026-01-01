@@ -17,7 +17,7 @@ function Navbar() {
           <li><a href="#historia">Nuestra historia</a></li>
           <li><a href="#tours">Tours</a></li>
           <li><a href="#mice">MICE</a></li>
-          <li><a href="#contacto" className="cta">Contáctanos</a></li>
+          <li><a href="#contacto" className="cta-hero">Contáctanos</a></li>
         </ul>
 
         <div className="hamburger" onClick={() => setOpen(!open)}>

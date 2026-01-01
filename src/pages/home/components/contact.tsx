@@ -1,6 +1,8 @@
 import "../../../css/contact.css";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
 import { useFadeUp } from "../hooks/useFadeUp";
+import { FaLocationDot, FaP } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 function Contact() {
     useFadeUp();
@@ -23,9 +25,9 @@ function Contact() {
                     </p>
 
                     <div className="contact-details">
-                        <p>📍 Riviera Maya, México</p>
-                        <p>📞 +52 558 034 3878</p>
-                        <p>✉️ contacto@tropicalvitamin.com</p>
+                        <p><FaLocationDot /> Riviera Maya, México</p>
+                        <p><FaPhone /> +52 558 034 3878</p>
+                        <p><FaAt /> contacto@tropicalvitamin.com</p>
                     </div>
 
                     <div className="socials">

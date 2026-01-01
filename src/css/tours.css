@@ -72,6 +72,7 @@
 .tour-info button {
   background: var(--orange-sunset);
   border: none;
+  color: white;
   padding: 0.6rem 1.4rem;
   border-radius: 10px;
   font-weight: 600;
