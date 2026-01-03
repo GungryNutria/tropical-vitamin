@@ -1,8 +1,7 @@
 import "../../../css/contact.css";
 import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
 import { useFadeUp } from "../hooks/useFadeUp";
-import { FaLocationDot, FaP } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import { FaLocationDot} from "react-icons/fa6";
 
 function Contact() {
     useFadeUp();
