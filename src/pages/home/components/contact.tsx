@@ -1,14 +1,54 @@
 import "../../../css/contact.css";
 import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import { useFadeUp } from "../hooks/useFadeUp";
-import { FaLocationDot} from "react-icons/fa6";
+import { useState } from "react";
 
 function Contact() {
     useFadeUp();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Mensaje enviado (demo)");
+        setLoading(true);
+        setStatus("idle");
+
+        try {
+            debugger;
+            var url = import.meta.env.VITE_API_URL + "/mail"
+            const res = await fetch(
+                url,
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(form),
+                }
+            );
+
+            if (!res.ok) throw new Error("Error");
+
+            setStatus("success");
+            setForm({ name: "", email: "", phone: "", message: "" });
+        } catch {
+            setStatus("error");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -30,20 +70,10 @@ function Contact() {
                     </div>
 
                     <div className="socials">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                            <FaFacebookF />
-                        </a>
-
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                            <FaInstagram />
-                        </a>
-
-                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
-                            <FaTiktok />
-                        </a>
+                        <a href="https://facebook.com" target="_blank"><FaFacebookF /></a>
+                        <a href="https://instagram.com" target="_blank"><FaInstagram /></a>
+                        <a href="https://tiktok.com" target="_blank"><FaTiktok /></a>
                     </div>
-
-
 
                     <button
                         className="whatsapp-btn"
@@ -60,14 +90,49 @@ function Contact() {
 
                 {/* RIGHT */}
                 <form className="contact-form fade-up" onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Nombre" required />
-                    <input type="email" placeholder="Correo" required />
-                    <input type="tel" placeholder="Teléfono" />
-                    <textarea placeholder="Cuéntanos tu plan de viaje" rows={5} />
+                    <input
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        placeholder="Nombre"
+                        required
+                    />
 
-                    <button type="submit">Enviar mensaje</button>
+                    <input
+                        name="email"
+                        type="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Correo"
+                        required
+                    />
+
+                    <input
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        placeholder="Teléfono"
+                    />
+
+                    <textarea
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        placeholder="Cuéntanos tu plan de viaje"
+                        rows={5}
+                    />
+
+                    <button type="submit" disabled={loading}>
+                        {loading ? "Enviando..." : "Enviar mensaje"}
+                    </button>
+
+                    {status === "success" && (
+                        <p className="success">Mensaje enviado correctamente ✅</p>
+                    )}
+                    {status === "error" && (
+                        <p className="error">Ocurrió un error, intenta más tarde ❌</p>
+                    )}
                 </form>
-
             </div>
         </section>
     );
