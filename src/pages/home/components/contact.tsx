@@ -29,7 +29,6 @@ function Contact() {
         setStatus("idle");
 
         try {
-            debugger;
             var url = import.meta.env.VITE_API_URL + "/mail"
             const res = await fetch(
                 url,
