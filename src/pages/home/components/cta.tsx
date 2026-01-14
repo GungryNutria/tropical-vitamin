@@ -1,5 +1,5 @@
 import "../../../css/cta.css";
-import { useFadeUp } from "../hooks/useFadeUp";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 
 function Cta() {
   useFadeUp();

@@ -29,7 +29,9 @@
   gap: 30px;
   list-style: none;
 }
-
+.nav-links a.active {
+  color: var(--orange-soft);
+}
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -95,5 +97,73 @@
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* =========================
+   SUBMENU CLICK
+   ========================= */
+
+.has-submenu {
+  position: relative;
+}
+
+/* Botón Servicios */
+.submenu-trigger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.submenu-trigger:hover {
+  color: #f4c430;
+}
+
+/* Submenu oculto */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 220px;
+  display: none; /* 👈 CLAVE */
+  flex-direction: column;
+  z-index: 20;
+  border-radius: 4px;
+}
+
+/* Visible SOLO cuando está open */
+.has-submenu.open .submenu {
+  display: flex;
+}
+
+/* Items */
+.submenu li {
+  padding: 8px 20px;
+}
+
+.submenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.submenu a:hover {
+  color: #f4c430;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .submenu {
+    position: static;
+    background: transparent;
+    padding: 10px 0 0 15px;
   }
 }

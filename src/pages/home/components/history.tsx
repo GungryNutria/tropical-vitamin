@@ -1,5 +1,5 @@
 import "../../../css/history.css";
-import { useFadeUp } from "../hooks/useFadeUp";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 import historyImg from "../../../assets/history.jpg";
 import { FaHandshake, FaGlobeAmericas, FaHome } from "react-icons/fa";
 
@@ -16,8 +16,11 @@ function History() {
 
           <p className="history-intro fade-up">
             Nuestra historia comienza cuando el destino nos dio un giro inesperado.
-            Decidimos ir contracorriente y devolverle al turismo algo esencial:
-            <strong> el trato humano</strong>.
+            Aráiz de la pandemia, la vida nos llevó de la gigante Ciudad de México
+            al paraíso de la Riviera Maya. Incursionando en el turismo, y el servicio
+            hospitalario entendimos que el turismo moderno se había vuelto frío y
+            automatizado. Por eso, decidimos ir contracorriente:
+            <strong> Ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado</strong>.
           </p>
 
           <div className="history-values">
@@ -26,8 +29,9 @@ function History() {
               <FaHandshake />
               <h3>Trato Humano</h3>
               <p>
-                Aquí no eres un número, eres un amigo. Escuchamos, entendemos y
-                acompañamos cada experiencia.
+                Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, nos
+                dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el
+                abrazo de un buen anfitrión.
               </p>
             </div>
 
@@ -35,8 +39,11 @@ function History() {
               <FaGlobeAmericas />
               <h3>Fusión Cultural</h3>
               <p>
-                Organización europea con la calidez mexicana para crear
-                experiencias auténticas y memorables.
+                Somos el resultado de la unión de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta
+                fusión nos permitió construir una empresa orgullosamente 100% MEXICANA, con una misión clara: No hacer clientes,
+                sino AMIGOS.
+                Queremos que tu estancia sea amena, cálida y memorable., que no te sientas como un turista más, sino como un
+                amigo que viene de visita.
               </p>
             </div>
 

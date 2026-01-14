@@ -1,19 +1,38 @@
 import "../../../css/services.css";
-import { useFadeUp } from "../hooks/useFadeUp";
-import {
-  FaShuttleVan,
-  FaHotel,
-  FaUmbrellaBeach,
-  FaBriefcase,
-  FaStar,
-} from "react-icons/fa";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 
-const services = [
-  { title: "Transportación", icon: <FaShuttleVan />, desc: "Aeropuerto, punto a punto y servicio abierto." },
-  { title: "Hospedaje", icon: <FaHotel />, desc: "Hoteles, casas y condos en la Riviera Maya." },
-  { title: "Tours & Experiencias", icon: <FaUmbrellaBeach />, desc: "Acuáticos, arqueológicos, parques y más." },
-  { title: "MICE & Convenciones", icon: <FaBriefcase />, desc: "Eventos, congresos y logística empresarial." },
-  { title: "Viajes Temáticos", icon: <FaStar />, desc: "Experiencias hechas a tu medida." },
+import service1 from "../../../assets/services/transportacion.jpg";
+import service2 from "../../../assets/services/hospedaje.jpg";
+import service3 from "../../../assets/services/tours.jpg";
+import service4 from "../../../assets/services/convenciones.jpg";
+import service5 from "../../../assets/services/tematicos.jpg";
+
+const servicios = [
+  {
+    title: "Transportación",
+    desc: "Aeropuerto, punto a punto y servicio abierto.",
+    img: service1,
+  },
+  {
+    title: "Hospedaje",
+    desc: "Hoteles, casas y condos en la Riviera Maya.",
+    img: service2,
+  },
+  {
+    title: "Tours & Experiencias",
+    desc: "Acuáticos, arqueológicos, parques y más.",
+    img: service3,
+  },
+  {
+    title: "MICE & Convenciones",
+    desc: "Eventos, congresos y logística empresarial.",
+    img: service4,
+  },
+  {
+    title: "Viajes Temáticos",
+    desc: "Experiencias hechas a tu medida.",
+    img: service5,
+  },
 ];
 
 function Services() {
@@ -22,17 +41,24 @@ function Services() {
   return (
     <section id="servicios" className="services">
       <h2 className="fade-up">Nuestros Servicios</h2>
-      <p className="fade-up">Diseñamos experiencias, no solo viajes.</p>
+      <p className="services-intro fade-up">
+        Diseñamos experiencias, no solo viajes.
+      </p>
 
       <div className="services-grid">
-        {services.map((s, i) => (
+        {servicios.map((service, i) => (
           <div
-            className={`service-card fade-up fade-delay-${i + 1}`}
+            className={`service-card fade-up fade-delay-${(i % 3) + 1}`}
             key={i}
           >
-            <span className="service-icon">{s.icon}</span>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
+            <div className="service-image">
+              <img src={service.img} alt={service.title} />
+            </div>
+
+            <div className="service-info">
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+            </div>
           </div>
         ))}
       </div>

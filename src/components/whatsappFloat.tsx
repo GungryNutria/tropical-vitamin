@@ -1,4 +1,4 @@
-import "../../../css/whatsapp-float.css";
+import "../css/whatsapp-float.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsappFloat() {

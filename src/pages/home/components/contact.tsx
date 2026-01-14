@@ -1,7 +1,7 @@
 import "../../../css/contact.css";
 import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { useFadeUp } from "../hooks/useFadeUp";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 import { useState } from "react";
 
 function Contact() {

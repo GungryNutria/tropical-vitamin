@@ -1,6 +1,7 @@
 .history {
   padding: 6rem 4rem;
-  background: var(--white-soft);
+  text-align: justify;
+  background: var(--blue-caribbean);
 }
 
 .history-wrapper {

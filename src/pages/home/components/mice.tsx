@@ -1,5 +1,5 @@
 import "../../../css/mice.css";
-import { useFadeUp } from "../hooks/useFadeUp";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 import miceImg from "../../../assets/mice.jpg";
 import { FaBriefcase, FaUsers, FaRegCalendarCheck } from "react-icons/fa";
 
