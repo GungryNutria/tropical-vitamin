@@ -53,7 +53,7 @@ function Services() {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={40}
-        slidesPerView={2}
+        slidesPerView={1}
         pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 1 },
