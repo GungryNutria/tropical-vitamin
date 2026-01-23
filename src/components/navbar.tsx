@@ -1,7 +1,7 @@
 import "../css/navbar.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -16,7 +16,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* LOGO */}
         <NavLink to="/" className="logo" onClick={closeMenu}>
-          Tropical<span>Vitamin</span>
+          <img src={logo} alt="Tropical Vitamin" />
         </NavLink>
 
         <ul className={`nav-links ${open ? "open" : ""}`}>

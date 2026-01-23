@@ -19,7 +19,11 @@
   font-weight: 700;
   font-size: 22px;
 }
-
+.logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 .logo span {
   color: #f4c430; /* amarillo tropical */
 }
@@ -80,6 +84,9 @@
 
 /* 🔥 Responsive */
 @media (max-width: 900px) {
+  .logo img {
+    height: 40px;
+  }
   .nav-links {
     position: absolute;
     top: 80px;

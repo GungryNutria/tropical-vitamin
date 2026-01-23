@@ -1,11 +1,16 @@
 import "../../../css/services.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 import service1 from "../../../assets/services/transportacion.jpg";
 import service2 from "../../../assets/services/hospedaje.jpg";
 import service3 from "../../../assets/services/tours.jpg";
 import service4 from "../../../assets/services/convenciones.jpg";
 import service5 from "../../../assets/services/tematicos.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
 
 const servicios = [
   {
@@ -45,23 +50,33 @@ function Services() {
         Diseñamos experiencias, no solo viajes.
       </p>
 
-      <div className="services-grid">
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={40}
+        slidesPerView={2}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="services-swiper fade-up"
+      >
         {servicios.map((service, i) => (
-          <div
-            className={`service-card fade-up fade-delay-${(i % 3) + 1}`}
-            key={i}
-          >
-            <div className="service-image">
-              <img src={service.img} alt={service.title} />
-            </div>
+          <SwiperSlide key={i} >
+            <div className="service-card">
+              <div className="service-image">
+                <img src={service.img} alt={service.title} />
+              </div>
 
-            <div className="service-info">
-              <h3>{service.title}</h3>
-              <p>{service.desc}</p>
+              <div className="service-info">
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }
