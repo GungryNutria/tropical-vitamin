@@ -1,7 +1,7 @@
 import "../../../css/history.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 import historyImg from "../../../assets/history.jpg";
-import { FaHandshake, FaGlobeAmericas, FaHome } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
 
 function History() {
   useFadeUp();
