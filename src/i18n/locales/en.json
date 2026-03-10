@@ -99,6 +99,7 @@
       "all": "All"
     },
     "count": "tours available",
+    "currency": "Currency",
     "category": "Category",
     "location": "Location",
     "duration": "Duration",

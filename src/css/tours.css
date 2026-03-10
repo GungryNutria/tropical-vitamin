@@ -11,6 +11,37 @@
   margin-bottom: 2rem;
 }
 
+/* Currency Selector */
+.tours-currency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tours-currency label {
+  color: var(--green-main);
+  font-weight: 500;
+}
+
+.currency-select {
+  background: white;
+  border: 2px solid var(--green-main);
+  color: var(--green-main);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.currency-select:hover {
+  background: var(--green-main);
+  color: white;
+}
+
 /* Filter */
 .tours-filter {
   display: flex;

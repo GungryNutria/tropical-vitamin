@@ -7,12 +7,25 @@ import WhatsappFloat from '../../components/whatsappFloat';
 
 import service1 from "../../assets/services/transportacion.jpg";
 
+const exchangeRates = {
+  MXN: 1,
+  USD: 0.059,
+  EUR: 0.054
+};
+
+const currencies = [
+  { code: 'MXN', symbol: '$', name: 'MXN' },
+  { code: 'USD', symbol: '$', name: 'USD' },
+  { code: 'EUR', symbol: '€', name: 'EUR' }
+];
+
 export default function Tours() {
   const { t, i18n } = useTranslation();
   const [tours, setTours] = useState<Tour[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
+  const [currency, setCurrency] = useState<string>('MXN');
 
   useEffect(() => {
     console.log('Fetching tours, language:', i18n.language);
@@ -51,6 +64,12 @@ export default function Tours() {
     );
   }, [tours, selectedCategory]);
 
+  // Convert price
+  const convertPrice = (price: number) => {
+    const converted = price * exchangeRates[currency as keyof typeof exchangeRates];
+    return Math.round(converted);
+  };
+
   if (loading) {
     return <div className="tours-loading">{t('tours.loading')}</div>;
   }
@@ -62,6 +81,22 @@ export default function Tours() {
   return (
     <div className="tours-container">
       <h1 className="tours-title">{t('tours.title')}</h1>
+      
+      {/* Currency Selector */}
+      <div className="tours-currency">
+        <label>{t('tours.currency')}: </label>
+        <select 
+          value={currency} 
+          onChange={(e) => setCurrency(e.target.value)}
+          className="currency-select"
+        >
+          {currencies.map(curr => (
+            <option key={curr.code} value={curr.code}>
+              {curr.symbol} {curr.code}
+            </option>
+          ))}
+        </select>
+      </div>
       
       {/* Filter */}
       <div className="tours-filter">
@@ -100,7 +135,9 @@ export default function Tours() {
                 </div>
                 <div className="tour-price">
                   <span className="price-label">{t('tours.price.label')}</span>
-                  <span className="price-value">${tour.price}</span>
+                  <span className="price-value">
+                    {currencies.find(c => c.code === currency)?.symbol}{convertPrice(tour.price)}
+                  </span>
                 </div>
                 <button className="tour-button">{t('tours.book')}</button>
               </div>
