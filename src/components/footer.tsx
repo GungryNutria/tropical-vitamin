@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../css/footer.css";
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
@@ -32,10 +33,11 @@ function Footer() {
                 {/* LINKS */}
                 <div className="footer-links">
                     <h4>Información</h4>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#tours">Tours</a>
-                    <a href="#mice">MICE</a>
-                    <a href="#contacto">Contacto</a>
+                    <NavLink to="#servicios">Transportacion</NavLink>
+                    <NavLink to="#tours">Hospedaje</NavLink>
+                    <NavLink to="#mice">Tours & Experiencias</NavLink>
+                    <NavLink to="#contacto">MICE</NavLink>
+                    <NavLink to="#contacto">Viajes Temáticos</NavLink>
                 </div>
 
                 {/* POLICIES */}

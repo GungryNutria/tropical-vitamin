@@ -31,50 +31,30 @@ function Navbar() {
               Historia
             </a>
           </li>
-
-          {/* 🔽 SERVICIOS (CLICK, NO HOVER) */}
-          <li className={`has-submenu ${servicesOpen ? "open" : ""}`}>
-            <button
-              type="button"
-              className="submenu-trigger"
-              onClick={() => setServicesOpen(!servicesOpen)}
-            >
-              Servicios
-            </button>
-
-            <ul className="submenu">
-              <li>
-                <NavLink to="/transportacion" onClick={closeMenu}>
-                  Transportación
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/hospedaje" onClick={closeMenu}>
-                  Hospedaje
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/tours" onClick={closeMenu}>
-                  Tours & Experiencias
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/mice" onClick={closeMenu}>
-                  MICE
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/tematicos" onClick={closeMenu}>
-                  Viajes Temáticos
-                </NavLink>
-              </li>
-            </ul>
-          </li>
-
           <li>
-            <a href="#mice" onClick={closeMenu}>
+            <NavLink to="/transportacion" onClick={closeMenu}>
+              Transportación
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/hospedaje" onClick={closeMenu}>
+              Hospedaje
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/tours" onClick={closeMenu}>
+              Tours & Experiencias
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/mice" onClick={closeMenu}>
               MICE
-            </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/tematicos" onClick={closeMenu}>
+              Viajes Temáticos
+            </NavLink>
           </li>
 
           <li>
