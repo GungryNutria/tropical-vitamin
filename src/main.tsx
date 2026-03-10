@@ -1,7 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './i18n'
 import './css/main.css'
 import './css/variables.css'
+import './css/testimonials.css'
+import './css/stats.css'
+import './css/faq.css'
 import { BrowserRouter } from 'react-router-dom'
 import App from './app'
 

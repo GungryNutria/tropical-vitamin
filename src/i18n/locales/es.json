@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "transportacion": "Transportacion",
+    "hospedaje": "Hospedaje",
+    "tours": "Tours & Experiencias",
+    "mice": "MICE",
+    "tematicos": "Viajes Tematicos",
+    "contacto": "Contactanos"
+  },
+  "home": {
+    "hero": {
+      "title": "Viaja como invitado, no como turista",
+      "subtitle": "La Riviera Maya te espera con experiencias unicas",
+      "cta": "Planea tu viaje"
+    },
+    "history": {
+      "title": "Nuestra Historia",
+      "values": {
+        "humanTreatment": "Trato Humano",
+        "humanTreatmentDesc": "Tratamiento personalizado y calido",
+        "passion": "Pasion",
+        "passionDesc": "Amor por mostrar lo mejor de Mexico"
+      },
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raiz de la pandemia, la vida nos llevo de la gigante Ciudad de Mexico al paraiso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se habia vuelto frio y automatizado. Por eso, decidimos ir contracorriente: Ofrecer un trato mas humano, amable y personal en un mundo cada vez mas digitalizado. Creemos firmemente que un robot no puede escuchar tus suenos ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se habia vuelto fria. Pero nosotros creemos que un robot nunca podra reemplazar el abrazo de un buen anfitrion. Somos el resultado de la union de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta fusion nos permitio construir una empresa orgullosamente 100% MEXICANA.",
+      "missionTitle": "Nuestra Mision",
+      "missionText": "No hacer clientes, sino AMIGOS. Mi Casa Es Tu Casa."
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Disenamos experiencias, no solo viajes.",
+      "cards": {
+        "transportation": "Transportacion",
+        "transportationDesc": "Aeropuerto, punto a punto y servicio abierto.",
+        "accommodation": "Hospedaje",
+        "accommodationDesc": "Hoteles, casas y condos en la Riviera Maya.",
+        "tours": "Tours & Experiencias",
+        "toursDesc": "Acuatics, arqueologicos, parques y mas.",
+        "mice": "MICE & Convenciones",
+        "miceDesc": "Eventos, congresos y logistica empresarial.",
+        "thematic": "Viajes Tematicos",
+        "thematicDesc": "Experiencias faites a tu medida."
+      }
+    },
+    "stats": {
+      "clients": "Clientes satisfechos",
+      "hotels": "Hoteles aliados",
+      "tours": "Tours disponibles",
+      "experience": "Anios de experiencia"
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros clientes",
+      "items": {
+        "1": {
+          "text": "Excelente servicio, todo muy bien organizado. El equipo de Tropical Vitamin hizo de nuestro viaje una experiencia inolvidable."
+        },
+        "2": {
+          "text": "La mejor experiencia en la Riviera Maya. Transportacion puntual y tours espectaculares. Totalmente recomendados."
+        },
+        "3": {
+          "text": "Viaje de graduacion perfecto. El equipo se encarga de cada detalle. Volveremos!"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "Cual es la mejor epoca para visitar la Riviera Maya?",
+        "answer": "La mejor epoca es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la region ofrece experiencias unicas durante todo el ano."
+      },
+      "q2": {
+        "question": "Incluyen transporte desde el aeropuerto?",
+        "answer": "Si, contamos con servicio de transportacion aeropuerto-hotel en todas nuestras opciones: compartido, privado, luxury y autobus."
+      },
+      "q3": {
+        "question": "Puedo reservar tours para grupos grandes?",
+        "answer": "Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contactanos para una cotizacion personalizada."
+      },
+      "q4": {
+        "question": "Cual es la politica de cancelacion?",
+        "answer": "Nuestra politica de cancelacion varia segun el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los terminos especificos al momento de reservar."
+      },
+      "q5": {
+        "question": "Ofrecen seguro de viaje?",
+        "answer": "Si, podemos ayudarte a contratar un seguro de viaje que cubra tu estancia. Preguntanos por las opciones disponibles."
+      }
+    },
+    "cta": {
+      "title": "Planea tu experiencia en la Riviera Maya",
+      "subtitle": "Viaja como invitado, no como turista. Nosotros nos encargamos de todo.",
+      "button": "Hablar por WhatsApp"
+    }
+  },
+  "tours": {
+    "title": "Tours",
+    "loading": "Cargando tours...",
+    "error": "Error al cargar los tours",
+    "filter": {
+      "all": "Todos"
+    },
+    "count": "tours disponibles",
+    "category": "Categoria",
+    "location": "Ubicacion",
+    "duration": "Duracion",
+    "price": {
+      "label": "Desde",
+      "value": "${{price}}"
+    },
+    "book": "Reservar Ahora",
+    "categories": {
+      "acuaticos": "Acuatics",
+      "parques": "Parques",
+      "arqueologicos": "Arqueologicos",
+      "extremos": "Extremos y Aventura",
+      "naturaleza": "Naturaleza",
+      "vida-silvestre": "Vida Silvestre",
+      "islas": "Islas",
+      "entretenimiento": "Entretenimiento Nocturno"
+    }
+  },
+  "transportation": {
+    "title": "Servicio de Transportacion",
+    "intro": "Contamos con unidades nuevas y en optimas condiciones, con aire acondicionado y profesionales pilotos que garantizan un viaje comodo y seguro.",
+    "airport": {
+      "title": "Transportation Aeropuerto - Hotel",
+      "subtitle": "Playa del Carmen, Cancun, Tulum, Riviera Maya",
+      "description": "Servicio abierto para que organices tu propio itinerario"
+    },
+    "options": {
+      "title": "Opciones:",
+      "shared": "Servicio compartido",
+      "private": "Servicio Privado",
+      "luxury": "Servicio Luxury",
+      "bus": "Servicio de Autobus"
+    },
+    "type": {
+      "title": "Tipo de servicio:",
+      "oneWay": "One way",
+      "roundTrip": "Round Trip"
+    },
+    "quote": "Solicitar Cotizacion"
+  },
+  "accommodation": {
+    "title": "Servicio de Hospedaje",
+    "intro": "Encuentra el alojamiento perfecto para tu estancia en la Riviera Maya. Contamos con opciones para cada tipo de viajero.",
+    "types": {
+      "houses": "Hospedaje en Casas",
+      "hotels": "Hospedaje en Hotel",
+      "condos": "Hospedaje en Condos"
+    },
+    "features": {
+      "houses": "Vive una experiencia unica en hogares locales autenticos.",
+      "hoteles": "Hoteles 3 estrellas o superiores con servicios completos.",
+      "condos": "Espacios amplios y equipada para familias o grupos.",
+      "directHost": "Contacto directo con anfitriones",
+      "cultural": "Experiencia cultural",
+      "comfort": "Comodidad hogarena",
+      "roomService": "Servicio de habitacion",
+      "amenities": "Amenidades",
+      "personalized": "Atencion personalizada",
+      "variety": "Variedad de servicios",
+      "kitchen": "Cocina equipada",
+      "spaces": "Espacios amplios",
+      "privacy": "Privacidad",
+      "longStays": "Ideal para estancias largas"
+    },
+    "includes": "Incluye",
+    "viewOptions": "Ver Opciones",
+    "destinations": "Destinos disponibles"
+  },
+  "mice": {
+    "title": "Grupos & Convenciones",
+    "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los mas altos estandares de calidad.",
+    "subtitle": "Nos encargamos de cada detalle para que tu evento sea un exito.",
+    "services": {
+      "1": "Busqueda de hotel, cotizacion y cierre de contrato con la parte hotelera",
+      "2": "Gestion de la transportacion y movilizacion de todos los asistentes",
+      "3": "Produccion, logistica y Staff para el desarrollo de los eventos",
+      "4": "Coordinacion de Audio Visual, Display y montajes de produccion",
+      "5": "Coordinacion de seguridad, procesos y eventos"
+    },
+    "cta": {
+      "title": "Planeas un evento corporativo?",
+      "subtitle": "Contactanos y te ayudamos a organizarlo",
+      "button": "Contactar Ahora"
+    }
+  },
+  "thematic": {
+    "title": "Servicio de Viajes Tematicos",
+    "intro": "Celebra tus momentos especiales con experiencias unicas e inolvidable en la Riviera Maya.",
+    "trips": {
+      "despedida": "Despedidas de soltera o soltero",
+      "bienvenida": "Bienvenidas de soltera o soltero",
+      "cumpleanos": "Cumpleanos",
+      "pedida": "Pedidas de matrimonio",
+      "familia": "Integracion familiar",
+      "team": "Team Building",
+      "graduacion": "Viajes de graduacion"
+    },
+    "description": "Una experiencia disenada especificamente para hacer de este momento algo especial y memorable.",
+    "moreInfo": "Mas Informacion",
+    "cta": {
+      "title": "Tienes alguna celebracion en mente?",
+      "subtitle": "Cuentanos y noi encargamos de todo",
+      "button": "Contactanos"
+    }
+  },
+  "contact": {
+    "title": "Contactanos",
+    "subtitle": "Listo para vivir una experiencia unica en la Riviera Maya? Escribenos y te ayudamos a planear cada detalle de tu viaje.",
+    "info": {
+      "location": "Ubicacion",
+      "locationValue": "Riviera Maya, Mexico",
+      "phone": "Telefono",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Envianos un mensaje",
+      "name": "Nombre completo *",
+      "email": "Correo electronico *",
+      "phone": "Telefono",
+      "service": "Selecciona un servicio",
+      "destination": "Selecciona destino",
+      "travelers": "Numero de viajeros",
+      "message": "Cuentanos mas sobre tu plan de viaje (fechas, preferencias, etc.)",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando mensaje...",
+      "success": "Mensaje enviado exitosamente! Te contactaremos pronto.",
+      "error": "Ocurrio un error, por favor intenta mas tarde."
+    },
+    "services": {
+      "transportation": "Transportacion",
+      "accommodation": "Hospedaje",
+      "tours": "Tours",
+      "mice": "Grupos y Convenciones",
+      "thematic": "Viajes Tematicos",
+      "other": "Otro"
+    },
+    "destinations": {
+      "cancun": "Cancun",
+      "playaCarmen": "Playa del Carmen",
+      "rivieraMaya": "Riviera Maya",
+      "tulum": "Tulum",
+      "bacalar": "Bacalar",
+      "yucatan": "Yucatan",
+      "other": "Otro"
+    },
+    "whatsapp": "Chatea por WhatsApp"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Exito",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "close": "Cerrar"
+  }
+}

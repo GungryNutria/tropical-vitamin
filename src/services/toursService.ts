@@ -1,3 +1,5 @@
+import i18n from '../i18n';
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export interface TourTranslation {
@@ -15,7 +17,8 @@ export interface Tour {
 }
 
 class ToursService {
-  async getTours(lang: string): Promise<Tour[]> {
+  async getTours(): Promise<Tour[]> {
+    const lang = i18n.language || 'es';
     const response = await fetch(`${API_URL}/tours?lang=${lang}`);
     if (!response.ok) {
       throw new Error('Error fetching tours');

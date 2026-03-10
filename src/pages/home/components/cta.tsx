@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import "../../../css/cta.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 
 function Cta() {
+  const { t } = useTranslation();
   useFadeUp();
 
   const handleWhatsApp = () => {
@@ -14,14 +16,13 @@ function Cta() {
   return (
     <section className="cta">
       <div className="cta-content fade-up">
-        <h2>Planea tu experiencia en la Riviera Maya</h2>
+        <h2>{t('home.cta.title')}</h2>
         <p>
-          Viaja como invitado, no como turista.  
-          Nosotros nos encargamos de todo.
+          {t('home.cta.subtitle')}
         </p>
 
         <button onClick={handleWhatsApp}>
-          Hablar por WhatsApp
+          {t('home.cta.button')}
         </button>
       </div>
     </section>

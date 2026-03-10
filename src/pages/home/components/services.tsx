@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import "../../../css/services.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 
@@ -12,42 +13,43 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 
 
-const servicios = [
-  {
-    title: "Transportación",
-    desc: "Aeropuerto, punto a punto y servicio abierto.",
-    img: service1,
-  },
-  {
-    title: "Hospedaje",
-    desc: "Hoteles, casas y condos en la Riviera Maya.",
-    img: service2,
-  },
-  {
-    title: "Tours & Experiencias",
-    desc: "Acuáticos, arqueológicos, parques y más.",
-    img: service3,
-  },
-  {
-    title: "MICE & Convenciones",
-    desc: "Eventos, congresos y logística empresarial.",
-    img: service4,
-  },
-  {
-    title: "Viajes Temáticos",
-    desc: "Experiencias hechas a tu medida.",
-    img: service5,
-  },
-];
-
 function Services() {
+  const { t } = useTranslation();
   useFadeUp();
+
+  const servicios = [
+    {
+      title: t('home.services.cards.transportation'),
+      desc: t('home.services.cards.transportationDesc'),
+      img: service1,
+    },
+    {
+      title: t('home.services.cards.accommodation'),
+      desc: t('home.services.cards.accommodationDesc'),
+      img: service2,
+    },
+    {
+      title: t('home.services.cards.tours'),
+      desc: t('home.services.cards.toursDesc'),
+      img: service3,
+    },
+    {
+      title: t('home.services.cards.mice'),
+      desc: t('home.services.cards.miceDesc'),
+      img: service4,
+    },
+    {
+      title: t('home.services.cards.thematic'),
+      desc: t('home.services.cards.thematicDesc'),
+      img: service5,
+    },
+  ];
 
   return (
     <section id="servicios" className="services">
-      <h2 className="fade-up">Nuestros Servicios</h2>
+      <h2 className="fade-up">{t('home.services.title')}</h2>
       <p className="services-intro fade-up">
-        Diseñamos experiencias, no solo viajes.
+        {t('home.services.subtitle')}
       </p>
 
       <Swiper

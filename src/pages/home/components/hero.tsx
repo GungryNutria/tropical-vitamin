@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import "../../../css/hero.css";
 import heroVideo from '../../../assets/hero.mp4';
 
 function Hero() {
+  const { t } = useTranslation();
 
   const handleWhatsApp = () => {
     window.open(
@@ -26,11 +28,9 @@ function Hero() {
       <div className="hero-overlay" />
 
       <div className="hero-left-content">
-        <h1>Bienvenido a Tropical Vitamin</h1>
-        <p>Somos una integradora de servicios turísticos en la Riviera Maya,
-          enfocados en el servicio personalizado, gestión y asistencia durante la
-          estancia de nuestros AMIGOS.</p>
-        <button className="hero-cta" onClick={handleWhatsApp}>Planea tu viaje</button>
+        <h1>{t('home.hero.title')}</h1>
+        <p>{t('home.hero.subtitle')}</p>
+        <button className="hero-cta" onClick={handleWhatsApp}>{t('home.hero.cta')}</button>
       </div>
     </section>
   );

@@ -1,88 +1,179 @@
 .history {
   padding: 6rem 4rem;
-  text-align: justify;
-  background: var(--blue-caribbean);
+  background: linear-gradient(135deg, var(--blue-caribbean) 0%, #0a4d5c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative elements */
+.history::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.history::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .history-wrapper {
   width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.0fr 1.0fr;
-  gap: 4rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.history-content,
-.history-image {
-  max-width: 100%;
-}
-
-/* LEFT */
+/* LEFT - Content */
 .history-content h2 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--green-main);
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.history-intro {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-}
-
-/* VALUES */
-.history-values {
+/* Cards Grid */
+.history-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
 .history-card {
-  background: white;
-  padding: 1.8rem;
-  border-radius: 16px;
-  overflow-wrap: break-word;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.history-card svg {
-  font-size: 2rem;
+
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.history-card.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.history-card.icon-card svg {
+  font-size: 3rem;
   color: var(--green-main);
+  margin-bottom: 1rem;
+}
+
+.history-card.icon-card h3 {
+  color: var(--green-main);
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
-.history-card span {
-  font-size: 2rem;
+.history-card.icon-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.history-card h3 {
-  margin: 0.8rem 0;
-  color: var(--green-main);
+.history-card.text-card {
+  grid-column: span 2;
+  padding: 2.5rem;
 }
 
-/* RIGHT IMAGE */
-.history-image img {
+.history-card.text-card p {
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Mission card highlight */
+.history-card.mission {
+  background: linear-gradient(135deg, var(--green-main) 0%, #2d8a6e 100%);
+  grid-column: span 2;
+  text-align: center;
+  padding: 3rem;
+}
+
+.history-card.mission h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.history-card.mission p {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* RIGHT - Collage */
+.history-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  gap: 12px;
+}
+
+.history-collage img {
   width: 100%;
-  display: block;
+  height: 100%;
   object-fit: cover;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+.history-collage img:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
 
 /* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .history-wrapper {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .history-image img {
-    height: 100%;
+    gap: 3rem;
   }
 
   .history {
     padding: 4rem 2rem;
+  }
+
+  .history-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .history-card.text-card,
+  .history-card.mission {
+    grid-column: span 1;
+  }
+
+  .history-collage {
+    max-width: 500px;
+    margin: 0 auto;
+    grid-template-rows: repeat(3, 140px);
   }
 }

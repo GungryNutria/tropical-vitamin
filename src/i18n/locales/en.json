@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "transportacion": "Transportation",
+    "hospedaje": "Accommodation",
+    "tours": "Tours & Experiences",
+    "mice": "MICE",
+    "tematicos": "Thematic Trips",
+    "contacto": "Contact Us"
+  },
+  "home": {
+    "hero": {
+      "title": "Travel as a guest, not as a tourist",
+      "subtitle": "The Riviera Maya awaits you with unique experiences",
+      "cta": "Plan your trip"
+    },
+    "history": {
+      "title": "Our History",
+      "values": {
+        "humanTreatment": "Human Treatment",
+        "humanTreatmentDesc": "Personalized and warm treatment",
+        "passion": "Passion",
+        "passionDesc": "Love for showing the best of Mexico"
+      },
+      "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
+      "missionTitle": "Our Mission",
+      "missionText": "Not to make clients, but FRIENDS. My House Is Your House."
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "We design experiences, not just trips.",
+      "cards": {
+        "transportation": "Transportation",
+        "transportationDesc": "Airport, point to point and open service.",
+        "accommodation": "Accommodation",
+        "accommodationDesc": "Hotels, homes and condos in the Riviera Maya.",
+        "tours": "Tours & Experiences",
+        "toursDesc": "Aquatic, archaeological, theme parks and more.",
+        "mice": "MICE & Conventions",
+        "miceDesc": "Events, congresses and corporate logistics.",
+        "thematic": "Thematic Trips",
+        "thematicDesc": "Experiences made to your measure."
+      }
+    },
+    "stats": {
+      "clients": "Satisfied clients",
+      "hotels": "Partner hotels",
+      "tours": "Available tours",
+      "experience": "Years of experience"
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "items": {
+        "1": {
+          "text": "Excellent service, everything was very well organized. The Tropical Vitamin team made our trip an unforgettable experience."
+        },
+        "2": {
+          "text": "The best experience in the Riviera Maya. Punctual transportation and spectacular tours. Totally recommended."
+        },
+        "3": {
+          "text": "Perfect graduation trip. The team took care of every detail. We will be back!"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What is the best time to visit the Riviera Maya?",
+        "answer": "The best time is from November to April, when the weather is dry and temperatures are pleasant. However, the region offers unique experiences throughout the year."
+      },
+      "q2": {
+        "question": "Do you include transportation from the airport?",
+        "answer": "Yes, we have airport-hotel transportation service in all our options: shared, private, luxury and bus."
+      },
+      "q3": {
+        "question": "Can I book tours for large groups?",
+        "answer": "Absolutely! We have experience organizing events for large groups, conventions and company trips. Contact us for a personalized quote."
+      },
+      "q4": {
+        "question": "What is the cancellation policy?",
+        "answer": "Our cancellation policy varies by service. Generally, you can cancel up to 48 hours before without charge. We recommend checking the specific terms at the time of booking."
+      },
+      "q5": {
+        "question": "Do you offer travel insurance?",
+        "answer": "Yes, we can help you purchase travel insurance that covers your stay. Ask us about the available options."
+      }
+    },
+    "cta": {
+      "title": "Plan your experience in the Riviera Maya",
+      "subtitle": "Travel as a guest, not as a tourist. We take care of everything.",
+      "button": "Talk via WhatsApp"
+    }
+  },
+  "tours": {
+    "title": "Tours",
+    "loading": "Loading tours...",
+    "error": "Error loading tours",
+    "filter": {
+      "all": "All"
+    },
+    "count": "tours available",
+    "category": "Category",
+    "location": "Location",
+    "duration": "Duration",
+    "price": {
+      "label": "From",
+      "value": "${{price}}"
+    },
+    "book": "Book Now",
+    "categories": {
+      "acuaticos": "Aquatic",
+      "parques": "Theme Parks",
+      "arqueologicos": "Archaeological",
+      "extremos": "Extreme & Adventure",
+      "naturaleza": "Nature",
+      "vida-silvestre": "Wildlife",
+      "islas": "Islands",
+      "entretenimiento": "Night Entertainment"
+    }
+  },
+  "transportation": {
+    "title": "Transportation Service",
+    "intro": "We have new units in optimal conditions, with air conditioning and professional drivers that guarantee a comfortable and safe trip.",
+    "airport": {
+      "title": "Airport - Hotel Transportation",
+      "subtitle": "Playa del Carmen, Cancun, Tulum, Riviera Maya",
+      "description": "Open service so you can organize your own itinerary"
+    },
+    "options": {
+      "title": "Options:",
+      "shared": "Shared service",
+      "private": "Private service",
+      "luxury": "Luxury service",
+      "bus": "Bus service"
+    },
+    "type": {
+      "title": "Service type:",
+      "oneWay": "One way",
+      "roundTrip": "Round Trip"
+    },
+    "quote": "Request Quote"
+  },
+  "accommodation": {
+    "title": "Accommodation Service",
+    "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
+    "types": {
+      "houses": "Accommodation in Houses",
+      "hotels": "Hotel Accommodation",
+      "condos": "Condo Accommodation"
+    },
+    "features": {
+      "houses": "Experience a unique stay in authentic local homes.",
+      "hotels": "3-star or higher hotels with full services.",
+      "condos": "Spacious spaces equipped for families or groups.",
+      "directHost": "Direct contact with hosts",
+      "cultural": "Cultural experience",
+      "comfort": "Home comfort",
+      "roomService": "Room service",
+      "amenities": "Amenities",
+      "personalized": "Personalized attention",
+      "variety": "Variety of services",
+      "kitchen": "Equipped kitchen",
+      "spaces": "Spacious spaces",
+      "privacy": "Privacy",
+      "longStays": "Ideal for long stays"
+    },
+    "includes": "Includes",
+    "viewOptions": "View Options",
+    "destinations": "Available destinations"
+  },
+  "mice": {
+    "title": "Groups & Conventions",
+    "intro": "We organize corporate events, conventions and MICE tourism with the highest quality standards.",
+    "subtitle": "We take care of every detail so your event is a success.",
+    "services": {
+      "1": "Hotel search, quotation and contract closure with the hotel where the event takes place",
+      "2": "Transportation management and mobilization of all attendees",
+      "3": "Production, logistics and Staff for event development",
+      "4": "Coordination of Audio Visual, Display and production setups",
+      "5": "Coordination of security, processes and events"
+    },
+    "cta": {
+      "title": "Planning a corporate event?",
+      "subtitle": "Contact us and we'll help you organize it",
+      "button": "Contact Now"
+    }
+  },
+  "thematic": {
+    "title": "Thematic Trips Service",
+    "intro": "Celebrate your special moments with unique and unforgettable experiences in the Riviera Maya.",
+    "trips": {
+      "despedida": "Bachelor/Bachelorette parties",
+      "bienvenida": "Welcome parties",
+      "cumpleanos": "Birthdays",
+      "pedida": "Marriage proposals",
+      "familia": "Family integration",
+      "team": "Team Building",
+      "graduacion": "Graduation trips"
+    },
+    "description": "An experience designed specifically to make this moment special and memorable.",
+    "moreInfo": "More Information",
+    "cta": {
+      "title": "Have a celebration in mind?",
+      "subtitle": "Tell us and we take care of everything",
+      "button": "Contact Us"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to experience something unique in the Riviera Maya? Write to us and we'll help you plan every detail of your trip.",
+    "info": {
+      "location": "Location",
+      "locationValue": "Riviera Maya, Mexico",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "service": "Select a service",
+      "destination": "Select destination",
+      "travelers": "Number of travelers",
+      "message": "Tell us more about your travel plan (dates, preferences, etc.)",
+      "submit": "Send message",
+      "sending": "Sending message...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "An error occurred, please try again later."
+    },
+    "services": {
+      "transportation": "Transportation",
+      "accommodation": "Accommodation",
+      "tours": "Tours",
+      "mice": "Groups & Conventions",
+      "thematic": "Thematic Trips",
+      "other": "Other"
+    },
+    "destinations": {
+      "cancun": "Cancun",
+      "playaCarmen": "Playa del Carmen",
+      "rivieraMaya": "Riviera Maya",
+      "tulum": "Tulum",
+      "bacalar": "Bacalar",
+      "yucatan": "Yucatan",
+      "other": "Other"
+    },
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close"
+  }
+}

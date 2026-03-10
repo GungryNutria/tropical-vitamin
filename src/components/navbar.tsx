@@ -1,12 +1,20 @@
 import "../css/navbar.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png";
+import LanguageSwitcher from "./languageSwitcher";
+
 function Navbar() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   const closeMenu = () => {
     setOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setOpen(!open);
   };
 
   return (
@@ -20,52 +28,49 @@ function Navbar() {
         <ul className={`nav-links ${open ? "open" : ""}`}>
           <li>
             <NavLink to="/" onClick={closeMenu}>
-              Inicio
+              {t('nav.inicio')}
             </NavLink>
-          </li>
-
-          <li>
-            <a href="#historia" onClick={closeMenu}>
-              Historia
-            </a>
           </li>
           <li>
             <NavLink to="/transportacion" onClick={closeMenu}>
-              Transportación
+              {t('nav.transportacion')}
             </NavLink>
           </li>
           <li>
             <NavLink to="/hospedaje" onClick={closeMenu}>
-              Hospedaje
+              {t('nav.hospedaje')}
             </NavLink>
           </li>
           <li>
             <NavLink to="/tours" onClick={closeMenu}>
-              Tours & Experiencias
+              {t('nav.tours')}
             </NavLink>
           </li>
           <li>
             <NavLink to="/mice" onClick={closeMenu}>
-              MICE
+              {t('nav.mice')}
             </NavLink>
           </li>
           <li>
             <NavLink to="/tematicos" onClick={closeMenu}>
-              Viajes Temáticos
+              {t('nav.tematicos')}
             </NavLink>
           </li>
 
           <li>
-            <a href="#contacto" className="cta-hero" onClick={closeMenu}>
-              Contáctanos
-            </a>
+            <NavLink to="/contacto" className="cta-hero" onClick={closeMenu}>
+              {t('nav.contacto')}
+            </NavLink>
           </li>
         </ul>
 
-        <div className="hamburger" onClick={() => setOpen(!open)}>
-          <span />
-          <span />
-          <span />
+        <div className="navbar-right">
+          <LanguageSwitcher />
+          <div className={`hamburger ${open ? "active" : ""}`} onClick={toggleMenu}>
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
       </div>
     </nav>

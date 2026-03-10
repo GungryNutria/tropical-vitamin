@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import "../../../css/history.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 import historyImg from "../../../assets/history.jpg";
-import { FaHandshake } from "react-icons/fa";
+import { FaHandshake, FaHeart } from "react-icons/fa";
 
 function History() {
+  const { t } = useTranslation();
   useFadeUp();
 
   return (
@@ -12,51 +14,42 @@ function History() {
 
         {/* LEFT CONTENT */}
         <div className="history-content">
-          <h2 className="fade-up">Nuestra Historia</h2>
+          <h2 className="fade-up">{t('home.history.title')}</h2>
 
-          <p className="history-intro fade-up">
-
-          </p>
-
-          <div className="history-values">
-
-            <div className="history-card fade-up fade-delay-1">
+          <div className="history-cards">
+            {/* Icon Cards Row */}
+            <div className="history-card icon-card fade-up fade-delay-1">
               <FaHandshake />
-              <h3>Trato Humano</h3>
-              <p>
-                Nuestra historia comienza cuando el destino nos dio un giro inesperado.
-                Aráiz de la pandemia, la vida nos llevó de la gigante Ciudad de México
-                al paraíso de la Riviera Maya. Incursionando en el turismo, y el servicio
-                hospitalario entendimos que el turismo moderno se había vuelto frío y
-                automatizado. Por eso, decidimos ir contracorriente:
-                <strong> Ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado</strong>.
-              </p>
-              <br />
-              <p>
-                Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, nos
-                dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el
-                abrazo de un buen anfitrión.
-              </p>
-              <br />
-              <p>
-                Somos el resultado de la unión de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta
-                fusión nos permitió construir una empresa orgullosamente 100% MEXICANA, con una misión clara: No hacer clientes,
-                sino AMIGOS.
-                Queremos que tu estancia sea amena, cálida y memorable., que no te sientas como un turista más, sino como un
-                amigo que viene de visita.
-              </p>
-              <br />
-              <p>
-                Estamos aquí para mostrarle a México, Europa y al mundo la verdadera esencia de nuestra tierra y por qué en México
-                decimos con tanto orgullo:"MICASAESTUCASA"
-              </p>
+              <h3>{t('home.history.values.humanTreatment')}</h3>
+              <p>{t('home.history.values.humanTreatmentDesc')}</p>
+            </div>
+
+            <div className="history-card icon-card fade-up fade-delay-2">
+              <FaHeart />
+              <h3>{t('home.history.values.passion')}</h3>
+              <p>{t('home.history.values.passionDesc')}</p>
+            </div>
+
+            {/* Main Text Card */}
+            <div className="history-card text-card fade-up fade-delay-3">
+              <p>{t('home.history.description')}</p>
+            </div>
+
+            {/* Mission Highlight */}
+            <div className="history-card mission fade-up fade-delay-4">
+              <h3>{t('home.history.missionTitle')}</h3>
+              <p>{t('home.history.missionText')}</p>
             </div>
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="history-image fade-up fade-delay-2">
-          <img src={historyImg} alt="Tropical Vitamin Historia" />
+        {/* RIGHT - Collage */}
+        <div className="history-collage fade-up fade-delay-2">
+          <img src={historyImg} alt="Tropical Vitamin" />
+          <img src={historyImg} alt="Tropical Vitamin" />
+          <img src={historyImg} alt="Tropical Vitamin" />
+          <img src={historyImg} alt="Tropical Vitamin" />
+          <img src={historyImg} alt="Tropical Vitamin" />
         </div>
 
       </div>
