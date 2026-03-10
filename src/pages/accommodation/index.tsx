@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../css/accommodation.css';
 import WhatsappFloat from '../../components/whatsappFloat';

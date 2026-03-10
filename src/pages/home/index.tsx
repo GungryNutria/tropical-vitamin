@@ -1,4 +1,3 @@
-import Contact from "./components/contact";
 import Cta from "./components/cta";
 import Hero from "./components/hero";
 import History from "./components/history";
