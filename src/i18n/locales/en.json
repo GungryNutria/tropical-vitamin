@@ -254,5 +254,12 @@
     "submit": "Submit",
     "cancel": "Cancel",
     "close": "Close"
+  },
+  "footer": {
+    "description": "We design authentic experiences in the Riviera Maya, combining European organization with Mexican warmth.",
+    "information": "Information",
+    "legal": "Legal",
+    "privacy": "Privacy Notice",
+    "rights": "All rights reserved."
   }
 }
