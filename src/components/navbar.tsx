@@ -4,11 +4,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   const closeMenu = () => {
     setOpen(false);
-    setServicesOpen(false);
   };
 
   return (
