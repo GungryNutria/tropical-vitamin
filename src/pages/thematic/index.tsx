@@ -3,8 +3,6 @@ import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
-import heroBg from '../../assets/thematic-hero.jpg';
-
 export default function Thematic() {
   const { t } = useTranslation();
 

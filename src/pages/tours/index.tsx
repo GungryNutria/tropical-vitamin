@@ -20,8 +20,6 @@ const currencies = [
   { code: 'EUR', symbol: '€', name: 'EUR' }
 ];
 
-// Hero image from Unsplash (free to use)
-const HERO_IMAGE = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80";
 
 export default function Tours() {
   const { t, i18n } = useTranslation();

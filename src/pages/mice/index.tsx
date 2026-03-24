@@ -3,7 +3,6 @@ import '../../css/mice.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
-import heroBg from '../../assets/mice-hero.jpg';
 
 export default function Mice() {
   const { t } = useTranslation();

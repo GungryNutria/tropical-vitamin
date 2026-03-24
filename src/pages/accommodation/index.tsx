@@ -4,9 +4,6 @@ import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
 
-// Hero image from Unsplash (free to use - luxury hotel/beach resort)
-const HERO_IMAGE = "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80";
-
 export default function Accommodation() {
   const { t } = useTranslation();
 
