@@ -25,21 +25,21 @@
 
 /* Card */
 .service-card {
-  background: white;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  position: relative;
+  height: 380px;
   transition: transform 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: scale(1.02);
 }
 
-/* Image */
+/* Image as background */
 .service-image {
-  position: relative;
-  height: 260px;
+  position: absolute;
+  inset: 0;
 }
 
 .service-image img {
@@ -48,35 +48,54 @@
   object-fit: cover;
 }
 
-.service-category {
+/* Overlay gradient for text readability */
+.service-image::after {
+  content: '';
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: var(--green-main);
-  color: white;
-  padding: 0.4rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
 }
 
-/* Info */
+/* Info overlay on image */
 .service-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1.5rem;
+  z-index: 1;
 }
 
 .service-info h3 {
-  color: var(--green-main);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.service-info p {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  line-height: 1.4;
   margin-bottom: 1rem;
+  display: none; /* Hide description on this style */
 }
 
 .service-info button {
-  background: var(--orange-sunset);
+  background: #F4B942;
   border: none;
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 10px;
+  color: #1a1a1a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   font-weight: 600;
+  font-size: 0.85rem;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.service-info button:hover {
+  background: #e5a93a;
 }
 .services-swiper {
   max-width: 1200px;

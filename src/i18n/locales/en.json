@@ -92,6 +92,9 @@
     }
   },
   "tours": {
+    "hero": {
+      "subtitle": "Aquatic, archaeological, theme parks and more."
+    },
     "title": "Tours",
     "loading": "Loading tours...",
     "error": "Error loading tours",
@@ -121,6 +124,9 @@
   },
   "transportation": {
     "title": "Transportation Service",
+    "hero": {
+      "subtitle": "Airport, point to point and open service."
+    },
     "intro": "We have new units in optimal conditions, with air conditioning and professional drivers that guarantee a comfortable and safe trip.",
     "airport": {
       "title": "Airport - Hotel Transportation",
@@ -142,6 +148,9 @@
     "quote": "Request Quote"
   },
   "accommodation": {
+    "hero": {
+      "subtitle": "Hotels, homes and condos in the Riviera Maya."
+    },
     "title": "Accommodation Service",
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
     "types": {
@@ -173,13 +182,27 @@
     "title": "Groups & Conventions",
     "intro": "We organize corporate events, conventions and MICE tourism with the highest quality standards.",
     "subtitle": "We take care of every detail so your event is a success.",
-    "services": {
-      "1": "Hotel search, quotation and contract closure with the hotel where the event takes place",
-      "2": "Transportation management and mobilization of all attendees",
-      "3": "Production, logistics and Staff for event development",
-      "4": "Coordination of Audio Visual, Display and production setups",
-      "5": "Coordination of security, processes and events"
+    "hero": {
+      "subtitle": "We know that all groups are different and with different planning and objectives.",
+      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Don't worry, leave it in our hands!</strong>"
     },
+    "groups": {
+      "mice": "MICE Groups",
+      "miceDesc": "Meetings, Incentives, Conferences and Exhibitions: We are your eyes in the destination! Rely on the experts to start the search from the venue to all the coordination and management you need for your event.",
+      "team": "Team Building Groups",
+      "teamDesc": "Creative corporate experiences and with a defined objective for strengthening the corporate team.",
+      "boda": "Wedding Groups",
+      "bodaDesc": "Back yourself with us for the logistics of your event without worrying about anything or anyone, live the best moment of your life next to your love.",
+      "viajeros": "Traveler Groups",
+      "viajerosDesc": "There is no better vitamin for the soul than the memories of adventures. Let us show you the side of the Riviera Maya that you don't know.",
+      "familia": "Family Groups",
+      "familiaDesc": "\"Láak'tsilil\" means Family in Maya. Reconnect in a paradise full of unforgettable vegetation and experiences.",
+      "escolares": "School Groups",
+      "escolaresDesc": "Live one of the best stages of your life in the company of your best friends. We guarantee it will be part of stories they will have to tell over and over again.",
+      "deportivos": "Sports Groups",
+      "deportivosDesc": "We help you carry out your tournaments and manage your or the attending teams for sports coordination."
+    },
+    "moreInfo": "More information",
     "cta": {
       "title": "Planning a corporate event?",
       "subtitle": "Contact us and we'll help you organize it",
@@ -189,17 +212,26 @@
   "thematic": {
     "title": "Thematic Trips Service",
     "intro": "Celebrate your special moments with unique and unforgettable experiences in the Riviera Maya.",
+    "hero": {
+      "subtitle": "Every special moment and celebration deserves that detail that makes it unique.",
+      "text": "At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of each specialized event.<br/><strong>Let us help you with your celebration!</strong>"
+    },
     "trips": {
       "despedida": "Bachelor/Bachelorette parties",
+      "despedidaDesc": "The phrases \"Will you marry me?\" and \"Yes, I do!\" are the magic words to start a new stage. There's no better place to celebrate than the Mexican Caribbean: beach, party, gastronomy and the best places to celebrate LOVE!",
       "bienvenida": "Welcome parties",
+      "bienvenidaDesc": "As the saying goes: \"Life is tastier in the sea.\" Come celebrate the decisions, what you've lived, and what's to come because you only live once.",
+      "graduacion": "Graduation trips",
+      "graduacionDesc": "You worked hard for it, so a graduation trip is what you deserve. Celebrate your achievement, organize the most adventurous graduation trip with your friends.",
+      "familia": "Family reconnections",
+      "familiaDesc": "Family connection, integration, and love purpose trips. They don't just come for vacation, they come to experience where you connect with your family in every way.",
       "cumpleanos": "Birthdays",
+      "cumpleanosDesc": "Celebrate your life and celebrate with your loved ones! We organize all the details you deserve for your day and celebration.",
       "pedida": "Marriage proposals",
-      "familia": "Family integration",
-      "team": "Team Building",
-      "graduacion": "Graduation trips"
+      "pedidaDesc": "One of the most anticipated moments and it has to be UNIQUE. We help you have a magical and full of love surprise."
     },
     "description": "An experience designed specifically to make this moment special and memorable.",
-    "moreInfo": "More Information",
+    "moreInfo": "More information",
     "cta": {
       "title": "Have a celebration in mind?",
       "subtitle": "Tell us and we take care of everything",

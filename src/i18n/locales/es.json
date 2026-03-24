@@ -92,6 +92,9 @@
     }
   },
   "tours": {
+    "hero": {
+      "subtitle": "Acuaticos, arqueologicos, parques y mas."
+    },
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
@@ -121,6 +124,9 @@
   },
   "transportation": {
     "title": "Servicio de Transportacion",
+    "hero": {
+      "subtitle": "Aeropuerto, punto a punto y servicio abierto."
+    },
     "intro": "Contamos con unidades nuevas y en optimas condiciones, con aire acondicionado y profesionales pilotos que garantizan un viaje comodo y seguro.",
     "airport": {
       "title": "Transportation Aeropuerto - Hotel",
@@ -142,6 +148,9 @@
     "quote": "Solicitar Cotizacion"
   },
   "accommodation": {
+    "hero": {
+      "subtitle": "Hoteles, casas y condos en la Riviera Maya."
+    },
     "title": "Servicio de Hospedaje",
     "intro": "Encuentra el alojamiento perfecto para tu estancia en la Riviera Maya. Contamos con opciones para cada tipo de viajero.",
     "types": {
@@ -173,37 +182,59 @@
     "title": "Grupos & Convenciones",
     "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los mas altos estandares de calidad.",
     "subtitle": "Nos encargamos de cada detalle para que tu evento sea un exito.",
-    "services": {
-      "1": "Busqueda de hotel, cotizacion y cierre de contrato con la parte hotelera",
-      "2": "Gestion de la transportacion y movilizacion de todos los asistentes",
-      "3": "Produccion, logistica y Staff para el desarrollo de los eventos",
-      "4": "Coordinacion de Audio Visual, Display y montajes de produccion",
-      "5": "Coordinacion de seguridad, procesos y eventos"
+    "hero": {
+      "subtitle": "Sabemos que todos los grupos son diferentes y con distinta planeacion y objetivo.",
+      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinacion adecuada a cada necesidad del grupo. ¡Despreocúpate por la logística masiva, tenemos una amplia experiencia en el manejo y gestión de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, concluyendo hasta su salida y término de tu evento.<br/><strong>¡Despreocúpate, déjamelo en nuestras manos!</strong>"
+    },
+    "groups": {
+      "mice": "Grupos MICE",
+      "miceDesc": "Reuniones, Incentivos, Conferencias y Exhibiciones: ¡Somos tus ojos en el destino! Apoyate con los expertos para iniciar la búsqueda desde la sede hasta toda la coordinación y gestión que requieres para tu evento.",
+      "team": "Grupos de Team Building",
+      "teamDesc": "Experiencias corporativas creativas y con un objetivo definido para el fortalecimiento del equipo corporativo.",
+      "boda": "Grupos de Boda",
+      "bodaDesc": "Respáldate con nosotros para la logística de tu evento sin preocuparte por nada ni nadie, vive el mejor momento de tu vida al lado de tu amor.",
+      "viajeros": "Grupos de Viajeros",
+      "viajerosDesc": "No hay mejor vitamina para el alma que los recuerdos de las aventuras. Permítenos presentarte el lado de la Riviera que no conoces.",
+      "familia": "Grupos de Familia",
+      "familiaDesc": "\"Láak'tsilil\" significa Familia en Maya. Reconéctense en un paraíso lleno de vegetación y experiencias inolvidable.",
+      "escolares": "Grupos Escolares",
+      "escolaresDesc": "Vive una de tus mejores etapas de la vida en compañía de tus mejores amigos. Les garantizamos que será parte de sus historias que tendrán que contar una y otra vez.",
+      "deportivos": "Grupos Deportivos",
+      "deportivosDesc": "Te ayudamos a realizar tus torneos y gestionar tu o los equipos asistentes para una coordinación deportiva."
     },
     "cta": {
-      "title": "Planeas un evento corporativo?",
-      "subtitle": "Contactanos y te ayudamos a organizarlo",
+      "title": "¿Planeas un evento corporativo?",
+      "subtitle": "Contáctanos y te ayudamos a organizarlo",
       "button": "Contactar Ahora"
     }
   },
   "thematic": {
-    "title": "Servicio de Viajes Tematicos",
-    "intro": "Celebra tus momentos especiales con experiencias unicas e inolvidable en la Riviera Maya.",
-    "trips": {
-      "despedida": "Despedidas de soltera o soltero",
-      "bienvenida": "Bienvenidas de soltera o soltero",
-      "cumpleanos": "Cumpleanos",
-      "pedida": "Pedidas de matrimonio",
-      "familia": "Integracion familiar",
-      "team": "Team Building",
-      "graduacion": "Viajes de graduacion"
+    "title": "Servicio de Viajes Temáticos",
+    "intro": "Celebra tus momentos especiales con experiencias únicas e inolvidable en la Riviera Maya.",
+    "hero": {
+      "subtitle": "Todo momento y celebración especial merece ese detalle que lo caracteriza y lo hace único.",
+      "text": "En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de cada evento especializado.<br/><strong>¡Déjanos ayudarte con tu celebración!</strong>"
     },
-    "description": "Una experiencia disenada especificamente para hacer de este momento algo especial y memorable.",
-    "moreInfo": "Mas Informacion",
+    "trips": {
+      "despedida": "Despedidas de soltera y soltero",
+      "despedidaDesc": "Las frases de \"¿Te quieres casar conmigo?\" y \"¡Sí Acepto!?\" son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: ¡playa, fiesta, gastronomía y los mejores lugares para festejar el AMOR!",
+      "bienvenida": "Bienvenida de Solter@",
+      "bienvenidaDesc": "Como dice el dicho: \"En el mar la vida es más sabrosa\", ven a celebrar las decisiones, lo vivido y lo que está por venir porque vida solo hay una.",
+      "graduacion": "Graduaciones",
+      "graduacionDesc": "Te esforzaste mucho para lograrlo, así que un viaje de graduación es lo que mereces. Celebra tu logro, organiza con tus amigos el viaje de graduación más aventurero.",
+      "familia": "Reconexiones de Familia",
+      "familiaDesc": "Viajes de conexión familiar, de integración y de propósito de amor familiar. No solo vienen de vacaciones, vienen a vivir una experiencia donde conectas con tu familia en todos los sentidos.",
+      "cumpleanos": "Cumpleaños",
+      "cumpleanosDesc": "¡Celebra tu vida y celebra con los tuyos! Te organizamos todos los detalles que mereces tener en tu día y tu festejo.",
+      "pedida": "Pedidas de matrimonio",
+      "pedidaDesc": "Uno de los momentos más esperados y tiene que ser ÚNICO. Te ayudamos a tener una sorpresa mágica y llena de amor."
+    },
+    "description": "Una experiencia diseñada específicamente para hacer de este momento algo especial y memorable.",
+    "moreInfo": "Más información",
     "cta": {
-      "title": "Tienes alguna celebracion en mente?",
-      "subtitle": "Cuentanos y noi encargamos de todo",
-      "button": "Contactanos"
+      "title": "¿Tienes alguna celebración en mente?",
+      "subtitle": "Cuéntanos y nosotros nos encargamos de todo",
+      "button": "Contáctanos"
     }
   },
   "contact": {

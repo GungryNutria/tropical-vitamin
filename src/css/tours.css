@@ -1,7 +1,81 @@
 .tours-container {
-  padding: 8rem 4rem 4rem;
+  padding: 0;
   min-height: 100vh;
   background: var(--sand-light);
+}
+
+/* Hero Section */
+.tours-hero {
+  background: linear-gradient(135deg, rgba(0,41,32,0.4) 0%, rgba(13,61,42,0.5) 100%), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tours-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.tours-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tours-title-hero {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.15em;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  line-height: 1;
+}
+
+.tours-tropical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tours-logo {
+  height: clamp(60px, 12vw, 100px);
+  object-fit: contain;
+}
+
+.tours-hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: white;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Page Title (after hero) */
+.tours-page-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--green-main);
+  margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 
 .tours-title {
@@ -228,11 +302,17 @@
 /* Mobile */
 @media (max-width: 768px) {
   .tours-container {
-    padding: 6rem 1.5rem 3rem;
+    padding: 0;
+  }
+
+  .tours-hero {
+    padding: 3.5rem 1.5rem;
+    min-height: 450px;
   }
 
   .tours-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1rem 2rem;
   }
 }

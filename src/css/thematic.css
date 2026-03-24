@@ -1,48 +1,111 @@
 .thematic-container {
-  padding: 8rem 4rem 4rem;
+  padding: 70px 0 0;
   min-height: 100vh;
   background: var(--sand-light);
 }
 
-.thematic-title {
+/* Hero Section */
+.thematic-hero {
+  background: linear-gradient(135deg, rgba(0,41,32,0.4) 0%, rgba(13,61,42,0.5) 100%), url(../assets/thematic-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
   text-align: center;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--green-main);
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thematic-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.thematic-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
-.thematic-intro {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  text-align: center;
+.thematic-viajes {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.15em;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  line-height: 1;
 }
 
-.thematic-intro p {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
+.thematic-tropical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thematic-logo {
+  height: clamp(60px, 12vw, 100px);
+  object-fit: contain;
+}
+
+.thematic-hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: white;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.thematic-hero-text {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
   line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
+.thematic-hero-text strong {
+  color: #F4B942;
+}
+
+/* Grid */
 .thematic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+  align-items: stretch;
+  background: transparent;
+  border-radius: 0;
 }
 
+/* Card */
 .thematic-card {
   background: white;
-  border-radius: 24px;
-  padding: 2.5rem;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(0, 41, 20, 0.08);
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  min-height: 380px;
 }
 
 .thematic-card::before {
@@ -51,102 +114,131 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, var(--green-main), var(--green-secondary));
+  height: 4px;
+  background: linear-gradient(90deg, var(--green-main), #F4B942);
+}
+
+.thematic-card::after {
+  content: '✨';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  opacity: 0.3;
 }
 
 .thematic-card:hover {
-  transform: translateY(-5px);
-}
-
-.thematic-icon {
-  font-size: 2.5rem;
-  color: var(--orange-sunset);
-  margin-bottom: 1rem;
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 .thematic-card-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--green-main);
   margin-bottom: 1rem;
   font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+}
+
+.thematic-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #F4B942;
 }
 
 .thematic-card-desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
   flex: 1;
+  text-align: justify;
 }
 
 .thematic-btn {
-  background: transparent;
-  border: 2px solid var(--green-main);
-  color: var(--green-main);
-  padding: 0.875rem 1.5rem;
-  border-radius: 14px;
+  background: linear-gradient(135deg, var(--green-main), #0d3d2a);
+  border: none;
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  align-self: stretch;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .thematic-btn:hover {
-  background: var(--green-main);
-  color: white;
+  background: linear-gradient(135deg, #0d3d2a, var(--green-main));
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(0, 61, 42, 0.3);
 }
 
+/* CTA */
 .thematic-cta {
   text-align: center;
-  background: linear-gradient(135deg, var(--green-main), var(--green-secondary));
-  padding: 3.5rem;
-  border-radius: 24px;
+  background: linear-gradient(135deg, var(--green-main), #0d3d2a);
+  padding: 3rem 2rem;
+  margin: -2rem auto 4rem;
   max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 20px 60px rgba(0, 41, 20, 0.3);
+  border-radius: 20px;
 }
 
 .thematic-cta h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: white;
   margin-bottom: 0.5rem;
 }
 
 .thematic-cta p {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255,255,255,0.8);
   margin-bottom: 1.5rem;
 }
 
 .thematic-contact-btn {
-  background: linear-gradient(135deg, var(--orange-sunset), #ffb25c);
-  color: white;
+  background: #F4B942;
+  color: #1a1a1a;
   border: none;
-  padding: 1.1rem 2.5rem;
-  border-radius: 14px;
-  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 154, 77, 0.4);
+  transition: background 0.2s ease;
 }
 
 .thematic-contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 154, 77, 0.5);
+  background: #e5a93a;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .thematic-container {
-    padding: 6rem 1.5rem 3rem;
+    padding-top: 60px;
+  }
+
+  .thematic-hero {
+    padding: 3.5rem 1.5rem;
   }
 
   .thematic-grid {
     grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+    padding: 2rem 1rem;
+    border-radius: 20px;
   }
 
-  .thematic-cta {
-    padding: 2.5rem 1.5rem;
+  .thematic-card {
+    padding: 1.8rem 1.5rem;
+    min-height: auto;
   }
 }

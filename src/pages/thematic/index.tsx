@@ -2,38 +2,73 @@ import { useTranslation } from 'react-i18next';
 import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
+import logo from '../../assets/logo.png';
+import heroBg from '../../assets/thematic-hero.jpg';
+
 export default function Thematic() {
   const { t } = useTranslation();
 
   const thematicTrips = [
-    { key: 'despedida', title: t('thematic.trips.despedida') },
-    { key: 'bienvenida', title: t('thematic.trips.bienvenida') },
-    { key: 'cumpleanos', title: t('thematic.trips.cumpleanos') },
-    { key: 'pedida', title: t('thematic.trips.pedida') },
-    { key: 'familia', title: t('thematic.trips.familia') },
-    { key: 'team', title: t('thematic.trips.team') },
-    { key: 'graduacion', title: t('thematic.trips.graduacion') }
+    { 
+      key: 'despedida', 
+      title: t('thematic.trips.despedida'),
+      description: t('thematic.trips.despedidaDesc')
+    },
+    { 
+      key: 'bienvenida', 
+      title: t('thematic.trips.bienvenida'),
+      description: t('thematic.trips.bienvenidaDesc')
+    },
+    { 
+      key: 'graduacion', 
+      title: t('thematic.trips.graduacion'),
+      description: t('thematic.trips.graduacionDesc')
+    },
+    { 
+      key: 'familia', 
+      title: t('thematic.trips.familia'),
+      description: t('thematic.trips.familiaDesc')
+    },
+    { 
+      key: 'cumpleanos', 
+      title: t('thematic.trips.cumpleanos'),
+      description: t('thematic.trips.cumpleanosDesc')
+    },
+    { 
+      key: 'pedida', 
+      title: t('thematic.trips.pedida'),
+      description: t('thematic.trips.pedidaDesc')
+    }
   ];
 
   return (
     <div className="thematic-container">
-      <h1 className="thematic-title">{t('thematic.title')}</h1>
-      
-      <div className="thematic-intro">
-        <p>{t('thematic.intro')}</p>
+      {/* Hero Section */}
+      <div className="thematic-hero">
+        <div className="thematic-hero-content">
+          <div className="thematic-brand">
+            <span className="thematic-viajes">VIAJES</span>
+            <div className="thematic-tropical">
+              <img src={logo} alt="Tropical Vitamin" className="thematic-logo" />
+            </div>
+          </div>
+          <p className="thematic-hero-subtitle" dangerouslySetInnerHTML={{ __html: t('thematic.hero.subtitle') }} />
+          <p className="thematic-hero-text" dangerouslySetInnerHTML={{ __html: t('thematic.hero.text') }} />
+        </div>
       </div>
 
+      {/* Cards Grid */}
       <div className="thematic-grid">
         {thematicTrips.map((trip) => (
           <div key={trip.key} className="thematic-card">
-            <div className="thematic-icon">✦</div>
             <h3 className="thematic-card-title">{trip.title}</h3>
-            <p className="thematic-card-desc">{t('thematic.description')}</p>
+            <p className="thematic-card-desc">{trip.description}</p>
             <button className="thematic-btn">{t('thematic.moreInfo')}</button>
           </div>
         ))}
       </div>
 
+      {/* CTA */}
       <div className="thematic-cta">
         <h2>{t('thematic.cta.title')}</h2>
         <p>{t('thematic.cta.subtitle')}</p>

@@ -2,6 +2,11 @@ import { useTranslation } from 'react-i18next';
 import '../../css/transportation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
+import logo from '../../assets/logo.png';
+
+// Hero image from Unsplash (free to use - van/shuttle Mexico)
+const HERO_IMAGE = "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=80";
+
 export default function Transportation() {
   const { t } = useTranslation();
 
@@ -26,10 +31,18 @@ export default function Transportation() {
 
   return (
     <div className="transportation-container">
-      <h1 className="transportation-title">{t('transportation.title')}</h1>
-      
-      <div className="transportation-intro">
-        <p>{t('transportation.intro')}</p>
+      {/* Hero Section */}
+      <div className="transportation-hero">
+        <div className="transportation-hero-content">
+          <div className="transportation-brand">
+            <span className="transportation-title-hero">TRANSPORTACIÓN</span>
+            <div className="transportation-tropical">
+              <img src={logo} alt="Tropical Vitamin" className="transportation-logo" />
+            </div>
+          </div>
+          <p className="transportation-hero-subtitle">{t('transportation.hero.subtitle')}</p>
+          <p className="transportation-hero-text">{t('transportation.intro')}</p>
+        </div>
       </div>
 
       <div className="transportation-grid">

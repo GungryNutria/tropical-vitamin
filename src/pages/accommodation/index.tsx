@@ -2,6 +2,11 @@ import { useTranslation } from 'react-i18next';
 import '../../css/accommodation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
+import logo from '../../assets/logo.png';
+
+// Hero image from Unsplash (free to use - luxury hotel/beach resort)
+const HERO_IMAGE = "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80";
+
 export default function Accommodation() {
   const { t } = useTranslation();
 
@@ -52,10 +57,18 @@ export default function Accommodation() {
 
   return (
     <div className="accommodation-container">
-      <h1 className="accommodation-title">{t('accommodation.title')}</h1>
-      
-      <div className="accommodation-intro">
-        <p>{t('accommodation.intro')}</p>
+      {/* Hero Section */}
+      <div className="accommodation-hero">
+        <div className="accommodation-hero-content">
+          <div className="accommodation-brand">
+            <span className="accommodation-title-hero">HOSPEDAJE</span>
+            <div className="accommodation-tropical">
+              <img src={logo} alt="Tropical Vitamin" className="accommodation-logo" />
+            </div>
+          </div>
+          <p className="accommodation-hero-subtitle">{t('accommodation.hero.subtitle')}</p>
+          <p className="accommodation-hero-text">{t('accommodation.intro')}</p>
+        </div>
       </div>
 
       <div className="accommodation-grid">
