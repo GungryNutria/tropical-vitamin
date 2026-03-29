@@ -9,7 +9,7 @@
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
 }
 
@@ -52,19 +52,42 @@
   color: #0A0A0A;
 }
 
-/* LINKS */
-.footer-links h4 {
+/* LINKS - Sections (same as navbar) */
+.footer-sections h4 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
-.footer-links a {
+.footer-sections a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: var(--text-secondary);
   margin-bottom: 0.6rem;
   font-size: 0.9rem;
-  opacity: 0.9;
+  transition: color 0.25s ease;
+}
+
+.footer-sections a:hover {
+  color: var(--yellow-main);
+}
+
+/* LINKS - Contact */
+.footer-contact h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-contact a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--yellow-main);
 }
 
 /* BOTTOM */

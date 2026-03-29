@@ -2,23 +2,11 @@ import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toursService, type Tour } from '../../services/toursService';
 import '../../css/tours.css';
-import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
 import service1 from "../../assets/services/transportacion.jpg";
-
-const exchangeRates = {
-  MXN: 1,
-  USD: 0.059,
-  EUR: 0.054
-};
-
-const currencies = [
-  { code: 'MXN', symbol: '$', name: 'MXN' },
-  { code: 'USD', symbol: '$', name: 'USD' },
-  { code: 'EUR', symbol: '€', name: 'EUR' }
-];
 
 
 export default function Tours() {
@@ -27,7 +15,7 @@ export default function Tours() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
-  const [currency, setCurrency] = useState<string>('MXN');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   useEffect(() => {
     console.log('Fetching tours, language:', i18n.language);
@@ -58,19 +46,32 @@ export default function Tours() {
     return ['todos', ...Array.from(cats).sort()];
   }, [tours]);
 
-  // Filter tours
+  // Filter tours by category and search
   const filteredTours = useMemo(() => {
-    if (selectedCategory === 'todos') return tours;
-    return tours.filter(tour => 
-      tour.tourTranslations[0]?.category === selectedCategory
-    );
-  }, [tours, selectedCategory]);
-
-  // Convert price
-  const convertPrice = (price: number) => {
-    const converted = price * exchangeRates[currency as keyof typeof exchangeRates];
-    return Math.round(converted);
-  };
+    let filtered = tours;
+    
+    // Filter by category
+    if (selectedCategory !== 'todos') {
+      filtered = filtered.filter(tour => 
+        tour.tourTranslations[0]?.category === selectedCategory
+      );
+    }
+    
+    // Filter by search
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(tour => {
+        const translation = tour.tourTranslations[0];
+        return (
+          translation?.title?.toLowerCase().includes(query) ||
+          translation?.description?.toLowerCase().includes(query) ||
+          tour.location?.toLowerCase().includes(query)
+        );
+      });
+    }
+    
+    return filtered;
+  }, [tours, selectedCategory, searchQuery]);
 
   if (loading) {
     return <div className="tours-loading">{t('tours.loading')}</div>;
@@ -97,36 +98,35 @@ export default function Tours() {
 
       <h1 className="tours-page-title">{t('tours.title')}</h1>
       
-      {/* Currency Selector */}
-      <div className="tours-currency">
-        <label>{t('tours.currency')}: </label>
-        <select 
-          value={currency} 
-          onChange={(e) => setCurrency(e.target.value)}
-          className="currency-select"
+      {/* Search & Filter */}
+      <div className="tours-search-filter">
+        {/* Search */}
+        <div className="tours-search">
+          <FaSearch className="search-icon" />
+          <input
+            type="text"
+            placeholder={t('tours.search.placeholder') || 'Buscar tours...'}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+          />
+        </div>
+        
+        {/* Category Dropdown */}
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="category-select"
         >
-          {currencies.map(curr => (
-            <option key={curr.code} value={curr.code}>
-              {curr.symbol} {curr.code}
+          {categories.map(cat => (
+            <option key={cat} value={cat}>
+              {cat === 'todos' ? t('tours.filter.all') : cat}
             </option>
           ))}
         </select>
       </div>
-      
-      {/* Filter */}
-      <div className="tours-filter">
-        {categories.map(cat => (
-          <button
-            key={cat}
-            className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(cat)}
-          >
-            {cat === 'todos' ? t('tours.filter.all') : cat}
-          </button>
-        ))}
-      </div>
 
-      <p className="tours-count">{filteredTours.length} {t('tours.count')}</p>
+      {/* <p className="tours-count">{filteredTours.length} {t('tours.count')}</p> */}
 
       <div className="tours-grid">
         {filteredTours.map((tour) => {
@@ -147,12 +147,6 @@ export default function Tours() {
                 <div className="tour-info">
                   <span className="tour-location"><FaMapMarkerAlt /> {tour.location}</span>
                   <span className="tour-duration"><FaClock /> {translation?.duration}</span>
-                </div>
-                <div className="tour-price">
-                  <span className="price-label">{t('tours.price.label')}</span>
-                  <span className="price-value">
-                    {currencies.find(c => c.code === currency)?.symbol}{convertPrice(tour.price)}
-                  </span>
                 </div>
                 <button className="tour-button">{t('tours.book')}</button>
               </div>

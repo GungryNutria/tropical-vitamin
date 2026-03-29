@@ -98,6 +98,9 @@
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
+    "search": {
+      "placeholder": "Buscar tours..."
+    },
     "filter": {
       "all": "Todos"
     },
@@ -290,6 +293,7 @@
   "footer": {
     "description": "Disenamos experiencias autenticas en la Riviera Maya, combinando organizacion europea con calidez mexicana.",
     "information": "Informacion",
+    "contact": "Contacto",
     "legal": "Legal",
     "privacy": "Aviso de Privacidad",
     "rights": "Todos los derechos reservados."

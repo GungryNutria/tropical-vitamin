@@ -63,10 +63,12 @@
 
 .cta-hero {
   background: var(--yellow-main);
-  color: #0A0A0A;
+  color: #0A0A0A !important;
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hamburger {

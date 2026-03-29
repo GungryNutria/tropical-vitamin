@@ -30,8 +30,8 @@ function Footer() {
                     </div>
                 </div>
 
-                {/* LINKS */}
-                <div className="footer-links">
+                {/* SECTIONS - Same as navbar */}
+                <div className="footer-sections">
                     <h4>{t('footer.information')}</h4>
                     <NavLink to="/transportacion">{t('nav.transportacion')}</NavLink>
                     <NavLink to="/hospedaje">{t('nav.hospedaje')}</NavLink>
@@ -40,16 +40,12 @@ function Footer() {
                     <NavLink to="/tematicos">{t('nav.tematicos')}</NavLink>
                 </div>
 
-                {/* POLICIES */}
-                <div className="footer-links">
-                    <h4>{t('footer.legal')}</h4>
-                    <a
-                        href="/policies/aviso-privacidad.pdf"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        {t('footer.privacy')}
-                    </a>
+                {/* CONTACT */}
+                <div className="footer-contact">
+                    <h4>{t('footer.contact')}</h4>
+                    <a href="tel:+529841681263">+52 984 168 1263</a>
+                    <a href="mailto:info@tropicalvitamin.com">info@tropicalvitamin.com</a>
+                    <NavLink to="/contacto">{t('nav.contacto')}</NavLink>
                 </div>
 
             </div>
