@@ -1,6 +1,6 @@
 .history {
   padding: 6rem 4rem;
-  background: linear-gradient(135deg, var(--blue-caribbean) 0%, #0a4d5c 100%);
+  background: var(--bg-main);
   position: relative;
   overflow: hidden;
 }
@@ -56,16 +56,18 @@
 }
 
 .history-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: var(--glass-blur);
 }
 
 .history-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .history-card.icon-card {
@@ -78,12 +80,12 @@
 
 .history-card.icon-card svg {
   font-size: 3rem;
-  color: var(--green-main);
+  color: var(--yellow-main);
   margin-bottom: 1rem;
 }
 
 .history-card.icon-card h3 {
-  color: var(--green-main);
+  color: var(--text-main);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
@@ -101,7 +103,7 @@
 }
 
 .history-card.text-card p {
-  color: var(--text-dark);
+  color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;
   text-align: justify;
@@ -110,20 +112,21 @@
 
 /* Mission card highlight */
 .history-card.mission {
-  background: linear-gradient(135deg, var(--green-main) 0%, #2d8a6e 100%);
+  background: var(--glass-bg);
+  border: 1px solid var(--yellow-main);
   grid-column: span 2;
   text-align: center;
   padding: 3rem;
 }
 
 .history-card.mission h3 {
-  color: white;
+  color: var(--yellow-main);
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .history-card.mission p {
-  color: rgba(255,255,255,0.95);
+  color: var(--text-main);
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 1px;

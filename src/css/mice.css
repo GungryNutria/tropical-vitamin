@@ -1,12 +1,12 @@
 .mice-container {
   padding: 0;
   min-height: 100vh;
-  background: var(--sand-light);
+  background: var(--bg-main);
 }
 
 /* Hero Section */
 .mice-hero {
-  background: linear-gradient(135deg, rgba(0,41,32,0.4) 0%, rgba(13,61,42,0.5) 100%), url(../assets/mice-hero.jpg);
+  background: linear-gradient(135deg, rgba(10,10,10,0.8) 0%, rgba(20,20,20,0.9) 100%), url(../assets/mice-hero.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -25,10 +25,11 @@
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(0,0,0,0.3);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   padding: 2rem;
   border-radius: 20px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--glass-blur);
 }
 
 .mice-brand {
@@ -42,9 +43,9 @@
 .mice-grupos {
   font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 900;
-  color: white;
+  color: var(--yellow-main);
   letter-spacing: 0.15em;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
   line-height: 1;
 }
 
@@ -61,22 +62,20 @@
 
 .mice-hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: white;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-style: italic;
   line-height: 1.6;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .mice-hero-text {
   font-size: 1rem;
-  color: rgba(255,255,255,0.9);
+  color: var(--text-secondary);
   line-height: 1.8;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .mice-hero-text strong {
-  color: #F4B942;
+  color: var(--yellow-main);
 }
 
 /* Grid */
@@ -96,16 +95,18 @@
 
 /* Card */
 .mice-card {
-  background: white;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
   min-height: 320px;
+  backdrop-filter: var(--glass-blur);
 }
 
 .mice-card::before {
@@ -115,7 +116,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--green-main), #F4B942);
+  background: linear-gradient(90deg, var(--yellow-main), var(--yellow-soft));
 }
 
 .mice-card::after {
@@ -129,16 +130,16 @@
 
 .mice-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
 .mice-card-title {
   font-size: 1.4rem;
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 1rem;
   font-weight: 700;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--glass-border);
   position: relative;
 }
 
@@ -149,12 +150,12 @@
   left: 0;
   width: 60px;
   height: 2px;
-  background: #F4B942;
+  background: var(--yellow-main);
 }
 
 .mice-card-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
   flex: 1;
@@ -162,9 +163,9 @@
 }
 
 .mice-btn {
-  background: linear-gradient(135deg, var(--green-main), #0d3d2a);
+  background: var(--yellow-main);
   border: none;
-  color: white;
+  color: #0A0A0A;
   padding: 0.85rem 1.75rem;
   border-radius: 10px;
   font-weight: 600;
@@ -177,15 +178,15 @@
 }
 
 .mice-btn:hover {
-  background: linear-gradient(135deg, #0d3d2a, var(--green-main));
   transform: scale(1.02);
-  box-shadow: 0 5px 20px rgba(0, 61, 42, 0.3);
+  box-shadow: 0 5px 20px rgba(244, 185, 66, 0.3);
 }
 
 /* CTA */
 .mice-cta {
   text-align: center;
-  background: linear-gradient(135deg, var(--green-main), #0d3d2a);
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
   padding: 3rem 2rem;
   margin: -2rem auto 4rem;
   max-width: 700px;
@@ -194,30 +195,31 @@
 
 .mice-cta h2 {
   font-size: 1.6rem;
-  color: white;
+  color: var(--text-main);
   margin-bottom: 0.5rem;
 }
 
 .mice-cta p {
   font-size: 1rem;
-  color: rgba(255,255,255,0.8);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .mice-contact-btn {
-  background: #F4B942;
-  color: #1a1a1a;
+  background: var(--yellow-main);
+  color: #0A0A0A;
   border: none;
   padding: 1rem 2rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .mice-contact-btn:hover {
-  background: #e5a93a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 185, 66, 0.3);
 }
 
 /* Mobile */

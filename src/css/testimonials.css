@@ -1,6 +1,6 @@
 .testimonials {
   padding: 6rem 4rem;
-  background: white;
+  background: var(--bg-main);
 }
 
 .testimonials-container {
@@ -11,7 +11,7 @@
 .testimonials-title {
   text-align: center;
   font-size: clamp(2rem, 4vw, 2.5rem);
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 3rem;
 }
 
@@ -22,15 +22,17 @@
 }
 
 .testimonial-card {
-  background: var(--sand-light);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   padding: 2rem;
   border-radius: 20px;
   position: relative;
+  backdrop-filter: var(--glass-blur);
 }
 
 .testimonial-quote {
-  color: var(--green-main);
-  opacity: 0.3;
+  color: var(--yellow-main);
+  opacity: 0.5;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -49,12 +51,12 @@
 }
 
 .testimonial-rating svg {
-  color: #ffc107;
+  color: var(--yellow-main);
   font-size: 0.9rem;
 }
 
 .testimonial-author h4 {
-  color: var(--green-main);
+  color: var(--text-main);
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }

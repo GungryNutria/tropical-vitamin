@@ -1,6 +1,6 @@
 .faq {
   padding: 6rem 4rem;
-  background: var(--sand-light);
+  background: var(--bg-main);
 }
 
 .faq-container {
@@ -11,7 +11,7 @@
 .faq-title {
   text-align: center;
   font-size: clamp(2rem, 4vw, 2.5rem);
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 3rem;
 }
 
@@ -22,16 +22,18 @@
 }
 
 .faq-item {
-  background: white;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
+  backdrop-filter: var(--glass-blur);
 }
 
 .faq-item:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .faq-question {
@@ -40,11 +42,11 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  color: var(--green-main);
+  color: var(--text-main);
 }
 
 .faq-question svg {
-  color: var(--orange-sunset);
+  color: var(--yellow-main);
   font-size: 0.9rem;
 }
 

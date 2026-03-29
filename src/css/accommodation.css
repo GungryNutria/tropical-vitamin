@@ -1,12 +1,12 @@
 .accommodation-container {
   padding: 0;
   min-height: 100vh;
-  background: var(--sand-light);
+  background: var(--bg-main);
 }
 
 /* Hero Section */
 .accommodation-hero {
-  background: linear-gradient(135deg, rgba(0,41,32,0.4) 0%, rgba(13,61,42,0.5) 100%), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80');
+  background: linear-gradient(135deg, rgba(10,10,10,0.8) 0%, rgba(20,20,20,0.9) 100%), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,10 +26,11 @@
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(0,0,0,0.3);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   padding: 2rem;
   border-radius: 20px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--glass-blur);
 }
 
 .accommodation-brand {
@@ -43,9 +44,9 @@
 .accommodation-title-hero {
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 900;
-  color: white;
+  color: var(--yellow-main);
   letter-spacing: 0.1em;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
   line-height: 1;
 }
 
@@ -62,25 +63,23 @@
 
 .accommodation-hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: white;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   font-style: italic;
   line-height: 1.6;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .accommodation-hero-text {
   font-size: 1rem;
-  color: rgba(255,255,255,0.9);
+  color: var(--text-secondary);
   line-height: 1.8;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 /* Page Title (after hero) */
 .accommodation-page-title {
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 2rem;
   padding: 0 2rem;
 }
@@ -88,7 +87,7 @@
 .accommodation-title {
   text-align: center;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 2rem;
 }
 
@@ -113,16 +112,17 @@
 }
 
 .accommodation-card {
-  background: white;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 2.5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(0, 41, 20, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  backdrop-filter: var(--glass-blur);
 }
 
 .accommodation-card::before {
@@ -132,12 +132,12 @@
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, var(--green-main), var(--green-secondary));
+  background: linear-gradient(90deg, var(--yellow-main), var(--yellow-soft));
 }
 
 .accommodation-card-title {
   font-size: 1.5rem;
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -152,14 +152,15 @@
 .accommodation-features {
   text-align: left;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--blue-caribbean), #e8fcfc);
+  background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 16px;
+  border: 1px solid var(--glass-border);
 }
 
 .accommodation-features h3 {
   font-size: 0.9rem;
-  color: var(--green-main);
+  color: var(--yellow-main);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -178,8 +179,8 @@
 }
 
 .accommodation-btn {
-  background: linear-gradient(135deg, var(--green-main), var(--green-secondary));
-  color: white;
+  background: var(--yellow-main);
+  color: #0A0A0A;
   border: none;
   padding: 1rem 2rem;
   border-radius: 14px;
@@ -187,13 +188,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 41, 20, 0.25);
+  box-shadow: 0 4px 15px rgba(244, 185, 66, 0.25);
   margin-top: auto;
 }
 
 .accommodation-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 41, 20, 0.35);
+  box-shadow: 0 6px 20px rgba(244, 185, 66, 0.35);
 }
 
 /* Destinations */
@@ -201,11 +202,12 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 2%;
 }
 
 .destinations-title {
   font-size: 1.8rem;
-  color: var(--green-main);
+  color: var(--text-main);
   margin-bottom: 1.5rem;
 }
 
@@ -217,20 +219,23 @@
 }
 
 .destination-tag {
-  background: white;
-  color: var(--green-main);
+  background: var(--glass-bg);
+  color: var(--text-main);
   padding: 0.875rem 1.75rem;
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 500;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 41, 20, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
+  backdrop-filter: var(--glass-blur);
 }
 
 .destination-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 41, 20, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: var(--yellow-main);
+  color: #0A0A0A;
 }
 
 /* Mobile */

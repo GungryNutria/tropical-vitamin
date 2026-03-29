@@ -1,6 +1,8 @@
 .stats {
   padding: 4rem 4rem;
-  background: linear-gradient(135deg, var(--green-main), var(--green-secondary));
+  background: var(--bg-card);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .stats-container {

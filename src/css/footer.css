@@ -1,7 +1,8 @@
 .footer {
-  background: var(--green-main);
-  color: white;
+  background: var(--bg-card);
+  color: var(--text-main);
   padding: 4rem 4rem 2rem;
+  border-top: 1px solid var(--glass-border);
 }
 
 .footer-wrapper {
@@ -34,17 +35,21 @@
 .footer-socials a {
   width: 38px;
   height: 38px;
-  background: white;
-  color: var(--green-main);
+  background: var(--glass-bg);
+  color: var(--yellow-main);
+  border: 1px solid var(--glass-border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
+  transition: all 0.25s ease;
+  backdrop-filter: var(--glass-blur);
 }
 
 .footer-socials a:hover {
   transform: translateY(-3px);
+  background: var(--yellow-main);
+  color: #0A0A0A;
 }
 
 /* LINKS */
