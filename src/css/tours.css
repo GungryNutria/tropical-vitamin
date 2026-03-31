@@ -69,6 +69,15 @@
   line-height: 1.6;
 }
 
+.tours-hero-text {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Page Title (after hero) */
 .tours-page-title {
   text-align: center;

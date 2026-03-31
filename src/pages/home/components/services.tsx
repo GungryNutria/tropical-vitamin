@@ -5,12 +5,11 @@ import { useFadeUp } from "../../../hooks/useFadeUp";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import service1 from "../../../assets/services/transportacion.jpg";
 import service2 from "../../../assets/services/hospedaje.jpg";
 import service3 from "../../../assets/services/tours.jpg";
 import service4 from "../../../assets/services/convenciones.jpg";
 import service5 from "../../../assets/services/tematicos.jpg";
-
-const transportImage = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80";
 
 
 
@@ -23,7 +22,7 @@ function Services() {
     {
       title: t('home.services.cards.transportation'),
       desc: t('home.services.cards.transportationDesc'),
-      img: transportImage,
+      img: service1,
       path: '/transportacion',
     },
     {
@@ -54,7 +53,10 @@ function Services() {
 
   return (
     <section id="servicios" className="services">
-      <h2 className="fade-up">{t('home.services.title')}</h2>
+      <h2 className="section-title fade-up">
+        <span className="title-accent"></span>
+        {t('home.services.title')}
+      </h2>
       <p className="services-intro fade-up">
         {t('home.services.subtitle')}
       </p>

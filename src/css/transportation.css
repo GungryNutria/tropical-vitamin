@@ -252,3 +252,229 @@
     padding: 0 1rem 2rem;
   }
 }
+
+/* Units Section */
+.transport-units {
+  padding: 4rem 2rem;
+  background: var(--bg-main);
+  text-align: center;
+}
+
+.transport-section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.transport-units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transport-unit-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.transport-unit-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--yellow-main);
+  box-shadow: 0 10px 30px rgba(244, 185, 66, 0.2);
+}
+
+.transport-unit-icon {
+  font-size: 2.5rem;
+}
+
+.transport-unit-name {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Segments Section */
+.transport-segments {
+  padding: 4rem 2rem;
+  background: var(--bg-main);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transport-segment-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.transport-segment-tab {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 1.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.transport-segment-tab:hover {
+  border-color: var(--yellow-main);
+  color: var(--yellow-main);
+}
+
+.transport-segment-tab.active {
+  background: var(--yellow-main);
+  border-color: var(--yellow-main);
+  color: #0A0A0A;
+}
+
+.transport-segment-content {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.transport-segment-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.transport-segment-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.transport-segment-options h4 {
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.transport-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.transport-option-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.transport-option-item:hover {
+  border-color: var(--yellow-main);
+  background: rgba(244, 185, 66, 0.1);
+  cursor: pointer;
+}
+
+.transport-option-item.active {
+  border-color: var(--yellow-main);
+  background: rgba(244, 185, 66, 0.2);
+  box-shadow: 0 0 15px rgba(244, 185, 66, 0.3);
+}
+
+.transport-service-selection {
+  margin-bottom: 2rem;
+}
+
+.transport-service-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.transport-service-btn {
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid var(--yellow-main);
+  color: var(--yellow-main);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transport-service-btn:hover,
+.transport-service-btn.active {
+  background: var(--yellow-main);
+  color: #0A0A0A;
+}
+
+.transport-type-selection {
+  margin-bottom: 2rem;
+}
+
+.transport-type-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.transport-type-btn {
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid var(--yellow-main);
+  color: var(--yellow-main);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transport-type-btn:hover {
+  background: var(--yellow-main);
+  color: #0A0A0A;
+}
+
+.transport-type-btn.active {
+  background: var(--yellow-main);
+  color: #0A0A0A;
+  box-shadow: 0 4px 15px rgba(244, 185, 66, 0.4);
+}
+
+.transport-quote-btn {
+  background: var(--yellow-main);
+  border: none;
+  color: #0A0A0A;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transport-quote-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(244, 185, 66, 0.4);
+}

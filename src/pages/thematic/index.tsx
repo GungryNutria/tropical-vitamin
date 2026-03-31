@@ -45,7 +45,7 @@ export default function Thematic() {
       <div className="thematic-hero">
         <div className="thematic-hero-content">
           <div className="thematic-brand">
-            <span className="thematic-viajes">VIAJES</span>
+            <span className="thematic-viajes">{t('thematic.hero.title')}</span>
             <div className="thematic-tropical">
               <img src={logo} alt="Tropical Vitamin" className="thematic-logo" />
             </div>

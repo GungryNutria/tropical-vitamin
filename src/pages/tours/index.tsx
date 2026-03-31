@@ -93,6 +93,7 @@ export default function Tours() {
             </div>
           </div>
           <p className="tours-hero-subtitle">{t('tours.hero.subtitle')}</p>
+          <p className="tours-hero-text">{t('tours.intro')}</p>
         </div>
       </div>
 

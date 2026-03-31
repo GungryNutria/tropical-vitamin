@@ -31,7 +31,10 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="testimonials-container">
-        <h2 className="testimonials-title">{t('home.testimonials.title')}</h2>
+        <h2 className="section-title">
+          <span className="title-accent"></span>
+          {t('home.testimonials.title')}
+        </h2>
         
         <div className="testimonials-grid">
           {testimonials.map((testimonial) => (

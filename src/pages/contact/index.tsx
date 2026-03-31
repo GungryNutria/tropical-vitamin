@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../../css/contact-page.css";
-import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
+import { FaAt, FaFacebookF, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 import WhatsappFloat from "../../components/whatsappFloat";
@@ -65,22 +65,30 @@ function ContactPage() {
                         <div className="contact-page-detail">
                             <FaLocationDot className="contact-page-icon" />
                             <div>
-                                <h4>{t('contact.info.location')}</h4>
-                                <p>{t('contact.info.locationValue')}</p>
+                                <h4>{t('contact.info.mexico')}</h4>
+                                <p>{t('contact.info.mexicoLocation')}</p>
+                            </div>
+                        </div>
+                        <div className="contact-page-detail">
+                            <FaLocationDot className="contact-page-icon" />
+                            <div>
+                                <h4>{t('contact.info.netherlands')}</h4>
+                                <p>{t('contact.info.netherlandsLocation')}</p>
                             </div>
                         </div>
                         <div className="contact-page-detail">
                             <FaPhone className="contact-page-icon" />
                             <div>
                                 <h4>{t('contact.info.phone')}</h4>
-                                <p>+52 984 168 1263</p>
+                                <p>{t('contact.info.mexicoPhone')}</p>
+                                <p>{t('contact.info.netherlandsPhone')}</p>
                             </div>
                         </div>
                         <div className="contact-page-detail">
                             <FaAt className="contact-page-icon" />
                             <div>
                                 <h4>{t('contact.info.email')}</h4>
-                                <p>contacto@tropicalvitamin.com</p>
+                                <p>contacto@tropical-vitamin.com</p>
                             </div>
                         </div>
                     </div>
@@ -92,8 +100,8 @@ function ContactPage() {
                         <a href="https://instagram.com" target="_blank" className="social-link">
                             <FaInstagram /> Instagram
                         </a>
-                        <a href="https://tiktok.com" target="_blank" className="social-link">
-                            <FaTiktok /> TikTok
+                        <a href="https://linkedin.com" target="_blank" className="social-link">
+                            <FaLinkedin /> LinkedIn
                         </a>
                     </div>
 

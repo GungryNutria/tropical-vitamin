@@ -4,13 +4,13 @@
     "transportacion": "Transportation",
     "hospedaje": "Accommodation",
     "tours": "Tours & Experiences",
-    "mice": "MICE",
+    "mice": "MICE Groups",
     "tematicos": "Thematic Trips",
     "contacto": "Contact Us"
   },
   "home": {
     "hero": {
-      "title": "Travel as a guest, not as a tourist",
+      "title": "Creating authentically memorable experiences",
       "subtitle": "The Riviera Maya awaits you with unique experiences",
       "cta": "Plan your trip"
     },
@@ -24,7 +24,19 @@
       },
       "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
       "missionTitle": "Our Mission",
-      "missionText": "Not to make clients, but FRIENDS. My House Is Your House."
+      "missionText": "Not to make clients, but FRIENDS. My House Is Your House.",
+      "visionTitle": "Our Vision",
+      "visionText": "To be the most reliable and beloved tourism experiences company in the Riviera Maya.",
+      "values": {
+        "humanTreatment": "Human Treatment",
+        "humanTreatmentDesc": "Personalized and warm treatment",
+        "passion": "Passion",
+        "passionDesc": "Love for showing the best of Mexico",
+        "excellence": "Excellence",
+        "excellenceDesc": "Quality in every detail of your experience",
+        "community": "Community",
+        "communityDesc": "Building memories together"
+      }
     },
     "services": {
       "title": "Our Services",
@@ -87,14 +99,15 @@
     },
     "cta": {
       "title": "Plan your experience in the Riviera Maya",
-      "subtitle": "Travel as a guest, not as a tourist. We take care of everything.",
+      "subtitle": "Don't worry about your trip, we take care of everything",
       "button": "Talk via WhatsApp"
     }
   },
   "tours": {
     "hero": {
-      "subtitle": "Aquatic, archaeological, theme parks and more."
+      "subtitle": "We have the best options, recommendations and personalized experiences for your trip."
     },
+    "intro": "We perfectly understand the objective of each experience so we know our segmentation of the best tours and Experiences. \"We make your experiences authentically memorable\"",
     "title": "Tours",
     "loading": "Loading tours...",
     "error": "Error loading tours",
@@ -128,12 +141,13 @@
   "transportation": {
     "title": "Transportation Service",
     "hero": {
+      "title": "TRANSPORTATION",
       "subtitle": "Airport, point to point and open service."
     },
-    "intro": "We have new units in optimal conditions, with air conditioning and professional drivers that guarantee a comfortable and safe trip.",
+    "intro": "We have new units in optimal conditions, both for conventional and high-end services. Each transportation service we offer adapts perfectly to each travel need, thus positioning ourselves in the market with a comfortable, safe and functional service.",
     "airport": {
-      "title": "Airport - Hotel Transportation",
-      "subtitle": "Playa del Carmen, Cancun, Tulum, Riviera Maya",
+      "title": "Airport Transportation",
+      "subtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
       "description": "Open service so you can organize your own itinerary"
     },
     "options": {
@@ -145,26 +159,51 @@
     },
     "type": {
       "title": "Service type:",
-      "oneWay": "One way",
+      "oneWay": "One Way",
       "roundTrip": "Round Trip"
     },
-    "quote": "Request Quote"
+    "quote": "Request Quote",
+    "units": {
+      "title": "Our Units"
+    },
+    "segments": {
+      "optionsTitle": "Service Options",
+      "airport": "AIRPORT TRANSPORTATION",
+      "airportSubtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
+      "airportOpt1": "Cancun Airport",
+      "airportOpt2": "Tulum Airport",
+      "airportOpt3": "Cozumel Airport",
+      "point": "POINT TO POINT TRANSPORTATION",
+      "pointSubtitle": "Your itinerary, your time",
+      "pointOpt1": "Cancun",
+      "pointOpt2": "Playa del Carmen",
+      "pointOpt3": "Tulum",
+      "pointOpt4": "Riviera Maya",
+      "pointOpt5": "Yucatan Peninsula",
+      "open": "OPEN SERVICE TRANSPORTATION",
+      "openSubtitle": "Create your own trip",
+      "openOpt1": "4 HRS",
+      "openOpt2": "6 HRS",
+      "openOpt3": "8 HRS",
+      "openOpt4": "10 HRS",
+      "openOpt5": "12 HRS"
+    }
   },
   "accommodation": {
     "hero": {
-      "subtitle": "Hotels, homes and condos in the Riviera Maya."
+      "subtitle": "Accommodation in private property / Accommodation in Standard Hotels / Accommodation in All Inclusive Hotel"
     },
     "title": "Accommodation Service",
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
     "types": {
-      "houses": "Accommodation in Houses",
-      "hotels": "Hotel Accommodation",
-      "condos": "Condo Accommodation"
+      "houses": "PRIVATE PROPERTY ACCOMMODATION",
+      "hotels": "STANDARD HOTEL ACCOMMODATION",
+      "condos": "ALL INCLUSIVE HOTEL ACCOMMODATION"
     },
     "features": {
-      "houses": "Experience a unique stay in authentic local homes.",
-      "hotels": "3-star or higher hotels with full services.",
-      "condos": "Spacious spaces equipped for families or groups.",
+      "houses": "Experience privacy in your own space in the tropical paradise, with the best location and amenities that will make you feel at home",
+      "hoteles": "If you're looking for a comfortable, authentic, affordable and functional place, this is the best option with breakfast included, pool and incredible roof. Discover this central and unmatched option that will optimize your experience in the Mexican Caribbean",
+      "condos": "If you're looking to pamper yourself and relax in an All Inclusive, this option is for you. We have the best options and advice according to your travel needs and objectives. Check out the recommendations we have for you.",
       "directHost": "Direct contact with hosts",
       "cultural": "Cultural experience",
       "comfort": "Home comfort",
@@ -185,6 +224,7 @@
     "title": "Groups & Conventions",
     "intro": "We organize corporate events, conventions and MICE tourism with the highest quality standards.",
     "subtitle": "We take care of every detail so your event is a success.",
+    "moreInfo": "Contact executive",
     "hero": {
       "subtitle": "We know that all groups are different and with different planning and objectives.",
       "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Don't worry, leave it in our hands!</strong>"
@@ -205,7 +245,6 @@
       "deportivos": "Sports Groups",
       "deportivosDesc": "We help you carry out your tournaments and manage your or the attending teams for sports coordination."
     },
-    "moreInfo": "More information",
     "cta": {
       "title": "Planning a corporate event?",
       "subtitle": "Contact us and we'll help you organize it",
@@ -216,6 +255,7 @@
     "title": "Thematic Trips Service",
     "intro": "Celebrate your special moments with unique and unforgettable experiences in the Riviera Maya.",
     "hero": {
+      "title": "THEMATIC TRIPS",
       "subtitle": "Every special moment and celebration deserves that detail that makes it unique.",
       "text": "At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of each specialized event.<br/><strong>Let us help you with your celebration!</strong>"
     },
@@ -248,7 +288,13 @@
       "location": "Location",
       "locationValue": "Riviera Maya, Mexico",
       "phone": "Phone",
-      "email": "Email"
+      "email": "Email",
+      "mexico": "Mexico",
+      "netherlands": "Netherlands",
+      "mexicoLocation": "Riviera Maya, Quintana Roo",
+      "netherlandsLocation": "Amsterdam",
+      "mexicoPhone": "+52 984 168 1263 (Mexico)",
+      "netherlandsPhone": "+31 20 123 4567 (Netherlands)"
     },
     "form": {
       "title": "Send us a message",
@@ -294,6 +340,11 @@
   "footer": {
     "description": "We design authentic experiences in the Riviera Maya, combining European organization with Mexican warmth.",
     "information": "Information",
+    "registros": "Registers & Permits",
+    "privacy": "Privacy policies",
+    "cancellations": "Reservations & cancellations",
+    "sitePolicies": "Site policies",
+    "sitemap": "Sitemap",
     "contact": "Contact",
     "legal": "Legal",
     "privacy": "Privacy Notice",

@@ -105,10 +105,16 @@
 
 .accommodation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+  align-items: stretch;
+  background: transparent;
+  border-radius: 0;
 }
 
 .accommodation-card {
@@ -125,21 +131,55 @@
   backdrop-filter: var(--glass-blur);
 }
 
+.accommodation-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 450px;
+}
+
 .accommodation-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
+  height: 4px;
   background: linear-gradient(90deg, var(--yellow-main), var(--yellow-soft));
 }
 
+.accommodation-card::after {
+  content: '🏨';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  opacity: 1;
+  filter: grayscale(0) brightness(1.5);
+}
+
+.accommodation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
 .accommodation-card-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--text-main);
   margin-bottom: 1rem;
   font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--glass-border);
+  position: relative;
+  text-align: left;
+}
+
+.accommodation-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--yellow-main);
 }
 
 .accommodation-card-desc {
@@ -147,6 +187,7 @@
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  text-align: left;
 }
 
 .accommodation-features {
@@ -180,16 +221,23 @@
 
 .accommodation-btn {
   background: var(--yellow-main);
-  color: #0A0A0A;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 14px;
-  font-size: 1rem;
+  color: #0A0A0A;
+  padding: 0.85rem 1.75rem;
+  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(244, 185, 66, 0.25);
+  align-self: stretch;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
   margin-top: auto;
+}
+
+.accommodation-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(244, 185, 66, 0.3);
 }
 
 .accommodation-btn:hover {
@@ -221,9 +269,9 @@
 .destination-tag {
   background: var(--glass-bg);
   color: var(--text-main);
-  padding: 0.875rem 1.75rem;
-  border-radius: 30px;
-  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--glass-border);

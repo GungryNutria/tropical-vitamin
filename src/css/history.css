@@ -32,26 +32,38 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 5rem;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
 
 /* LEFT - Content */
-.history-content h2 {
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section Title */
+.section-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: white;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.title-accent {
+  width: 6px;
+  height: clamp(2rem, 4vw, 3rem);
+  background: var(--yellow-main);
+  border-radius: 3px;
 }
 
 /* Cards Grid */
 .history-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -70,33 +82,7 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.history-card.icon-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2.5rem 1.5rem;
-}
-
-.history-card.icon-card svg {
-  font-size: 3rem;
-  color: var(--yellow-main);
-  margin-bottom: 1rem;
-}
-
-.history-card.icon-card h3 {
-  color: var(--text-main);
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.history-card.icon-card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
+/* Description Card */
 .history-card.text-card {
   grid-column: span 2;
   padding: 2.5rem;
@@ -106,77 +92,81 @@
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;
-  text-align: justify;
   margin: 0;
 }
 
-/* Mission card highlight */
-.history-card.mission {
-  background: var(--glass-bg);
-  border: 1px solid var(--yellow-main);
+/* Mission & Vision Cards */
+.history-card.mission-card,
+.history-card.vision-card {
   grid-column: span 2;
-  text-align: center;
-  padding: 3rem;
+  background: linear-gradient(135deg, rgba(244, 185, 66, 0.1) 0%, rgba(244, 185, 66, 0.05) 100%);
+  border: 1px solid rgba(244, 185, 66, 0.3);
 }
 
-.history-card.mission h3 {
+.history-card.mission-card h3,
+.history-card.vision-card h3 {
   color: var(--yellow-main);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
-.history-card.mission p {
+.history-card.mission-card p,
+.history-card.vision-card p {
   color: var(--text-main);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* RIGHT - Collage */
-.history-collage {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 150px);
-  gap: 12px;
+/* Value Cards */
+.history-card.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.75rem;
 }
 
-.history-collage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+.history-card.value-card h3 {
+  color: var(--text-main);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
-.history-collage img:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
+.history-card.value-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* MOBILE */
 @media (max-width: 1100px) {
-  .history-wrapper {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .history {
     padding: 4rem 2rem;
   }
 
   .history-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-card.text-card,
+  .history-card.mission-card,
+  .history-card.vision-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-cards {
     grid-template-columns: 1fr;
   }
 
   .history-card.text-card,
-  .history-card.mission {
+  .history-card.mission-card,
+  .history-card.vision-card {
     grid-column: span 1;
-  }
-
-  .history-collage {
-    max-width: 500px;
-    margin: 0 auto;
-    grid-template-rows: repeat(3, 140px);
   }
 }

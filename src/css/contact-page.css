@@ -157,6 +157,13 @@
   background: var(--glass-bg);
 }
 
+/* Select dropdown options */
+.contact-page-form select option {
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 0.5rem;
+}
+
 .contact-page-form input::placeholder,
 .contact-page-form textarea::placeholder {
   color: var(--text-muted);

@@ -9,7 +9,7 @@
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
 }
 
@@ -68,6 +68,25 @@
 }
 
 .footer-sections a:hover {
+  color: var(--yellow-main);
+}
+
+/* REGISTROS / LEGAL */
+.footer-legal h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-legal a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
   color: var(--yellow-main);
 }
 

@@ -15,6 +15,25 @@
   margin-bottom: 3rem;
 }
 
+/* Section Title Style */
+.faq h2.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: white !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.faq .title-accent {
+  width: 6px;
+  height: clamp(2rem, 4vw, 3rem);
+  background: var(--yellow-main);
+  border-radius: 3px;
+}
+
 .faq-list {
   display: flex;
   flex-direction: column;

@@ -2,6 +2,44 @@
   padding: 6rem 4rem;
   background: var(--bg-main);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.35) 0%,
+    rgba(10, 10, 10, 0.55) 100%
+  ), url('../assets/services-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.services > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title Style */
+.services h2.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: white !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.services .title-accent {
+  width: 6px;
+  height: clamp(2rem, 4vw, 3rem);
+  background: var(--yellow-main);
+  border-radius: 3px;
 }
 
 .services h2 {

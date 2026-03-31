@@ -32,7 +32,10 @@ export default function FAQ() {
   return (
     <section className="faq">
       <div className="faq-container">
-        <h2 className="faq-title">{t('home.faq.title')}</h2>
+        <h2 className="section-title">
+          <span className="title-accent"></span>
+          {t('home.faq.title')}
+        </h2>
         
         <div className="faq-list">
           {faqs.map((faq, idx) => (

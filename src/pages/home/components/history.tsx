@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../../../css/history.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
-import historyImg from "../../../assets/history.jpg";
-import { FaHandshake, FaHeart } from "react-icons/fa";
 
 function History() {
   const { t } = useTranslation();
@@ -14,42 +12,50 @@ function History() {
 
         {/* LEFT CONTENT */}
         <div className="history-content">
-          <h2 className="fade-up">{t('home.history.title')}</h2>
+          <h2 className="section-title fade-up">
+            <span className="title-accent"></span>
+            {t('home.history.title')}
+          </h2>
 
           <div className="history-cards">
-            {/* Icon Cards Row */}
-            <div className="history-card icon-card fade-up fade-delay-1">
-              <FaHandshake />
+            {/* Description Card */}
+            <div className="history-card text-card fade-up fade-delay-1">
+              <p>{t('home.history.description')}</p>
+            </div>
+
+            {/* Mission Card */}
+            <div className="history-card mission-card fade-up fade-delay-2">
+              <h3>{t('home.history.missionTitle')}</h3>
+              <p>{t('home.history.missionText')}</p>
+            </div>
+
+            {/* Vision Card */}
+            <div className="history-card vision-card fade-up fade-delay-3">
+              <h3>{t('home.history.visionTitle')}</h3>
+              <p>{t('home.history.visionText')}</p>
+            </div>
+
+            {/* Values Cards */}
+            <div className="history-card value-card fade-up fade-delay-4">
               <h3>{t('home.history.values.humanTreatment')}</h3>
               <p>{t('home.history.values.humanTreatmentDesc')}</p>
             </div>
 
-            <div className="history-card icon-card fade-up fade-delay-2">
-              <FaHeart />
+            <div className="history-card value-card fade-up fade-delay-5">
               <h3>{t('home.history.values.passion')}</h3>
               <p>{t('home.history.values.passionDesc')}</p>
             </div>
 
-            {/* Main Text Card */}
-            <div className="history-card text-card fade-up fade-delay-3">
-              <p>{t('home.history.description')}</p>
+            <div className="history-card value-card fade-up fade-delay-6">
+              <h3>{t('home.history.values.excellence')}</h3>
+              <p>{t('home.history.values.excellenceDesc')}</p>
             </div>
 
-            {/* Mission Highlight */}
-            <div className="history-card mission fade-up fade-delay-4">
-              <h3>{t('home.history.missionTitle')}</h3>
-              <p>{t('home.history.missionText')}</p>
+            <div className="history-card value-card fade-up fade-delay-7">
+              <h3>{t('home.history.values.community')}</h3>
+              <p>{t('home.history.values.communityDesc')}</p>
             </div>
           </div>
-        </div>
-
-        {/* RIGHT - Collage */}
-        <div className="history-collage fade-up fade-delay-2">
-          <img src={historyImg} alt="Tropical Vitamin" />
-          <img src={historyImg} alt="Tropical Vitamin" />
-          <img src={historyImg} alt="Tropical Vitamin" />
-          <img src={historyImg} alt="Tropical Vitamin" />
-          <img src={historyImg} alt="Tropical Vitamin" />
         </div>
 
       </div>

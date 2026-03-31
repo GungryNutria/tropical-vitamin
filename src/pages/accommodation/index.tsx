@@ -20,8 +20,8 @@ export default function Accommodation() {
     },
     {
       id: 'hoteles',
-      title: t('accommodation.types.hotels'),
-      description: t('accommodation.features.hotels'),
+      title: t('accommodation.types.hoteles'),
+      description: t('accommodation.features.hoteles'),
       features: [
         t('accommodation.features.roomService'),
         t('accommodation.features.amenities'),
@@ -49,7 +49,10 @@ export default function Accommodation() {
     t('contact.destinations.tulum'),
     t('contact.destinations.bacalar'),
     'Mahahual',
-    t('contact.destinations.yucatan')
+    t('contact.destinations.yucatan'),
+    'Holbox',
+    'Isla Mujeres',
+    'Cozumel'
   ];
 
   return (
@@ -73,15 +76,6 @@ export default function Accommodation() {
           <div key={acc.id} className="accommodation-card">
             <h2 className="accommodation-card-title">{acc.title}</h2>
             <p className="accommodation-card-desc">{acc.description}</p>
-            
-            <div className="accommodation-features">
-              <h3>{t('accommodation.includes')}:</h3>
-              <ul>
-                {acc.features.map((feat, idx) => (
-                  <li key={idx}>✓ {feat}</li>
-                ))}
-              </ul>
-            </div>
 
             <button className="accommodation-btn">{t('accommodation.viewOptions')}</button>
           </div>
