@@ -5,6 +5,8 @@
 }
 html{
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -13,6 +15,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
+  overflow-x: hidden;
 }
 
 .fade-up {
