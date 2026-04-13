@@ -6,8 +6,15 @@ import { FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
-import service1 from "../../assets/services/transportacion.jpg";
 
+// Helper to format duration
+function formatDuration(minutes: number): string {
+  if (minutes < 60) return `${minutes} min`;
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  if (mins === 0) return `${hours} hr${hours > 1 ? 's' : ''}`;
+  return `${hours} hr${hours > 1 ? 's' : ''} ${mins} min`;
+}
 
 export default function Tours() {
   const { t, i18n } = useTranslation();
@@ -36,14 +43,21 @@ export default function Tours() {
     fetchTours();
   }, [i18n.language, t]);
 
-  // Get unique categories
+  // Get unique categories from tours
   const categories = useMemo(() => {
-    const cats = new Set<string>();
+    const cats = new Map<string, string>(); // adminName -> displayName
     tours.forEach(tour => {
-      const cat = tour.tourTranslations[0]?.category;
-      if (cat) cats.add(cat);
+      const cat = tour.category;
+      if (cat) {
+        // Use translated name if available, fallback to adminName
+        const displayName = cat.translations?.[0]?.name || cat.adminName;
+        cats.set(cat.adminName, displayName);
+      }
     });
-    return ['todos', ...Array.from(cats).sort()];
+    // Convert to array and sort by display name
+    const sorted = Array.from(cats.entries()).sort((a, b) => a[1].localeCompare(b[1]));
+    // Return as [adminName, displayName] pairs
+    return sorted;
   }, [tours]);
 
   // Filter tours by category and search
@@ -53,7 +67,7 @@ export default function Tours() {
     // Filter by category
     if (selectedCategory !== 'todos') {
       filtered = filtered.filter(tour => 
-        tour.tourTranslations[0]?.category === selectedCategory
+        tour.category?.adminName === selectedCategory
       );
     }
     
@@ -61,7 +75,7 @@ export default function Tours() {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(tour => {
-        const translation = tour.tourTranslations[0];
+        const translation = tour.translations?.[0];
         return (
           translation?.title?.toLowerCase().includes(query) ||
           translation?.description?.toLowerCase().includes(query) ||
@@ -119,26 +133,27 @@ export default function Tours() {
           onChange={(e) => setSelectedCategory(e.target.value)}
           className="category-select"
         >
-          {categories.map(cat => (
-            <option key={cat} value={cat}>
-              {cat === 'todos' ? t('tours.filter.all') : cat}
+          <option value="todos">{t('tours.filter.all')}</option>
+          {categories.map(([adminName, displayName]) => (
+            <option key={adminName} value={adminName}>
+              {displayName}
             </option>
           ))}
         </select>
       </div>
 
-      {/* <p className="tours-count">{filteredTours.length} {t('tours.count')}</p> */}
-
       <div className="tours-grid">
         {filteredTours.map((tour) => {
-          const translation = tour.tourTranslations[0];
+          const translation = tour.translations?.[0];
+          const categoryDisplayName = tour.category?.translations?.[0]?.name || tour.category?.adminName || '';
+          const imageUrl = (tour as any).imageUrl; // Added by toursService
           
           return (
             <div key={tour.id} className="tour-card">
               <div className="tour-image">
-                <span className="tour-category">{translation?.category}</span>
+                <span className="tour-category">{categoryDisplayName}</span>
                 <img 
-                  src={service1}
+                  src={imageUrl}
                   alt={translation?.title || 'Tour'}
                 />
               </div>
@@ -147,7 +162,7 @@ export default function Tours() {
                 <p className="tour-description">{translation?.description}</p>
                 <div className="tour-info">
                   <span className="tour-location"><FaMapMarkerAlt /> {tour.location}</span>
-                  <span className="tour-duration"><FaClock /> {translation?.duration}</span>
+                  <span className="tour-duration"><FaClock /> {formatDuration(tour.duration)}</span>
                 </div>
                 <button className="tour-button">{t('tours.book')}</button>
               </div>
