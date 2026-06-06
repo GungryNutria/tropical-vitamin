@@ -3,6 +3,7 @@ import '../../css/mice.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
+import SectionHero from '../../components/sectionHero';
 
 export default function Mice() {
   const { t } = useTranslation();
@@ -48,18 +49,11 @@ export default function Mice() {
   return (
     <div className="mice-container">
       {/* Hero Section */}
-      <div className="mice-hero">
-        <div className="mice-hero-content">
-          <div className="mice-brand">
-            <span className="mice-grupos">GRUPOS</span>
-            <div className="mice-tropical">
-              <img src={logo} alt="Tropical Vitamin" className="mice-logo" />
-            </div>
-          </div>
-          <p className="mice-hero-subtitle">{t('mice.hero.subtitle')}</p>
-          <p className="mice-hero-text" dangerouslySetInnerHTML={{ __html: t('mice.hero.text') }} />
-        </div>
-      </div>
+
+      <SectionHero
+        title={t('mice.hero.title')}
+        subtitle={t('mice.hero.subtitle')}
+        text={t('mice.hero.text')} backgroundImage={'https://plus.unsplash.com/premium_photo-1661510831877-e94fff4cc710?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} />
 
       {/* Cards Grid */}
       <div className="mice-grid">

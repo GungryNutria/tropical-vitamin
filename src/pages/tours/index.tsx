@@ -1,11 +1,10 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { toursService, type Tour } from '../../services/toursService';
+import { toursService, type Tour, type Category } from '../../services/toursService';
 import '../../css/tours.css';
 import { FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
-
-import logo from '../../assets/logo.png';
+import SectionHero from '../../components/sectionHero';
 
 // Helper to format duration
 function formatDuration(minutes: number): string {
@@ -14,6 +13,18 @@ function formatDuration(minutes: number): string {
   const mins = minutes % 60;
   if (mins === 0) return `${hours} hr${hours > 1 ? 's' : ''}`;
   return `${hours} hr${hours > 1 ? 's' : ''} ${mins} min`;
+}
+
+function getCategoryDisplayName(category: Category | undefined, t: (key: string) => string): string {
+  if (!category) return '';
+
+  const localized = t(`tours.categories.${category.adminName}`);
+  if (localized && localized !== `tours.categories.${category.adminName}`) {
+    return localized;
+  }
+
+  const translation = category.translations?.[0];
+  return translation?.name || category.adminName;
 }
 
 export default function Tours() {
@@ -49,8 +60,7 @@ export default function Tours() {
     tours.forEach(tour => {
       const cat = tour.category;
       if (cat) {
-        // Use translated name if available, fallback to adminName
-        const displayName = cat.translations?.[0]?.name || cat.adminName;
+        const displayName = getCategoryDisplayName(cat, t);
         cats.set(cat.adminName, displayName);
       }
     });
@@ -58,14 +68,14 @@ export default function Tours() {
     const sorted = Array.from(cats.entries()).sort((a, b) => a[1].localeCompare(b[1]));
     // Return as [adminName, displayName] pairs
     return sorted;
-  }, [tours]);
+  }, [tours, t]);
 
   // Filter tours by category and search
   const filteredTours = useMemo(() => {
     let filtered = tours;
     
     // Filter by category
-    if (selectedCategory !== 'todos') {
+    if (selectedCategory !== 'todos' && selectedCategory !== 'all') {
       filtered = filtered.filter(tour => 
         tour.category?.adminName === selectedCategory
       );
@@ -98,20 +108,10 @@ export default function Tours() {
   return (
     <div className="tours-container">
       {/* Hero Section */}
-      <div className="tours-hero">
-        <div className="tours-hero-content">
-          <div className="tours-brand">
-            <span className="tours-title-hero">TOURS</span>
-            <div className="tours-tropical">
-              <img src={logo} alt="Tropical Vitamin" className="tours-logo" />
-            </div>
-          </div>
-          <p className="tours-hero-subtitle">{t('tours.hero.subtitle')}</p>
-          <p className="tours-hero-text">{t('tours.intro')}</p>
-        </div>
-      </div>
-
-      <h1 className="tours-page-title">{t('tours.title')}</h1>
+      <SectionHero
+        title={t('tours.hero.title')}
+        subtitle={t('tours.hero.subtitle')}
+        backgroundImage={'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80'} text={t('tours.intro')}      />
       
       {/* Search & Filter */}
       <div className="tours-search-filter">
@@ -145,7 +145,7 @@ export default function Tours() {
       <div className="tours-grid">
         {filteredTours.map((tour) => {
           const translation = tour.translations?.[0];
-          const categoryDisplayName = tour.category?.translations?.[0]?.name || tour.category?.adminName || '';
+          const categoryDisplayName = getCategoryDisplayName(tour.category, t);
           const imageUrl = (tour as any).imageUrl; // Added by toursService
           
           return (

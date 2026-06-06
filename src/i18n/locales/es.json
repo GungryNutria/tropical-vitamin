@@ -16,12 +16,6 @@
     },
     "history": {
       "title": "Nuestra Historia",
-      "values": {
-        "humanTreatment": "Trato Humano",
-        "humanTreatmentDesc": "Tratamiento personalizado y calido",
-        "passion": "Pasion",
-        "passionDesc": "Amor por mostrar lo mejor de Mexico"
-      },
       "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raiz de la pandemia, la vida nos llevo de la gigante Ciudad de Mexico al paraiso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se habia vuelto frio y automatizado. Por eso, decidimos ir contracorriente: Ofrecer un trato mas humano, amable y personal en un mundo cada vez mas digitalizado. Creemos firmemente que un robot no puede escuchar tus suenos ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se habia vuelto fria. Pero nosotros creemos que un robot nunca podra reemplazar el abrazo de un buen anfitrion. Somos el resultado de la union de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta fusion nos permitio construir una empresa orgullosamente 100% MEXICANA.",
       "missionTitle": "Nuestra Mision",
       "missionText": "No hacer clientes, sino AMIGOS. Mi Casa Es Tu Casa.",
@@ -105,6 +99,7 @@
   },
   "tours": {
     "hero": {
+      "title": "TOURS & EXPERIENCIAS",
       "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje."
     },
     "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conocemos nuestra segmentacion de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean autenticamente memorables\"",
@@ -128,14 +123,15 @@
     },
     "book": "Reservar Ahora",
     "categories": {
-      "acuaticos": "Acuatics",
-      "parques": "Parques",
-      "arqueologicos": "Arqueologicos",
-      "extremos": "Extremos y Aventura",
-      "naturaleza": "Naturaleza",
-      "vida-silvestre": "Vida Silvestre",
-      "islas": "Islas",
-      "entretenimiento": "Entretenimiento Nocturno"
+      "aquatic": "Acuáticos",
+      "adventure": "Aventura",
+      "parks": "Parques",
+      "archaeological": "Arqueológicos",
+      "extreme-adventure": "Extremos y Aventura",
+      "nature": "Naturaleza",
+      "wildlife": "Vida Silvestre",
+      "islands": "Islas",
+      "night-entertainment": "Entretenimiento Nocturno"
     }
   },
   "transportation": {
@@ -191,6 +187,7 @@
   },
   "accommodation": {
     "hero": {
+      "title": "HOSPEDAJE",
       "subtitle": "Hospedaje en propiedad privada / Hospedaje en Hoteles standard / Hospedaje en Hotel All Inclusive"
     },
     "title": "Servicio de Hospedaje",
@@ -226,6 +223,7 @@
     "subtitle": "Nos encargamos de cada detalle para que tu evento sea un exito.",
     "moreInfo": "Contactar ejecutivo",
     "hero": {
+      "title": "GRUPOS & CONVENCIONES",
       "subtitle": "Sabemos que todos los grupos son diferentes y con distinta planeacion y objetivo.",
       "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinacion adecuada a cada necesidad del grupo. No te despreocupes por la logistica masiva, tenemos una amplia experiencia en el manejo y gestion de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeacion, organizacion, control, gestion, produccion y logistica de todo el grupo en el destino, conclusion hasta su salida y termino de tu evento.<br/><strong>No te despreocupes, dejalo en nuestras manos!</strong>"
     },
@@ -341,7 +339,6 @@
     "description": "Diseñamos experiencias autenticas en la Riviera Maya, combinando organizacion europea con calidez mexicana.",
     "information": "Informacion",
     "registros": "Registros y permisos",
-    "privacy": "Politicas de privacidad",
     "cancellations": "Reservas y cancelaciones",
     "sitePolicies": "Politicas del sitio",
     "sitemap": "Mapa del sitio",

@@ -16,12 +16,6 @@
     },
     "history": {
       "title": "Our History",
-      "values": {
-        "humanTreatment": "Human Treatment",
-        "humanTreatmentDesc": "Personalized and warm treatment",
-        "passion": "Passion",
-        "passionDesc": "Love for showing the best of Mexico"
-      },
       "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
       "missionTitle": "Our Mission",
       "missionText": "Not to make clients, but FRIENDS. My House Is Your House.",
@@ -105,6 +99,7 @@
   },
   "tours": {
     "hero": {
+      "title": "TOURS & EXPERIENCES",
       "subtitle": "We have the best options, recommendations and personalized experiences for your trip."
     },
     "intro": "We perfectly understand the objective of each experience so we know our segmentation of the best tours and Experiences. \"We make your experiences authentically memorable\"",
@@ -128,14 +123,15 @@
     },
     "book": "Book Now",
     "categories": {
-      "acuaticos": "Aquatic",
-      "parques": "Theme Parks",
-      "arqueologicos": "Archaeological",
-      "extremos": "Extreme & Adventure",
-      "naturaleza": "Nature",
-      "vida-silvestre": "Wildlife",
-      "islas": "Islands",
-      "entretenimiento": "Night Entertainment"
+      "aquatic": "Aquatic",
+      "adventure": "Adventure",
+      "parks": "Theme Parks",
+      "archaeological": "Archaeological",
+      "extreme-adventure": "Extreme & Adventure",
+      "nature": "Nature",
+      "wildlife": "Wildlife",
+      "islands": "Islands",
+      "night-entertainment": "Night Entertainment"
     }
   },
   "transportation": {
@@ -191,6 +187,7 @@
   },
   "accommodation": {
     "hero": {
+      "title": "ACCOMMODATION",
       "subtitle": "Accommodation in private property / Accommodation in Standard Hotels / Accommodation in All Inclusive Hotel"
     },
     "title": "Accommodation Service",
@@ -226,6 +223,7 @@
     "subtitle": "We take care of every detail so your event is a success.",
     "moreInfo": "Contact executive",
     "hero": {
+      "title": "GROUPS & CONVENTIONS",
       "subtitle": "We know that all groups are different and with different planning and objectives.",
       "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Don't worry, leave it in our hands!</strong>"
     },
@@ -341,7 +339,6 @@
     "description": "We design authentic experiences in the Riviera Maya, combining European organization with Mexican warmth.",
     "information": "Information",
     "registros": "Registers & Permits",
-    "privacy": "Privacy policies",
     "cancellations": "Reservations & cancellations",
     "sitePolicies": "Site policies",
     "sitemap": "Sitemap",

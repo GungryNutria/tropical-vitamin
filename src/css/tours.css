@@ -6,7 +6,7 @@
 
 /* Hero Section */
 .tours-hero {
-  background: linear-gradient(135deg, rgba(10,10,10,0.6) 0%, rgba(20,20,20,0.6) 100%), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80');
+  background: linear-gradient(135deg, rgba(10,10,10,0.6) 0%, rgba(20,20,20,0.6) 100%);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -101,7 +101,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin: 10% auto;
   padding: 0 1rem;
 }
 

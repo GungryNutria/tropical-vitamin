@@ -4,77 +4,6 @@
   background: var(--bg-main);
 }
 
-/* Hero Section */
-.accommodation-hero {
-  background: linear-gradient(135deg, rgba(10,10,10,0.6) 0%, rgba(20,20,20,0.6) 100%), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.accommodation-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 2rem;
-  border-radius: 20px;
-  backdrop-filter: var(--glass-blur);
-}
-
-.accommodation-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.accommodation-title-hero {
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 900;
-  color: var(--yellow-main);
-  letter-spacing: 0.1em;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  line-height: 1;
-}
-
-.accommodation-tropical {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.accommodation-logo {
-  height: clamp(60px, 12vw, 100px);
-  object-fit: contain;
-}
-
-.accommodation-hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-.accommodation-hero-text {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
 /* Page Title (after hero) */
 .accommodation-page-title {
   text-align: center;
@@ -108,7 +37,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 3rem 2rem;
   position: relative;
   z-index: 2;
@@ -248,7 +177,7 @@
 /* Destinations */
 .destinations-section {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10% auto;
   text-align: center;
   padding: 2%;
 }

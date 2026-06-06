@@ -4,80 +4,6 @@
   background: var(--bg-main);
 }
 
-/* Hero Section */
-.mice-hero {
-  background: linear-gradient(135deg, rgba(10,10,10,0.6) 0%, rgba(20,20,20,0.6) 100%), url(../assets/mice-hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mice-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 2rem;
-  border-radius: 20px;
-  backdrop-filter: var(--glass-blur);
-}
-
-.mice-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.mice-grupos {
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 900;
-  color: var(--yellow-main);
-  letter-spacing: 0.15em;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  line-height: 1;
-}
-
-.mice-tropical {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mice-logo {
-  height: clamp(60px, 12vw, 100px);
-  object-fit: contain;
-}
-
-.mice-hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-.mice-hero-text {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-.mice-hero-text strong {
-  color: var(--yellow-main);
-}
-
 /* Grid */
 .mice-grid {
   display: grid;
@@ -189,7 +115,7 @@
   background: var(--bg-card);
   border: 1px solid var(--glass-border);
   padding: 3rem 2rem;
-  margin: -2rem auto 4rem;
+  margin: 3rem auto;
   max-width: 700px;
   border-radius: 20px;
 }
@@ -243,5 +169,9 @@
   .mice-card {
     padding: 1.8rem 1.5rem;
     min-height: 450px;
+  }
+
+  .mice-cta {
+    margin: 3rem 1rem;
   }
 }

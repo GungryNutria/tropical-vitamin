@@ -4,6 +4,7 @@ import '../../css/transportation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
+import SectionHero from '../../components/sectionHero';
 
 export default function Transportation() {
   const { t, i18n } = useTranslation();
@@ -109,7 +110,13 @@ export default function Transportation() {
 
   return (
     <div className="transportation-container">
-      {/* Hero Section */}
+      <SectionHero 
+        title={t('transportation.hero.title')} 
+        subtitle={t('transportation.hero.subtitle')} 
+        backgroundImage={'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=1920&q=80'}
+        text={t('transportation.intro')}
+      />
+      {/* Hero Section
       <div className="transportation-hero">
         <div className="transportation-hero-content">
           <div className="transportation-brand">
@@ -121,7 +128,7 @@ export default function Transportation() {
           <p className="transportation-hero-subtitle">{t('transportation.hero.subtitle')}</p>
           <p className="transportation-hero-text">{t('transportation.intro')}</p>
         </div>
-      </div>
+      </div> */}
 
       {/* Units Section */}
       <section className="transport-units">

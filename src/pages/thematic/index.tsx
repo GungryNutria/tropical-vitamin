@@ -3,6 +3,7 @@ import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
+import SectionHero from '../../components/sectionHero';
 export default function Thematic() {
   const { t } = useTranslation();
 
@@ -42,18 +43,7 @@ export default function Thematic() {
   return (
     <div className="thematic-container">
       {/* Hero Section */}
-      <div className="thematic-hero">
-        <div className="thematic-hero-content">
-          <div className="thematic-brand">
-            <span className="thematic-viajes">{t('thematic.hero.title')}</span>
-            <div className="thematic-tropical">
-              <img src={logo} alt="Tropical Vitamin" className="thematic-logo" />
-            </div>
-          </div>
-          <p className="thematic-hero-subtitle" dangerouslySetInnerHTML={{ __html: t('thematic.hero.subtitle') }} />
-          <p className="thematic-hero-text" dangerouslySetInnerHTML={{ __html: t('thematic.hero.text') }} />
-        </div>
-      </div>
+      <SectionHero  title={t('thematic.hero.title')} subtitle={t('thematic.hero.subtitle')} text={t('thematic.hero.text')} backgroundImage='https://images.unsplash.com/photo-1632429495431-e9bce133028a?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
 
       {/* Cards Grid */}
       <div className="thematic-grid">

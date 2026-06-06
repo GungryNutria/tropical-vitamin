@@ -3,6 +3,7 @@ import '../../css/accommodation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 
 import logo from '../../assets/logo.png';
+import SectionHero from '../../components/sectionHero';
 
 export default function Accommodation() {
   const { t } = useTranslation();
@@ -58,18 +59,12 @@ export default function Accommodation() {
   return (
     <div className="accommodation-container">
       {/* Hero Section */}
-      <div className="accommodation-hero">
-        <div className="accommodation-hero-content">
-          <div className="accommodation-brand">
-            <span className="accommodation-title-hero">HOSPEDAJE</span>
-            <div className="accommodation-tropical">
-              <img src={logo} alt="Tropical Vitamin" className="accommodation-logo" />
-            </div>
-          </div>
-          <p className="accommodation-hero-subtitle">{t('accommodation.hero.subtitle')}</p>
-          <p className="accommodation-hero-text">{t('accommodation.intro')}</p>
-        </div>
-      </div>
+      <SectionHero
+        title={t('accommodation.hero.title')}
+        subtitle={t('accommodation.hero.subtitle')}
+        text={t('accommodation.intro')}
+        backgroundImage="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80"
+      />
 
       <div className="accommodation-grid">
         {accommodations.map((acc) => (
