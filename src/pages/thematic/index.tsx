@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
-
-import logo from '../../assets/logo.png';
 import SectionHero from '../../components/sectionHero';
 export default function Thematic() {
   const { t } = useTranslation();
