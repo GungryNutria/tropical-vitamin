@@ -1,11 +1,7 @@
 import type { TFunction } from 'i18next';
 import i18n from '../i18n';
 import type { Category } from '../services/toursService';
-
-// TODO T-2: mover a src/components/pictograma.tsx y reexportar desde allí.
-export type PictogramaId =
-  | 'snorkel' | 'isla' | 'tortuga' | 'laguna' | 'piramide' | 'moto-acuatica' | 'tirolesa' | 'tobogan'
-  | 'luna-copa' | 'avion' | 'camioneta' | 'cama' | 'grupo' | 'copas' | 'camara';
+import type { PictogramaId } from '../components/pictograma';
 
 const PICTOGRAMAS: Record<string, PictogramaId> = {
   aquatic: 'snorkel',
