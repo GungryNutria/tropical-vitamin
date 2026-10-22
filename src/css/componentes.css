@@ -148,7 +148,7 @@
 
 .navbar__logo {
   display: block;
-  padding: var(--tv-space-1) var(--tv-space-2);
+  padding: 6px var(--tv-space-2);
   border-radius: var(--tv-r-sm);
   background: var(--tv-asfalto-900);
   transition: opacity var(--tv-dur-navbar) var(--tv-ease), visibility var(--tv-dur-navbar);
@@ -256,7 +256,7 @@
 .pie__columna a:not(.tv-wa) {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   color: var(--tv-blanco);
   text-decoration: none;
 }
@@ -447,6 +447,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--tv-space-2);
+  min-width: 44px;
   min-height: 44px;
   padding: 0 var(--tv-space-3) 0 var(--tv-space-2);
   border: var(--tv-borde-control);

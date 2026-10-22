@@ -21,16 +21,12 @@ export default function Hero() {
   const video = useRef<HTMLVideoElement>(null);
   const [pausado, setPausado] = useState(false);
 
+  // El estado sigue a los eventos del video (también si el navegador bloquea la reproducción).
   const alternar = () => {
     const v = video.current;
     if (!v) return;
-    if (v.paused) {
-      v.play();
-      setPausado(false);
-    } else {
-      v.pause();
-      setPausado(true);
-    }
+    if (v.paused) v.play().catch(() => setPausado(true));
+    else v.pause();
   };
 
   return (
@@ -38,7 +34,7 @@ export default function Hero() {
       {reducido ? (
         <img className="hero__medio" src={heroStill} alt="" />
       ) : (
-        <video ref={video} className="hero__medio" src={heroVideo} poster={heroPoster} autoPlay muted loop playsInline aria-hidden="true" />
+        <video ref={video} className="hero__medio" src={heroVideo} poster={heroPoster} autoPlay muted loop playsInline aria-hidden="true" onPlay={() => setPausado(false)} onPause={() => setPausado(true)} />
       )}
       <div className="hero__velo" />
 
