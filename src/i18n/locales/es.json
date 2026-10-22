@@ -1,12 +1,16 @@
 {
   "nav": {
     "inicio": "Inicio",
-    "transportacion": "Transportacion",
+    "transportacion": "Transportación",
     "hospedaje": "Hospedaje",
-    "tours": "Tours & Experiencias",
-    "mice": "Grupos MICE",
-    "tematicos": "Viajes Tematicos",
-    "contacto": "Contactanos"
+    "tours": "Tours",
+    "mice": "Grupos y convenciones",
+    "tematicos": "Viajes temáticos",
+    "contacto": "Contacto",
+    "principal": "Navegación principal",
+    "abrirMenu": "Abrir menú",
+    "cerrarMenu": "Cerrar menú",
+    "irInicio": "Tropical Vitamin, ir al inicio"
   },
   "home": {
     "hero": {
@@ -333,10 +337,22 @@
     "success": "Exito",
     "submit": "Enviar",
     "cancel": "Cancelar",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "whatsapp": "WhatsApp",
+    "whatsappAria": "Escribir por WhatsApp (se abre en otra ventana)",
+    "idioma": "Idioma",
+    "espanol": "Español",
+    "ingles": "English",
+    "reintentar": "Reintentar",
+    "preguntarWhatsapp": "Preguntar por WhatsApp",
+    "verServicio": "Ver servicio",
+    "saleDe": "Sale de: {{lugar}}",
+    "duracion": "Duración",
+    "categoria": "Categoría",
+    "cargando": "Cargando…"
   },
   "footer": {
-    "description": "Diseñamos experiencias autenticas en la Riviera Maya, combinando organizacion europea con calidez mexicana.",
+    "description": "Diseñamos experiencias auténticas en la Riviera Maya, combinando organización europea con calidez mexicana.",
     "information": "Informacion",
     "registros": "Registros y permisos",
     "cancellations": "Reservas y cancelaciones",
@@ -345,7 +361,14 @@
     "contact": "Contacto",
     "legal": "Legal",
     "privacy": "Aviso de Privacidad",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "servicios": "Servicios",
+    "contacto": "Contacto",
+    "formulario": "Contacto (formulario)",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "idioma": "Idioma",
+    "copyright": "© 2026 Tropical Vitamin",
+    "toursServicio": "Tours y experiencias"
   },
   "whatsapp": {
     "general": "Hola, quiero ayuda para planear mi viaje a la Riviera Maya.",

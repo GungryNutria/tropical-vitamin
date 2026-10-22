@@ -1,3 +1,4 @@
+import { urlWhatsApp } from '../../lib/whatsapp';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../css/transportation.css';
@@ -58,7 +59,7 @@ export default function Transportation() {
       ? `Hola, me gustaría cotizar un ${serviceTypeText} de ${segmentName}. ${destinationLabel}: ${selectedOption}. Tipo: ${tripTypeText}`
       : `Hello, I would like to quote a ${serviceTypeText} of ${segmentName}. ${destinationLabel}: ${selectedOption}. Type: ${tripTypeText}`;
 
-    const whatsappUrl = `https://wa.me/529841681263?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = urlWhatsApp(message);
     window.open(whatsappUrl, '_blank');
   };
 

@@ -1,3 +1,4 @@
+import { urlWhatsApp } from '../../lib/whatsapp';
 import { useTranslation } from "react-i18next";
 import "../../css/contact-page.css";
 import { FaAt, FaFacebookF, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
@@ -109,7 +110,7 @@ function ContactPage() {
                         className="contact-page-whatsapp"
                         onClick={() =>
                             window.open(
-                                "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios%20",
+                                urlWhatsApp("Hola, quiero información sobre sus servicios"),
                                 "_blank"
                             )
                         }

@@ -1,3 +1,4 @@
+import { urlWhatsApp } from '../../../lib/whatsapp';
 import "../../../css/contact.css";
 import { FaAt, FaFacebookF, FaInstagram, FaPhone, FaTiktok } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -78,7 +79,7 @@ function Contact() {
                         className="whatsapp-btn"
                         onClick={() =>
                             window.open(
-                                "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios%20",
+                                urlWhatsApp("Hola, quiero información sobre sus servicios"),
                                 "_blank"
                             )
                         }

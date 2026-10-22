@@ -3,10 +3,14 @@
     "inicio": "Home",
     "transportacion": "Transportation",
     "hospedaje": "Accommodation",
-    "tours": "Tours & Experiences",
-    "mice": "MICE Groups",
-    "tematicos": "Thematic Trips",
-    "contacto": "Contact Us"
+    "tours": "Tours",
+    "mice": "Groups and conventions",
+    "tematicos": "Themed trips",
+    "contacto": "Contact",
+    "principal": "Main navigation",
+    "abrirMenu": "Open menu",
+    "cerrarMenu": "Close menu",
+    "irInicio": "Tropical Vitamin, go to home"
   },
   "home": {
     "hero": {
@@ -333,7 +337,19 @@
     "success": "Success",
     "submit": "Submit",
     "cancel": "Cancel",
-    "close": "Close"
+    "close": "Close",
+    "whatsapp": "WhatsApp",
+    "whatsappAria": "Message us on WhatsApp (opens in a new window)",
+    "idioma": "Language",
+    "espanol": "Español",
+    "ingles": "English",
+    "reintentar": "Try again",
+    "preguntarWhatsapp": "Ask on WhatsApp",
+    "verServicio": "See service",
+    "saleDe": "Departs from: {{lugar}}",
+    "duracion": "Duration",
+    "categoria": "Category",
+    "cargando": "Loading…"
   },
   "footer": {
     "description": "We design authentic experiences in the Riviera Maya, combining European organization with Mexican warmth.",
@@ -345,7 +361,14 @@
     "contact": "Contact",
     "legal": "Legal",
     "privacy": "Privacy Notice",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "servicios": "Services",
+    "contacto": "Contact",
+    "formulario": "Contact (form)",
+    "whatsapp": "Message us on WhatsApp",
+    "idioma": "Language",
+    "copyright": "© 2026 Tropical Vitamin",
+    "toursServicio": "Tours and experiences"
   },
   "whatsapp": {
     "general": "Hi! I'd like help planning my trip to the Riviera Maya.",
