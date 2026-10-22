@@ -178,8 +178,9 @@
   "transportation": {
     "title": "Transportation Service",
     "hero": {
-      "title": "TRANSPORTATION",
-      "subtitle": "Airport, point to point and open service."
+      "title": "Transportation",
+      "subtitle": "Airport, point to point and open service.",
+      "cta": "Plan your transfer"
     },
     "intro": "We have new units in optimal conditions, both for conventional and high-end services. Each transportation service we offer adapts perfectly to each travel need, thus positioning ourselves in the market with a comfortable, safe and functional service.",
     "airport": {
@@ -196,34 +197,55 @@
     },
     "type": {
       "title": "Service type:",
-      "oneWay": "One Way",
-      "roundTrip": "Round Trip"
+      "oneWay": "One way",
+      "roundTrip": "Round trip"
     },
-    "quote": "Request Quote",
+    "quote": "Request a quote",
     "units": {
-      "title": "Our Units"
+      "title": "Our units",
+      "texto": "New units for groups of every size.",
+      "bus": "Bus"
     },
     "segments": {
-      "optionsTitle": "Service Options",
-      "airport": "AIRPORT TRANSPORTATION",
-      "airportSubtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
-      "airportOpt1": "Cancun Airport",
+      "optionsTitle": "Service options",
+      "airport": "Airport",
+      "airportSubtitle": "Cancún, Playa del Carmen, Tulum and Riviera Maya",
+      "airportOpt1": "Cancún Airport",
       "airportOpt2": "Tulum Airport",
       "airportOpt3": "Cozumel Airport",
-      "point": "POINT TO POINT TRANSPORTATION",
+      "point": "Point to point",
       "pointSubtitle": "Your itinerary, your time",
-      "pointOpt1": "Cancun",
+      "pointOpt1": "Cancún",
       "pointOpt2": "Playa del Carmen",
       "pointOpt3": "Tulum",
       "pointOpt4": "Riviera Maya",
       "pointOpt5": "Yucatan Peninsula",
-      "open": "OPEN SERVICE TRANSPORTATION",
+      "open": "Open service",
       "openSubtitle": "Create your own trip",
-      "openOpt1": "4 HRS",
-      "openOpt2": "6 HRS",
-      "openOpt3": "8 HRS",
-      "openOpt4": "10 HRS",
-      "openOpt5": "12 HRS"
+      "openOpt1": "4 h",
+      "openOpt2": "6 h",
+      "openOpt3": "8 h",
+      "openOpt4": "10 h",
+      "openOpt5": "12 h"
+    },
+    "pasos": {
+      "titulo": "Get a transfer quote",
+      "texto": "Choose step by step and we'll have the message ready to send on WhatsApp.",
+      "tipo": "What kind of transfer?",
+      "aeropuerto": "Which airport?",
+      "destino": "Where are you going?",
+      "duracion": "How many hours?",
+      "detalle": "Origin, destination or hours",
+      "modalidad": "Service and trip",
+      "faltaTipo": "Choose a type of transfer",
+      "faltaAeropuerto": "Choose an airport",
+      "faltaDestino": "Choose a destination",
+      "faltaDuracion": "Choose how many hours",
+      "faltaModalidad": "Choose private or shared service",
+      "faltaViaje": "Choose one way or round trip",
+      "detalleAeropuerto": "{{opcion}}",
+      "detalleDestino": "Destination: {{opcion}}",
+      "detalleDuracion": "Duration: {{opcion}}"
     }
   },
   "accommodation": {
@@ -386,7 +408,14 @@
     "saleDe": "Departs from: {{lugar}}",
     "duracion": "Duration",
     "categoria": "Category",
-    "cargando": "Loading…"
+    "cargando": "Loading…",
+    "obligatorio": "(required)",
+    "vistaPrevia": "Message preview",
+    "editar": "Edit",
+    "enviarWhatsapp": "Send on WhatsApp",
+    "prefieroCorreo": "I prefer email",
+    "completo": "complete",
+    "servicio": "Service"
   },
   "footer": {
     "description": "We design authentic experiences in the Riviera Maya, combining European organization with Mexican warmth.",
@@ -412,6 +441,7 @@
     "tour": "Hi! I'm interested in the «{{titulo}}» tour ({{duracion}}). Can you help me plan it?",
     "servicio": "Hi! I'd like information about {{servicio}}.",
     "transporte": "Hi! I'd like a quote for a transfer: {{tipo}}. {{detalle}}. {{modalidad}}, {{viaje}}.",
-    "grupo": "Hi! I'd like a quote for {{tipo}} for {{personas}} people. Approximate dates: {{fechas}}."
+    "grupo": "Hi! I'd like a quote for {{tipo}} for {{personas}} people. Approximate dates: {{fechas}}.",
+    "transporteAbierto": "Hi! I'd like a quote for a transfer: {{tipo}}. {{detalle}}. {{modalidad}}."
   }
 }

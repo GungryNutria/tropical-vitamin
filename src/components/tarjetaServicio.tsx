@@ -30,6 +30,7 @@ export default function TarjetaServicio({ pictograma, titulo, color = 'azul', im
           <Pictograma id={pictograma} size={96} />
         </div>
       )}
+      {(texto || datos || enlace || mensaje) && (
       <div className="tarjeta__cuerpo">
         {texto && <p className="t-small tarjeta__texto">{texto}</p>}
         {datos && (
@@ -46,6 +47,7 @@ export default function TarjetaServicio({ pictograma, titulo, color = 'azul', im
           </div>
         )}
       </div>
+      )}
     </article>
   );
 }

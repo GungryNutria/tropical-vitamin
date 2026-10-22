@@ -81,51 +81,6 @@
   mask-image: linear-gradient(to right, black calc(100% - 32px), transparent);
 }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--tv-space-2);
-  min-height: 44px;
-  padding: 0 var(--tv-space-3) 0 var(--tv-space-2);
-  border: var(--tv-borde-control);
-  border-radius: var(--tv-r-xs);
-  background: var(--tv-blanco);
-  color: var(--tv-asfalto-900);
-  font-size: var(--tv-t-small);
-  font-weight: 600;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background-color var(--tv-dur-hover) var(--tv-ease);
-}
-
-.chip:hover { background: var(--tv-gris-100); }
-
-.chip__picto {
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: var(--tv-r-xs);
-  background: var(--tv-cafe-700);
-  color: var(--tv-blanco);
-}
-
-.chip[aria-pressed="true"] {
-  position: relative;
-  border-color: var(--tv-cafe-700);
-  background: var(--tv-cafe-700);
-  color: var(--tv-blanco);
-}
-
-.chip[aria-pressed="true"]::after {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  border: 1px solid var(--tv-blanco);
-  border-radius: 2px;
-  pointer-events: none;
-}
-
 .tours-chips li:first-child .chip { padding-left: var(--tv-space-3); }
 
 /* Catálogo */

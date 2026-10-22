@@ -176,54 +176,76 @@
     "errorCarga": "No pudimos cargar los tours"
   },
   "transportation": {
-    "title": "Servicio de Transportacion",
+    "title": "Servicio de transportación",
     "hero": {
-      "title": "TRANSPORTACION",
-      "subtitle": "Aeropuerto, punto a punto y servicio abierto."
+      "title": "Transportación",
+      "subtitle": "Aeropuerto, punto a punto y servicio abierto.",
+      "cta": "Arma tu traslado"
     },
-    "intro": "Contamos con unidades nuevas y en optimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportacion que oferecemos se adapta perfectamente a cada necesidad de viaje, marcando asi en el mercado un servicio comodo, seguro y funcional.",
+    "intro": "Contamos con unidades nuevas y en óptimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportación que ofrecemos se adapta a cada necesidad de viaje: un servicio cómodo, seguro y funcional.",
     "airport": {
-      "title": "Transportacion Aeropuerto",
+      "title": "Transportación aeropuerto",
       "subtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
       "description": "Servicio abierto para que organices tu propio itinerario"
     },
     "options": {
       "title": "Opciones:",
       "shared": "Servicio compartido",
-      "private": "Servicio Privado",
-      "luxury": "Servicio Luxury",
-      "bus": "Servicio de Autobus"
+      "private": "Servicio privado",
+      "luxury": "Servicio de lujo",
+      "bus": "Servicio de autobús"
     },
     "type": {
       "title": "Tipo de servicio:",
       "oneWay": "Solo ida",
       "roundTrip": "Ida y vuelta"
     },
-    "quote": "Solicitar Cotizacion",
+    "quote": "Solicitar cotización",
     "units": {
-      "title": "Nuestras Unidades"
+      "title": "Nuestras unidades",
+      "texto": "Unidades nuevas para grupos de todos los tamaños.",
+      "bus": "Autobús"
     },
     "segments": {
-      "optionsTitle": "Opciones de Servicio",
-      "airport": "TRANSPORTACION AEROPUERTO",
-      "airportSubtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
-      "airportOpt1": "Aeropuerto Cancun",
-      "airportOpt2": "Aeropuerto Tulum",
-      "airportOpt3": "Aeropuerto Cozumel",
-      "point": "TRANSPORTACION PUNTO A PUNTO",
+      "optionsTitle": "Opciones de servicio",
+      "airport": "Aeropuerto",
+      "airportSubtitle": "Cancún, Playa del Carmen, Tulum y Riviera Maya",
+      "airportOpt1": "Aeropuerto de Cancún",
+      "airportOpt2": "Aeropuerto de Tulum",
+      "airportOpt3": "Aeropuerto de Cozumel",
+      "point": "Punto a punto",
       "pointSubtitle": "Tu itinerario, tu tiempo",
-      "pointOpt1": "Cancun",
+      "pointOpt1": "Cancún",
       "pointOpt2": "Playa del Carmen",
       "pointOpt3": "Tulum",
       "pointOpt4": "Riviera Maya",
-      "pointOpt5": "Peninsula Yucatan",
-      "open": "TRANSPORTACION SERVICIO ABIERTO",
+      "pointOpt5": "Península de Yucatán",
+      "open": "Servicio abierto",
       "openSubtitle": "Arma tu propio viaje",
-      "openOpt1": "4 HRS",
-      "openOpt2": "6 HRS",
-      "openOpt3": "8 HRS",
-      "openOpt4": "10 HRS",
-      "openOpt5": "12 HRS"
+      "openOpt1": "4 h",
+      "openOpt2": "6 h",
+      "openOpt3": "8 h",
+      "openOpt4": "10 h",
+      "openOpt5": "12 h"
+    },
+    "pasos": {
+      "titulo": "Cotiza tu traslado",
+      "texto": "Elige paso a paso y te dejamos el mensaje listo para enviarlo por WhatsApp.",
+      "tipo": "¿Qué tipo de traslado?",
+      "aeropuerto": "¿Qué aeropuerto?",
+      "destino": "¿A dónde vas?",
+      "duracion": "¿Cuántas horas?",
+      "detalle": "Origen, destino u horas",
+      "modalidad": "Modalidad y viaje",
+      "faltaTipo": "Elige un tipo de traslado",
+      "faltaAeropuerto": "Elige un aeropuerto",
+      "faltaDestino": "Elige un destino",
+      "faltaDuracion": "Elige cuántas horas",
+      "faltaModalidad": "Elige servicio privado o compartido",
+      "faltaViaje": "Elige solo ida o ida y vuelta",
+      "detalleAeropuerto": "{{opcion}}",
+      "detalleDestino": "Destino: {{opcion}}",
+      "detalleDuracion": "Duración: {{opcion}}"
     }
   },
   "accommodation": {
@@ -386,7 +408,14 @@
     "saleDe": "Sale de: {{lugar}}",
     "duracion": "Duración",
     "categoria": "Categoría",
-    "cargando": "Cargando…"
+    "cargando": "Cargando…",
+    "obligatorio": "(obligatorio)",
+    "vistaPrevia": "Vista previa del mensaje",
+    "editar": "Editar",
+    "enviarWhatsapp": "Enviar por WhatsApp",
+    "prefieroCorreo": "Prefiero correo",
+    "completo": "completo",
+    "servicio": "Servicio"
   },
   "footer": {
     "description": "Diseñamos experiencias auténticas en la Riviera Maya, combinando organización europea con calidez mexicana.",
@@ -412,6 +441,7 @@
     "tour": "Hola, me interesa el tour «{{titulo}}» ({{duracion}}). ¿Me ayudan a planearlo?",
     "servicio": "Hola, quiero información de {{servicio}}.",
     "transporte": "Hola, quiero cotizar un traslado: {{tipo}}. {{detalle}}. {{modalidad}}, {{viaje}}.",
-    "grupo": "Hola, quiero cotizar {{tipo}} para {{personas}} personas. Fechas aproximadas: {{fechas}}."
+    "grupo": "Hola, quiero cotizar {{tipo}} para {{personas}} personas. Fechas aproximadas: {{fechas}}.",
+    "transporteAbierto": "Hola, quiero cotizar un traslado: {{tipo}}. {{detalle}}. {{modalidad}}."
   }
 }

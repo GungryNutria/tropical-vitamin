@@ -441,3 +441,153 @@
 .seccion { padding-block: var(--tv-space-seccion); }
 .seccion__titulo { margin-bottom: var(--tv-space-2); }
 .seccion__entradilla { color: var(--tv-texto-2); }
+
+/* Chip-placa (filtros y opciones) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tv-space-2);
+  min-height: 44px;
+  padding: 0 var(--tv-space-3) 0 var(--tv-space-2);
+  border: var(--tv-borde-control);
+  border-radius: var(--tv-r-xs);
+  background: var(--tv-blanco);
+  color: var(--tv-asfalto-900);
+  font-size: var(--tv-t-small);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--tv-dur-hover) var(--tv-ease);
+}
+
+.chip:hover { background: var(--tv-gris-100); }
+
+.chip__picto {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--tv-r-xs);
+  background: var(--tv-cafe-700);
+  color: var(--tv-blanco);
+}
+
+.chip[aria-pressed="true"] {
+  position: relative;
+  border-color: var(--tv-cafe-700);
+  background: var(--tv-cafe-700);
+  color: var(--tv-blanco);
+}
+
+.chip[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--tv-blanco);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Chip azul (opciones de PasosSolicitud): seleccionado en placa azul */
+.chip--azul[aria-pressed="true"] { border-color: var(--tv-azul-700); background: var(--tv-azul-700); }
+.chip--azul { padding-left: var(--tv-space-3); }
+
+/* PasosSolicitud: postes numerados unidos por la línea vial */
+.pasos { display: grid; list-style: none; }
+
+.pasos__paso {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--tv-space-4);
+  padding-bottom: var(--tv-space-7);
+  scroll-margin-top: 96px;
+}
+
+.pasos__paso:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  bottom: 4px;
+  left: 17px;
+  width: 6px;
+  background: repeating-linear-gradient(to bottom, var(--tv-linea-400) 0 32px, transparent 32px 56px);
+}
+
+.pasos__poste {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--tv-asfalto-900);
+  border-radius: var(--tv-r-full);
+  background: var(--tv-blanco);
+  font-family: var(--tv-font-mono);
+  font-weight: 700;
+}
+
+.pasos__poste--completo { background: var(--tv-asfalto-900); color: var(--tv-blanco); }
+.pasos__cuerpo { display: grid; gap: var(--tv-space-4); min-width: 0; padding-top: var(--tv-space-1); }
+.pasos__opciones { display: flex; flex-wrap: wrap; gap: var(--tv-space-2); list-style: none; }
+.pasos__subtitulo { color: var(--tv-texto-2); font-weight: 600; }
+
+.pasos__vista {
+  display: grid;
+  gap: var(--tv-space-2);
+  justify-items: start;
+  padding: var(--tv-space-4);
+  border: var(--tv-borde-control);
+  border-radius: var(--tv-r-xs);
+  background: var(--tv-blanco);
+}
+
+.pasos__mensaje { white-space: pre-wrap; }
+.pasos__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tv-space-3) var(--tv-space-5); }
+.pasos__motivo { color: var(--tv-texto-2); font-weight: 600; }
+
+@media (max-width: 599px) {
+  .pasos__acciones .tv-wa, .pasos__deshabilitado { width: 100%; }
+}
+
+/* Campo */
+.campo { display: grid; gap: var(--tv-space-2); }
+.campo__etiqueta { font-size: var(--tv-t-small); font-weight: 600; }
+.campo__obligatorio { color: var(--tv-texto-2); font-weight: 400; }
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--tv-space-3);
+  border: var(--tv-borde-control);
+  border-radius: var(--tv-r-xs);
+  background: var(--tv-blanco);
+}
+
+.campo textarea { min-height: 128px; resize: vertical; }
+.campo input:hover, .campo select:hover, .campo textarea:hover { border-color: var(--tv-asfalto-900); }
+.campo input:disabled, .campo select:disabled, .campo textarea:disabled { background: var(--tv-gris-100); }
+.campo--error input, .campo--error select, .campo--error textarea { border: 2px solid var(--tv-error-700); }
+.campo__ayuda { font-size: var(--tv-t-small); color: var(--tv-texto-2); }
+
+.campo__error {
+  display: flex;
+  align-items: center;
+  gap: var(--tv-space-1);
+  font-size: var(--tv-t-small);
+  font-weight: 600;
+  color: var(--tv-error-700);
+}
+
+/* Sección de solicitud (Transportación, MICE, Temáticos) */
+.solicitud { background: var(--tv-blanco); }
+.solicitud__rejilla { display: grid; gap: var(--tv-space-6); }
+.solicitud__intro { display: grid; gap: var(--tv-space-3); align-content: start; }
+
+@media (min-width: 900px) {
+  .solicitud__rejilla { grid-template-columns: 1fr 2fr; gap: var(--tv-space-8); }
+}
+
+.hero-servicio__botones { display: flex; flex-wrap: wrap; gap: var(--tv-space-3); }
+.bloque-tarjetas { margin-top: var(--tv-space-6); }
