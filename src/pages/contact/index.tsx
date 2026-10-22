@@ -79,7 +79,7 @@ export default function ContactPage() {
     <section className="contacto">
       <div className="contenedor contacto__rejilla">
         <div className="contacto__info">
-          <p className="placa placa--verde contacto__placa"><span className="t-label">{t('contact.etiqueta')}</span></p>
+          <p className="rotulo rotulo--accion contacto__placa"><span className="t-label">{t('contact.etiqueta')}</span></p>
           <h1 className="t-h1">{t('contact.title')}</h1>
           <p className="t-body-lg contacto__entradilla">{t('contact.subtitle')}</p>
           <div className="contacto__canal">

@@ -9,17 +9,17 @@ type Props = {
   texto: string;
   imagen: string;
   accion: ReactNode;
-  // Línea grande de la placa (p. ej. "Cancún y Riviera Maya"); si falta, la placa solo lleva la etiqueta.
+  // Línea grande del rótulo (p. ej. "Cancún y Riviera Maya"); si falta, el rótulo solo lleva la etiqueta.
   destino?: string;
 };
 
-// Héroe de páginas internas: placa (café para tours, azul para servicios) + H1 + acción, foto 4:3 a la derecha.
+// Héroe de páginas internas: rótulo (rosa para tours, añil para servicios) + H1 + acción, foto 4:3 con marco a la derecha.
 export default function HeroServicio({ tipo, pictograma, etiqueta, titulo, texto, imagen, accion, destino }: Props) {
   return (
-    <section className="hero-servicio">
+    <section className={`hero-servicio hero-servicio--${tipo}`}>
       <div className="contenedor hero-servicio__rejilla">
         <div className="hero-servicio__texto">
-          <p className={`placa placa--${tipo === 'tour' ? 'cafe' : 'azul'} hero-servicio__placa`}>
+          <p className={`rotulo rotulo--${tipo} hero-servicio__placa`}>
             <Pictograma id={pictograma} size={32} />
             <span className="hero-servicio__placa-texto">
               <span className="t-label">{etiqueta}</span>

@@ -34,7 +34,7 @@ function Chips<T extends string>({ valores, actual, etiqueta, onElegir }: {
     <ul className="pasos__opciones">
       {valores.map((v) => (
         <li key={v}>
-          <button type="button" className="chip chip--azul" aria-pressed={actual === v} onClick={() => onElegir(v)}>
+          <button type="button" className="chip chip--servicio" aria-pressed={actual === v} onClick={() => onElegir(v)}>
             {etiqueta(v)}
           </button>
         </li>

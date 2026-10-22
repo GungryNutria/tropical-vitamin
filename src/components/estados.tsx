@@ -4,16 +4,16 @@ import { LuCircleAlert, LuCircleCheck, LuClock, LuInfo } from 'react-icons/lu';
 import BotonWhatsApp from './botonWhatsApp';
 import Pictograma, { type PictogramaId } from './pictograma';
 
-export function EstadoVacio({ pictograma, color = 'cafe', titulo, texto, children }: {
+export function EstadoVacio({ pictograma, tipo = 'tour', titulo, texto, children }: {
   pictograma: PictogramaId;
-  color?: 'cafe' | 'azul';
+  tipo?: 'tour' | 'servicio';
   titulo: string;
   texto: string;
   children?: ReactNode;
 }) {
   return (
     <div className="estado">
-      <span className={`estado__placa placa--${color}`}><Pictograma id={pictograma} size={32} /></span>
+      <span className={`estado__placa rotulo--${tipo}`}><Pictograma id={pictograma} size={32} /></span>
       <h2 className="t-h3">{titulo}</h2>
       <p className="t-small estado__texto">{texto}</p>
       {children && <div className="estado__acciones">{children}</div>}

@@ -14,7 +14,7 @@ type Props = {
   correo?: { servicio: string };
 };
 
-// Pasos numerados en "postes" unidos por la línea vial; el último es la vista previa del mensaje.
+// Pasos numerados unidos por una línea sólida; el último es la vista previa del mensaje.
 export default function PasosSolicitud({ pasos, mensaje, correo }: Props) {
   const { t } = useTranslation();
   const pendiente = pasos.find((p) => !p.completo);
@@ -23,7 +23,7 @@ export default function PasosSolicitud({ pasos, mensaje, correo }: Props) {
     <ol className="pasos">
       {pasos.map((paso, i) => (
         <li key={paso.titulo} id={`paso-${i + 1}`} className="pasos__paso">
-          <span className={`pasos__poste${paso.completo ? ' pasos__poste--completo' : ''}`} aria-hidden="true">{i + 1}</span>
+          <span className={`pasos__numero${paso.completo ? ' pasos__numero--completo' : ''}`} aria-hidden="true">{i + 1}</span>
           <div className="pasos__cuerpo">
             <h3 className="t-h3 pasos__titulo">
               {paso.titulo}
@@ -34,13 +34,13 @@ export default function PasosSolicitud({ pasos, mensaje, correo }: Props) {
         </li>
       ))}
       <li className="pasos__paso">
-        <span className="pasos__poste" aria-hidden="true">{pasos.length + 1}</span>
+        <span className="pasos__numero" aria-hidden="true">{pasos.length + 1}</span>
         <div className="pasos__cuerpo">
           <h3 className="t-h3 pasos__titulo">{t('common.vistaPrevia')}</h3>
           {mensaje ? (
             <>
               <div className="pasos__vista">
-                <p className="t-mono pasos__mensaje" aria-live="polite">{mensaje}</p>
+                <p className="t-body pasos__mensaje" aria-live="polite">{mensaje}</p>
                 <a href="#paso-1" className="tv-boton tv-boton--texto">{t('common.editar')}</a>
               </div>
               <div className="pasos__acciones">

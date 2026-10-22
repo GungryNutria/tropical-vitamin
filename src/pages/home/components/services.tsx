@@ -8,12 +8,12 @@ import imgHospedaje from '../../../assets/services/hospedaje.jpg';
 import imgConvenciones from '../../../assets/services/convenciones.jpg';
 import imgTematicos from '../../../assets/services/tematicos.jpg';
 
-const SERVICIOS: { clave: string; ruta: string; pictograma: PictogramaId; imagen: string; color: 'azul' | 'cafe' }[] = [
-  { clave: 'tours', ruta: '/tours', pictograma: 'camara', imagen: imgTours, color: 'cafe' },
-  { clave: 'transportation', ruta: '/transportacion', pictograma: 'camioneta', imagen: imgTransportacion, color: 'azul' },
-  { clave: 'accommodation', ruta: '/hospedaje', pictograma: 'cama', imagen: imgHospedaje, color: 'azul' },
-  { clave: 'mice', ruta: '/mice', pictograma: 'grupo', imagen: imgConvenciones, color: 'azul' },
-  { clave: 'thematic', ruta: '/tematicos', pictograma: 'copas', imagen: imgTematicos, color: 'azul' },
+const SERVICIOS: { clave: string; ruta: string; pictograma: PictogramaId; imagen: string; tipo: 'servicio' | 'tour' }[] = [
+  { clave: 'tours', ruta: '/tours', pictograma: 'camara', imagen: imgTours, tipo: 'tour' },
+  { clave: 'transportation', ruta: '/transportacion', pictograma: 'camioneta', imagen: imgTransportacion, tipo: 'servicio' },
+  { clave: 'accommodation', ruta: '/hospedaje', pictograma: 'cama', imagen: imgHospedaje, tipo: 'servicio' },
+  { clave: 'mice', ruta: '/mice', pictograma: 'grupo', imagen: imgConvenciones, tipo: 'servicio' },
+  { clave: 'thematic', ruta: '/tematicos', pictograma: 'copas', imagen: imgTematicos, tipo: 'servicio' },
 ];
 
 export default function Services() {
@@ -31,7 +31,7 @@ export default function Services() {
                 <TarjetaServicio
                   pictograma={s.pictograma}
                   titulo={titulo}
-                  color={s.color}
+                  tipo={s.tipo}
                   imagen={s.imagen}
                   texto={t(`home.services.cards.${s.clave}Desc`)}
                   enlace={s.ruta}
@@ -41,8 +41,8 @@ export default function Services() {
             );
           })}
           <li>
-            <div className="placa placa--verde home-medida">
-              <h3 className="t-h2">{t('home.services.cards.medidaTitle')}</h3>
+            <div className="rotulo rotulo--accion home-medida">
+              <h3 className="t-rotulo-lg">{t('home.services.cards.medidaTitle')}</h3>
               <p className="t-body-lg">{t('home.services.cards.medidaText')}</p>
               <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('home.services.cards.medidaCta')} tamano="grande" />
             </div>

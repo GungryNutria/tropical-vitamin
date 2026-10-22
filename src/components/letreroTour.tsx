@@ -41,7 +41,7 @@ function LetreroConDatos({ tour }: { tour: TourConImagen }) {
 
   return (
     <article className="letrero">
-      <h3 className="letrero__placa placa placa--cafe">
+      <h3 className="letrero__placa rotulo rotulo--tour t-rotulo">
         <Pictograma id={pictograma} size={32} />
         <span className="letrero__titulo">{titulo}</span>
       </h3>

@@ -114,7 +114,7 @@ export default function Navbar() {
           <ul className="menu-movil__destinos">
             {DESTINOS.map((d) => (
               <li key={d.to}>
-                <NavLink to={d.to} className="placa placa--verde menu-movil__placa" onClick={cerrar}>{t(d.clave)}</NavLink>
+                <NavLink to={d.to} className="rotulo rotulo--accion menu-movil__rotulo" onClick={cerrar}>{t(d.clave)}</NavLink>
               </li>
             ))}
           </ul>

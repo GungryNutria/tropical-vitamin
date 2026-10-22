@@ -19,13 +19,13 @@ export default function History() {
       </div>
 
       <div className="contenedor home-historia__pilares">
-        <div className="placa placa--asfalto home-historia__placa">
+        <div className="rotulo rotulo--tinta home-historia__placa">
           <div>
             <h3 className="t-label">{t('home.history.missionTitle')}</h3>
             <p className="t-h3">{t('home.history.missionText')}</p>
           </div>
         </div>
-        <div className="placa placa--azul home-historia__placa">
+        <div className="rotulo rotulo--servicio home-historia__placa">
           <div>
             <h3 className="t-label">{t('home.history.visionTitle')}</h3>
             <p className="t-h3">{t('home.history.visionText')}</p>

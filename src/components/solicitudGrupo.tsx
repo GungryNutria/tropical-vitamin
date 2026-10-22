@@ -42,7 +42,7 @@ export default function SolicitudGrupo({ servicio, tituloTipo, tipos }: Props) {
             <ul className="pasos__opciones">
               {tipos.map((x) => (
                 <li key={x.clave}>
-                  <button type="button" className="chip chip--azul" aria-pressed={tipo === x.clave} onClick={() => setTipo(x.clave)}>
+                  <button type="button" className="chip chip--servicio" aria-pressed={tipo === x.clave} onClick={() => setTipo(x.clave)}>
                     {x.titulo}
                   </button>
                 </li>

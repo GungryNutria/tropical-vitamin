@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer className="pie superficie-oscura">
-      <div className="linea-vial" />
+      <div className="pie__filo" />
       <div className="contenedor pie__rejilla">
         <div className="pie__marca">
           <p className="pie__nombre">Tropical Vitamin</p>
