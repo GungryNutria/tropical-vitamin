@@ -1,37 +1,189 @@
-* {
+/* Base "Señal turística de Kukulcán". Valores solo desde tokens.css. */
+
+/* Reset mínimo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
-  max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
-html,
+
 body {
+  min-height: 100vh;
+  background: var(--tv-senal-50);
+  color: var(--tv-asfalto-900);
+  font-family: var(--tv-font-sans);
+  font-size: var(--tv-t-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Clases de texto (DESIGN §3, Tipografía) */
+.t-display { font-size: var(--tv-t-display); font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
+.t-h1 { font-size: var(--tv-t-h1); font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; }
+.t-h2 { font-size: var(--tv-t-h2); font-weight: 700; line-height: 1.15; }
+.t-h3 { font-size: var(--tv-t-h3); font-weight: 700; line-height: 1.2; }
+.t-body-lg { font-size: var(--tv-t-body-lg); font-weight: 400; line-height: 1.5; }
+.t-body { font-size: var(--tv-t-body); font-weight: 400; line-height: 1.55; max-width: 68ch; }
+.t-small { font-size: var(--tv-t-small); font-weight: 400; line-height: 1.45; }
+.t-label { font-size: var(--tv-t-label); font-weight: 700; line-height: 1.2; letter-spacing: 0.04em; text-transform: uppercase; }
+.t-data { font-size: var(--tv-t-data); font-weight: 600; font-variant-numeric: tabular-nums; }
+.t-mono { font-family: var(--tv-font-mono); font-size: var(--tv-t-mono); font-weight: 500; }
+.t-km { font-family: var(--tv-font-mono); font-size: var(--tv-t-km); font-weight: 700; line-height: 1; }
+
+/* Contenedor: máx. 1200, márgenes 16 / 24 (≥600) / 48 (≥1200) */
+.contenedor {
   width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
-  overflow-x: hidden;
+  max-width: calc(var(--tv-contenedor-max) + 2 * var(--tv-space-4));
+  margin-inline: auto;
+  padding-inline: var(--tv-space-4);
 }
 
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+@media (min-width: 600px) {
+  .contenedor {
+    max-width: calc(var(--tv-contenedor-max) + 2 * var(--tv-space-5));
+    padding-inline: var(--tv-space-5);
+  }
 }
 
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
+@media (min-width: 1200px) {
+  .contenedor {
+    max-width: calc(var(--tv-contenedor-max) + 2 * var(--tv-space-7));
+    padding-inline: var(--tv-space-7);
+  }
 }
 
-/* delay opcional para cards */
-.fade-delay-1 { transition-delay: 0.1s; }
-.fade-delay-2 { transition-delay: 0.2s; }
-.fade-delay-3 { transition-delay: 0.3s; }
-.fade-delay-4 { transition-delay: 0.4s; }
-.fade-delay-5 { transition-delay: 0.5s; }
+/* Foco: anillo 2 px + separación 2 px. En superficies oscuras, amarillo. */
+:focus-visible {
+  outline: 2px solid var(--tv-foco);
+  outline-offset: 2px;
+}
+
+.superficie-oscura {
+  --tv-foco: var(--tv-linea-400);
+}
+
+/* Botones (DESIGN §5, Boton) */
+.tv-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tv-space-2);
+  min-height: 48px;
+  padding: 0 var(--tv-space-5);
+  border: 2px solid transparent;
+  border-radius: var(--tv-r-sm);
+  font-family: var(--tv-font-sans);
+  font-size: var(--tv-t-button);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--tv-dur-hover) var(--tv-ease), border-color var(--tv-dur-hover) var(--tv-ease);
+}
+
+.tv-boton--compacto {
+  min-height: 40px;
+  padding: 0 var(--tv-space-4);
+}
+
+.tv-boton--primario {
+  background: var(--tv-linea-400);
+  color: var(--tv-asfalto-900);
+}
+
+.tv-boton--primario:hover {
+  background: var(--tv-linea-500);
+}
+
+.tv-boton--direccion {
+  background: var(--tv-verde-700);
+  color: var(--tv-blanco);
+}
+
+.tv-boton--direccion:hover {
+  background: var(--tv-verde-800);
+}
+
+.tv-boton--direccion::after {
+  content: "→";
+}
+
+.tv-boton--secundario {
+  background: transparent;
+  border-color: var(--tv-asfalto-900);
+  color: var(--tv-asfalto-900);
+}
+
+.tv-boton--secundario:hover {
+  background: var(--tv-gris-100);
+}
+
+.tv-boton--texto {
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  color: var(--tv-verde-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tv-boton--texto:hover {
+  color: var(--tv-verde-800);
+}
+
+.tv-boton:disabled,
+.tv-boton[aria-disabled="true"] {
+  background: var(--tv-gris-100);
+  border-color: transparent;
+  color: var(--tv-texto-2);
+  cursor: not-allowed;
+}
+
+/* Línea vial: discontinua amarilla de 6 px, trazos de 32 y huecos de 24 */
+.linea-vial {
+  height: 6px;
+  background: repeating-linear-gradient(to right, var(--tv-linea-400) 0 32px, transparent 32px 56px);
+}
+
+/* Movimiento reducido: sin transiciones ni animaciones */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

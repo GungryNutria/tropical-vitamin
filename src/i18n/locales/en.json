@@ -346,5 +346,12 @@
     "legal": "Legal",
     "privacy": "Privacy Notice",
     "rights": "All rights reserved."
+  },
+  "whatsapp": {
+    "general": "Hi! I'd like help planning my trip to the Riviera Maya.",
+    "tour": "Hi! I'm interested in the «{{titulo}}» tour ({{duracion}}). Can you help me plan it?",
+    "servicio": "Hi! I'd like information about {{servicio}}.",
+    "transporte": "Hi! I'd like a quote for a transfer: {{tipo}}. {{detalle}}. {{modalidad}}, {{viaje}}.",
+    "grupo": "Hi! I'd like a quote for {{tipo}} for {{personas}} people. Approximate dates: {{fechas}}."
   }
 }

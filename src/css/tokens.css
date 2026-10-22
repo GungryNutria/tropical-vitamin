@@ -1,0 +1,85 @@
+/* Tokens "Señal turística de Kukulcán" (DESIGN §3). Único lugar con valores. */
+:root {
+  /* Color */
+  --tv-senal-50: #F5F7F6;
+  --tv-blanco: #FFFFFF;
+  --tv-gris-100: #E7EBEC;
+  --tv-gris-400: #7A858C;
+  --tv-asfalto-900: #1E2427;
+  --tv-asfalto-700: #2F383D;
+  --tv-texto-2: #55606A;
+  --tv-poste-300: #B9C3C9;
+  --tv-gris-500-osc: #8A949B;
+  --tv-linea-400: #F4B942;
+  --tv-linea-500: #E0A92E;
+  --tv-cafe-700: #6E3B1F;
+  --tv-cafe-800: #5A2F18;
+  --tv-azul-700: #0B4F8A;
+  --tv-verde-700: #00703C;
+  --tv-verde-800: #005A30;
+  --tv-laguna-600: #2E6B5E;
+  --tv-whatsapp: #25D366;
+  --tv-whatsapp-hover: #1FB855;
+  --tv-error-700: #B3261E;
+  --tv-error-50: #FDECEA;
+  --tv-exito-50: #E6F4EC;
+  --tv-aviso-50: #FFF4D6;
+  /* Foco: asfalto sobre claro; las superficies oscuras lo cambian a amarillo */
+  --tv-foco: var(--tv-asfalto-900);
+
+  /* Tipografía */
+  --tv-font-sans: "Overpass Variable", system-ui, "Segoe UI", Arial, sans-serif;
+  --tv-font-mono: "Overpass Mono Variable", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  /* Escala fluida 390 → 1440 px */
+  --tv-t-display: clamp(2.5rem, 1.5714rem + 3.8095vw, 5rem);
+  --tv-t-h1: clamp(2rem, 1.4429rem + 2.2857vw, 3.5rem);
+  --tv-t-h2: clamp(1.625rem, 1.3929rem + 0.9524vw, 2.25rem);
+  --tv-t-h3: clamp(1.25rem, 1.1571rem + 0.381vw, 1.5rem);
+  --tv-t-body-lg: clamp(1.125rem, 1.0786rem + 0.1905vw, 1.25rem);
+  --tv-t-body: clamp(1rem, 0.9768rem + 0.0952vw, 1.0625rem);
+  --tv-t-small: 0.875rem;
+  --tv-t-label: 0.8125rem;
+  --tv-t-data: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);
+  --tv-t-mono: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);
+  --tv-t-km: clamp(1.25rem, 1.1571rem + 0.381vw, 1.5rem);
+  --tv-t-button: 1rem;
+
+  /* Espaciado (módulo 8) */
+  --tv-space-1: 4px;
+  --tv-space-2: 8px;
+  --tv-space-3: 12px;
+  --tv-space-4: 16px;
+  --tv-space-5: 24px;
+  --tv-space-6: 32px;
+  --tv-space-7: 48px;
+  --tv-space-8: 64px;
+  --tv-space-9: 96px;
+  --tv-space-10: 128px;
+  /* Ritmo entre secciones: 64 (390) → 128 (1440) */
+  --tv-space-seccion: clamp(4rem, 2.5143rem + 6.0952vw, 8rem);
+  --tv-contenedor-max: 1200px;
+
+  /* Radios, bordes y sombras */
+  --tv-r-xs: 4px;
+  --tv-r-sm: 6px;
+  --tv-r-md: 8px;
+  --tv-r-full: 999px;
+  /* Filete de placa: línea blanca de 2 px a 4 px del borde (p. ej. en un ::after con inset: var(--tv-filete-inset)) */
+  --tv-filete: 2px solid var(--tv-blanco);
+  --tv-filete-inset: 4px;
+  --tv-borde-control: 1px solid var(--tv-gris-400);
+  --tv-borde-lectura: 1px solid var(--tv-gris-100);
+  --tv-sombra-1: 0 1px 2px rgba(30, 36, 39, .12), 0 8px 24px -12px rgba(30, 36, 39, .28);
+
+  /* Velo del video del hero (DESIGN §5, Hero de Home) */
+  --tv-velo-hero:
+    linear-gradient(to bottom, rgba(30, 36, 39, .60) 0, rgba(30, 36, 39, 0) 160px),
+    linear-gradient(to top, rgba(30, 36, 39, .80) 0%, rgba(30, 36, 39, .55) 25%, rgba(30, 36, 39, .20) 50%, rgba(30, 36, 39, 0) 70%);
+
+  /* Movimiento */
+  --tv-ease: cubic-bezier(.2, .7, .2, 1);
+  --tv-dur-hover: 120ms;
+  --tv-dur-filtros: 150ms;
+  --tv-dur-navbar: 200ms;
+  --tv-dur-letrero: 240ms;
+}
