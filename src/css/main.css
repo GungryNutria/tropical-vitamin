@@ -52,6 +52,8 @@ a {
 .t-rotulo,
 .t-rotulo-lg { font-family: var(--tv-font-display); font-weight: 400; overflow-wrap: normal; hyphens: manual; }
 .t-h1 { font-size: var(--tv-t-h1); line-height: 1.1; }
+/* A 320 px, "Transportación" en Bungee no cabe con el mínimo de 2rem. */
+@media (max-width: 359px) { .t-h1 { font-size: 1.75rem; } }
 .t-h2 { font-size: var(--tv-t-h2); line-height: 1.1; }
 .t-rotulo { font-size: var(--tv-t-rotulo); line-height: 1.15; }
 .t-rotulo-lg { font-size: var(--tv-t-rotulo-lg); line-height: 1.15; }

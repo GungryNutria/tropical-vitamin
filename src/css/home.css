@@ -225,3 +225,11 @@
 }
 
 .home-cierre__texto { margin-top: var(--tv-space-3); }
+
+/* Pantallas de 320 px: el texto del botón puede bajar de línea y el panel no se desborda. */
+@media (max-width: 359px) {
+  .hero__poste { min-width: 0; max-width: 100%; padding: var(--tv-space-4); }
+  .hero__acciones { width: 100%; }
+  .hero__acciones > *,
+  .hero__acciones > * > * { min-width: 0; white-space: normal; text-align: center; }
+}
