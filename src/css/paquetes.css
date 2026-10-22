@@ -22,6 +22,8 @@
 }
 
 .paquete-tarjeta__rotulo svg { flex: none; }
+/* La tarjeta recorta lo que sobresale: el anillo de foco se dibuja dentro del rótulo (tinta sobre amarillo, 9.83) */
+.paquete-tarjeta__rotulo:focus-visible { outline-offset: -6px; }
 
 .paquete-tarjeta__foto {
   display: block;
