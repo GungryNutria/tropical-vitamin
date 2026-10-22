@@ -1,276 +1,65 @@
-.contact-page-container {
-  padding: 8rem 4rem 4rem;
-  min-height: 100vh;
-  background: var(--bg-main);
-  overflow-x: hidden;
-  max-width: 100%;
-}
+/* Contacto "Señal turística de Kukulcán". Valores solo desde tokens.css. */
+.contacto { padding-block: var(--tv-space-7) var(--tv-space-seccion); }
 
-.contact-page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+.contacto__rejilla { display: grid; gap: var(--tv-space-7); align-items: start; }
+.contacto__info { display: grid; gap: var(--tv-space-5); justify-items: start; }
+.contacto__placa { padding: var(--tv-space-3) var(--tv-space-5); }
+.contacto__entradilla { color: var(--tv-texto-2); max-width: 46ch; }
+
+.contacto__canal {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  gap: var(--tv-space-3);
+  justify-items: start;
   width: 100%;
+  padding: var(--tv-space-5);
+  border-radius: var(--tv-r-md);
+  background: var(--tv-blanco);
 }
 
-/* LEFT - Info */
-.contact-page-info {
-  padding-right: 2rem;
-}
-
-.contact-page-info h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--text-main);
-  margin-bottom: 1rem;
-}
-
-.contact-page-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.contact-page-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.contact-page-detail {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.contact-page-icon {
-  color: var(--yellow-main);
-  font-size: 1.5rem;
-  margin-top: 0.25rem;
-}
-
-.contact-page-detail h4 {
-  color: var(--text-main);
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.contact-page-detail p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-}
-
-.contact-page-socials {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.social-link {
-  display: flex;
+.contacto__tel {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--glass-bg);
-  color: var(--text-main);
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--glass-border);
-  transition: all 0.3s ease;
-  backdrop-filter: var(--glass-blur);
+  gap: var(--tv-space-2);
+  min-height: 44px;
+  color: var(--tv-verde-700);
+  font-weight: 700;
 }
 
-.social-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background: var(--yellow-main);
-  color: #0A0A0A;
-}
-
-.contact-page-whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  width: 100%;
-  background: var(--yellow-main);
-  color: #0A0A0A;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(244, 185, 66, 0.3);
-}
-
-.contact-page-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(244, 185, 66, 0.4);
-}
-
-/* RIGHT - Form */
-.contact-page-form-container {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  backdrop-filter: var(--glass-blur);
-}
-
-.contact-page-form h2 {
-  color: var(--text-main);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.form-row {
+.contacto__form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: var(--tv-space-5);
+  padding: var(--tv-space-5);
+  border-radius: var(--tv-r-md);
+  background: var(--tv-blanco);
 }
 
-.contact-page-form input,
-.contact-page-form select,
-.contact-page-form textarea {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  border: 2px solid var(--glass-border);
-  border-radius: 12px;
-  font-size: 1rem;
-  color: var(--text-main);
-  background: var(--bg-card);
-  transition: all 0.3s ease;
+.contacto__par { display: grid; gap: var(--tv-space-5); }
+.contacto__resumen { margin-top: var(--tv-space-2); padding-left: var(--tv-space-5); }
+.contacto__resumen a { color: var(--tv-error-700); font-weight: 600; }
+.contacto__enviar { justify-self: start; }
+.contacto__salida { margin-top: var(--tv-space-3); }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--tv-r-full);
+  animation: tv-giro .8s linear infinite;
 }
 
-.contact-page-form input:focus,
-.contact-page-form select:focus,
-.contact-page-form textarea:focus {
-  outline: none;
-  border-color: var(--yellow-main);
-  background: var(--glass-bg);
+@keyframes tv-giro { to { transform: rotate(360deg); } }
+
+@media (max-width: 599px) {
+  .contacto__enviar { justify-self: stretch; }
 }
 
-/* Select dropdown options */
-.contact-page-form select option {
-  background: var(--bg-card);
-  color: var(--text-main);
-  padding: 0.5rem;
+@media (min-width: 600px) {
+  .contacto__par { grid-template-columns: 1fr 1fr; }
+  .contacto__form { padding: var(--tv-space-6); }
 }
 
-.contact-page-form input::placeholder,
-.contact-page-form textarea::placeholder {
-  color: var(--text-muted);
-}
-
-.contact-page-form textarea {
-  resize: vertical;
-  min-height: 120px;
-  margin-bottom: 1rem;
-}
-
-.submit-btn {
-  width: 100%;
-  background: var(--yellow-main);
-  color: #0A0A0A;
-  border: none;
-  padding: 1.25rem;
-  border-radius: 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(244, 185, 66, 0.25);
-}
-
-.submit-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(244, 185, 66, 0.35);
-}
-
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.form-success {
-  text-align: center;
-  color: #22c55e;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.form-error {
-  text-align: center;
-  color: #ef4444;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .contact-page-container {
-    padding: 6rem 1.5rem 3rem;
-    overflow-x: hidden;
-  }
-
-  .contact-page-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  .contact-page-info {
-    padding-right: 0;
-    width: 100%;
-  }
-
-  .contact-page-form-container {
-    padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contact-page-form input,
-  .contact-page-form select,
-  .contact-page-form textarea {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-page-container {
-    padding: 5rem 1rem 2rem;
-  }
-
-  .contact-page-info h1 {
-    font-size: 2rem;
-  }
-
-  .contact-page-form-container {
-    padding: 1.5rem;
-  }
-
-  .contact-page-socials {
-    flex-wrap: wrap;
-  }
-
-  .social-link {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
+@media (min-width: 900px) {
+  .contacto { padding-top: var(--tv-space-8); }
+  .contacto__rejilla { grid-template-columns: 1fr 1.4fr; gap: var(--tv-space-8); }
 }
