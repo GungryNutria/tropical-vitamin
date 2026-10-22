@@ -6,18 +6,8 @@ import '@fontsource-variable/overpass-mono'
 import './css/tokens.css'
 import './css/main.css'
 import './css/componentes.css'
-import './css/variables.css'
-import './css/testimonials.css'
-import './css/stats.css'
-import './css/faq.css'
 import { BrowserRouter } from 'react-router-dom'
 import App from './app'
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

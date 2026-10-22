@@ -3,7 +3,7 @@ import TarjetaServicio from '../../../components/tarjetaServicio';
 import BotonWhatsApp from '../../../components/botonWhatsApp';
 import type { PictogramaId } from '../../../components/pictograma';
 import imgTours from '../../../assets/services/tours.jpg';
-import imgTransportacion from '../../../assets/services/transportacion.jpg';
+import imgTransportacion from '../../../assets/units/autobus.jpg';
 import imgHospedaje from '../../../assets/services/hospedaje.jpg';
 import imgConvenciones from '../../../assets/services/convenciones.jpg';
 import imgTematicos from '../../../assets/services/tematicos.jpg';

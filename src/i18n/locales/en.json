@@ -37,7 +37,8 @@
         "excellence": "Excellence",
         "excellenceDesc": "Quality in every detail of your experience",
         "community": "Community",
-        "communityDesc": "Building memories together"
+        "communityDesc": "Building memories together",
+        "comminityDesc": "Building memories together"
       },
       "short": "The pandemic brought us from Mexico City to the Riviera Maya. Here we saw that tourism had become cold and automated, and we decided to go against the current: a human, friendly and personal touch."
     },
@@ -146,7 +147,7 @@
       "label": "From",
       "value": "${{price}}"
     },
-    "book": "Book Now",
+    "book": "Book now",
     "categories": {
       "aquatic": "Aquatic",
       "adventure": "Adventure",
@@ -258,7 +259,7 @@
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
     "types": {
       "houses": "Private property",
-      "hotels": "STANDARD HOTEL ACCOMMODATION",
+      "hotels": "Standard hotel",
       "condos": "All-inclusive hotel",
       "hoteles": "Standard hotel"
     },
@@ -291,7 +292,7 @@
     "hero": {
       "title": "Groups and conventions",
       "subtitle": "We know every group is different, with its own planning and goals.",
-      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Don't worry, leave it in our hands!</strong>",
+      "text": "We focus on creating memorable group experiences, with the right coordination structure for each group. Leave it in our hands!",
       "cta": "Get a group quote"
     },
     "groups": {
@@ -327,7 +328,7 @@
     "hero": {
       "title": "Themed trips",
       "subtitle": "Every special moment and celebration deserves the detail that makes it unique.",
-      "text": "At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of each specialized event.<br/><strong>Let us help you with your celebration!</strong>",
+      "text": "At Tropical Vitamin we coordinate the planning, organization, control, management, production and logistics of every specialized event. Let us help you with your celebration!",
       "cta": "Get a celebration quote"
     },
     "trips": {

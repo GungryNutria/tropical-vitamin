@@ -24,16 +24,16 @@
     },
     "history": {
       "title": "Nuestra historia",
-      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raiz de la pandemia, la vida nos llevo de la gigante Ciudad de Mexico al paraiso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se habia vuelto frio y automatizado. Por eso, decidimos ir contracorriente: Ofrecer un trato mas humano, amable y personal en un mundo cada vez mas digitalizado. Creemos firmemente que un robot no puede escuchar tus suenos ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se habia vuelto fria. Pero nosotros creemos que un robot nunca podra reemplazar el abrazo de un buen anfitrion. Somos el resultado de la union de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta fusion nos permitio construir una empresa orgullosamente 100% MEXICANA.",
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Al incursionar en el turismo y el servicio hospitalario entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso decidimos ir a contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, y que nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura neerlandesa y la inigualable calidez mexicana. Esta fusión nos permitió construir una empresa orgullosamente 100 % mexicana.",
       "missionTitle": "Nuestra misión",
       "missionText": "No hacer clientes, sino amigos. Mi casa es tu casa.",
-      "visionTitle": "Nuestra Vision",
-      "visionText": "Ser la empresa de experiencias turisticas mas confiable y querida de la Riviera Maya.",
+      "visionTitle": "Nuestra visión",
+      "visionText": "Ser la empresa de experiencias turísticas más confiable y querida de la Riviera Maya.",
       "values": {
-        "humanTreatment": "Trato Humano",
-        "humanTreatmentDesc": "Tratamiento personalizado y calido",
-        "passion": "Pasion",
-        "passionDesc": "Amor por mostrar lo mejor de Mexico",
+        "humanTreatment": "Trato humano",
+        "humanTreatmentDesc": "Trato personalizado y cálido",
+        "passion": "Pasión",
+        "passionDesc": "Amor por mostrar lo mejor de México",
         "excellence": "Excelencia",
         "excellenceDesc": "Calidad en cada detalle de tu experiencia",
         "community": "Comunidad",
@@ -64,7 +64,7 @@
       "clients": "Clientes satisfechos",
       "hotels": "Hoteles aliados",
       "tours": "Tours disponibles",
-      "experience": "Anios de experiencia"
+      "experience": "Años de experiencia"
     },
     "testimonials": {
       "title": "Lo que dicen nuestros clientes",
@@ -73,10 +73,10 @@
           "text": "Excelente servicio, todo muy bien organizado. El equipo de Tropical Vitamin hizo de nuestro viaje una experiencia inolvidable."
         },
         "2": {
-          "text": "La mejor experiencia en la Riviera Maya. Transportacion puntual y tours espectaculares. Totalmente recomendados."
+          "text": "La mejor experiencia en la Riviera Maya. Transportación puntual y tours espectaculares. Totalmente recomendados."
         },
         "3": {
-          "text": "Viaje de graduacion perfecto. El equipo se encarga de cada detalle. Volveremos!"
+          "text": "Viaje de graduación perfecto. El equipo se encarga de cada detalle. ¡Volveremos!"
         }
       }
     },
@@ -95,8 +95,8 @@
         "answer": "¡Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contáctanos para una cotización personalizada."
       },
       "q4": {
-        "question": "Cual es la politica de cancelacion?",
-        "answer": "Nuestra politica de cancelacion varia segun el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los terminos especificos al momento de reservar."
+        "question": "¿Cuál es la política de cancelación?",
+        "answer": "Nuestra política de cancelación varía según el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los términos específicos al momento de reservar."
       },
       "q5": {
         "question": "¿Ofrecen seguro de viaje?",
@@ -124,7 +124,7 @@
       "destino": "Cancún y Riviera Maya",
       "cta": "Pregúntanos por WhatsApp"
     },
-    "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conocemos nuestra segmentacion de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean autenticamente memorables\"",
+    "intro": "Entendemos el objetivo de cada experiencia, por eso conocemos a fondo nuestra selección de los mejores tours y experiencias. «Hacemos que tus experiencias sean auténticamente memorables».",
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
@@ -139,14 +139,14 @@
     },
     "count": "tours disponibles",
     "currency": "Moneda",
-    "category": "Categoria",
-    "location": "Ubicacion",
-    "duration": "Duracion",
+    "category": "Categoría",
+    "location": "Ubicación",
+    "duration": "Duración",
     "price": {
       "label": "Desde",
       "value": "${{price}}"
     },
-    "book": "Reservar Ahora",
+    "book": "Reservar ahora",
     "categories": {
       "aquatic": "Acuáticos",
       "adventure": "Aventura",
@@ -185,7 +185,7 @@
     "intro": "Contamos con unidades nuevas y en óptimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportación que ofrecemos se adapta a cada necesidad de viaje: un servicio cómodo, seguro y funcional.",
     "airport": {
       "title": "Transportación aeropuerto",
-      "subtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
+      "subtitle": "Cancún, Playa del Carmen, Tulum y Riviera Maya",
       "description": "Servicio abierto para que organices tu propio itinerario"
     },
     "options": {
@@ -290,7 +290,7 @@
     "hero": {
       "title": "Grupos y convenciones",
       "subtitle": "Sabemos que cada grupo es diferente, con su propia planeación y objetivo.",
-      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinacion adecuada a cada necesidad del grupo. No te despreocupes por la logistica masiva, tenemos una amplia experiencia en el manejo y gestion de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeacion, organizacion, control, gestion, produccion y logistica de todo el grupo en el destino, conclusion hasta su salida y termino de tu evento.<br/><strong>No te despreocupes, dejalo en nuestras manos!</strong>",
+      "text": "Nos enfocamos en crear experiencias grupales memorables, con la estructura de coordinación adecuada para cada grupo. ¡Déjalo en nuestras manos!",
       "cta": "Cotiza tu grupo"
     },
     "groups": {
@@ -326,7 +326,7 @@
     "hero": {
       "title": "Viajes temáticos",
       "subtitle": "Todo momento y celebración especial merece ese detalle que lo hace único.",
-      "text": "En <strong>Tropical Vitamin</strong> coordinamos toda la planeacion, organizacion, control, gestion, produccion y logistica de cada evento especializado.<br/><strong>Dejanos ayudarte con tu celebracion!</strong>",
+      "text": "En Tropical Vitamin coordinamos la planeación, organización, control, gestión, producción y logística de cada evento especializado. ¡Déjanos ayudarte con tu celebración!",
       "cta": "Cotiza tu celebración"
     },
     "trips": {
@@ -419,9 +419,9 @@
     "whatsappTexto": "La forma más rápida de planear tu viaje."
   },
   "common": {
-    "loading": "Cargando...",
+    "loading": "Cargando…",
     "error": "Error",
-    "success": "Exito",
+    "success": "Éxito",
     "submit": "Enviar",
     "cancel": "Cancelar",
     "close": "Cerrar",
@@ -457,14 +457,14 @@
   },
   "footer": {
     "description": "Diseñamos experiencias auténticas en la Riviera Maya, combinando organización europea con calidez mexicana.",
-    "information": "Informacion",
+    "information": "Información",
     "registros": "Registros y permisos",
     "cancellations": "Reservas y cancelaciones",
-    "sitePolicies": "Politicas del sitio",
+    "sitePolicies": "Políticas del sitio",
     "sitemap": "Mapa del sitio",
     "contact": "Contacto",
     "legal": "Legal",
-    "privacy": "Aviso de Privacidad",
+    "privacy": "Aviso de privacidad",
     "rights": "Todos los derechos reservados.",
     "servicios": "Servicios",
     "contacto": "Contacto",
