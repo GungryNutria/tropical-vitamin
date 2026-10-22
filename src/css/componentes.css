@@ -591,3 +591,9 @@
 
 .hero-servicio__botones { display: flex; flex-wrap: wrap; gap: var(--tv-space-3); }
 .bloque-tarjetas { margin-top: var(--tv-space-6); }
+
+/* Lista de destinos (Hospedaje) */
+.destinos { display: flex; flex-wrap: wrap; gap: var(--tv-space-2); margin-top: var(--tv-space-5); list-style: none; }
+.destinos__item { padding: var(--tv-space-2) var(--tv-space-3); border: var(--tv-borde-control); border-radius: var(--tv-r-xs); background: var(--tv-senal-50); }
+.seccion__entradilla + .seccion__entradilla { margin-top: var(--tv-space-3); }
+.tarjeta__cuerpo > .tv-wa { margin-top: auto; }

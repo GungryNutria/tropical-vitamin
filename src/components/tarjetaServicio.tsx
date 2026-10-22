@@ -12,10 +12,12 @@ type Props = {
   datos?: string[];
   enlace?: string;
   mensaje?: string;
+  // Sin bloque de foto (tipos de MICE y Temáticos)
+  compacta?: boolean;
 };
 
 // Placa azul de servicio (café solo para Tours, que es destino turístico).
-export default function TarjetaServicio({ pictograma, titulo, color = 'azul', imagen, texto, datos, enlace, mensaje }: Props) {
+export default function TarjetaServicio({ pictograma, titulo, color = 'azul', imagen, texto, datos, enlace, mensaje, compacta }: Props) {
   const { t } = useTranslation();
   return (
     <article className="tarjeta">
@@ -23,7 +25,7 @@ export default function TarjetaServicio({ pictograma, titulo, color = 'azul', im
         <Pictograma id={pictograma} size={32} />
         <span>{titulo}</span>
       </h3>
-      {imagen ? (
+      {compacta ? null : imagen ? (
         <img className="tarjeta__foto" src={imagen} alt="" loading="lazy" />
       ) : (
         <div className={`tarjeta__foto tarjeta__foto--vacia placa--${color}`}>
