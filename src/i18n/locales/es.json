@@ -24,7 +24,7 @@
     },
     "history": {
       "title": "Nuestra historia",
-      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Al incursionar en el turismo y el servicio hospitalario entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso decidimos ir a contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, y que nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura neerlandesa y la inigualable calidez mexicana. Esta fusión nos permitió construir una empresa orgullosamente 100 % mexicana.",
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya.\n\nAl incursionar en el turismo y el servicio hospitalario entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso decidimos ir a contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado.\n\nCreemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, y que nunca podrá reemplazar el abrazo de un buen anfitrión.\n\nSomos el resultado de la unión de dos culturas: la estructura neerlandesa y la inigualable calidez mexicana. Esta fusión nos permitió construir una empresa orgullosamente 100 % mexicana.",
       "missionTitle": "Nuestra misión",
       "missionText": "No hacer clientes, sino amigos. Mi casa es tu casa.",
       "visionTitle": "Nuestra visión",
@@ -37,9 +37,8 @@
         "excellence": "Excelencia",
         "excellenceDesc": "Calidad en cada detalle de tu experiencia",
         "community": "Comunidad",
-        "comminityDesc": "Construyendo recuerdos juntos"
-      },
-      "short": "La pandemia nos llevó de la Ciudad de México a la Riviera Maya. Aquí vimos que el turismo se había vuelto frío y automatizado, y decidimos ir a contracorriente: un trato humano, amable y personal."
+        "communityDesc": "Construyendo recuerdos juntos"
+      }
     },
     "services": {
       "title": "Nuestros servicios",

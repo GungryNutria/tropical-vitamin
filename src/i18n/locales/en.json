@@ -24,23 +24,21 @@
     },
     "history": {
       "title": "Our story",
-      "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
+      "description": "Our story begins when destiny took an unexpected turn. Because of the pandemic, life brought us from the vast Mexico City to the paradise of the Riviera Maya.\n\nAs we ventured into tourism and hospitality, we realized that modern tourism had become cold and automated. That's why we decided to go against the current: to offer a more human, friendly and personal touch in an increasingly digital world.\n\nWe firmly believe that a robot can't hear your dreams or understand what makes a trip special, and that it can never replace the embrace of a good host.\n\nWe are the union of two cultures: Dutch structure and unmatched Mexican warmth. This fusion allowed us to build a proudly 100% Mexican company.",
       "missionTitle": "Our mission",
       "missionText": "Not to make clients, but friends. My house is your house.",
-      "visionTitle": "Our Vision",
+      "visionTitle": "Our vision",
       "visionText": "To be the most reliable and beloved tourism experiences company in the Riviera Maya.",
       "values": {
-        "humanTreatment": "Human Treatment",
+        "humanTreatment": "Human touch",
         "humanTreatmentDesc": "Personalized and warm treatment",
         "passion": "Passion",
         "passionDesc": "Love for showing the best of Mexico",
         "excellence": "Excellence",
         "excellenceDesc": "Quality in every detail of your experience",
         "community": "Community",
-        "communityDesc": "Building memories together",
-        "comminityDesc": "Building memories together"
-      },
-      "short": "The pandemic brought us from Mexico City to the Riviera Maya. Here we saw that tourism had become cold and automated, and we decided to go against the current: a human, friendly and personal touch."
+        "communityDesc": "Building memories together"
+      }
     },
     "services": {
       "title": "Our services",
