@@ -237,7 +237,7 @@
 }
 
 .menu-movil__placa.active { box-shadow: inset 8px 0 0 var(--tv-linea-400); }
-.menu-movil__pie { margin-top: auto; color: var(--tv-poste-300); }
+.menu-movil__pie { display: grid; gap: var(--tv-space-4); justify-items: start; margin-top: auto; color: var(--tv-poste-300); }
 
 /* Footer */
 .pie { background: var(--tv-asfalto-900); color: var(--tv-poste-300); }
@@ -379,6 +379,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  background: var(--tv-gris-100);
   transition: transform var(--tv-dur-hover) var(--tv-ease);
 }
 
@@ -598,3 +599,16 @@
 .destinos__item { padding: var(--tv-space-2) var(--tv-space-3); border: var(--tv-borde-control); border-radius: var(--tv-r-xs); background: var(--tv-senal-50); }
 .seccion__entradilla + .seccion__entradilla { margin-top: var(--tv-space-3); }
 .tarjeta__cuerpo > .tv-wa { margin-top: auto; }
+
+/* Entrada escalonada (useAparicion): solo se oculta si hay JS y no hay movimiento reducido */
+.aparece {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--tv-dur-letrero) var(--tv-ease) var(--retraso, 0ms), transform var(--tv-dur-letrero) var(--tv-ease) var(--retraso, 0ms);
+}
+
+.aparece--visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aparece { opacity: 1; transform: none; }
+}

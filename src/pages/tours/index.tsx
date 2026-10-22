@@ -5,6 +5,7 @@ import { LuSearch, LuX } from 'react-icons/lu';
 import '../../css/tours.css';
 import toursImg from '../../assets/services/tours.jpg';
 import { useTours } from '../../hooks/useTours';
+import { useAparicion } from '../../hooks/useAparicion';
 import { nombreCategoria, pictogramaCategoria } from '../../lib/categorias';
 import type { Category } from '../../services/toursService';
 import HeroServicio from '../../components/heroServicio';
@@ -22,6 +23,7 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, 
 export default function Tours() {
   const { t } = useTranslation();
   const { tours, estado, reintentar } = useTours();
+  const aparicion = useAparicion();
   const [params, setParams] = useSearchParams();
   const categoria = params.get('categoria') ?? '';
   const q = params.get('q') ?? '';
@@ -152,7 +154,7 @@ export default function Tours() {
 
           {estado === 'listo' && filtrados.length > 0 && (
             <>
-              <ul className="rejilla rejilla--4">
+              <ul ref={aparicion} className="rejilla rejilla--4">
                 {mostrados.map((tour) => <li key={tour.id}><LetreroTour tour={tour} /></li>)}
               </ul>
               <div className="tours-mas">

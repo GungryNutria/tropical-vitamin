@@ -26,10 +26,6 @@
 .tours-busqueda { flex: 1 1 220px; max-width: 420px; }
 .tours-busqueda__etiqueta { display: block; font-weight: 600; margin-bottom: var(--tv-space-2); }
 
-@media (max-width: 899px) {
-  .tours-busqueda__etiqueta { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-}
-
 .tours-busqueda__campo { position: relative; }
 
 .tours-busqueda__campo input {

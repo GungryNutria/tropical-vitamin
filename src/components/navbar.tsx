@@ -118,7 +118,10 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="menu-movil__pie"><LanguageSwitcher completo /></div>
+          <div className="menu-movil__pie">
+            <BotonWhatsApp mensaje={t('whatsapp.general')} tamano="grande" observable={false} />
+            <LanguageSwitcher completo />
+          </div>
         </div>
       )}
     </header>

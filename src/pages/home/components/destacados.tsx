@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTours } from '../../../hooks/useTours';
+import { useAparicion } from '../../../hooks/useAparicion';
 import LetreroTour from '../../../components/letreroTour';
 
 const CANTIDAD = 4;
@@ -9,6 +10,7 @@ const CANTIDAD = 4;
 export default function Destacados() {
   const { t } = useTranslation();
   const { tours, estado } = useTours();
+  const aparicion = useAparicion();
   if (estado === 'error') return null;
 
   const activos = tours.filter((tour) => tour.isActive);
@@ -28,7 +30,7 @@ export default function Destacados() {
             {estado === 'listo' ? t('home.destacados.verTodos', { count: tours.length }) : t('home.destacados.verTours')}
           </Link>
         </div>
-        <ul className="rejilla rejilla--4" aria-busy={estado === 'cargando'}>
+        <ul ref={estado === 'listo' ? aparicion : undefined} className="rejilla rejilla--4" aria-busy={estado === 'cargando'}>
           {estado === 'cargando'
             ? Array.from({ length: CANTIDAD }, (_, i) => <li key={i}><LetreroTour cargando /></li>)
             : elegidos.map((tour) => <li key={tour.id}><LetreroTour tour={tour} /></li>)}
