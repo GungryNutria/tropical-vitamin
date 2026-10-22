@@ -1,5 +1,6 @@
 {
   "nav": {
+    "paquetes": "Packages",
     "inicio": "Home",
     "transportacion": "Transportation",
     "hospedaje": "Accommodation",
@@ -13,6 +14,11 @@
     "irInicio": "Tropical Vitamin, go to home"
   },
   "home": {
+    "paquetes": {
+      "titulo": "Featured packages",
+      "texto": "Several services in one plan, ready to request on WhatsApp.",
+      "verTodos": "See all packages"
+    },
     "hero": {
       "title": "Creating authentically memorable experiences",
       "subtitle": "The Riviera Maya awaits you with unique experiences.",
@@ -418,6 +424,45 @@
     "datosTitulo": "Talk to us",
     "whatsappTexto": "The fastest way to plan your trip."
   },
+  "paquetes": {
+    "tituloDocumento": "Packages · Tropical Vitamin",
+    "hero": {
+      "etiqueta": "Packages",
+      "titulo": "Travel packages",
+      "texto": "Several services in one plan: tours, transfers and accommodation, coordinated by us.",
+      "cta": "Build your package on WhatsApp"
+    },
+    "vacio": {
+      "titulo": "We're putting our packages together",
+      "texto": "In the meantime, tell us what you'd like and we'll put one together for you.",
+      "cta": "Build your package on WhatsApp"
+    },
+    "dias_one": "{{count}} day",
+    "dias_other": "{{count}} days",
+    "tarjeta": {
+      "verDetalle": "View package",
+      "incluye": "Includes",
+      "mas_one": "and {{count}} more",
+      "mas_other": "and {{count}} more"
+    },
+    "detalle": {
+      "etiqueta": "Package",
+      "precio": "Price",
+      "incluye": "Includes",
+      "noIncluye": "Not included",
+      "itinerario": "Itinerary",
+      "galeria": "Gallery",
+      "relacionados": "Other packages",
+      "cierre": "Like this package?",
+      "preguntar": "Ask about this package",
+      "volver": "See all packages"
+    },
+    "noEncontrado": {
+      "titulo": "We couldn't find this package",
+      "texto": "It may no longer be available. See the ones we have or build your own.",
+      "tituloDocumento": "Package not found · Tropical Vitamin"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",
@@ -475,6 +520,8 @@
     "toursServicio": "Tours and experiences"
   },
   "whatsapp": {
+    "paquete": "Hi! I'm interested in the «{{nombre}}» package ({{duracion}}). Can you help me plan it?",
+    "paqueteMedida": "Hi! I'd like to put together a custom package. Can you help me?",
     "general": "Hi! I'd like help planning my trip to the Riviera Maya.",
     "tour": "Hi! I'm interested in the «{{titulo}}» tour ({{duracion}}). Can you help me plan it?",
     "servicio": "Hi! I'd like information about {{servicio}}.",

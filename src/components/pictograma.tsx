@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react';
 
-// 15 pictogramas exportados de Figma ("To-be / Fundamentos", Picto/*): trazo 2.5 a 24 px, color heredado.
+// 15 pictogramas exportados de Figma ("To-be / Fundamentos", Picto/*) más la maleta de Paquetes (DESIGN §12):
+// trazo 2.5 a 24 px, terminaciones redondas, color heredado.
 export type PictogramaId =
   | 'snorkel' | 'isla' | 'tortuga' | 'laguna' | 'piramide' | 'moto-acuatica' | 'tirolesa' | 'tobogan'
-  | 'luna-copa' | 'avion' | 'camioneta' | 'cama' | 'grupo' | 'copas' | 'camara';
+  | 'luna-copa' | 'avion' | 'camioneta' | 'cama' | 'grupo' | 'copas' | 'camara' | 'maleta';
 
 const TRAZOS: Record<PictogramaId, ReactNode> = {
   'snorkel': (
@@ -112,6 +113,13 @@ const TRAZOS: Record<PictogramaId, ReactNode> = {
       <path d="M19 7H5C3.89543 7 3 7.89543 3 9V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V9C21 7.89543 20.1046 7 19 7Z" />
       <path d="M8 7L10 4H14L16 7" />
       <path d="M12 17C13.933 17 15.5 15.433 15.5 13.5C15.5 11.567 13.933 10 12 10C10.067 10 8.5 11.567 8.5 13.5C8.5 15.433 10.067 17 12 17Z" />
+    </>
+  ),
+  'maleta': (
+    <>
+      <path d="M19 7H5C3.89543 7 3 7.89543 3 9V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V9C21 7.89543 20.1046 7 19 7Z" />
+      <path d="M9 7V5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V7" />
+      <path d="M8 7V20M16 7V20" />
     </>
   ),
 };

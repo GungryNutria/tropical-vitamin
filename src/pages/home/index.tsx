@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import '../../css/home.css';
 import Hero from './components/hero';
 import Services from './components/services';
+import PaquetesDestacados from './components/paquetesDestacados';
 import Destacados from './components/destacados';
 import History from './components/history';
 import FAQ from './components/faq';
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
+      <PaquetesDestacados />
       <Destacados />
       <History />
       <FAQ />

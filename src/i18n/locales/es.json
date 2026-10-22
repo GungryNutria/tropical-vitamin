@@ -1,5 +1,6 @@
 {
   "nav": {
+    "paquetes": "Paquetes",
     "inicio": "Inicio",
     "transportacion": "Transportación",
     "hospedaje": "Hospedaje",
@@ -13,6 +14,11 @@
     "irInicio": "Tropical Vitamin, ir al inicio"
   },
   "home": {
+    "paquetes": {
+      "titulo": "Paquetes destacados",
+      "texto": "Varios servicios en un solo plan, listos para pedir por WhatsApp.",
+      "verTodos": "Ver todos los paquetes"
+    },
     "hero": {
       "title": "Creando experiencias auténticamente memorables",
       "subtitle": "La Riviera Maya te espera con experiencias únicas.",
@@ -417,6 +423,45 @@
     "datosTitulo": "Habla con nosotros",
     "whatsappTexto": "La forma más rápida de planear tu viaje."
   },
+  "paquetes": {
+    "tituloDocumento": "Paquetes · Tropical Vitamin",
+    "hero": {
+      "etiqueta": "Paquetes",
+      "titulo": "Paquetes de viaje",
+      "texto": "Varios servicios en un solo plan: tours, traslados y hospedaje, coordinados por nosotros.",
+      "cta": "Arma tu paquete por WhatsApp"
+    },
+    "vacio": {
+      "titulo": "Estamos armando nuestros paquetes",
+      "texto": "Mientras tanto, cuéntanos qué quieres y te armamos uno a tu medida.",
+      "cta": "Arma tu paquete por WhatsApp"
+    },
+    "dias_one": "{{count}} día",
+    "dias_other": "{{count}} días",
+    "tarjeta": {
+      "verDetalle": "Ver paquete",
+      "incluye": "Incluye",
+      "mas_one": "y {{count}} más",
+      "mas_other": "y {{count}} más"
+    },
+    "detalle": {
+      "etiqueta": "Paquete",
+      "precio": "Precio",
+      "incluye": "Incluye",
+      "noIncluye": "No incluye",
+      "itinerario": "Itinerario",
+      "galeria": "Galería",
+      "relacionados": "Otros paquetes",
+      "cierre": "¿Te late este paquete?",
+      "preguntar": "Preguntar por este paquete",
+      "volver": "Ver todos los paquetes"
+    },
+    "noEncontrado": {
+      "titulo": "No encontramos este paquete",
+      "texto": "Puede que ya no esté disponible. Mira los que tenemos o arma uno a tu medida.",
+      "tituloDocumento": "Paquete no encontrado · Tropical Vitamin"
+    }
+  },
   "common": {
     "loading": "Cargando…",
     "error": "Error",
@@ -474,6 +519,8 @@
     "toursServicio": "Tours y experiencias"
   },
   "whatsapp": {
+    "paquete": "Hola, me interesa el paquete «{{nombre}}» ({{duracion}}). ¿Me ayudan a planearlo?",
+    "paqueteMedida": "Hola, quiero armar un paquete a mi medida. ¿Me ayudan?",
     "general": "Hola, quiero ayuda para planear mi viaje a la Riviera Maya.",
     "tour": "Hola, me interesa el tour «{{titulo}}» ({{duracion}}). ¿Me ayudan a planearlo?",
     "servicio": "Hola, quiero información de {{servicio}}.",

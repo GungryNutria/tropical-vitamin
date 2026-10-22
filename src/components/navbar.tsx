@@ -8,6 +8,7 @@ import BotonWhatsApp from './botonWhatsApp';
 
 const DESTINOS = [
   { to: '/tours', clave: 'nav.tours' },
+  { to: '/paquetes', clave: 'nav.paquetes' },
   { to: '/transportacion', clave: 'nav.transportacion' },
   { to: '/hospedaje', clave: 'nav.hospedaje' },
   { to: '/mice', clave: 'nav.mice' },

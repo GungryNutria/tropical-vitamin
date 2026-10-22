@@ -7,7 +7,8 @@ const SELECTOR = '[data-whatsapp]';
 
 // WhatsappFijo: solo < 900 px (CSS). Se oculta mientras haya un BotonWhatsApp del contenido en pantalla,
 // incluidos los que aparecen después de cargar (p. ej. la vista previa de una solicitud).
-export default function WhatsappFloat() {
+// Con barra (detalle de paquete): barra inferior a todo el ancho con su propio mensaje y texto (DESIGN §12).
+export default function WhatsappFloat({ barra }: { barra?: { mensaje: string; texto: string } }) {
   const { t } = useTranslation();
   const [oculto, setOculto] = useState(false);
 
@@ -45,6 +46,17 @@ export default function WhatsappFloat() {
       mo.disconnect();
     };
   }, []);
+
+  if (barra) {
+    return (
+      <div className={`barra-whatsapp${oculto ? ' barra-whatsapp--oculta' : ''}`} aria-hidden={oculto || undefined}>
+        <a className="tv-wa tv-wa--grande" href={urlWhatsApp(barra.mensaje)} target="_blank" rel="noopener" tabIndex={oculto ? -1 : undefined}>
+          <FaWhatsapp aria-hidden="true" className="tv-wa__icono" />
+          <span>{barra.texto}</span>
+        </a>
+      </div>
+    );
+  }
 
   return (
     <a

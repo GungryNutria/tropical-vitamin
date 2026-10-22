@@ -2,19 +2,22 @@ import type { ReactNode } from 'react';
 import Pictograma, { type PictogramaId } from './pictograma';
 
 type Props = {
-  tipo: 'tour' | 'servicio';
+  tipo: 'tour' | 'servicio' | 'paquete';
   pictograma: PictogramaId;
   etiqueta: string;
   titulo: string;
   texto: string;
   imagen: string;
+  // Texto alternativo de la foto; vacío si es decorativa
+  alt?: string;
   accion: ReactNode;
   // Línea grande del rótulo (p. ej. "Cancún y Riviera Maya"); si falta, el rótulo solo lleva la etiqueta.
   destino?: string;
 };
 
-// Héroe de páginas internas: rótulo (rosa para tours, añil para servicios) + H1 + acción, foto 4:3 con marco a la derecha.
-export default function HeroServicio({ tipo, pictograma, etiqueta, titulo, texto, imagen, accion, destino }: Props) {
+// Héroe de páginas internas: rótulo (rosa para tours, añil para servicios, amarillo para paquetes) + H1 + acción,
+// foto 4:3 con marco del color del rótulo a la derecha.
+export default function HeroServicio({ tipo, pictograma, etiqueta, titulo, texto, imagen, alt = '', accion, destino }: Props) {
   return (
     <section className={`hero-servicio hero-servicio--${tipo}`}>
       <div className="contenedor hero-servicio__rejilla">
@@ -30,7 +33,7 @@ export default function HeroServicio({ tipo, pictograma, etiqueta, titulo, texto
           <p className="t-body-lg hero-servicio__entradilla">{texto}</p>
           <div className="hero-servicio__accion">{accion}</div>
         </div>
-        <img className="hero-servicio__foto" src={imagen} alt="" />
+        <img className="hero-servicio__foto" src={imagen} alt={alt} />
       </div>
     </section>
   );

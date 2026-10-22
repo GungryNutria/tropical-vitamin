@@ -22,6 +22,7 @@
 .rotulo--servicio { background: var(--tv-anil-700); color: var(--tv-blanco); }
 .rotulo--accion { background: var(--tv-verde-700); color: var(--tv-blanco); }
 .rotulo--tinta { background: var(--tv-tinta-900); color: var(--tv-blanco); }
+.rotulo--paquete { background: var(--tv-amarillo-400); color: var(--tv-tinta-900); }
 
 /* Un control sobre un muro de color lleva el anillo de foco blanco (DESIGN §3, Foco) */
 .rotulo--tour,
@@ -190,7 +191,8 @@
   .navbar__wa-texto, .navbar__idioma { display: block; }
 }
 
-@media (min-width: 1200px) {
+/* Con 7 destinos la fila completa no cabe en 1200: se muestra desde 1280 (DESIGN §12) */
+@media (min-width: 1280px) {
   .navbar__destinos { display: block; }
   .navbar__acciones { margin-left: var(--tv-space-2); }
   .navbar__menu { display: none; }
@@ -326,6 +328,7 @@
 }
 
 .hero-servicio--tour .hero-servicio__foto { border-color: var(--tv-rosa-700); }
+.hero-servicio--paquete .hero-servicio__foto { border-color: var(--tv-amarillo-400); }
 
 @media (min-width: 900px) {
   .hero-servicio { padding-block: var(--tv-space-8); }

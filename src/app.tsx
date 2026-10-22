@@ -7,6 +7,8 @@ import Accommodation from "./pages/accommodation";
 import Mice from "./pages/mice";
 import Thematic from "./pages/thematic";
 import ContactPage from "./pages/contact";
+import Packages from "./pages/packages";
+import PackageDetail from "./pages/packages/detalle";
 
 export default function App() {
     return (
@@ -19,6 +21,8 @@ export default function App() {
             <Route path="/mice" element={<Mice />} />
             <Route path="/tematicos" element={<Thematic />} />
             <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/paquetes" element={<Packages />} />
+            <Route path="/paquetes/:slug" element={<PackageDetail />} />
         </Route>    
     </Routes>
     );

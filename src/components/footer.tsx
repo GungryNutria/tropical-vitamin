@@ -7,6 +7,7 @@ export default function Footer() {
   const { t } = useTranslation();
   const servicios = [
     { to: '/tours', texto: t('footer.toursServicio') },
+    { to: '/paquetes', texto: t('nav.paquetes') },
     { to: '/transportacion', texto: t('nav.transportacion') },
     { to: '/hospedaje', texto: t('nav.hospedaje') },
     { to: '/mice', texto: t('nav.mice') },

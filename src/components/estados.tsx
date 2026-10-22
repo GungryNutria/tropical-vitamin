@@ -4,9 +4,11 @@ import { LuCircleAlert, LuCircleCheck, LuClock, LuInfo } from 'react-icons/lu';
 import BotonWhatsApp from './botonWhatsApp';
 import Pictograma, { type PictogramaId } from './pictograma';
 
-export function EstadoVacio({ pictograma, tipo = 'tour', titulo, texto, children }: {
+// encabezado h1 cuando el estado es todo el contenido de la página (p. ej. paquete no encontrado).
+export function EstadoVacio({ pictograma, tipo = 'tour', titulo, texto, encabezado: Encabezado = 'h2', children }: {
   pictograma: PictogramaId;
-  tipo?: 'tour' | 'servicio';
+  tipo?: 'tour' | 'servicio' | 'paquete';
+  encabezado?: 'h1' | 'h2';
   titulo: string;
   texto: string;
   children?: ReactNode;
@@ -14,7 +16,7 @@ export function EstadoVacio({ pictograma, tipo = 'tour', titulo, texto, children
   return (
     <div className="estado">
       <span className={`estado__placa rotulo--${tipo}`}><Pictograma id={pictograma} size={32} /></span>
-      <h2 className="t-h3">{titulo}</h2>
+      <Encabezado className="t-h3">{titulo}</Encabezado>
       <p className="t-small estado__texto">{texto}</p>
       {children && <div className="estado__acciones">{children}</div>}
     </div>
