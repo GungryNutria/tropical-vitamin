@@ -1,47 +1,48 @@
-/* Tokens "Señal turística de Kukulcán" (DESIGN §3). Único lugar con valores. */
+/* Tokens "Rótulo del Centro" (DESIGN §3). Único lugar con valores. */
 :root {
   /* Color */
-  --tv-senal-50: #F5F7F6;
+  --tv-cal-50: #F4F4F1;
   --tv-blanco: #FFFFFF;
-  --tv-gris-100: #E7EBEC;
-  --tv-gris-400: #7A858C;
-  --tv-asfalto-900: #1E2427;
-  --tv-asfalto-700: #2F383D;
-  --tv-texto-2: #55606A;
-  --tv-poste-300: #B9C3C9;
-  --tv-gris-500-osc: #8A949B;
-  --tv-linea-400: #F4B942;
-  --tv-linea-500: #E0A92E;
-  --tv-cafe-700: #6E3B1F;
-  --tv-cafe-800: #5A2F18;
-  --tv-azul-700: #0B4F8A;
-  --tv-verde-700: #00703C;
-  --tv-verde-800: #005A30;
-  --tv-laguna-600: #2E6B5E;
+  --tv-cal-100: #E9E8E2;
+  --tv-cal-300: #D6D4CB;
+  --tv-borde-500: #7D7B72;
+  --tv-tinta-900: #1A1A1A;
+  --tv-tinta-700: #2E2E2B;
+  --tv-texto-2: #555550;
+  --tv-texto-2-osc: #BDBBB2;
+  --tv-texto-3-osc: #8F8D85;
+  --tv-amarillo-400: #F4B942;
+  --tv-amarillo-500: #E0A92E;
+  --tv-rosa-700: #B81D5E;
+  --tv-rosa-800: #96174C;
+  --tv-anil-700: #1F3F99;
+  --tv-anil-800: #18317A;
+  --tv-verde-700: #17734B;
+  --tv-verde-800: #115C3A;
   --tv-whatsapp: #25D366;
   --tv-whatsapp-hover: #1FB855;
   --tv-error-700: #B3261E;
-  --tv-error-50: #FDECEA;
-  --tv-exito-50: #E6F4EC;
-  --tv-aviso-50: #FFF4D6;
-  /* Foco: asfalto sobre claro; las superficies oscuras lo cambian a amarillo */
-  --tv-foco: var(--tv-asfalto-900);
+  --tv-error-50: #FBEAEA;
+  --tv-exito-50: #E4F1E9;
+  --tv-aviso-50: #FDF2D8;
+  /* Foco: tinta sobre claro; las superficies oscuras lo cambian a amarillo y el video o los muros de color, a blanco */
+  --tv-foco: var(--tv-tinta-900);
 
   /* Tipografía */
-  --tv-font-sans: "Overpass Variable", system-ui, "Segoe UI", Arial, sans-serif;
-  --tv-font-mono: "Overpass Mono Variable", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --tv-font-display: "Bungee", "Arial Black", "Segoe UI Black", sans-serif;
+  --tv-font-sans: "Work Sans Variable", system-ui, "Segoe UI", Arial, sans-serif;
   /* Escala fluida 390 → 1440 px */
-  --tv-t-display: clamp(2.5rem, 1.5714rem + 3.8095vw, 5rem);
-  --tv-t-h1: clamp(2rem, 1.4429rem + 2.2857vw, 3.5rem);
-  --tv-t-h2: clamp(1.625rem, 1.3929rem + 0.9524vw, 2.25rem);
+  --tv-t-h1-hero: clamp(1.75rem, 1.2857rem + 1.9048vw, 3rem);
+  --tv-t-h1: clamp(2rem, 1.5357rem + 1.9048vw, 3.25rem);
+  --tv-t-h2: clamp(1.5rem, 1.2679rem + 0.9524vw, 2.125rem);
+  --tv-t-rotulo: 1.25rem;
+  --tv-t-rotulo-lg: 1.375rem;
   --tv-t-h3: clamp(1.25rem, 1.1571rem + 0.381vw, 1.5rem);
   --tv-t-body-lg: clamp(1.125rem, 1.0786rem + 0.1905vw, 1.25rem);
   --tv-t-body: clamp(1rem, 0.9768rem + 0.0952vw, 1.0625rem);
   --tv-t-small: 0.875rem;
   --tv-t-label: 0.8125rem;
   --tv-t-data: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);
-  --tv-t-mono: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);
-  --tv-t-km: clamp(1.25rem, 1.1571rem + 0.381vw, 1.5rem);
   --tv-t-button: 1rem;
 
   /* Espaciado (módulo 8) */
@@ -60,21 +61,21 @@
   --tv-contenedor-max: 1200px;
 
   /* Radios, bordes y sombras */
-  --tv-r-xs: 4px;
-  --tv-r-sm: 6px;
-  --tv-r-md: 8px;
+  --tv-r-0: 0;
+  --tv-r-campo: 2px;
   --tv-r-full: 999px;
-  /* Filete de placa: línea blanca de 2 px a 4 px del borde (p. ej. en un ::after con inset: var(--tv-filete-inset)) */
-  --tv-filete: 2px solid var(--tv-blanco);
-  --tv-filete-inset: 4px;
-  --tv-borde-control: 1px solid var(--tv-gris-400);
-  --tv-borde-lectura: 1px solid var(--tv-gris-100);
-  --tv-sombra-1: 0 1px 2px rgba(30, 36, 39, .12), 0 8px 24px -12px rgba(30, 36, 39, .28);
+  --tv-borde-rotulo: 2px solid var(--tv-tinta-900);
+  --tv-borde-rotulo-grueso: 3px solid var(--tv-tinta-900);
+  --tv-borde-control: 1px solid var(--tv-borde-500);
+  --tv-borde-lectura: 1px solid var(--tv-cal-300);
+  /* Marco de foto: 8 px del color del muro (solo HeroServicio e Historia) */
+  --tv-marco-foto: 8px;
+  --tv-sombra-1: 0 1px 2px rgba(26, 26, 26, .12), 0 8px 24px -12px rgba(26, 26, 26, .28);
 
-  /* Velo del video del hero (DESIGN §5, Hero de Home) */
+  /* Velo del video del hero (DESIGN §3) */
   --tv-velo-hero:
-    linear-gradient(to bottom, rgba(30, 36, 39, .60) 0, rgba(30, 36, 39, 0) 160px),
-    linear-gradient(to top, rgba(30, 36, 39, .80) 0%, rgba(30, 36, 39, .55) 25%, rgba(30, 36, 39, .20) 50%, rgba(30, 36, 39, 0) 70%);
+    linear-gradient(to bottom, rgba(26, 26, 26, .60) 0, rgba(26, 26, 26, 0) 160px),
+    linear-gradient(to top, rgba(26, 26, 26, .80) 0%, rgba(26, 26, 26, .55) 25%, rgba(26, 26, 26, .20) 50%, rgba(26, 26, 26, 0) 70%);
 
   /* Movimiento */
   --tv-ease: cubic-bezier(.2, .7, .2, 1);
@@ -82,4 +83,25 @@
   --tv-dur-filtros: 150ms;
   --tv-dur-navbar: 200ms;
   --tv-dur-letrero: 240ms;
+
+  /* ALIAS-B: se borra en T-3 */
+  --tv-senal-50: var(--tv-cal-50);
+  --tv-gris-100: var(--tv-cal-100);
+  --tv-gris-400: var(--tv-borde-500);
+  --tv-asfalto-900: var(--tv-tinta-900);
+  --tv-asfalto-700: var(--tv-tinta-700);
+  --tv-poste-300: var(--tv-texto-2-osc);
+  --tv-linea-400: var(--tv-amarillo-400);
+  --tv-linea-500: var(--tv-amarillo-500);
+  --tv-cafe-700: var(--tv-rosa-700);
+  --tv-cafe-800: var(--tv-rosa-800);
+  --tv-azul-700: var(--tv-anil-700);
+  --tv-r-xs: var(--tv-r-0);
+  --tv-r-sm: var(--tv-r-0);
+  --tv-r-md: var(--tv-r-0);
+  --tv-filete: 0 solid transparent;
+  --tv-filete-inset: 0;
+  --tv-font-mono: var(--tv-font-sans);
+  --tv-t-mono: var(--tv-t-body);
+  --tv-t-km: var(--tv-t-h3);
 }

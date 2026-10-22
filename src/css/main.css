@@ -1,4 +1,4 @@
-/* Base "Señal turística de Kukulcán". Valores solo desde tokens.css. */
+/* Base "Rótulo del Centro". Valores solo desde tokens.css. */
 
 /* Reset mínimo */
 *,
@@ -17,8 +17,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--tv-senal-50);
-  color: var(--tv-asfalto-900);
+  background: var(--tv-cal-50);
+  color: var(--tv-tinta-900);
   font-family: var(--tv-font-sans);
   font-size: var(--tv-t-body);
   line-height: 1.55;
@@ -45,15 +45,21 @@ a {
   color: inherit;
 }
 
-/* Clases de texto (DESIGN §3, Tipografía) */
-.t-display { font-size: var(--tv-t-display); font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
-.t-h1 { font-size: var(--tv-t-h1); font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; }
-.t-h2 { font-size: var(--tv-t-h2); font-weight: 700; line-height: 1.15; }
-.t-h3 { font-size: var(--tv-t-h3); font-weight: 700; line-height: 1.2; }
+/* Clases de texto (DESIGN §3, Tipografía). Bungee solo en la lista cerrada de roles de display:
+   t-h1, t-h2, t-rotulo y t-rotulo-lg. Sin text-transform ni letter-spacing (Bungee es unicase). */
+.t-h1,
+.t-h2,
+.t-rotulo,
+.t-rotulo-lg { font-family: var(--tv-font-display); font-weight: 400; overflow-wrap: normal; hyphens: manual; }
+.t-h1 { font-size: var(--tv-t-h1); line-height: 1.1; }
+.t-h2 { font-size: var(--tv-t-h2); line-height: 1.1; }
+.t-rotulo { font-size: var(--tv-t-rotulo); line-height: 1.15; }
+.t-rotulo-lg { font-size: var(--tv-t-rotulo-lg); line-height: 1.15; }
+.t-h3 { font-size: var(--tv-t-h3); font-weight: 700; line-height: 1.25; }
 .t-body-lg { font-size: var(--tv-t-body-lg); font-weight: 400; line-height: 1.5; }
-.t-body { font-size: var(--tv-t-body); font-weight: 400; line-height: 1.55; max-width: 68ch; }
-.t-small { font-size: var(--tv-t-small); font-weight: 400; line-height: 1.45; }
-.t-label { font-size: var(--tv-t-label); font-weight: 700; line-height: 1.2; letter-spacing: 0.04em; text-transform: uppercase; }
+.t-body { font-size: var(--tv-t-body); font-weight: 400; line-height: 1.6; max-width: 68ch; }
+.t-small { font-size: var(--tv-t-small); font-weight: 400; line-height: 1.5; }
+.t-label { font-size: var(--tv-t-label); font-weight: 600; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase; }
 .t-data { font-size: var(--tv-t-data); font-weight: 600; font-variant-numeric: tabular-nums; }
 .t-mono { font-family: var(--tv-font-mono); font-size: var(--tv-t-mono); font-weight: 500; }
 .t-km { font-family: var(--tv-font-mono); font-size: var(--tv-t-km); font-weight: 700; line-height: 1; }
@@ -87,7 +93,7 @@ a {
 }
 
 .superficie-oscura {
-  --tv-foco: var(--tv-linea-400);
+  --tv-foco: var(--tv-amarillo-400);
 }
 
 /* Botones (DESIGN §5, Boton) */
@@ -99,8 +105,7 @@ a {
   min-height: 48px;
   padding: 0 var(--tv-space-5);
   border: 2px solid transparent;
-  border-radius: var(--tv-r-sm);
-  font-family: var(--tv-font-sans);
+  border-radius: var(--tv-r-0);
   font-size: var(--tv-t-button);
   font-weight: 700;
   line-height: 1;
@@ -115,12 +120,13 @@ a {
 }
 
 .tv-boton--primario {
-  background: var(--tv-linea-400);
-  color: var(--tv-asfalto-900);
+  border: var(--tv-borde-rotulo);
+  background: var(--tv-amarillo-400);
+  color: var(--tv-tinta-900);
 }
 
 .tv-boton--primario:hover {
-  background: var(--tv-linea-500);
+  background: var(--tv-amarillo-500);
 }
 
 .tv-boton--direccion {
@@ -137,13 +143,13 @@ a {
 }
 
 .tv-boton--secundario {
+  border: var(--tv-borde-rotulo);
   background: transparent;
-  border-color: var(--tv-asfalto-900);
-  color: var(--tv-asfalto-900);
+  color: var(--tv-tinta-900);
 }
 
 .tv-boton--secundario:hover {
-  background: var(--tv-gris-100);
+  background: var(--tv-cal-100);
 }
 
 .tv-boton--texto {
@@ -161,7 +167,7 @@ a {
 
 .tv-boton:disabled,
 .tv-boton[aria-disabled="true"] {
-  background: var(--tv-gris-100);
+  background: var(--tv-cal-100);
   border-color: transparent;
   color: var(--tv-texto-2);
   cursor: not-allowed;
