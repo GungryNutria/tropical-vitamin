@@ -1,0 +1,220 @@
+/* Paquetes "Rótulo del Centro" (DESIGN §12). Valores solo desde tokens.css. */
+
+/* TarjetaPaquete estándar: misma anatomía que LetreroTour, con el rótulo amarillo */
+.paquete-tarjeta {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: var(--tv-borde-rotulo);
+  border-radius: var(--tv-r-0);
+  background: var(--tv-blanco);
+}
+
+.paquete-tarjeta__rotulo {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tv-space-2);
+  min-height: 108px;
+  padding: var(--tv-space-4) var(--tv-space-5);
+  text-decoration: none;
+  transition: background-color var(--tv-dur-hover) var(--tv-ease);
+}
+
+.paquete-tarjeta__rotulo svg { flex: none; }
+/* La tarjeta recorta lo que sobresale: el anillo de foco se dibuja dentro del rótulo (tinta sobre amarillo, 9.83) */
+.paquete-tarjeta__rotulo:focus-visible { outline-offset: -6px; }
+
+.paquete-tarjeta__foto {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--tv-cal-100);
+  transition: transform var(--tv-dur-hover) var(--tv-ease);
+}
+
+.paquete-tarjeta:hover .paquete-tarjeta__rotulo { background: var(--tv-amarillo-500); }
+.paquete-tarjeta:hover .paquete-tarjeta__foto { transform: scale(1.03); }
+
+/* Franja de datos: tinta con texto blanco; sin precio, el hueco no existe */
+.paquete-tarjeta__franja {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--tv-space-4);
+  row-gap: var(--tv-space-1);
+  padding: var(--tv-space-2) var(--tv-space-4);
+  background: var(--tv-tinta-900);
+  color: var(--tv-blanco);
+}
+
+.paquete-tarjeta__dato { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--tv-space-1); }
+.paquete-tarjeta__monto { font-weight: 700; }
+.paquete-tarjeta__nota { color: var(--tv-texto-2-osc); }
+
+.paquete-tarjeta__cuerpo {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--tv-space-4);
+  padding: var(--tv-space-4);
+  background: var(--tv-blanco);
+}
+
+.paquete-tarjeta__incluye ul { display: grid; gap: var(--tv-space-2); margin-top: var(--tv-space-2); list-style: none; }
+.paquete-tarjeta__incluye-titulo,
+.paquete-tarjeta__mas { color: var(--tv-texto-2); }
+.paquete-tarjeta__mas { margin-top: var(--tv-space-2); }
+
+/* Renglón de "Incluye": cuadro verde con la marca, siempre con texto */
+.paquete-incluye { display: flex; align-items: center; gap: var(--tv-space-2); }
+
+.paquete-incluye__icono {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--tv-verde-700);
+  color: var(--tv-blanco);
+}
+
+.paquete-incluye--grande { gap: var(--tv-space-3); }
+.paquete-incluye--grande .paquete-incluye__icono { width: 32px; height: 32px; }
+
+.paquete-tarjeta__acciones { display: grid; gap: var(--tv-space-2); justify-items: start; margin-top: auto; }
+.paquete-tarjeta__acciones .tv-wa { justify-self: stretch; }
+
+/* Variante destacada: a ≥900 ocupa todo el ancho, foto a la izquierda (7/12) y contenido a la derecha (5/12) */
+@media (min-width: 900px) {
+  .paquete-tarjeta--destacada {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .paquete-tarjeta--destacada .paquete-tarjeta__titulo { grid-column: 2; }
+  .paquete-tarjeta--destacada .paquete-tarjeta__rotulo { font-size: var(--tv-t-h2); line-height: 1.1; }
+  .paquete-tarjeta--destacada .paquete-tarjeta__foto { grid-column: 1; grid-row: 1 / 4; height: 100%; }
+  .paquete-tarjeta--destacada .paquete-tarjeta__franja,
+  .paquete-tarjeta--destacada .paquete-tarjeta__cuerpo { grid-column: 2; }
+  .paquete-tarjeta--destacada .paquete-tarjeta__cuerpo { padding: var(--tv-space-5); }
+  .paquete-tarjeta--destacada .paquete-tarjeta__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tv-space-3); }
+}
+
+/* Rejilla de paquetes: 1 / 2 / 3 columnas (no 4: llevan más contenido); la destacada, a todo el ancho */
+.paquetes-rejilla__ancha { grid-column: 1 / -1; }
+
+@media (min-width: 900px) {
+  .paquetes-rejilla--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.paquetes-listado { padding-bottom: var(--tv-space-seccion); }
+.home-paquetes { background: var(--tv-blanco); }
+
+/* Detalle: ficha de resumen */
+.paquete-ficha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tv-space-4);
+  padding: var(--tv-space-5);
+  border: var(--tv-borde-rotulo);
+  background: var(--tv-blanco);
+}
+
+.paquete-ficha__dato { display: grid; gap: var(--tv-space-1); }
+.paquete-ficha dt { color: var(--tv-texto-2); }
+.paquete-ficha__nota { color: var(--tv-texto-2); font-weight: 400; }
+
+@media (min-width: 600px) {
+  .paquete-ficha { flex-direction: row; flex-wrap: wrap; column-gap: var(--tv-space-8); }
+}
+
+.paquete-bloque .t-h2 { margin-bottom: var(--tv-space-5); }
+.paquete-bloque + .paquete-bloque { padding-top: 0; }
+
+/* Incluye / No incluye: apilados en 390, dos columnas a ≥900 */
+.paquete-incluye-rejilla { display: grid; gap: var(--tv-space-7); }
+.paquete-lista { display: grid; gap: var(--tv-space-3); list-style: none; }
+.paquete-no-incluye { display: flex; align-items: center; gap: var(--tv-space-3); }
+.paquete-no-incluye__icono { flex: none; color: var(--tv-texto-2); }
+
+@media (min-width: 900px) {
+  .paquete-incluye-rejilla { grid-template-columns: 1fr 1fr; }
+}
+
+/* Itinerario: momentos unidos por la misma línea sólida de tinta que los pasos */
+.paquete-itinerario { display: grid; list-style: none; }
+
+.paquete-itinerario__paso {
+  position: relative;
+  display: grid;
+  gap: var(--tv-space-2);
+  justify-items: start;
+  padding: 0 0 var(--tv-space-6) var(--tv-space-6);
+}
+
+.paquete-itinerario__paso::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 2px;
+  background: var(--tv-tinta-900);
+}
+
+.paquete-itinerario__paso:last-child { padding-bottom: 0; }
+
+.paquete-itinerario__momento {
+  padding: var(--tv-space-1) var(--tv-space-3);
+  background: var(--tv-tinta-900);
+  color: var(--tv-blanco);
+  font-weight: 700;
+}
+
+/* Galería: 2 columnas (390) / 3 (≥900) de fotos 4:3 */
+.paquete-galeria { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--tv-space-3); list-style: none; }
+.paquete-galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+@media (min-width: 900px) {
+  .paquete-galeria { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--tv-space-4); }
+}
+
+/* Cierre: muro amarillo con texto tinta */
+.paquete-cierre {
+  margin-top: var(--tv-space-seccion);
+  padding-block: var(--tv-space-8);
+  background: var(--tv-amarillo-400);
+  color: var(--tv-tinta-900);
+}
+
+.paquete-bloque + .paquete-cierre { margin-top: 0; }
+.paquete-cierre__rejilla { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--tv-space-5); }
+
+/* Barra fija de WhatsApp (< 900) en el detalle: sustituye a WhatsappFijo; la página reserva su alto abajo */
+.barra-whatsapp {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  padding: var(--tv-space-3) var(--tv-space-4) calc(var(--tv-space-3) + env(safe-area-inset-bottom));
+  border-top: var(--tv-borde-rotulo);
+  background: var(--tv-blanco);
+  box-shadow: var(--tv-sombra-1);
+  transition: opacity var(--tv-dur-navbar) var(--tv-ease), transform var(--tv-dur-navbar) var(--tv-ease);
+}
+
+.barra-whatsapp .tv-wa { width: 100%; }
+.barra-whatsapp--oculta { opacity: 0; transform: translateY(100%); pointer-events: none; }
+
+@media (max-width: 899px) {
+  body:has(.barra-whatsapp) .pie { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
+@media (min-width: 900px) {
+  .barra-whatsapp { display: none; }
+}

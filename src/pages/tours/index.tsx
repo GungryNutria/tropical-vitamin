@@ -1,177 +1,179 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { toursService, type Tour, type Category } from '../../services/toursService';
+import { LuSearch, LuX } from 'react-icons/lu';
 import '../../css/tours.css';
-import { FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
+import toursImg from '../../assets/services/tours.jpg';
+import { useTours } from '../../hooks/useTours';
+import { useAparicion } from '../../hooks/useAparicion';
+import { nombreCategoria, pictogramaCategoria } from '../../lib/categorias';
+import type { Category } from '../../services/toursService';
+import HeroServicio from '../../components/heroServicio';
+import BotonWhatsApp from '../../components/botonWhatsApp';
+import LetreroTour from '../../components/letreroTour';
+import Pictograma from '../../components/pictograma';
+import { EstadoError, EstadoVacio } from '../../components/estados';
 import WhatsappFloat from '../../components/whatsappFloat';
-import SectionHero from '../../components/sectionHero';
 
-// Helper to format duration
-function formatDuration(minutes: number): string {
-  if (minutes < 60) return `${minutes} min`;
-  const hours = Math.floor(minutes / 60);
-  const mins = minutes % 60;
-  if (mins === 0) return `${hours} hr${hours > 1 ? 's' : ''}`;
-  return `${hours} hr${hours > 1 ? 's' : ''} ${mins} min`;
-}
+const PAGINA = 12;
 
-function getCategoryDisplayName(category: Category | undefined, t: (key: string) => string): string {
-  if (!category) return '';
-
-  const localized = t(`tours.categories.${category.adminName}`);
-  if (localized && localized !== `tours.categories.${category.adminName}`) {
-    return localized;
-  }
-
-  const translation = category.translations?.[0];
-  return translation?.name || category.adminName;
-}
+// Comparación sin mayúsculas ni acentos ("chichen" encuentra "Chichén").
+const normalizar = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
 
 export default function Tours() {
-  const { t, i18n } = useTranslation();
-  const [tours, setTours] = useState<Tour[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('todos');
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const { t } = useTranslation();
+  const { tours, estado, reintentar } = useTours();
+  const aparicion = useAparicion();
+  const [params, setParams] = useSearchParams();
+  const categoria = params.get('categoria') ?? '';
+  const q = params.get('q') ?? '';
+  const [pagina, setPagina] = useState({ clave: '', visibles: PAGINA });
+  // Al cambiar los filtros se vuelve a la primera página.
+  const claveFiltros = `${categoria}|${q}`;
+  const visibles = pagina.clave === claveFiltros ? pagina.visibles : PAGINA;
 
-  useEffect(() => {
-    console.log('Fetching tours, language:', i18n.language);
-    const fetchTours = async () => {
-      setLoading(true);
-      try {
-        const data = await toursService.getTours();
-        console.log('Tours loaded:', data.length);
-        setTours(data);
-      } catch (err) {
-        setError(t('tours.error'));
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTours();
-  }, [i18n.language, t]);
-
-  // Get unique categories from tours
-  const categories = useMemo(() => {
-    const cats = new Map<string, string>(); // adminName -> displayName
-    tours.forEach(tour => {
-      const cat = tour.category;
-      if (cat) {
-        const displayName = getCategoryDisplayName(cat, t);
-        cats.set(cat.adminName, displayName);
-      }
+  const categorias = useMemo(() => {
+    const mapa = new Map<string, Category>();
+    tours.forEach((tour) => {
+      if (!mapa.has(tour.category.adminName)) mapa.set(tour.category.adminName, tour.category);
     });
-    // Convert to array and sort by display name
-    const sorted = Array.from(cats.entries()).sort((a, b) => a[1].localeCompare(b[1]));
-    // Return as [adminName, displayName] pairs
-    return sorted;
-  }, [tours, t]);
+    return Array.from(mapa.values());
+  }, [tours]);
 
-  // Filter tours by category and search
-  const filteredTours = useMemo(() => {
-    let filtered = tours;
-    
-    // Filter by category
-    if (selectedCategory !== 'todos' && selectedCategory !== 'all') {
-      filtered = filtered.filter(tour => 
-        tour.category?.adminName === selectedCategory
-      );
-    }
-    
-    // Filter by search
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(tour => {
-        const translation = tour.translations?.[0];
-        return (
-          translation?.title?.toLowerCase().includes(query) ||
-          translation?.description?.toLowerCase().includes(query) ||
-          tour.location?.toLowerCase().includes(query)
-        );
-      });
-    }
-    
-    return filtered;
-  }, [tours, selectedCategory, searchQuery]);
+  const filtrados = useMemo(() => {
+    const texto = normalizar(q.trim());
+    return tours.filter((tour) => {
+      if (categoria && tour.category.adminName !== categoria) return false;
+      if (!texto) return true;
+      const tr = tour.translations[0];
+      return normalizar(`${tr?.title ?? ''} ${tr?.description ?? ''} ${nombreCategoria(tour.category, t)}`).includes(texto);
+    });
+  }, [tours, categoria, q, t]);
 
-  if (loading) {
-    return <div className="tours-loading">{t('tours.loading')}</div>;
-  }
-
-  if (error) {
-    return <div className="tours-error">{error}</div>;
-  }
+  const actualizar = (cambios: Record<string, string>) => {
+    const siguiente = new URLSearchParams(params);
+    Object.entries(cambios).forEach(([k, v]) => (v ? siguiente.set(k, v) : siguiente.delete(k)));
+    setParams(siguiente, { replace: true });
+  };
+  const quitarFiltros = () => setParams({}, { replace: true });
+  const hayFiltros = Boolean(categoria || q);
+  const total = tours.length;
+  const mostrados = filtrados.slice(0, visibles);
+  const restantes = Math.min(PAGINA, filtrados.length - mostrados.length);
 
   return (
-    <div className="tours-container">
-      {/* Hero Section */}
-      <SectionHero
-        title={t('tours.hero.title')}
-        subtitle={t('tours.hero.subtitle')}
-        backgroundImage={'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80'} text={t('tours.intro')}      />
-      
-      {/* Search & Filter */}
-      <div className="tours-search-filter">
-        {/* Search */}
-        <div className="tours-search">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder={t('tours.search.placeholder') || 'Buscar tours...'}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
-        </div>
-        
-        {/* Category Dropdown */}
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="category-select"
-        >
-          <option value="todos">{t('tours.filter.all')}</option>
-          {categories.map(([adminName, displayName]) => (
-            <option key={adminName} value={adminName}>
-              {displayName}
-            </option>
-          ))}
-        </select>
-      </div>
+    <>
+      <HeroServicio
+        tipo="tour"
+        pictograma="camara"
+        etiqueta={t('tours.hero.etiqueta')}
+        destino={t('tours.hero.destino')}
+        titulo={t('tours.hero.title')}
+        texto={t('tours.hero.subtitle')}
+        imagen={toursImg}
+        accion={<BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('tours.hero.cta')} tamano="grande" />}
+      />
 
-      <div className="tours-grid">
-        {filteredTours.map((tour) => {
-          const translation = tour.translations?.[0];
-          const categoryDisplayName = getCategoryDisplayName(tour.category, t);
-          const imageUrl = (tour as any).imageUrl; // Added by toursService
-          
-          return (
-            <div key={tour.id} className="tour-card">
-              <div className="tour-image">
-                <span className="tour-category">{categoryDisplayName}</span>
-                <img 
-                  src={imageUrl}
-                  alt={translation?.title || 'Tour'}
+      <section className="tours-filtros" aria-label={t('tours.filter.label')}>
+        <div className="contenedor tours-filtros__interior">
+          <div className="tours-filtros__fila">
+            <div className="tours-busqueda">
+              <label htmlFor="buscar-tours" className="t-small tours-busqueda__etiqueta">{t('tours.search.label')}</label>
+              <div className="tours-busqueda__campo">
+                <LuSearch size={20} aria-hidden="true" className="tours-busqueda__icono" />
+                <input
+                  id="buscar-tours"
+                  type="search"
+                  value={q}
+                  placeholder={t('tours.search.placeholder')}
+                  onChange={(e) => actualizar({ q: e.target.value })}
                 />
-              </div>
-              <div className="tour-content">
-                <h3 className="tour-name">{translation?.title}</h3>
-                <p className="tour-description">{translation?.description}</p>
-                <div className="tour-info">
-                  <span className="tour-location"><FaMapMarkerAlt /> {tour.location}</span>
-                  <span className="tour-duration"><FaClock /> {formatDuration(tour.duration)}</span>
-                </div>
-                <button className="tour-button">{t('tours.book')}</button>
+                {q && (
+                  <button type="button" className="tours-busqueda__limpiar" aria-label={t('tours.search.limpiar')} onClick={() => actualizar({ q: '' })}>
+                    <LuX size={20} aria-hidden="true" />
+                  </button>
+                )}
               </div>
             </div>
-          );
-        })}
-      </div>
+            {estado === 'listo' && (
+              <p className="t-data tours-contador" aria-live="polite">
+                {hayFiltros ? t('tours.contadorFiltrado', { n: filtrados.length, total }) : t('tours.contador', { count: total })}
+                {hayFiltros && (
+                  <button type="button" className="tv-boton tv-boton--texto" onClick={quitarFiltros}>{t('tours.quitarFiltros')}</button>
+                )}
+              </p>
+            )}
+          </div>
+          {categorias.length > 0 && (
+            <ul className="tours-chips">
+              <li>
+                <button type="button" className="chip" aria-pressed={!categoria} onClick={() => actualizar({ categoria: '' })}>
+                  {t('tours.filter.all')}
+                </button>
+              </li>
+              {categorias.map((cat) => (
+                <li key={cat.adminName}>
+                  <button
+                    type="button"
+                    className="chip"
+                    aria-pressed={categoria === cat.adminName}
+                    onClick={() => actualizar({ categoria: cat.adminName })}
+                  >
+                    <span className="chip__picto"><Pictograma id={pictogramaCategoria(cat.adminName)} size={20} /></span>
+                    {nombreCategoria(cat, t)}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </section>
 
+      <section className="tours-catalogo">
+        <div className="contenedor">
+          {estado === 'error' && <EstadoError titulo={t('tours.errorCarga')} onReintentar={reintentar} />}
+
+          {estado === 'cargando' && (
+            <ul className="rejilla rejilla--4" aria-busy="true">
+              {Array.from({ length: 8 }, (_, i) => <li key={i}><LetreroTour cargando /></li>)}
+            </ul>
+          )}
+
+          {estado === 'listo' && filtrados.length === 0 && (
+            hayFiltros ? (
+              <EstadoVacio pictograma="camara" titulo={t('tours.vacio.title')} texto={t('tours.vacio.text')}>
+                <button type="button" className="tv-boton tv-boton--secundario" onClick={quitarFiltros}>{t('tours.quitarFiltros')}</button>
+                <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('common.preguntarWhatsapp')} />
+              </EstadoVacio>
+            ) : (
+              <EstadoVacio pictograma="camara" titulo={t('tours.sinTours.title')} texto={t('tours.sinTours.text')}>
+                <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('common.preguntarWhatsapp')} />
+              </EstadoVacio>
+            )
+          )}
+
+          {estado === 'listo' && filtrados.length > 0 && (
+            <>
+              <ul ref={aparicion} className="rejilla rejilla--4">
+                {mostrados.map((tour) => <li key={tour.id}><LetreroTour tour={tour} /></li>)}
+              </ul>
+              <div className="tours-mas">
+                <p className="t-data tours-mas__texto">{t('tours.mostrando', { n: mostrados.length, total: filtrados.length })}</p>
+                {restantes > 0 && (
+                  <button
+                    type="button"
+                    className="tv-boton tv-boton--secundario"
+                    onClick={() => setPagina({ clave: claveFiltros, visibles: visibles + PAGINA })}
+                  >
+                    {t('tours.verMas', { count: restantes })}
+                  </button>
+                )}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
       <WhatsappFloat />
-    </div>
+    </>
   );
 }

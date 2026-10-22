@@ -1,77 +1,59 @@
 import { useTranslation } from 'react-i18next';
-import '../../css/mice.css';
+import convencionesImg from '../../assets/services/convenciones.jpg';
+import HeroServicio from '../../components/heroServicio';
+import BotonWhatsApp from '../../components/botonWhatsApp';
+import TarjetaServicio from '../../components/tarjetaServicio';
+import SolicitudGrupo from '../../components/solicitudGrupo';
 import WhatsappFloat from '../../components/whatsappFloat';
-import SectionHero from '../../components/sectionHero';
+
+const GRUPOS = ['mice', 'team', 'boda', 'viajeros', 'familia', 'escolares', 'deportivos'];
 
 export default function Mice() {
   const { t } = useTranslation();
-
-  const miceGroups = [
-    { 
-      key: 'mice',
-      title: t('mice.groups.mice'),
-      description: t('mice.groups.miceDesc')
-    },
-    { 
-      key: 'team',
-      title: t('mice.groups.team'),
-      description: t('mice.groups.teamDesc')
-    },
-    { 
-      key: 'boda',
-      title: t('mice.groups.boda'),
-      description: t('mice.groups.bodaDesc')
-    },
-    { 
-      key: 'viajeros',
-      title: t('mice.groups.viajeros'),
-      description: t('mice.groups.viajerosDesc')
-    },
-    { 
-      key: 'familia',
-      title: t('mice.groups.familia'),
-      description: t('mice.groups.familiaDesc')
-    },
-    { 
-      key: 'escolares',
-      title: t('mice.groups.escolares'),
-      description: t('mice.groups.escolaresDesc')
-    },
-    { 
-      key: 'deportivos',
-      title: t('mice.groups.deportivos'),
-      description: t('mice.groups.deportivosDesc')
-    }
-  ];
+  const tipos = GRUPOS.map((clave) => ({ clave, titulo: t(`mice.groups.${clave}`) }));
 
   return (
-    <div className="mice-container">
-      {/* Hero Section */}
-
-      <SectionHero
-        title={t('mice.hero.title')}
-        subtitle={t('mice.hero.subtitle')}
-        text={t('mice.hero.text')} backgroundImage={'https://plus.unsplash.com/premium_photo-1661510831877-e94fff4cc710?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} />
-
-      {/* Cards Grid */}
-      <div className="mice-grid">
-        {miceGroups.map((group) => (
-          <div key={group.key} className="mice-card">
-            <h3 className="mice-card-title">{group.title}</h3>
-            <p className="mice-card-desc">{group.description}</p>
-            <button className="mice-btn">{t('mice.moreInfo')}</button>
+    <>
+      <HeroServicio
+        tipo="servicio"
+        pictograma="grupo"
+        etiqueta={t('common.servicio')}
+        titulo={t('mice.hero.title')}
+        texto={t('mice.hero.subtitle')}
+        imagen={convencionesImg}
+        accion={
+          <div className="hero-servicio__botones">
+            <a href="#cotizar" className="tv-boton tv-boton--primario">{t('mice.hero.cta')}</a>
+            <BotonWhatsApp mensaje={t('whatsapp.servicio', { servicio: t('mice.title').toLowerCase() })} tamano="grande" />
           </div>
-        ))}
-      </div>
+        }
+      />
 
-      {/* CTA */}
-      <div className="mice-cta">
-        <h2>{t('mice.cta.title')}</h2>
-        <p>{t('mice.cta.subtitle')}</p>
-        <button className="mice-contact-btn">{t('mice.cta.button')}</button>
-      </div>
+      <section className="seccion">
+        <div className="contenedor">
+          <h2 className="t-h2 seccion__titulo">{t('mice.tiposTitulo')}</h2>
+          <p className="t-body seccion__entradilla">{t('mice.texto1')}</p>
+          <p className="t-body seccion__entradilla">{t('mice.texto2')}</p>
+          <ul className="rejilla bloque-tarjetas">
+            {GRUPOS.map((clave) => (
+              <li key={clave}>
+                <TarjetaServicio compacta pictograma="grupo" titulo={t(`mice.groups.${clave}`)} texto={t(`mice.groups.${clave}Desc`)} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
+      <section id="cotizar" className="seccion solicitud">
+        <div className="contenedor solicitud__rejilla">
+          <div className="solicitud__intro">
+            <h2 className="t-h2">{t('mice.pasosTitulo')}</h2>
+            <p className="t-body seccion__entradilla">{t('mice.pasosTexto')}</p>
+          </div>
+          <SolicitudGrupo servicio="mice" tituloTipo={t('common.grupoTipo')} tipos={tipos} />
+        </div>
+      </section>
       <WhatsappFloat />
-    </div>
+    </>
   );
 }

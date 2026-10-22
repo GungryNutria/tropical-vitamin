@@ -1,96 +1,54 @@
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import "../../../css/services.css";
-import { useFadeUp } from "../../../hooks/useFadeUp";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from 'react-i18next';
+import TarjetaServicio from '../../../components/tarjetaServicio';
+import BotonWhatsApp from '../../../components/botonWhatsApp';
+import type { PictogramaId } from '../../../components/pictograma';
+import imgTours from '../../../assets/services/tours.jpg';
+import imgTransportacion from '../../../assets/units/autobus.jpg';
+import imgHospedaje from '../../../assets/services/hospedaje.jpg';
+import imgConvenciones from '../../../assets/services/convenciones.jpg';
+import imgTematicos from '../../../assets/services/tematicos.jpg';
 
-import service1 from "../../../assets/services/transportacion.jpg";
-import service2 from "../../../assets/services/hospedaje.jpg";
-import service3 from "../../../assets/services/tours.jpg";
-import service4 from "../../../assets/services/convenciones.jpg";
-import service5 from "../../../assets/services/tematicos.jpg";
+const SERVICIOS: { clave: string; ruta: string; pictograma: PictogramaId; imagen: string; tipo: 'servicio' | 'tour' }[] = [
+  { clave: 'tours', ruta: '/tours', pictograma: 'camara', imagen: imgTours, tipo: 'tour' },
+  { clave: 'transportation', ruta: '/transportacion', pictograma: 'camioneta', imagen: imgTransportacion, tipo: 'servicio' },
+  { clave: 'accommodation', ruta: '/hospedaje', pictograma: 'cama', imagen: imgHospedaje, tipo: 'servicio' },
+  { clave: 'mice', ruta: '/mice', pictograma: 'grupo', imagen: imgConvenciones, tipo: 'servicio' },
+  { clave: 'thematic', ruta: '/tematicos', pictograma: 'copas', imagen: imgTematicos, tipo: 'servicio' },
+];
 
-
-
-function Services() {
+export default function Services() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  useFadeUp();
-
-  const servicios = [
-    {
-      title: t('home.services.cards.transportation'),
-      desc: t('home.services.cards.transportationDesc'),
-      img: service1,
-      path: '/transportacion',
-    },
-    {
-      title: t('home.services.cards.accommodation'),
-      desc: t('home.services.cards.accommodationDesc'),
-      img: service2,
-      path: '/hospedaje',
-    },
-    {
-      title: t('home.services.cards.tours'),
-      desc: t('home.services.cards.toursDesc'),
-      img: service3,
-      path: '/tours',
-    },
-    {
-      title: t('home.services.cards.mice'),
-      desc: t('home.services.cards.miceDesc'),
-      img: service4,
-      path: '/mice',
-    },
-    {
-      title: t('home.services.cards.thematic'),
-      desc: t('home.services.cards.thematicDesc'),
-      img: service5,
-      path: '/tematicos',
-    },
-  ];
-
   return (
-    <section id="servicios" className="services">
-      <h2 className="section-title fade-up">
-        <span className="title-accent"></span>
-        {t('home.services.title')}
-      </h2>
-      <p className="services-intro fade-up">
-        {t('home.services.subtitle')}
-      </p>
-
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="services-swiper fade-up"
-      >
-        {servicios.map((service, i) => (
-          <SwiperSlide key={i} >
-            <div className="service-card">
-              <div className="service-image">
-                <img src={service.img} alt={service.title} />
-              </div>
-
-              <div className="service-info">
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
-                <button onClick={() => navigate(service.path)}>Ver más</button>
-              </div>
+    <section className="seccion">
+      <div className="contenedor">
+        <h2 className="t-h2 seccion__titulo">{t('home.services.title')}</h2>
+        <p className="t-body-lg seccion__entradilla">{t('home.services.subtitle')}</p>
+        <ul className="rejilla home-servicios">
+          {SERVICIOS.map((s) => {
+            const titulo = t(`home.services.cards.${s.clave}`);
+            return (
+              <li key={s.clave}>
+                <TarjetaServicio
+                  pictograma={s.pictograma}
+                  titulo={titulo}
+                  tipo={s.tipo}
+                  imagen={s.imagen}
+                  texto={t(`home.services.cards.${s.clave}Desc`)}
+                  enlace={s.ruta}
+                  mensaje={t('whatsapp.servicio', { servicio: titulo.toLowerCase() })}
+                />
+              </li>
+            );
+          })}
+          <li>
+            <div className="rotulo rotulo--accion home-medida">
+              <h3 className="t-rotulo-lg">{t('home.services.cards.medidaTitle')}</h3>
+              <p className="t-body-lg">{t('home.services.cards.medidaText')}</p>
+              <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('home.services.cards.medidaCta')} tamano="grande" />
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }
-
-export default Services;

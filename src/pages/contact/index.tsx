@@ -1,210 +1,167 @@
-import { useTranslation } from "react-i18next";
-import "../../css/contact-page.css";
-import { FaAt, FaFacebookF, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { useState } from "react";
-import WhatsappFloat from "../../components/whatsappFloat";
+import { useRef, useState, type ChangeEvent, type FormEvent } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LuPhone } from 'react-icons/lu';
+import '../../css/contact-page.css';
+import Campo from '../../components/campo';
+import BotonWhatsApp from '../../components/botonWhatsApp';
+import { Aviso } from '../../components/estados';
+import WhatsappFloat from '../../components/whatsappFloat';
 
-function ContactPage() {
-    const { t } = useTranslation();
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        destination: "",
-        travelers: "",
-        message: "",
-    });
+// Mismo cuerpo que antes para POST /mail (MailDto de la API).
+type Formulario = { name: string; email: string; phone: string; service: string; destination: string; travelers: string; message: string };
+type Errores = Partial<Record<keyof Formulario, string>>;
 
-    const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+const SERVICIOS: [string, string][] = [
+  ['transportacion', 'transportation'], ['hospedaje', 'accommodation'], ['tours', 'tours'],
+  ['mice', 'mice'], ['tematicos', 'thematic'], ['otro', 'other'],
+];
+const DESTINOS: [string, string][] = [
+  ['cancun', 'cancun'], ['playa-carmen', 'playaCarmen'], ['riviera-maya', 'rivieraMaya'], ['tulum', 'tulum'],
+  ['bacalar', 'bacalar'], ['yucatan', 'yucatan'], ['otro', 'other'],
+];
+const CORREO = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-    ) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
+export default function ContactPage() {
+  const { t } = useTranslation();
+  const [params] = useSearchParams();
+  const servicioInicial = params.get('servicio') ?? '';
+  const [form, setForm] = useState<Formulario>({
+    name: '', email: '', phone: '', destination: '', travelers: '',
+    service: SERVICIOS.some(([v]) => v === servicioInicial) ? servicioInicial : '',
+    message: params.get('mensaje') ?? '',
+  });
+  const [errores, setErrores] = useState<Errores>({});
+  const [estado, setEstado] = useState<'idle' | 'enviando' | 'exito' | 'error'>('idle');
+  const resumen = useRef<HTMLDivElement>(null);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
-        setStatus("idle");
+  const cambiar = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
-        try {
-            var url = import.meta.env.VITE_API_URL + "/mail"
-            const res = await fetch(
-                url,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(form),
-                }
-            );
+  const validar = (): Errores => {
+    const e: Errores = {};
+    if (!form.name.trim()) e.name = t('contact.form.errorName');
+    if (!form.email.trim()) e.email = t('contact.form.errorEmail');
+    else if (!CORREO.test(form.email.trim())) e.email = t('contact.form.errorEmailFormato');
+    if (!form.message.trim()) e.message = t('contact.form.errorMessage');
+    return e;
+  };
 
-            if (!res.ok) throw new Error("Error");
+  const enviar = async (e: FormEvent) => {
+    e.preventDefault();
+    const encontrados = validar();
+    setErrores(encontrados);
+    const claves = Object.keys(encontrados) as (keyof Formulario)[];
+    if (claves.length > 0) {
+      if (claves.length > 1) requestAnimationFrame(() => resumen.current?.focus());
+      else document.getElementById(`contacto-${claves[0]}`)?.focus();
+      return;
+    }
+    setEstado('enviando');
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/mail`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setEstado('exito');
+      setForm({ name: '', email: '', phone: '', service: '', destination: '', travelers: '', message: '' });
+    } catch {
+      setEstado('error');
+    }
+  };
 
-            setStatus("success");
-            setForm({ name: "", email: "", phone: "", service: "", destination: "", travelers: "", message: "" });
-        } catch {
-            setStatus("error");
-        } finally {
-            setLoading(false);
-        }
-    };
+  const listaErrores = Object.entries(errores) as [keyof Formulario, string][];
+  const enviando = estado === 'enviando';
 
-    return (
-        <div className="contact-page-container">
-            <div className="contact-page-wrapper">
-                {/* LEFT - Info */}
-                <div className="contact-page-info">
-                    <h1>{t('contact.title')}</h1>
-                    <p className="contact-page-subtitle">{t('contact.subtitle')}</p>
-
-                    <div className="contact-page-details">
-                        <div className="contact-page-detail">
-                            <FaLocationDot className="contact-page-icon" />
-                            <div>
-                                <h4>{t('contact.info.mexico')}</h4>
-                                <p>{t('contact.info.mexicoLocation')}</p>
-                            </div>
-                        </div>
-                        <div className="contact-page-detail">
-                            <FaLocationDot className="contact-page-icon" />
-                            <div>
-                                <h4>{t('contact.info.netherlands')}</h4>
-                                <p>{t('contact.info.netherlandsLocation')}</p>
-                            </div>
-                        </div>
-                        <div className="contact-page-detail">
-                            <FaPhone className="contact-page-icon" />
-                            <div>
-                                <h4>{t('contact.info.phone')}</h4>
-                                <p>{t('contact.info.mexicoPhone')}</p>
-                                <p>{t('contact.info.netherlandsPhone')}</p>
-                            </div>
-                        </div>
-                        <div className="contact-page-detail">
-                            <FaAt className="contact-page-icon" />
-                            <div>
-                                <h4>{t('contact.info.email')}</h4>
-                                <p>contacto@tropical-vitamin.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="contact-page-socials">
-                        <a href="https://facebook.com" target="_blank" className="social-link">
-                            <FaFacebookF /> Facebook
-                        </a>
-                        <a href="https://instagram.com" target="_blank" className="social-link">
-                            <FaInstagram /> Instagram
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" className="social-link">
-                            <FaLinkedin /> LinkedIn
-                        </a>
-                    </div>
-
-                    <button
-                        className="contact-page-whatsapp"
-                        onClick={() =>
-                            window.open(
-                                "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios%20",
-                                "_blank"
-                            )
-                        }
-                    >
-                        <FaPhone /> {t('contact.whatsapp')}
-                    </button>
-                </div>
-
-                {/* RIGHT - Form */}
-                <div className="contact-page-form-container">
-                    <form className="contact-page-form" onSubmit={handleSubmit}>
-                        <h2>{t('contact.form.title')}</h2>
-                        
-                        <div className="form-row">
-                            <input
-                                name="name"
-                                value={form.name}
-                                onChange={handleChange}
-                                placeholder={t('contact.form.name')}
-                                required
-                            />
-                            <input
-                                name="email"
-                                type="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder={t('contact.form.email')}
-                                required
-                            />
-                        </div>
-
-                        <div className="form-row">
-                            <input
-                                name="phone"
-                                value={form.phone}
-                                onChange={handleChange}
-                                placeholder={t('contact.form.phone')}
-                            />
-                            <select name="service" value={form.service} onChange={handleChange}>
-                                <option value="">{t('contact.form.service')}</option>
-                                <option value="transportacion">{t('contact.services.transportation')}</option>
-                                <option value="hospedaje">{t('contact.services.accommodation')}</option>
-                                <option value="tours">{t('contact.services.tours')}</option>
-                                <option value="mice">{t('contact.services.mice')}</option>
-                                <option value="tematicos">{t('contact.services.thematic')}</option>
-                                <option value="otro">{t('contact.services.other')}</option>
-                            </select>
-                        </div>
-
-                        <div className="form-row">
-                            <select name="destination" value={form.destination} onChange={handleChange}>
-                                <option value="">{t('contact.form.destination')}</option>
-                                <option value="cancun">{t('contact.destinations.cancun')}</option>
-                                <option value="playa-carmen">{t('contact.destinations.playaCarmen')}</option>
-                                <option value="riviera-maya">{t('contact.destinations.rivieraMaya')}</option>
-                                <option value="tulum">{t('contact.destinations.tulum')}</option>
-                                <option value="bacalar">{t('contact.destinations.bacalar')}</option>
-                                <option value="yucatan">{t('contact.destinations.yucatan')}</option>
-                                <option value="otro">{t('contact.destinations.other')}</option>
-                            </select>
-                            <input
-                                name="travelers"
-                                type="number"
-                                value={form.travelers}
-                                onChange={handleChange}
-                                placeholder={t('contact.form.travelers')}
-                                min="1"
-                            />
-                        </div>
-
-                        <textarea
-                            name="message"
-                            value={form.message}
-                            onChange={handleChange}
-                            placeholder={t('contact.form.message')}
-                            rows={6}
-                        />
-
-                        <button type="submit" disabled={loading} className="submit-btn">
-                            {loading ? t('contact.form.sending') : t('contact.form.submit')}
-                        </button>
-
-                        {status === "success" && (
-                            <p className="form-success">{t('contact.form.success')}</p>
-                        )}
-                        {status === "error" && (
-                            <p className="form-error">{t('contact.form.error')}</p>
-                        )}
-                    </form>
-                </div>
-            </div>
-
-            <WhatsappFloat />
+  return (
+    <section className="contacto">
+      <div className="contenedor contacto__rejilla">
+        <div className="contacto__info">
+          <p className="rotulo rotulo--accion contacto__placa"><span className="t-label">{t('contact.etiqueta')}</span></p>
+          <h1 className="t-h1">{t('contact.title')}</h1>
+          <p className="t-body-lg contacto__entradilla">{t('contact.subtitle')}</p>
+          <div className="contacto__canal">
+            <h2 className="t-h3">{t('contact.datosTitulo')}</h2>
+            <p className="t-small contacto__entradilla">{t('contact.whatsappTexto')}</p>
+            <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('contact.whatsapp')} tamano="grande" />
+            <a className="contacto__tel" href="tel:+529841681263">
+              <LuPhone size={20} aria-hidden="true" />
+              {t('contact.info.mexicoPhone')}
+            </a>
+          </div>
         </div>
-    );
-}
 
-export default ContactPage;
+        <form className="contacto__form" onSubmit={enviar} noValidate>
+          <h2 className="t-h2">{t('contact.form.title')}</h2>
+
+          {listaErrores.length > 1 && (
+            <div ref={resumen} tabIndex={-1} className="aviso aviso--error" role="alert">
+              <div>
+                <p className="aviso__titulo">{t('contact.form.resumen', { count: listaErrores.length })}</p>
+                <ul className="contacto__resumen">
+                  {listaErrores.map(([campo, msg]) => (
+                    <li key={campo}><a href={`#contacto-${campo}`}>{msg}</a></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          <Campo id="contacto-name" etiqueta={t('contact.form.name')} obligatorio error={errores.name}>
+            <input name="name" type="text" autoComplete="name" value={form.name} onChange={cambiar} />
+          </Campo>
+          <div className="contacto__par">
+            <Campo id="contacto-email" etiqueta={t('contact.form.email')} obligatorio error={errores.email}>
+              <input name="email" type="email" autoComplete="email" value={form.email} onChange={cambiar} />
+            </Campo>
+            <Campo id="contacto-phone" etiqueta={t('contact.form.phone')}>
+              <input name="phone" type="tel" autoComplete="tel" value={form.phone} onChange={cambiar} />
+            </Campo>
+          </div>
+          <div className="contacto__par">
+            <Campo id="contacto-service" etiqueta={t('contact.form.service')}>
+              <select name="service" value={form.service} onChange={cambiar}>
+                <option value="">{t('contact.form.servicePlaceholder')}</option>
+                {SERVICIOS.map(([v, k]) => <option key={v} value={v}>{t(`contact.services.${k}`)}</option>)}
+              </select>
+            </Campo>
+            <Campo id="contacto-destination" etiqueta={t('contact.form.destination')}>
+              <select name="destination" value={form.destination} onChange={cambiar}>
+                <option value="">{t('contact.form.destinationPlaceholder')}</option>
+                {DESTINOS.map(([v, k]) => <option key={v} value={v}>{t(`contact.destinations.${k}`)}</option>)}
+              </select>
+            </Campo>
+          </div>
+          <Campo id="contacto-travelers" etiqueta={t('contact.form.travelers')}>
+            <input name="travelers" type="number" min={1} inputMode="numeric" value={form.travelers} onChange={cambiar} />
+          </Campo>
+          <Campo id="contacto-message" etiqueta={t('contact.form.message')} obligatorio ayuda={t('contact.form.messageAyuda')} error={errores.message}>
+            <textarea name="message" rows={5} value={form.message} onChange={cambiar} />
+          </Campo>
+
+          <button type="submit" className="tv-boton tv-boton--primario contacto__enviar" disabled={enviando} aria-busy={enviando}>
+            {enviando && <span className="spinner" aria-hidden="true" />}
+            {enviando ? t('contact.form.sending') : t('contact.form.submit')}
+          </button>
+
+          {estado === 'exito' && (
+            <Aviso tipo="exito" titulo={t('contact.form.successTitulo')}>
+              <p className="t-small">{t('contact.form.success')}</p>
+            </Aviso>
+          )}
+          {estado === 'error' && (
+            <Aviso tipo="error" titulo={t('contact.form.errorTitulo')}>
+              <p className="t-small">{t('contact.form.error')}</p>
+              <div className="contacto__salida">
+                <BotonWhatsApp mensaje={form.message || t('whatsapp.general')} texto={t('contact.whatsapp')} />
+              </div>
+            </Aviso>
+          )}
+        </form>
+      </div>
+      <WhatsappFloat />
+    </section>
+  );
+}
