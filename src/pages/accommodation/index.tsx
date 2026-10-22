@@ -1,47 +1,19 @@
 import { useTranslation } from 'react-i18next';
-import '../../css/accommodation.css';
+import hospedajeImg from '../../assets/services/hospedaje.jpg';
+import HeroServicio from '../../components/heroServicio';
+import BotonWhatsApp from '../../components/botonWhatsApp';
+import TarjetaServicio from '../../components/tarjetaServicio';
 import WhatsappFloat from '../../components/whatsappFloat';
-import SectionHero from '../../components/sectionHero';
+
+const TIPOS = [
+  { clave: 'houses', datos: ['directHost', 'cultural', 'comfort'] },
+  { clave: 'hoteles', datos: ['roomService', 'amenities', 'personalized', 'variety'] },
+  { clave: 'condos', datos: ['kitchen', 'spaces', 'privacy', 'longStays'] },
+];
 
 export default function Accommodation() {
   const { t } = useTranslation();
-
-  const accommodations = [
-    {
-      id: 'casas',
-      title: t('accommodation.types.houses'),
-      description: t('accommodation.features.houses'),
-      features: [
-        t('accommodation.features.directHost'),
-        t('accommodation.features.cultural'),
-        t('accommodation.features.comfort')
-      ]
-    },
-    {
-      id: 'hoteles',
-      title: t('accommodation.types.hoteles'),
-      description: t('accommodation.features.hoteles'),
-      features: [
-        t('accommodation.features.roomService'),
-        t('accommodation.features.amenities'),
-        t('accommodation.features.personalized'),
-        t('accommodation.features.variety')
-      ]
-    },
-    {
-      id: 'condos',
-      title: t('accommodation.types.condos'),
-      description: t('accommodation.features.condos'),
-      features: [
-        t('accommodation.features.kitchen'),
-        t('accommodation.features.spaces'),
-        t('accommodation.features.privacy'),
-        t('accommodation.features.longStays')
-      ]
-    }
-  ];
-
-  const destinations = [
+  const destinos = [
     t('contact.destinations.cancun'),
     t('contact.destinations.playaCarmen'),
     t('contact.destinations.rivieraMaya'),
@@ -51,40 +23,54 @@ export default function Accommodation() {
     t('contact.destinations.yucatan'),
     'Holbox',
     'Isla Mujeres',
-    'Cozumel'
+    'Cozumel',
   ];
 
   return (
-    <div className="accommodation-container">
-      {/* Hero Section */}
-      <SectionHero
-        title={t('accommodation.hero.title')}
-        subtitle={t('accommodation.hero.subtitle')}
-        text={t('accommodation.intro')}
-        backgroundImage="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80"
+    <>
+      <HeroServicio
+        tipo="servicio"
+        pictograma="cama"
+        etiqueta={t('common.servicio')}
+        titulo={t('accommodation.hero.title')}
+        texto={t('accommodation.hero.subtitle')}
+        imagen={hospedajeImg}
+        accion={<BotonWhatsApp mensaje={t('whatsapp.servicio', { servicio: t('accommodation.hero.title').toLowerCase() })} texto={t('accommodation.hero.cta')} tamano="grande" />}
       />
 
-      <div className="accommodation-grid">
-        {accommodations.map((acc) => (
-          <div key={acc.id} className="accommodation-card">
-            <h2 className="accommodation-card-title">{acc.title}</h2>
-            <p className="accommodation-card-desc">{acc.description}</p>
-
-            <button className="accommodation-btn">{t('accommodation.viewOptions')}</button>
-          </div>
-        ))}
-      </div>
-
-      <div className="destinations-section">
-        <h2 className="destinations-title">{t('accommodation.destinations')}</h2>
-        <div className="destinations-list">
-          {destinations.map((dest, idx) => (
-            <span key={idx} className="destination-tag">{dest}</span>
-          ))}
+      <section className="seccion">
+        <div className="contenedor">
+          <h2 className="t-h2 seccion__titulo">{t('accommodation.tiposTitulo')}</h2>
+          <p className="t-body-lg seccion__entradilla">{t('accommodation.intro')}</p>
+          <ul className="rejilla bloque-tarjetas">
+            {TIPOS.map(({ clave, datos }) => {
+              const titulo = t(`accommodation.types.${clave}`);
+              return (
+                <li key={clave}>
+                  <TarjetaServicio
+                    compacta
+                    pictograma="cama"
+                    titulo={titulo}
+                    texto={t(`accommodation.features.${clave}`)}
+                    datos={datos.map((d) => t(`accommodation.features.${d}`))}
+                    mensaje={t('whatsapp.servicio', { servicio: `${t('accommodation.hero.title').toLowerCase()}: ${titulo}` })}
+                  />
+                </li>
+              );
+            })}
+          </ul>
         </div>
-      </div>
+      </section>
 
+      <section className="seccion solicitud">
+        <div className="contenedor">
+          <h2 className="t-h2 seccion__titulo">{t('accommodation.destinations')}</h2>
+          <ul className="destinos">
+            {destinos.map((d) => <li key={d} className="t-data destinos__item">{d}</li>)}
+          </ul>
+        </div>
+      </section>
       <WhatsappFloat />
-    </div>
+    </>
   );
 }
