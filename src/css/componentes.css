@@ -266,7 +266,7 @@
 .pie__copy { padding-bottom: var(--tv-space-6); }
 
 @media (min-width: 900px) {
-  .pie__rejilla { grid-template-columns: 2fr 1fr 1fr .7fr; padding-block: var(--tv-space-8) var(--tv-space-7); }
+  .pie__rejilla { grid-template-columns: 2fr 1fr 1.3fr .7fr; padding-block: var(--tv-space-8) var(--tv-space-7); }
 }
 
 /* EstadoVacio / EstadoError */

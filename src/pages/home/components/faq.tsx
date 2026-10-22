@@ -1,59 +1,28 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import BotonWhatsApp from '../../../components/botonWhatsApp';
+
+// q4 (cancelación, "48 horas") oculta hasta que la dueña confirme la política (dato 15).
+const PREGUNTAS = ['q1', 'q2', 'q3', 'q5'];
 
 export default function FAQ() {
   const { t } = useTranslation();
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: t('home.faq.q1.question'),
-      answer: t('home.faq.q1.answer')
-    },
-    {
-      question: t('home.faq.q2.question'),
-      answer: t('home.faq.q2.answer')
-    },
-    {
-      question: t('home.faq.q3.question'),
-      answer: t('home.faq.q3.answer')
-    },
-    {
-      question: t('home.faq.q4.question'),
-      answer: t('home.faq.q4.answer')
-    },
-    {
-      question: t('home.faq.q5.question'),
-      answer: t('home.faq.q5.answer')
-    }
-  ];
-
   return (
-    <section className="faq">
-      <div className="faq-container">
-        <h2 className="section-title">
-          <span className="title-accent"></span>
-          {t('home.faq.title')}
-        </h2>
-        
-        <div className="faq-list">
-          {faqs.map((faq, idx) => (
-            <div 
-              key={idx} 
-              className={`faq-item ${openIndex === idx ? 'open' : ''}`}
-              onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-            >
-              <div className="faq-question">
-                <span>{faq.question}</span>
-                {openIndex === idx ? <FaMinus /> : <FaPlus />}
-              </div>
-              {openIndex === idx && (
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
-                </div>
-              )}
-            </div>
+    <section className="seccion home-faq">
+      <div className="contenedor home-faq-fila__rejilla">
+        <div className="home-faq-fila__intro">
+          <h2 className="t-h2">{t('home.faq.title')}</h2>
+          <p className="t-body seccion__entradilla">{t('home.faq.subtitle')}</p>
+          <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('common.preguntarWhatsapp')} />
+        </div>
+        <div className="home-faq-fila__lista">
+          {PREGUNTAS.map((q, i) => (
+            <details key={q} className="faq-fila" open={i === 0}>
+              <summary className="faq-fila__pregunta">
+                <span>{t(`home.faq.${q}.question`)}</span>
+                <span className="faq-fila__icono" aria-hidden="true" />
+              </summary>
+              <p className="t-body faq-fila__respuesta">{t(`home.faq.${q}.answer`)}</p>
+            </details>
           ))}
         </div>
       </div>

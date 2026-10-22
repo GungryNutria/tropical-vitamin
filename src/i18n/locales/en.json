@@ -15,14 +15,18 @@
   "home": {
     "hero": {
       "title": "Creating authentically memorable experiences",
-      "subtitle": "The Riviera Maya awaits you with unique experiences",
-      "cta": "Plan your trip"
+      "subtitle": "The Riviera Maya awaits you with unique experiences.",
+      "cta": "Plan your trip on WhatsApp",
+      "verTours": "See tours",
+      "ciudad": "Cancún",
+      "pausar": "Pause video",
+      "reproducir": "Play video"
     },
     "history": {
-      "title": "Our History",
+      "title": "Our story",
       "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
-      "missionTitle": "Our Mission",
-      "missionText": "Not to make clients, but FRIENDS. My House Is Your House.",
+      "missionTitle": "Our mission",
+      "missionText": "Not to make clients, but friends. My house is your house.",
       "visionTitle": "Our Vision",
       "visionText": "To be the most reliable and beloved tourism experiences company in the Riviera Maya.",
       "values": {
@@ -34,22 +38,26 @@
         "excellenceDesc": "Quality in every detail of your experience",
         "community": "Community",
         "communityDesc": "Building memories together"
-      }
+      },
+      "short": "The pandemic brought us from Mexico City to the Riviera Maya. Here we saw that tourism had become cold and automated, and we decided to go against the current: a human, friendly and personal touch."
     },
     "services": {
-      "title": "Our Services",
+      "title": "Our services",
       "subtitle": "We design experiences, not just trips.",
       "cards": {
         "transportation": "Transportation",
         "transportationDesc": "Airport, point to point and open service.",
         "accommodation": "Accommodation",
         "accommodationDesc": "Hotels, homes and condos in the Riviera Maya.",
-        "tours": "Tours & Experiences",
+        "tours": "Tours and experiences",
         "toursDesc": "Aquatic, archaeological, theme parks and more.",
-        "mice": "MICE & Conventions",
+        "mice": "Groups and conventions",
         "miceDesc": "Events, congresses and corporate logistics.",
-        "thematic": "Thematic Trips",
-        "thematicDesc": "Experiences made to your measure."
+        "thematic": "Themed trips",
+        "thematicDesc": "Experiences made to measure.",
+        "medidaTitle": "Something tailor-made?",
+        "medidaText": "Tell us what you'd like to experience and we'll plan your trip with you.",
+        "medidaCta": "Message us on WhatsApp"
       }
     },
     "stats": {
@@ -73,7 +81,7 @@
       }
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Frequently asked questions",
       "q1": {
         "question": "What is the best time to visit the Riviera Maya?",
         "answer": "The best time is from November to April, when the weather is dry and temperatures are pleasant. However, the region offers unique experiences throughout the year."
@@ -93,12 +101,19 @@
       "q5": {
         "question": "Do you offer travel insurance?",
         "answer": "Yes, we can help you purchase travel insurance that covers your stay. Ask us about the available options."
-      }
+      },
+      "subtitle": "Another question? Message us and we'll answer on WhatsApp."
     },
     "cta": {
       "title": "Plan your experience in the Riviera Maya",
-      "subtitle": "Don't worry about your trip, we take care of everything",
-      "button": "Talk via WhatsApp"
+      "subtitle": "Don't worry about your trip: we take care of everything.",
+      "button": "Talk on WhatsApp"
+    },
+    "destacados": {
+      "title": "Featured tours",
+      "subtitle": "Every sign is a destination: where you're going, where you leave from and how long it takes.",
+      "verTodos": "See all {{count}} tours",
+      "verTours": "See tours"
     }
   },
   "tours": {

@@ -1,26 +1,32 @@
-import Cta from "./components/cta";
-import Hero from "./components/hero";
-import History from "./components/history";
-import Navbar from "../../components/navbar";
-import WhatsappFloat from "../../components/whatsappFloat";
-import Services from "./components/services";
-import Testimonials from "./components/testimonials";
-import Stats from "./components/stats";
-import FAQ from "./components/faq";
+import { useTranslation } from 'react-i18next';
+import '../../css/home.css';
+import Hero from './components/hero';
+import Services from './components/services';
+import Destacados from './components/destacados';
+import History from './components/history';
+import FAQ from './components/faq';
+import BotonWhatsApp from '../../components/botonWhatsApp';
+import WhatsappFloat from '../../components/whatsappFloat';
 
 export default function Home() {
-  return <>
-
-    <Navbar />
-    <Hero />
-    <History />
-    <Stats />
-    <Services />
-    <Testimonials />
-    <FAQ />
-    {/* <Mice /> */}
-    <Cta />
-    <WhatsappFloat />
-  </>;
-
+  const { t } = useTranslation();
+  return (
+    <>
+      <Hero />
+      <Services />
+      <Destacados />
+      <History />
+      <FAQ />
+      <section className="home-cierre superficie-oscura">
+        <div className="contenedor home-cierre__rejilla">
+          <div>
+            <h2 className="t-h2">{t('home.cta.title')}</h2>
+            <p className="t-body-lg home-cierre__texto">{t('home.cta.subtitle')}</p>
+          </div>
+          <BotonWhatsApp mensaje={t('whatsapp.general')} texto={t('home.cta.button')} tamano="grande" />
+        </div>
+      </section>
+      <WhatsappFloat />
+    </>
+  );
 }

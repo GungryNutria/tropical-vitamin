@@ -14,15 +14,19 @@
   },
   "home": {
     "hero": {
-      "title": "Creando experiencias autenticamente memorables",
-      "subtitle": "La Riviera Maya te espera con experiencias unicas",
-      "cta": "Planea tu viaje"
+      "title": "Creando experiencias auténticamente memorables",
+      "subtitle": "La Riviera Maya te espera con experiencias únicas.",
+      "cta": "Planea tu viaje por WhatsApp",
+      "verTours": "Ver tours",
+      "ciudad": "Cancún",
+      "pausar": "Pausar video",
+      "reproducir": "Reproducir video"
     },
     "history": {
-      "title": "Nuestra Historia",
+      "title": "Nuestra historia",
       "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raiz de la pandemia, la vida nos llevo de la gigante Ciudad de Mexico al paraiso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se habia vuelto frio y automatizado. Por eso, decidimos ir contracorriente: Ofrecer un trato mas humano, amable y personal en un mundo cada vez mas digitalizado. Creemos firmemente que un robot no puede escuchar tus suenos ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se habia vuelto fria. Pero nosotros creemos que un robot nunca podra reemplazar el abrazo de un buen anfitrion. Somos el resultado de la union de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta fusion nos permitio construir una empresa orgullosamente 100% MEXICANA.",
-      "missionTitle": "Nuestra Mision",
-      "missionText": "No hacer clientes, sino AMIGOS. Mi Casa Es Tu Casa.",
+      "missionTitle": "Nuestra misión",
+      "missionText": "No hacer clientes, sino amigos. Mi casa es tu casa.",
       "visionTitle": "Nuestra Vision",
       "visionText": "Ser la empresa de experiencias turisticas mas confiable y querida de la Riviera Maya.",
       "values": {
@@ -34,22 +38,26 @@
         "excellenceDesc": "Calidad en cada detalle de tu experiencia",
         "community": "Comunidad",
         "comminityDesc": "Construyendo recuerdos juntos"
-      }
+      },
+      "short": "La pandemia nos llevó de la Ciudad de México a la Riviera Maya. Aquí vimos que el turismo se había vuelto frío y automatizado, y decidimos ir a contracorriente: un trato humano, amable y personal."
     },
     "services": {
-      "title": "Nuestros Servicios",
-      "subtitle": "Disenamos experiencias, no solo viajes.",
+      "title": "Nuestros servicios",
+      "subtitle": "Diseñamos experiencias, no solo viajes.",
       "cards": {
-        "transportation": "Transportacion",
+        "transportation": "Transportación",
         "transportationDesc": "Aeropuerto, punto a punto y servicio abierto.",
         "accommodation": "Hospedaje",
-        "accommodationDesc": "Hoteles, casas y condos en la Riviera Maya.",
-        "tours": "Tours & Experiencias",
-        "toursDesc": "Acuatics, arqueologicos, parques y mas.",
-        "mice": "MICE & Convenciones",
-        "miceDesc": "Eventos, congresos y logistica empresarial.",
-        "thematic": "Viajes Tematicos",
-        "thematicDesc": "Experiencias faites a tu medida."
+        "accommodationDesc": "Hoteles, casas y condominios en la Riviera Maya.",
+        "tours": "Tours y experiencias",
+        "toursDesc": "Acuáticos, arqueológicos, parques y más.",
+        "mice": "Grupos y convenciones",
+        "miceDesc": "Eventos, congresos y logística empresarial.",
+        "thematic": "Viajes temáticos",
+        "thematicDesc": "Experiencias hechas a tu medida.",
+        "medidaTitle": "¿Algo a tu medida?",
+        "medidaText": "Cuéntanos qué quieres vivir y armamos tu viaje contigo.",
+        "medidaCta": "Escríbenos por WhatsApp"
       }
     },
     "stats": {
@@ -73,32 +81,39 @@
       }
     },
     "faq": {
-      "title": "Preguntas Frecuentes",
+      "title": "Preguntas frecuentes",
       "q1": {
-        "question": "Cual es la mejor epoca para visitar la Riviera Maya?",
-        "answer": "La mejor epoca es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la region ofrece experiencias unicas durante todo el ano."
+        "question": "¿Cuál es la mejor época para visitar la Riviera Maya?",
+        "answer": "La mejor época es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la región ofrece experiencias únicas todo el año."
       },
       "q2": {
-        "question": "Incluyen transporte desde el aeropuerto?",
-        "answer": "Si, contamos con servicio de transportacion aeropuerto-hotel en todas nuestras opciones: compartido, privado, luxury y autobus."
+        "question": "¿Incluyen transporte desde el aeropuerto?",
+        "answer": "Sí, contamos con servicio de transportación aeropuerto-hotel en todas nuestras opciones: compartido, privado, de lujo y autobús."
       },
       "q3": {
-        "question": "Puedo reservar tours para grupos grandes?",
-        "answer": "Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contactanos para una cotizacion personalizada."
+        "question": "¿Puedo reservar tours para grupos grandes?",
+        "answer": "¡Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contáctanos para una cotización personalizada."
       },
       "q4": {
         "question": "Cual es la politica de cancelacion?",
         "answer": "Nuestra politica de cancelacion varia segun el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los terminos especificos al momento de reservar."
       },
       "q5": {
-        "question": "Ofrecen seguro de viaje?",
-        "answer": "Si, podemos ayudarte a contratar un seguro de viaje que cubra tu estancia. Preguntanos por las opciones disponibles."
-      }
+        "question": "¿Ofrecen seguro de viaje?",
+        "answer": "Sí, podemos ayudarte a contratar un seguro de viaje que cubra tu estancia. Pregúntanos por las opciones disponibles."
+      },
+      "subtitle": "¿Otra duda? Escríbenos y te respondemos por WhatsApp."
     },
     "cta": {
       "title": "Planea tu experiencia en la Riviera Maya",
-      "subtitle": "Despreocupate por tu viaje, nosotros nos encargamos",
+      "subtitle": "Despreocúpate por tu viaje: nosotros nos encargamos.",
       "button": "Hablar por WhatsApp"
+    },
+    "destacados": {
+      "title": "Tours destacados",
+      "subtitle": "Cada letrero es un destino: a dónde vas, de dónde sales y cuánto dura.",
+      "verTodos": "Ver los {{count}} tours",
+      "verTours": "Ver tours"
     }
   },
   "tours": {
