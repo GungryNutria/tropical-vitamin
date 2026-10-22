@@ -61,7 +61,6 @@ a {
 .t-small { font-size: var(--tv-t-small); font-weight: 400; line-height: 1.5; }
 .t-label { font-size: var(--tv-t-label); font-weight: 600; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase; }
 .t-data { font-size: var(--tv-t-data); font-weight: 600; font-variant-numeric: tabular-nums; }
-.t-km { font-family: var(--tv-font-mono); font-size: var(--tv-t-km); font-weight: 700; line-height: 1; }
 
 /* Contenedor: máx. 1200, márgenes 16 / 24 (≥600) / 48 (≥1200) */
 .contenedor {
@@ -113,11 +112,6 @@ a {
   transition: background-color var(--tv-dur-hover) var(--tv-ease), border-color var(--tv-dur-hover) var(--tv-ease);
 }
 
-.tv-boton--compacto {
-  min-height: 40px;
-  padding: 0 var(--tv-space-4);
-}
-
 .tv-boton--primario {
   border: var(--tv-borde-rotulo);
   background: var(--tv-amarillo-400);
@@ -135,10 +129,6 @@ a {
 
 .tv-boton--direccion:hover {
   background: var(--tv-verde-800);
-}
-
-.tv-boton--direccion::after {
-  content: "→";
 }
 
 .tv-boton--secundario {

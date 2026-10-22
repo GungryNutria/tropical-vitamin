@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { LuArrowRight } from 'react-icons/lu';
 import { useTours } from '../../../hooks/useTours';
 import { useAparicion } from '../../../hooks/useAparicion';
 import LetreroTour from '../../../components/letreroTour';
@@ -28,6 +29,7 @@ export default function Destacados() {
           </div>
           <Link to="/tours" className="tv-boton tv-boton--direccion">
             {estado === 'listo' ? t('home.destacados.verTodos', { count: tours.length }) : t('home.destacados.verTours')}
+            <LuArrowRight size={20} aria-hidden="true" />
           </Link>
         </div>
         <ul ref={estado === 'listo' ? aparicion : undefined} className="rejilla rejilla--4" aria-busy={estado === 'cargando'}>

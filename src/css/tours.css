@@ -1,4 +1,4 @@
-/* Tours "Señal turística de Kukulcán". Valores solo desde tokens.css. */
+/* Tours "Rótulo del Centro". Valores solo desde tokens.css. */
 
 /* Filtros: blancos, fijos bajo la navbar en < 900 */
 .tours-filtros {
@@ -6,7 +6,7 @@
   top: 64px;
   z-index: 20;
   background: var(--tv-blanco);
-  border-block: var(--tv-borde-lectura);
+  border-bottom: var(--tv-borde-lectura);
 }
 
 .tours-filtros__interior {
@@ -33,11 +33,11 @@
   height: 48px;
   padding: 0 48px 0 44px;
   border: var(--tv-borde-control);
-  border-radius: var(--tv-r-xs);
+  border-radius: var(--tv-r-campo);
   background: var(--tv-blanco);
 }
 
-.tours-busqueda__campo input:hover { border-color: var(--tv-asfalto-900); }
+.tours-busqueda__campo input:hover { border-color: var(--tv-tinta-900); }
 .tours-busqueda__campo input::placeholder { color: var(--tv-texto-2); }
 .tours-busqueda__campo input::-webkit-search-cancel-button { display: none; }
 
@@ -65,7 +65,7 @@
 
 .tours-contador { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--tv-space-4); }
 
-/* Chips-placa: en 390 se desplazan en horizontal con sombra de desborde */
+/* Chips: en 390 se desplazan en horizontal con sombra de desborde */
 .tours-chips {
   display: flex;
   gap: var(--tv-space-2);

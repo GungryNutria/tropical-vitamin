@@ -1,13 +1,14 @@
-/* Home "Señal turística de Kukulcán". Valores solo desde tokens.css. */
+/* Home "Rótulo del Centro". Valores solo desde tokens.css. */
 
-/* Hero sobre video */
+/* Hero sobre video: el anillo de foco cae sobre el video con velo, así que es blanco */
 .hero {
+  --tv-foco: var(--tv-blanco);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-height: 100svh;
-  color: var(--tv-asfalto-900);
+  color: var(--tv-tinta-900);
 }
 
 .hero__medio {
@@ -33,26 +34,27 @@
   padding-bottom: var(--tv-space-6);
 }
 
+/* Panel de rótulo amarillo (DESIGN §6, Hero de Home) */
 .hero__poste {
+  --tv-foco: var(--tv-tinta-900);
   display: grid;
+  justify-items: start;
   gap: var(--tv-space-4);
   max-width: 560px;
   padding: var(--tv-space-5);
-  border-radius: var(--tv-r-sm);
-  background: var(--tv-senal-50);
+  border: var(--tv-borde-rotulo-grueso);
+  border-radius: var(--tv-r-0);
+  background: var(--tv-amarillo-400);
 }
 
-.hero__km { display: flex; align-items: center; gap: var(--tv-space-3); }
+.hero__poste .t-h1 { font-size: var(--tv-t-h1-hero); }
 
-.hero__placa-km {
-  padding: var(--tv-space-2) var(--tv-space-3);
-  border-radius: var(--tv-r-xs);
-  background: var(--tv-asfalto-900);
+.hero__ciudad {
+  padding: var(--tv-space-1) var(--tv-space-3);
+  background: var(--tv-tinta-900);
   color: var(--tv-blanco);
+  font-weight: 700;
 }
-
-.hero__ciudad { color: var(--tv-texto-2); font-weight: 600; }
-.hero__entradilla { color: var(--tv-texto-2); }
 
 .hero__acciones { display: flex; flex-wrap: wrap; gap: var(--tv-space-3); }
 .hero__acciones > * { flex: 1 1 auto; }
@@ -66,33 +68,11 @@
   width: 44px;
   height: 44px;
   border: 0;
-  border-radius: var(--tv-r-sm);
-  background: var(--tv-asfalto-700);
+  border-radius: var(--tv-r-0);
+  background: var(--tv-tinta-700);
   color: var(--tv-blanco);
   cursor: pointer;
-  --tv-foco: var(--tv-linea-400);
-}
-
-/* Línea vial vertical que baja del video hacia Servicios */
-.hero__linea-wrap { position: relative; height: 0; }
-
-.hero__linea {
-  position: absolute;
-  top: 0;
-  left: var(--tv-space-4);
-  width: 6px;
-  height: calc(var(--tv-space-seccion) - var(--tv-space-5));
-  background: repeating-linear-gradient(to bottom, var(--tv-linea-400) 0 32px, transparent 32px 56px);
-  animation: tv-linea-avanza 1.2s var(--tv-ease) 1 both;
-}
-
-@keyframes tv-linea-avanza {
-  from { clip-path: inset(0 0 100% 0); }
-  to { clip-path: inset(0 0 0 0); }
-}
-
-@media (min-width: 600px) {
-  .hero__linea { left: var(--tv-space-5); }
+  --tv-foco: var(--tv-amarillo-400);
 }
 
 @media (min-width: 900px) {
@@ -104,13 +84,13 @@
 }
 
 @media (min-width: 1200px) {
-  .hero__linea { left: var(--tv-space-7); }
   .hero__pausa { right: var(--tv-space-7); }
 }
 
 /* Servicios */
 .home-servicios { margin-top: var(--tv-space-6); }
 
+/* "¿Algo a tu medida?": muro verde */
 .home-medida {
   flex-direction: column;
   align-items: flex-start;
@@ -122,7 +102,7 @@
 }
 
 /* Destacados */
-.home-destacados { background: var(--tv-gris-100); }
+.home-destacados { background: var(--tv-cal-100); }
 
 .home-destacados__cabecera {
   display: flex;
@@ -140,7 +120,8 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--tv-r-md);
+  border: var(--tv-marco-foto) solid var(--tv-amarillo-400);
+  border-radius: var(--tv-r-0);
 }
 
 .home-historia__texto { display: grid; gap: var(--tv-space-4); }
@@ -166,9 +147,9 @@
   gap: var(--tv-space-2);
   align-content: start;
   padding: var(--tv-space-5);
-  border-top: 4px solid var(--tv-cafe-700);
-  background: var(--tv-gris-100);
-  border-radius: var(--tv-r-md);
+  border: var(--tv-borde-rotulo);
+  border-radius: var(--tv-r-0);
+  background: var(--tv-blanco);
 }
 
 @media (min-width: 900px) {
@@ -178,8 +159,8 @@
 
 /* FAQ */
 .home-faq { background: var(--tv-blanco); }
-.home-faq__rejilla { display: grid; gap: var(--tv-space-6); }
-.home-faq__intro { display: grid; gap: var(--tv-space-4); align-content: start; justify-items: start; }
+.home-faq-fila__rejilla { display: grid; gap: var(--tv-space-6); }
+.home-faq-fila__intro { display: grid; gap: var(--tv-space-4); align-content: start; justify-items: start; }
 
 .faq-fila { border-bottom: var(--tv-borde-lectura); }
 
@@ -204,7 +185,7 @@
   flex: none;
   width: 32px;
   height: 32px;
-  border-radius: var(--tv-r-xs);
+  border-radius: var(--tv-r-0);
   background: var(--tv-verde-700);
 }
 
@@ -225,14 +206,14 @@
 .faq-fila__respuesta { padding-bottom: var(--tv-space-5); }
 
 @media (min-width: 900px) {
-  .home-faq__rejilla { grid-template-columns: 1fr 1.5fr; gap: var(--tv-space-9); }
+  .home-faq-fila__rejilla { grid-template-columns: 1fr 1.5fr; gap: var(--tv-space-9); }
 }
 
-/* Cierre asfalto */
+/* Cierre: muro amarillo con texto tinta */
 .home-cierre {
   padding-block: var(--tv-space-seccion);
-  background: var(--tv-asfalto-900);
-  color: var(--tv-blanco);
+  background: var(--tv-amarillo-400);
+  color: var(--tv-tinta-900);
 }
 
 .home-cierre__rejilla {
@@ -243,4 +224,4 @@
   gap: var(--tv-space-5);
 }
 
-.home-cierre__texto { margin-top: var(--tv-space-3); color: var(--tv-poste-300); }
+.home-cierre__texto { margin-top: var(--tv-space-3); }

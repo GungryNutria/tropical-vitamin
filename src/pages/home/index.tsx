@@ -17,7 +17,7 @@ export default function Home() {
       <Destacados />
       <History />
       <FAQ />
-      <section className="home-cierre superficie-oscura">
+      <section className="home-cierre">
         <div className="contenedor home-cierre__rejilla">
           <div>
             <h2 className="t-h2">{t('home.cta.title')}</h2>
