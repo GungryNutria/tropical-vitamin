@@ -118,18 +118,24 @@
   },
   "tours": {
     "hero": {
-      "title": "TOURS & EXPERIENCES",
-      "subtitle": "We have the best options, recommendations and personalized experiences for your trip."
+      "title": "Tours and experiences",
+      "subtitle": "We have the best options, recommendations and personalized experiences for your trip.",
+      "etiqueta": "Tourist destination",
+      "destino": "Cancún and Riviera Maya",
+      "cta": "Ask us on WhatsApp"
     },
     "intro": "We perfectly understand the objective of each experience so we know our segmentation of the best tours and Experiences. \"We make your experiences authentically memorable\"",
     "title": "Tours",
     "loading": "Loading tours...",
     "error": "Error loading tours",
     "search": {
-      "placeholder": "Search tours..."
+      "placeholder": "Cenotes, islands, Chichén Itzá…",
+      "label": "Search tours",
+      "limpiar": "Clear search"
     },
     "filter": {
-      "all": "All"
+      "all": "All",
+      "label": "Filter by category"
     },
     "count": "tours available",
     "currency": "Currency",
@@ -144,14 +150,30 @@
     "categories": {
       "aquatic": "Aquatic",
       "adventure": "Adventure",
-      "parks": "Theme Parks",
+      "parks": "Theme parks",
       "archaeological": "Archaeological",
-      "extreme-adventure": "Extreme & Adventure",
+      "extreme-adventure": "Extreme and adventure",
       "nature": "Nature",
       "wildlife": "Wildlife",
       "islands": "Islands",
-      "night-entertainment": "Night Entertainment"
-    }
+      "night-entertainment": "Night entertainment"
+    },
+    "contador_one": "{{count}} tour",
+    "contador_other": "{{count}} tours",
+    "contadorFiltrado": "{{n}} of {{total}} tours",
+    "quitarFiltros": "Clear filters",
+    "mostrando": "Showing {{n}} of {{total}} tours",
+    "verMas_one": "See {{count}} more tour",
+    "verMas_other": "See {{count}} more tours",
+    "vacio": {
+      "title": "No tours match",
+      "text": "Clear the filters or ask us on WhatsApp: we surely have something for you."
+    },
+    "sinTours": {
+      "title": "New tours coming soon",
+      "text": "Meanwhile, ask us on WhatsApp and we'll help you plan."
+    },
+    "errorCarga": "We couldn't load the tours"
   },
   "transportation": {
     "title": "Transportation Service",
