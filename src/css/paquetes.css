@@ -212,7 +212,7 @@
 .barra-whatsapp--oculta { opacity: 0; transform: translateY(100%); pointer-events: none; }
 
 @media (max-width: 899px) {
-  body:has(.barra-whatsapp) { padding-bottom: 76px; }
+  body:has(.barra-whatsapp) .pie { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
 }
 
 @media (min-width: 900px) {

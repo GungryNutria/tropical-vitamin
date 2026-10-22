@@ -609,3 +609,7 @@
 @media (prefers-reduced-motion: reduce) {
   .aparece { opacity: 1; transform: none; }
 }
+
+@media (max-width: 599px) {
+  .estado { padding-inline: var(--tv-space-4); }
+}
