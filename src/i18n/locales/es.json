@@ -82,7 +82,7 @@
       "title": "TOURS & EXPERIENCIAS",
       "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje."
     },
-    "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conocemos nuestra segmentación de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\"",
+    "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conoce nuestra segmentación de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\"",
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
@@ -180,7 +180,7 @@
     "features": {
       "houses": "Vive la privacidad en tu propio espacio en el paraíso tropical, con la mejor ubicación y amenidades que te harán sentir en casa",
       "hoteles": "Si buscas un lugar cómodo, auténtico, económico y funcional, esta es la mejor opción con desayunos incluidos, alberca y rooftop increíble. Conoce esta opción céntrica e inigualable que optimizará tu experiencia en el Caribe mexicano",
-      "condos": "Si lo que buscas es apapacharte y descansar en un Todo Incluido, esta opcion es para ti. Tenemos las mejores opciones y consejos acorde a tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
+      "condos": "Si lo que buscas es apapacharte y descansar en un Todo Incluido, esta opción es para ti. Tenemos las mejores opciones y consejos acorde a tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
       "directHost": "Contacto directo con anfitriones",
       "cultural": "Experiencia cultural",
       "comfort": "Comodidad hogareña",
@@ -202,10 +202,12 @@
     "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los más altos estándares de calidad.",
     "subtitle": "Nos encargamos de cada detalle para que tu evento sea un éxito.",
     "moreInfo": "Contactar ejecutivo",
+    "whatsappMessage": "Hola, quiero información sobre Grupos MICE: {{name}}",
+    "whatsappGeneral": "Hola, quiero información sobre servicios MICE y convenciones",
     "hero": {
       "title": "GRUPOS & CONVENCIONES",
       "subtitle": "Sabemos que todos los grupos son diferentes y con distinta planeación y objetivo.",
-      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinación adecuada a cada necesidad del grupo. ¡No te preocupes por la logística masiva, tenemos una amplia experiencia en el manejo y gestión de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, conclusión hasta su salida y término de tu evento.<br/><strong>¡No te preocupes, déjalo en nuestras manos!</strong>"
+      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinación adecuada a cada necesidad del grupo. ¡No te preocupes por la logística masiva, tenemos una amplia experiencia en el manejo y gestión de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, conclusión hasta su salida y término de tu evento.<br/><strong>¡Despreocúpate, déjalo en nuestras manos!</strong>"
     },
     "groups": {
       "mice": "Grupos MICE",
@@ -234,12 +236,12 @@
     "intro": "Celebra tus momentos especiales con experiencias únicas e inolvidables en la Riviera Maya.",
     "hero": {
       "title": "VIAJES TEMÁTICOS",
-      "subtitle": "Todo momento y celebracion especial merece ese detalle que lo caracteriza y lo hace unico.",
+      "subtitle": "Todo momento y celebración especial merece ese detalle que lo caracteriza y lo hace único.",
       "text": "En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de cada evento especializado.<br/><strong>¡Déjanos ayudarte con tu celebración!</strong>"
     },
     "trips": {
       "despedida": "Despedidas de soltera y soltero",
-      "despedidaDesc": "Las frases de \"¿Te quieres casar conmigo?\" y \"¡Sí, acepto!\" son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: playa, fiesta, gastronomía y los mejores lugares para festejar el AMOR!",
+      "despedidaDesc": "Las frases de \"¿Te quieres casar conmigo?\" y \"¡Sí, acepto!\" son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: playa, fiesta, gastronomía y los mejores lugares para ¡festejar el AMOR!",
       "bienvenida": "Bienvenida de Solter@",
       "bienvenidaDesc": "Como dice el dicho: \"En el mar la vida es más sabrosa\", ven a celebrar las decisiones, lo vivido y lo que está por venir porque vida solo hay una.",
       "graduacion": "Graduaciones",
@@ -253,6 +255,7 @@
     },
     "description": "Una experiencia diseñada específicamente para hacer de este momento algo especial y memorable.",
     "moreInfo": "Más información",
+    "whatsappMessage": "Hola, quiero información sobre el viaje temático: {{name}}",
     "cta": {
       "title": "¿Tienes alguna celebración en mente?",
       "subtitle": "Cuéntanos y nosotros nos encargamos de todo",
