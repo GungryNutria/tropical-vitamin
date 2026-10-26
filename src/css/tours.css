@@ -355,6 +355,10 @@
 
 /* Button */
 .tour-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 100%;
   margin-top: auto;
   background: var(--yellow-main);
@@ -397,5 +401,10 @@
 
   .tour-content {
     padding: 24px;
+  }
+
+  /* El flotante de WhatsApp no tapa el buscador */
+  .tours-container .whatsapp-float {
+    bottom: 104px;
   }
 }

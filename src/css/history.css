@@ -133,7 +133,7 @@
 
 @media (max-width: 768px) {
   .history-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -143,9 +143,19 @@
 
   .history-card.text-card,
   .history-card.mission-card,
-  .history-card.vision-card,
-  .history-card.value-card {
+  .history-card.vision-card {
     grid-column: 1 / -1;
     grid-row: auto;
+  }
+
+  .history-card.value-card {
+    grid-column: auto;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .history-card.value-card h3 {
+    font-size: 18px;
   }
 }
