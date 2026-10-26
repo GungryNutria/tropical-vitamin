@@ -36,8 +36,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 6rem 2rem 2rem;
+  justify-content: center;
+  padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -73,14 +73,14 @@
 }
 
 .hero-logo {
-  height: clamp(44px, 6vw, 64px);
+  height: clamp(60px, 10vw, 100px);
   object-fit: contain;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
 }
 
 /* Title */
 .hero-title {
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
   color: white;
   line-height: 1.2;
