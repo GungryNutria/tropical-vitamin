@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 import '../../css/transportation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import transporterImg from '../../assets/units/transporter.jpg';
+import navigatorImg from '../../assets/units/navigator.jpg';
+import sprinterImg from '../../assets/units/sprinter.jpg';
+import autobusImg from '../../assets/units/autobus.jpg';
 
 export default function Transportation() {
   const { t, i18n } = useTranslation();
@@ -100,10 +104,10 @@ export default function Transportation() {
   ];
 
   const units = [
-    { name: 'Transporter/Van', icon: '🚐' },
-    { name: 'Navigator/Luxury', icon: '🚗' },
-    { name: 'Sprinter/Crafter', icon: '🚌' },
-    { name: 'Autobús', icon: '🚌' }
+    { name: 'Transporter/Van', img: transporterImg },
+    { name: 'Navigator/Luxury', img: navigatorImg },
+    { name: 'Sprinter/Crafter', img: sprinterImg },
+    { name: 'Autobús', img: autobusImg }
   ];
 
   return (
@@ -134,7 +138,7 @@ export default function Transportation() {
         <div className="transport-units-grid">
           {units.map((unit, idx) => (
             <div key={idx} className="transport-unit-card">
-              <span className="transport-unit-icon">{unit.icon}</span>
+              <img className="transport-unit-img" src={unit.img} alt={unit.name} loading="lazy" />
               <span className="transport-unit-name">{unit.name}</span>
             </div>
           ))}

@@ -221,8 +221,11 @@
   box-shadow: 0 10px 30px rgba(244, 185, 66, 0.2);
 }
 
-.transport-unit-icon {
-  font-size: 2.5rem;
+.transport-unit-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .transport-unit-name {
