@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import '../../css/transportation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import transporterImg from '../../assets/units/transporter.jpg';
+import navigatorImg from '../../assets/units/navigator.jpg';
+import sprinterImg from '../../assets/units/sprinter.jpg';
 import autobusImg from '../../assets/units/autobus.jpg';
 
 export default function Transportation() {
@@ -101,6 +104,9 @@ export default function Transportation() {
   ];
 
   const units = [
+    { name: 'Transporter/Van', img: transporterImg },
+    { name: 'Navigator/Luxury', img: navigatorImg },
+    { name: 'Sprinter/Crafter', img: sprinterImg },
     { name: 'Autobús', img: autobusImg }
   ];
 
