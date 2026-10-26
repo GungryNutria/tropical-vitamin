@@ -171,7 +171,7 @@ export default function Tours() {
                   <span className="tour-category">{categoryDisplayName}</span>
                   <h3 className="tour-name">{translation?.title}</h3>
                   <p className="tour-description">{translation?.description}</p>
-                  <p className="tour-meta">{[tour.location, formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
+                  <p className="tour-meta">{[tour.location?.trim(), formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
                   <button className="tour-button">{t('tours.book')}</button>
                 </div>
               </div>

@@ -248,7 +248,7 @@
 .tours-loading,
 .tours-error {
   text-align: center;
-  padding: 4rem;
+  padding: calc(var(--control-height) + 30px + 4rem) 4rem 4rem;
   font-size: 1.2rem;
   color: var(--text-secondary);
 }

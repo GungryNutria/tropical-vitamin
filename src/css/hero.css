@@ -43,8 +43,8 @@
 
 /* Content Card */
 .hero-content-card {
-  background: transparent;
-  border: none;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   padding: 3rem 3.5rem;
   max-width: 720px;
