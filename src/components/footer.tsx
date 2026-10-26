@@ -53,7 +53,7 @@ function Footer() {
                 <div className="footer-contact">
                     <h4>{t('footer.contact')}</h4>
                     <a href="tel:+529841681263">+52 984 168 1263</a>
-                    <a href="mailto:info@tropical-vitamin.com">info@tropical-vitamin.com</a>
+                    <a href="mailto:contacto@tropical-vitamin.com">contacto@tropical-vitamin.com</a>
                     <NavLink to="/contacto">{t('nav.contacto')}</NavLink>
                 </div>
 

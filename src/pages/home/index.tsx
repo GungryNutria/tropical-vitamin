@@ -4,8 +4,6 @@ import History from "./components/history";
 import Navbar from "../../components/navbar";
 import WhatsappFloat from "../../components/whatsappFloat";
 import Services from "./components/services";
-import Testimonials from "./components/testimonials";
-import Stats from "./components/stats";
 import FAQ from "./components/faq";
 
 export default function Home() {
@@ -14,9 +12,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <History />
-    <Stats />
     <Services />
-    <Testimonials />
     <FAQ />
     {/* <Mice /> */}
     <Cta />

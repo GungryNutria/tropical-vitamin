@@ -16,7 +16,7 @@
     },
     "history": {
       "title": "Our History",
-      "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: Offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
+      "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
       "missionTitle": "Our Mission",
       "missionText": "Not to make clients, but FRIENDS. My House Is Your House.",
       "visionTitle": "Our Vision",
@@ -45,27 +45,7 @@
         "mice": "MICE & Conventions",
         "miceDesc": "Events, congresses and corporate logistics.",
         "thematic": "Thematic Trips",
-        "thematicDesc": "Experiences made to your measure."
-      }
-    },
-    "stats": {
-      "clients": "Satisfied clients",
-      "hotels": "Partner hotels",
-      "tours": "Available tours",
-      "experience": "Years of experience"
-    },
-    "testimonials": {
-      "title": "What our clients say",
-      "items": {
-        "1": {
-          "text": "Excellent service, everything was very well organized. The Tropical Vitamin team made our trip an unforgettable experience."
-        },
-        "2": {
-          "text": "The best experience in the Riviera Maya. Punctual transportation and spectacular tours. Totally recommended."
-        },
-        "3": {
-          "text": "Perfect graduation trip. The team took care of every detail. We will be back!"
-        }
+        "thematicDesc": "Experiences made to measure."
       }
     },
     "faq": {
@@ -194,12 +174,12 @@
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
     "types": {
       "houses": "PRIVATE PROPERTY ACCOMMODATION",
-      "hotels": "STANDARD HOTEL ACCOMMODATION",
+      "hoteles": "STANDARD HOTEL ACCOMMODATION",
       "condos": "ALL INCLUSIVE HOTEL ACCOMMODATION"
     },
     "features": {
       "houses": "Experience privacy in your own space in the tropical paradise, with the best location and amenities that will make you feel at home",
-      "hoteles": "If you're looking for a comfortable, authentic, affordable and functional place, this is the best option with breakfast included, pool and incredible roof. Discover this central and unmatched option that will optimize your experience in the Mexican Caribbean",
+      "hoteles": "If you're looking for a comfortable, authentic, affordable and functional place, this is the best option with breakfast included, pool and an incredible rooftop. Discover this central and unmatched option that will optimize your experience in the Mexican Caribbean",
       "condos": "If you're looking to pamper yourself and relax in an All Inclusive, this option is for you. We have the best options and advice according to your travel needs and objectives. Check out the recommendations we have for you.",
       "directHost": "Direct contact with hosts",
       "cultural": "Cultural experience",
@@ -233,11 +213,11 @@
       "team": "Team Building Groups",
       "teamDesc": "Creative corporate experiences and with a defined objective for strengthening the corporate team.",
       "boda": "Wedding Groups",
-      "bodaDesc": "Back yourself with us for the logistics of your event without worrying about anything or anyone, live the best moment of your life next to your love.",
+      "bodaDesc": "Count on us for the logistics of your event without worrying about anything or anyone, live the best moment of your life next to your love.",
       "viajeros": "Traveler Groups",
       "viajerosDesc": "There is no better vitamin for the soul than the memories of adventures. Let us show you the side of the Riviera Maya that you don't know.",
       "familia": "Family Groups",
-      "familiaDesc": "\"Láak'tsilil\" means Family in Maya. Reconnect in a paradise full of unforgettable vegetation and experiences.",
+      "familiaDesc": "\"Láak'tsilil\" means Family in Maya. Reconnect in a paradise full of vegetation and unforgettable experiences.",
       "escolares": "School Groups",
       "escolaresDesc": "Live one of the best stages of your life in the company of your best friends. We guarantee it will be part of stories they will have to tell over and over again.",
       "deportivos": "Sports Groups",
@@ -250,7 +230,7 @@
     }
   },
   "thematic": {
-    "title": "Thematic Trips Service",
+    "title": "Thematic Trips",
     "intro": "Celebrate your special moments with unique and unforgettable experiences in the Riviera Maya.",
     "hero": {
       "title": "THEMATIC TRIPS",
@@ -269,7 +249,7 @@
       "cumpleanos": "Birthdays",
       "cumpleanosDesc": "Celebrate your life and celebrate with your loved ones! We organize all the details you deserve for your day and celebration.",
       "pedida": "Marriage proposals",
-      "pedidaDesc": "One of the most anticipated moments and it has to be UNIQUE. We help you have a magical and full of love surprise."
+      "pedidaDesc": "One of the most anticipated moments and it has to be UNIQUE. We help you have a magical surprise full of love."
     },
     "description": "An experience designed specifically to make this moment special and memorable.",
     "moreInfo": "More information",
