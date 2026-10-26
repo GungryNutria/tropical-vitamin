@@ -48,12 +48,6 @@
         "thematicDesc": "Experiences made to your measure."
       }
     },
-    "stats": {
-      "clients": "Satisfied clients",
-      "hotels": "Partner hotels",
-      "tours": "Available tours",
-      "experience": "Years of experience"
-    },
     "testimonials": {
       "title": "What our clients say",
       "items": {

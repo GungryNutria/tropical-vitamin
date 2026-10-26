@@ -48,12 +48,6 @@
         "thematicDesc": "Experiencias faites a tu medida."
       }
     },
-    "stats": {
-      "clients": "Clientes satisfechos",
-      "hotels": "Hoteles aliados",
-      "tours": "Tours disponibles",
-      "experience": "Anios de experiencia"
-    },
     "testimonials": {
       "title": "Lo que dicen nuestros clientes",
       "items": {
