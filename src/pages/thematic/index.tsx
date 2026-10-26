@@ -2,8 +2,11 @@ import { useTranslation } from 'react-i18next';
 import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import { openWhatsApp } from '../../utils/whatsapp';
+import { useNavigate } from 'react-router-dom';
 export default function Thematic() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const thematicTrips = [
     { 
@@ -49,7 +52,7 @@ export default function Thematic() {
           <div key={trip.key} className="thematic-card">
             <h3 className="thematic-card-title">{trip.title}</h3>
             <p className="thematic-card-desc">{trip.description}</p>
-            <button className="thematic-btn">{t('thematic.moreInfo')}</button>
+            <button className="thematic-btn" onClick={() => openWhatsApp(t('thematic.whatsappMessage', { name: trip.title }))}>{t('thematic.moreInfo')}</button>
           </div>
         ))}
       </div>
@@ -58,7 +61,7 @@ export default function Thematic() {
       <div className="thematic-cta">
         <h2>{t('thematic.cta.title')}</h2>
         <p>{t('thematic.cta.subtitle')}</p>
-        <button className="thematic-contact-btn">{t('thematic.cta.button')}</button>
+        <button className="thematic-contact-btn" onClick={() => navigate('/contacto')}>{t('thematic.cta.button')}</button>
       </div>
 
       <WhatsappFloat />

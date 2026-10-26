@@ -202,10 +202,12 @@
     "intro": "We organize corporate events, conventions and MICE tourism with the highest quality standards.",
     "subtitle": "We take care of every detail so your event is a success.",
     "moreInfo": "Contact executive",
+    "whatsappMessage": "Hello, I would like information about MICE Groups: {{name}}",
+    "whatsappGeneral": "Hello, I would like information about MICE services and conventions",
     "hero": {
       "title": "GROUPS & CONVENTIONS",
       "subtitle": "We know that all groups are different and with different planning and objectives.",
-      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Don't worry, leave it in our hands!</strong>"
+      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Relax, leave it in our hands!</strong>"
     },
     "groups": {
       "mice": "MICE Groups",
@@ -253,6 +255,7 @@
     },
     "description": "An experience designed specifically to make this moment special and memorable.",
     "moreInfo": "More information",
+    "whatsappMessage": "Hello, I would like information about the themed trip: {{name}}",
     "cta": {
       "title": "Have a celebration in mind?",
       "subtitle": "Tell us and we take care of everything",

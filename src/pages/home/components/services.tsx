@@ -2,8 +2,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import "../../../css/services.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import service1 from "../../../assets/services/transportacion.jpg";
 import service2 from "../../../assets/services/hospedaje.jpg";
@@ -61,34 +59,21 @@ function Services() {
         {t('home.services.subtitle')}
       </p>
 
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="services-swiper fade-up"
-      >
+      <div className="services-grid fade-up">
         {servicios.map((service, i) => (
-          <SwiperSlide key={i} >
-            <div className="service-card">
-              <div className="service-image">
-                <img src={service.img} alt={service.title} />
-              </div>
-
-              <div className="service-info">
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
-                <button onClick={() => navigate(service.path)}>Ver más</button>
-              </div>
+          <div className="service-card" key={i}>
+            <div className="service-image">
+              <img src={service.img} alt={service.title} />
             </div>
-          </SwiperSlide>
+
+            <div className="service-info">
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+              <button onClick={() => navigate(service.path)}>Ver más</button>
+            </div>
+          </div>
         ))}
-      </Swiper>
+      </div>
     </section>
   );
 }

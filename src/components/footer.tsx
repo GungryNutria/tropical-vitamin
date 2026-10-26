@@ -16,13 +16,14 @@ function Footer() {
                     <p>{t('footer.description')}</p>
 
                     <div className="footer-socials">
-                        <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                        <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+                        <a href="#" aria-label="Facebook" className="social-facebook"><FaFacebookF /></a>
+                        <a href="#" aria-label="Instagram" className="social-instagram"><FaInstagram /></a>
+                        <a href="#" aria-label="LinkedIn" className="social-linkedin"><FaLinkedin /></a>
                         <a
                             href="https://wa.me/529841681263"
                             target="_blank"
                             aria-label="WhatsApp"
+                            className="social-whatsapp"
                             rel="noreferrer"
                         >
                             <FaWhatsapp />
@@ -38,6 +39,7 @@ function Footer() {
                     <NavLink to="/tours">{t('nav.tours')}</NavLink>
                     <NavLink to="/mice">{t('nav.mice')}</NavLink>
                     <NavLink to="/tematicos">{t('nav.tematicos')}</NavLink>
+                    <NavLink to="/contacto">{t('nav.contacto')}</NavLink>
                 </div>
 
                 {/* REGISTROS */}
