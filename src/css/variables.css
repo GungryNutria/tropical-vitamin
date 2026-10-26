@@ -14,4 +14,26 @@
   --text-main: #FAFAFA;
   --text-secondary: #A0A0A0;
   --text-muted: #666666;
+
+  /* Pulido 005 */
+  --radius-control: 8px;
+  --radius-card: 16px;
+  --control-height: 48px;
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --content-width: 1200px;
+  --gutter: 20px;
+  --section-pad-y: 120px;
+  --title-gap: 48px;
+  --fs-display: clamp(36px, 2.67vw + 25.6px, 56px);
+  --fs-h2: clamp(30px, 0.952vw + 26.29px, 40px);
+  --fs-h3: clamp(20px, 0.1905vw + 19.257px, 22px);
+  --fs-body: 16px;
+  --fs-caption: 14px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 72px;
+    --title-gap: 32px;
+  }
 }

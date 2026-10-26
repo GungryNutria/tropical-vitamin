@@ -1,11 +1,11 @@
 .faq {
-  padding: 6rem 4rem;
+  padding: var(--section-pad-y) 0;
   background: var(--bg-main);
 }
 
 .faq-container {
-  max-width: 800px;
-  margin: 0 auto;
+  width: min(var(--content-width), 100% - 2 * var(--gutter));
+  margin-inline: auto;
 }
 
 .faq-title {
@@ -13,25 +13,6 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
   color: var(--text-main);
   margin-bottom: 3rem;
-}
-
-/* Section Title Style */
-.faq h2.section-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: white !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.faq .title-accent {
-  width: 6px;
-  height: clamp(2rem, 4vw, 3rem);
-  background: var(--yellow-main);
-  border-radius: 3px;
 }
 
 .faq-list {
@@ -76,10 +57,4 @@
 .faq-answer p {
   color: var(--text-secondary);
   line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .faq {
-    padding: 4rem 1.5rem;
-  }
 }

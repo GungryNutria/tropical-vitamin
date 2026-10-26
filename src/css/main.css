@@ -35,3 +35,32 @@ body {
 .fade-delay-3 { transition-delay: 0.3s; }
 .fade-delay-4 { transition-delay: 0.4s; }
 .fade-delay-5 { transition-delay: 0.5s; }
+
+
+/* Titulo de seccion con eyebrow (unico) */
+.section-title {
+  font-size: var(--fs-h2);
+  line-height: 1.2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--title-gap);
+  overflow-wrap: normal;
+  hyphens: manual;
+}
+
+.title-accent {
+  width: 4px;
+  height: 44px;
+  background: var(--yellow-main);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .title-accent {
+    height: 36px;
+  }
+}

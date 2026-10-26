@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   z-index: 10;
-  padding: 15px 24px;
+  padding: 15px 0;
   background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -13,9 +13,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 40px;
+  width: min(var(--content-width), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  gap: 24px;
 }
 
 .navbar-right {
@@ -36,7 +36,7 @@
 
 .nav-links{
   display:flex;
-  gap:28px;
+  gap:20px;
   list-style:none;
   align-items:center;
   flex:1;
@@ -53,6 +53,7 @@
   color: white;
   text-decoration: none;
   font-size: 16px;
+  white-space: nowrap;
   transition: color 0.3s;
 }
 
@@ -64,11 +65,17 @@
 .cta-hero {
   background: var(--yellow-main);
   color: #0A0A0A !important;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: 600;
+  border: 0;
+  border-radius: var(--radius-control);
+  min-height: var(--control-height);
+  padding: 0 28px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger {
@@ -77,6 +84,10 @@
   gap: 5px;
   cursor: pointer;
   padding: 5px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
