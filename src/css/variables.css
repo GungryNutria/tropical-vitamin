@@ -1,0 +1,17 @@
+:root {
+  /* Brand - Amarillo保留 */
+  --yellow-main: #F4B942;
+  --yellow-soft: #FFD166;
+
+  /* Glass effect */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(20px);
+
+  /* Neutrals - oscuro */
+  --bg-main: #0A0A0A;
+  --bg-card: #141414;
+  --text-main: #FAFAFA;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+}

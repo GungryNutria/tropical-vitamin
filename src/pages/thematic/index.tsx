@@ -1,58 +1,67 @@
 import { useTranslation } from 'react-i18next';
-import thematicImg from '../../assets/thematic-hero.jpg';
-import HeroServicio from '../../components/heroServicio';
-import BotonWhatsApp from '../../components/botonWhatsApp';
-import TarjetaServicio from '../../components/tarjetaServicio';
-import SolicitudGrupo from '../../components/solicitudGrupo';
+import '../../css/thematic.css';
 import WhatsappFloat from '../../components/whatsappFloat';
-
-const VIAJES = ['despedida', 'bienvenida', 'graduacion', 'familia', 'cumpleanos', 'pedida'];
-
+import SectionHero from '../../components/sectionHero';
 export default function Thematic() {
   const { t } = useTranslation();
-  const tipos = VIAJES.map((clave) => ({ clave, titulo: t(`thematic.trips.${clave}`) }));
+
+  const thematicTrips = [
+    { 
+      key: 'despedida', 
+      title: t('thematic.trips.despedida'),
+      description: t('thematic.trips.despedidaDesc')
+    },
+    { 
+      key: 'bienvenida', 
+      title: t('thematic.trips.bienvenida'),
+      description: t('thematic.trips.bienvenidaDesc')
+    },
+    { 
+      key: 'graduacion', 
+      title: t('thematic.trips.graduacion'),
+      description: t('thematic.trips.graduacionDesc')
+    },
+    { 
+      key: 'familia', 
+      title: t('thematic.trips.familia'),
+      description: t('thematic.trips.familiaDesc')
+    },
+    { 
+      key: 'cumpleanos', 
+      title: t('thematic.trips.cumpleanos'),
+      description: t('thematic.trips.cumpleanosDesc')
+    },
+    { 
+      key: 'pedida', 
+      title: t('thematic.trips.pedida'),
+      description: t('thematic.trips.pedidaDesc')
+    }
+  ];
 
   return (
-    <>
-      <HeroServicio
-        tipo="servicio"
-        pictograma="copas"
-        etiqueta={t('common.servicio')}
-        titulo={t('thematic.hero.title')}
-        texto={t('thematic.hero.subtitle')}
-        imagen={thematicImg}
-        accion={
-          <div className="hero-servicio__botones">
-            <a href="#cotizar" className="tv-boton tv-boton--primario">{t('thematic.hero.cta')}</a>
-            <BotonWhatsApp mensaje={t('whatsapp.servicio', { servicio: t('thematic.title').toLowerCase() })} tamano="grande" />
-          </div>
-        }
-      />
+    <div className="thematic-container">
+      {/* Hero Section */}
+      <SectionHero  title={t('thematic.hero.title')} subtitle={t('thematic.hero.subtitle')} text={t('thematic.hero.text')} backgroundImage='https://images.unsplash.com/photo-1632429495431-e9bce133028a?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
 
-      <section className="seccion">
-        <div className="contenedor">
-          <h2 className="t-h2 seccion__titulo">{t('thematic.tiposTitulo')}</h2>
-          <p className="t-body seccion__entradilla">{t('thematic.texto')}</p>
-          <ul className="rejilla bloque-tarjetas">
-            {VIAJES.map((clave) => (
-              <li key={clave}>
-                <TarjetaServicio compacta pictograma="copas" titulo={t(`thematic.trips.${clave}`)} texto={t(`thematic.trips.${clave}Desc`)} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section id="cotizar" className="seccion solicitud">
-        <div className="contenedor solicitud__rejilla">
-          <div className="solicitud__intro">
-            <h2 className="t-h2">{t('thematic.pasosTitulo')}</h2>
-            <p className="t-body seccion__entradilla">{t('thematic.pasosTexto')}</p>
+      {/* Cards Grid */}
+      <div className="thematic-grid">
+        {thematicTrips.map((trip) => (
+          <div key={trip.key} className="thematic-card">
+            <h3 className="thematic-card-title">{trip.title}</h3>
+            <p className="thematic-card-desc">{trip.description}</p>
+            <button className="thematic-btn">{t('thematic.moreInfo')}</button>
           </div>
-          <SolicitudGrupo servicio="tematicos" tituloTipo={t('thematic.pasosTipo')} tipos={tipos} />
-        </div>
-      </section>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="thematic-cta">
+        <h2>{t('thematic.cta.title')}</h2>
+        <p>{t('thematic.cta.subtitle')}</p>
+        <button className="thematic-contact-btn">{t('thematic.cta.button')}</button>
+      </div>
+
       <WhatsappFloat />
-    </>
+    </div>
   );
 }
