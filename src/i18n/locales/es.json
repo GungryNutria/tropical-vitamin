@@ -48,20 +48,6 @@
         "thematicDesc": "Experiencias hechas a tu medida."
       }
     },
-    "testimonials": {
-      "title": "Lo que dicen nuestros clientes",
-      "items": {
-        "1": {
-          "text": "Excelente servicio, todo muy bien organizado. El equipo de Tropical Vitamin hizo de nuestro viaje una experiencia inolvidable."
-        },
-        "2": {
-          "text": "La mejor experiencia en la Riviera Maya. Transportación puntual y tours espectaculares. Totalmente recomendados."
-        },
-        "3": {
-          "text": "Viaje de graduación perfecto. El equipo se encarga de cada detalle. ¡Volveremos!"
-        }
-      }
-    },
     "faq": {
       "title": "Preguntas Frecuentes",
       "q1": {
