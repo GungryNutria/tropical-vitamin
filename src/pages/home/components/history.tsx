@@ -1,48 +1,66 @@
-import { useTranslation } from 'react-i18next';
-import historyImg from '../../../assets/history.jpg';
+import { useTranslation } from "react-i18next";
+import "../../../css/history.css";
+import { useFadeUp } from "../../../hooks/useFadeUp";
 
-const VALORES = ['humanTreatment', 'passion', 'excellence', 'community'] as const;
-
-export default function History() {
+function History() {
   const { t } = useTranslation();
-  const parrafos = t('home.history.description').split('\n\n');
+  useFadeUp();
+
   return (
-    <section id="historia" className="seccion">
-      <div className="contenedor home-historia">
-        <img className="home-historia__foto" src={historyImg} alt="" loading="lazy" />
-        <div className="home-historia__texto">
-          <h2 className="t-h2">{t('home.history.title')}</h2>
-          {parrafos.map((p) => (
-            <p key={p} className="t-body">{p}</p>
-          ))}
-        </div>
-      </div>
+    <section id="historia" className="history">
+      <div className="history-wrapper">
 
-      <div className="contenedor home-historia__pilares">
-        <div className="rotulo rotulo--tinta home-historia__placa">
-          <div>
-            <h3 className="t-label">{t('home.history.missionTitle')}</h3>
-            <p className="t-h3">{t('home.history.missionText')}</p>
+        {/* LEFT CONTENT */}
+        <div className="history-content">
+          <h2 className="section-title fade-up">
+            <span className="title-accent"></span>
+            {t('home.history.title')}
+          </h2>
+
+          <div className="history-cards">
+            {/* Description Card */}
+            <div className="history-card text-card fade-up fade-delay-1">
+              <p>{t('home.history.description')}</p>
+            </div>
+
+            {/* Mission Card */}
+            <div className="history-card mission-card fade-up fade-delay-2">
+              <h3>{t('home.history.missionTitle')}</h3>
+              <p>{t('home.history.missionText')}</p>
+            </div>
+
+            {/* Vision Card */}
+            <div className="history-card vision-card fade-up fade-delay-3">
+              <h3>{t('home.history.visionTitle')}</h3>
+              <p>{t('home.history.visionText')}</p>
+            </div>
+
+            {/* Values Cards */}
+            <div className="history-card value-card fade-up fade-delay-4">
+              <h3>{t('home.history.values.humanTreatment')}</h3>
+              <p>{t('home.history.values.humanTreatmentDesc')}</p>
+            </div>
+
+            <div className="history-card value-card fade-up fade-delay-5">
+              <h3>{t('home.history.values.passion')}</h3>
+              <p>{t('home.history.values.passionDesc')}</p>
+            </div>
+
+            <div className="history-card value-card fade-up fade-delay-6">
+              <h3>{t('home.history.values.excellence')}</h3>
+              <p>{t('home.history.values.excellenceDesc')}</p>
+            </div>
+
+            <div className="history-card value-card fade-up fade-delay-7">
+              <h3>{t('home.history.values.community')}</h3>
+              <p>{t('home.history.values.communityDesc')}</p>
+            </div>
           </div>
         </div>
-        <div className="rotulo rotulo--servicio home-historia__placa">
-          <div>
-            <h3 className="t-label">{t('home.history.visionTitle')}</h3>
-            <p className="t-h3">{t('home.history.visionText')}</p>
-          </div>
-        </div>
-      </div>
 
-      <div className="contenedor">
-        <ul className="home-historia__valores">
-          {VALORES.map((v) => (
-            <li key={v} className="home-historia__valor">
-              <h3 className="t-h3">{t(`home.history.values.${v}`)}</h3>
-              <p className="t-body">{t(`home.history.values.${v}Desc`)}</p>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
 }
+
+export default History;

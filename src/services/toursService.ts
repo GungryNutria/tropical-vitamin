@@ -1,4 +1,5 @@
 import i18n from '../i18n';
+import noImage from '../assets/no-image.webp';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
@@ -33,7 +34,7 @@ export interface Tour {
 
 // Helper to get proper image URL - proxy through API for presigned URLs
 function getImageUrl(img: string | null): string {
-  if (!img) return '';
+  if (!img) return noImage;
   // Extract filename from any URL format
   const filename = img.split('/').pop();
   // Use API proxy endpoint which generates presigned URLs

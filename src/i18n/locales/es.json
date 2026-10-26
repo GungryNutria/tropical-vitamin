@@ -1,75 +1,58 @@
 {
   "nav": {
-    "paquetes": "Paquetes",
     "inicio": "Inicio",
-    "transportacion": "Transportación",
+    "transportacion": "Transportacion",
     "hospedaje": "Hospedaje",
-    "tours": "Tours",
-    "mice": "Grupos y convenciones",
-    "tematicos": "Viajes temáticos",
-    "contacto": "Contacto",
-    "principal": "Navegación principal",
-    "abrirMenu": "Abrir menú",
-    "cerrarMenu": "Cerrar menú",
-    "irInicio": "Tropical Vitamin, ir al inicio"
+    "tours": "Tours & Experiencias",
+    "mice": "Grupos MICE",
+    "tematicos": "Viajes Tematicos",
+    "contacto": "Contactanos"
   },
   "home": {
-    "paquetes": {
-      "titulo": "Paquetes destacados",
-      "texto": "Varios servicios en un solo plan, listos para pedir por WhatsApp.",
-      "verTodos": "Ver todos los paquetes"
-    },
     "hero": {
-      "title": "Creando experiencias auténticamente memorables",
-      "subtitle": "La Riviera Maya te espera con experiencias únicas.",
-      "cta": "Planea tu viaje por WhatsApp",
-      "verTours": "Ver tours",
-      "ciudad": "Cancún",
-      "pausar": "Pausar video",
-      "reproducir": "Reproducir video"
+      "title": "Creando experiencias autenticamente memorables",
+      "subtitle": "La Riviera Maya te espera con experiencias unicas",
+      "cta": "Planea tu viaje"
     },
     "history": {
-      "title": "Nuestra historia",
-      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya.\n\nAl incursionar en el turismo y el servicio hospitalario entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso decidimos ir a contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado.\n\nCreemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, y que nunca podrá reemplazar el abrazo de un buen anfitrión.\n\nSomos el resultado de la unión de dos culturas: la estructura neerlandesa y la inigualable calidez mexicana. Esta fusión nos permitió construir una empresa orgullosamente 100 % mexicana.",
-      "missionTitle": "Nuestra misión",
-      "missionText": "No hacer clientes, sino amigos. Mi casa es tu casa.",
-      "visionTitle": "Nuestra visión",
-      "visionText": "Ser la empresa de experiencias turísticas más confiable y querida de la Riviera Maya.",
+      "title": "Nuestra Historia",
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raiz de la pandemia, la vida nos llevo de la gigante Ciudad de Mexico al paraiso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se habia vuelto frio y automatizado. Por eso, decidimos ir contracorriente: Ofrecer un trato mas humano, amable y personal en un mundo cada vez mas digitalizado. Creemos firmemente que un robot no puede escuchar tus suenos ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se habia vuelto fria. Pero nosotros creemos que un robot nunca podra reemplazar el abrazo de un buen anfitrion. Somos el resultado de la union de dos culturas: la estructura NEERLANDES y la inigualable calidez MEXICANA. Esta fusion nos permitio construir una empresa orgullosamente 100% MEXICANA.",
+      "missionTitle": "Nuestra Mision",
+      "missionText": "No hacer clientes, sino AMIGOS. Mi Casa Es Tu Casa.",
+      "visionTitle": "Nuestra Vision",
+      "visionText": "Ser la empresa de experiencias turisticas mas confiable y querida de la Riviera Maya.",
       "values": {
-        "humanTreatment": "Trato humano",
-        "humanTreatmentDesc": "Trato personalizado y cálido",
-        "passion": "Pasión",
-        "passionDesc": "Amor por mostrar lo mejor de México",
+        "humanTreatment": "Trato Humano",
+        "humanTreatmentDesc": "Tratamiento personalizado y calido",
+        "passion": "Pasion",
+        "passionDesc": "Amor por mostrar lo mejor de Mexico",
         "excellence": "Excelencia",
         "excellenceDesc": "Calidad en cada detalle de tu experiencia",
         "community": "Comunidad",
-        "communityDesc": "Construyendo recuerdos juntos"
+        "comminityDesc": "Construyendo recuerdos juntos"
       }
     },
     "services": {
-      "title": "Nuestros servicios",
-      "subtitle": "Diseñamos experiencias, no solo viajes.",
+      "title": "Nuestros Servicios",
+      "subtitle": "Disenamos experiencias, no solo viajes.",
       "cards": {
-        "transportation": "Transportación",
+        "transportation": "Transportacion",
         "transportationDesc": "Aeropuerto, punto a punto y servicio abierto.",
         "accommodation": "Hospedaje",
-        "accommodationDesc": "Hoteles, casas y condominios en la Riviera Maya.",
-        "tours": "Tours y experiencias",
-        "toursDesc": "Acuáticos, arqueológicos, parques y más.",
-        "mice": "Grupos y convenciones",
-        "miceDesc": "Eventos, congresos y logística empresarial.",
-        "thematic": "Viajes temáticos",
-        "thematicDesc": "Experiencias hechas a tu medida.",
-        "medidaTitle": "¿Algo a tu medida?",
-        "medidaText": "Cuéntanos qué quieres vivir y armamos tu viaje contigo.",
-        "medidaCta": "Escríbenos por WhatsApp"
+        "accommodationDesc": "Hoteles, casas y condos en la Riviera Maya.",
+        "tours": "Tours & Experiencias",
+        "toursDesc": "Acuatics, arqueologicos, parques y mas.",
+        "mice": "MICE & Convenciones",
+        "miceDesc": "Eventos, congresos y logistica empresarial.",
+        "thematic": "Viajes Tematicos",
+        "thematicDesc": "Experiencias faites a tu medida."
       }
     },
     "stats": {
       "clients": "Clientes satisfechos",
       "hotels": "Hoteles aliados",
       "tours": "Tours disponibles",
-      "experience": "Años de experiencia"
+      "experience": "Anios de experiencia"
     },
     "testimonials": {
       "title": "Lo que dicen nuestros clientes",
@@ -78,204 +61,152 @@
           "text": "Excelente servicio, todo muy bien organizado. El equipo de Tropical Vitamin hizo de nuestro viaje una experiencia inolvidable."
         },
         "2": {
-          "text": "La mejor experiencia en la Riviera Maya. Transportación puntual y tours espectaculares. Totalmente recomendados."
+          "text": "La mejor experiencia en la Riviera Maya. Transportacion puntual y tours espectaculares. Totalmente recomendados."
         },
         "3": {
-          "text": "Viaje de graduación perfecto. El equipo se encarga de cada detalle. ¡Volveremos!"
+          "text": "Viaje de graduacion perfecto. El equipo se encarga de cada detalle. Volveremos!"
         }
       }
     },
     "faq": {
-      "title": "Preguntas frecuentes",
+      "title": "Preguntas Frecuentes",
       "q1": {
-        "question": "¿Cuál es la mejor época para visitar la Riviera Maya?",
-        "answer": "La mejor época es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la región ofrece experiencias únicas todo el año."
+        "question": "Cual es la mejor epoca para visitar la Riviera Maya?",
+        "answer": "La mejor epoca es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la region ofrece experiencias unicas durante todo el ano."
       },
       "q2": {
-        "question": "¿Incluyen transporte desde el aeropuerto?",
-        "answer": "Sí, contamos con servicio de transportación aeropuerto-hotel en todas nuestras opciones: compartido, privado, de lujo y autobús."
+        "question": "Incluyen transporte desde el aeropuerto?",
+        "answer": "Si, contamos con servicio de transportacion aeropuerto-hotel en todas nuestras opciones: compartido, privado, luxury y autobus."
       },
       "q3": {
-        "question": "¿Puedo reservar tours para grupos grandes?",
-        "answer": "¡Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contáctanos para una cotización personalizada."
+        "question": "Puedo reservar tours para grupos grandes?",
+        "answer": "Por supuesto! Tenemos experiencia organizando eventos para grupos grandes, convenciones y viajes de empresa. Contactanos para una cotizacion personalizada."
       },
       "q4": {
-        "question": "¿Cuál es la política de cancelación?",
-        "answer": "Nuestra política de cancelación varía según el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los términos específicos al momento de reservar."
+        "question": "Cual es la politica de cancelacion?",
+        "answer": "Nuestra politica de cancelacion varia segun el servicio. Generalmente, puedes cancelar hasta 48 horas antes sin cargo. Te recomendamos revisar los terminos especificos al momento de reservar."
       },
       "q5": {
-        "question": "¿Ofrecen seguro de viaje?",
-        "answer": "Sí, podemos ayudarte a contratar un seguro de viaje que cubra tu estancia. Pregúntanos por las opciones disponibles."
-      },
-      "subtitle": "¿Otra duda? Escríbenos y te respondemos por WhatsApp."
+        "question": "Ofrecen seguro de viaje?",
+        "answer": "Si, podemos ayudarte a contratar un seguro de viaje que cubra tu estancia. Preguntanos por las opciones disponibles."
+      }
     },
     "cta": {
       "title": "Planea tu experiencia en la Riviera Maya",
-      "subtitle": "Despreocúpate por tu viaje: nosotros nos encargamos.",
+      "subtitle": "Despreocupate por tu viaje, nosotros nos encargamos",
       "button": "Hablar por WhatsApp"
-    },
-    "destacados": {
-      "title": "Tours destacados",
-      "subtitle": "Cada letrero es un destino: a dónde vas, de dónde sales y cuánto dura.",
-      "verTodos": "Ver los {{count}} tours",
-      "verTours": "Ver tours"
     }
   },
   "tours": {
     "hero": {
-      "title": "Tours y experiencias",
-      "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje.",
-      "etiqueta": "Destino turístico",
-      "destino": "Cancún y Riviera Maya",
-      "cta": "Pregúntanos por WhatsApp"
+      "title": "TOURS & EXPERIENCIAS",
+      "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje."
     },
-    "intro": "Entendemos el objetivo de cada experiencia, por eso conocemos a fondo nuestra selección de los mejores tours y experiencias. «Hacemos que tus experiencias sean auténticamente memorables».",
+    "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conocemos nuestra segmentacion de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean autenticamente memorables\"",
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
     "search": {
-      "placeholder": "Cenotes, islas, Chichén Itzá…",
-      "label": "Buscar tours",
-      "limpiar": "Borrar búsqueda"
+      "placeholder": "Buscar tours..."
     },
     "filter": {
-      "all": "Todos",
-      "label": "Filtrar por categoría"
+      "all": "Todos"
     },
     "count": "tours disponibles",
     "currency": "Moneda",
-    "category": "Categoría",
-    "location": "Ubicación",
-    "duration": "Duración",
+    "category": "Categoria",
+    "location": "Ubicacion",
+    "duration": "Duracion",
     "price": {
       "label": "Desde",
       "value": "${{price}}"
     },
-    "book": "Reservar ahora",
+    "book": "Reservar Ahora",
     "categories": {
       "aquatic": "Acuáticos",
       "adventure": "Aventura",
       "parks": "Parques",
       "archaeological": "Arqueológicos",
-      "extreme-adventure": "Extremos y aventura",
+      "extreme-adventure": "Extremos y Aventura",
       "nature": "Naturaleza",
-      "wildlife": "Vida silvestre",
+      "wildlife": "Vida Silvestre",
       "islands": "Islas",
-      "night-entertainment": "Entretenimiento nocturno"
-    },
-    "contador_one": "{{count}} tour",
-    "contador_other": "{{count}} tours",
-    "contadorFiltrado": "{{n}} de {{total}} tours",
-    "quitarFiltros": "Quitar filtros",
-    "mostrando": "Mostrando {{n}} de {{total}} tours",
-    "verMas_one": "Ver {{count}} tour más",
-    "verMas_other": "Ver {{count}} tours más",
-    "vacio": {
-      "title": "Ningún tour coincide",
-      "text": "Quita filtros o pregúntanos por WhatsApp: seguro tenemos algo para ti."
-    },
-    "sinTours": {
-      "title": "Pronto publicaremos nuevos tours",
-      "text": "Mientras tanto, pregúntanos por WhatsApp y te ayudamos a planear."
-    },
-    "errorCarga": "No pudimos cargar los tours"
+      "night-entertainment": "Entretenimiento Nocturno"
+    }
   },
   "transportation": {
-    "title": "Servicio de transportación",
+    "title": "Servicio de Transportacion",
     "hero": {
-      "title": "Transportación",
-      "subtitle": "Aeropuerto, punto a punto y servicio abierto.",
-      "cta": "Arma tu traslado"
+      "title": "TRANSPORTACION",
+      "subtitle": "Aeropuerto, punto a punto y servicio abierto."
     },
-    "intro": "Contamos con unidades nuevas y en óptimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportación que ofrecemos se adapta a cada necesidad de viaje: un servicio cómodo, seguro y funcional.",
+    "intro": "Contamos con unidades nuevas y en optimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportacion que oferecemos se adapta perfectamente a cada necesidad de viaje, marcando asi en el mercado un servicio comodo, seguro y funcional.",
     "airport": {
-      "title": "Transportación aeropuerto",
-      "subtitle": "Cancún, Playa del Carmen, Tulum y Riviera Maya",
+      "title": "Transportacion Aeropuerto",
+      "subtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
       "description": "Servicio abierto para que organices tu propio itinerario"
     },
     "options": {
       "title": "Opciones:",
       "shared": "Servicio compartido",
-      "private": "Servicio privado",
-      "luxury": "Servicio de lujo",
-      "bus": "Servicio de autobús"
+      "private": "Servicio Privado",
+      "luxury": "Servicio Luxury",
+      "bus": "Servicio de Autobus"
     },
     "type": {
       "title": "Tipo de servicio:",
       "oneWay": "Solo ida",
       "roundTrip": "Ida y vuelta"
     },
-    "quote": "Solicitar cotización",
+    "quote": "Solicitar Cotizacion",
     "units": {
-      "title": "Nuestras unidades",
-      "texto": "Unidades nuevas para grupos de todos los tamaños.",
-      "bus": "Autobús"
+      "title": "Nuestras Unidades"
     },
     "segments": {
-      "optionsTitle": "Opciones de servicio",
-      "airport": "Aeropuerto",
-      "airportSubtitle": "Cancún, Playa del Carmen, Tulum y Riviera Maya",
-      "airportOpt1": "Aeropuerto de Cancún",
-      "airportOpt2": "Aeropuerto de Tulum",
-      "airportOpt3": "Aeropuerto de Cozumel",
-      "point": "Punto a punto",
+      "optionsTitle": "Opciones de Servicio",
+      "airport": "TRANSPORTACION AEROPUERTO",
+      "airportSubtitle": "Cancun, Playa del Carmen, Tulum, Riviera Maya",
+      "airportOpt1": "Aeropuerto Cancun",
+      "airportOpt2": "Aeropuerto Tulum",
+      "airportOpt3": "Aeropuerto Cozumel",
+      "point": "TRANSPORTACION PUNTO A PUNTO",
       "pointSubtitle": "Tu itinerario, tu tiempo",
-      "pointOpt1": "Cancún",
+      "pointOpt1": "Cancun",
       "pointOpt2": "Playa del Carmen",
       "pointOpt3": "Tulum",
       "pointOpt4": "Riviera Maya",
-      "pointOpt5": "Península de Yucatán",
-      "open": "Servicio abierto",
+      "pointOpt5": "Peninsula Yucatan",
+      "open": "TRANSPORTACION SERVICIO ABIERTO",
       "openSubtitle": "Arma tu propio viaje",
-      "openOpt1": "4 h",
-      "openOpt2": "6 h",
-      "openOpt3": "8 h",
-      "openOpt4": "10 h",
-      "openOpt5": "12 h"
-    },
-    "pasos": {
-      "titulo": "Cotiza tu traslado",
-      "texto": "Elige paso a paso y te dejamos el mensaje listo para enviarlo por WhatsApp.",
-      "tipo": "¿Qué tipo de traslado?",
-      "aeropuerto": "¿Qué aeropuerto?",
-      "destino": "¿A dónde vas?",
-      "duracion": "¿Cuántas horas?",
-      "detalle": "Origen, destino u horas",
-      "modalidad": "Modalidad y viaje",
-      "faltaTipo": "Elige un tipo de traslado",
-      "faltaAeropuerto": "Elige un aeropuerto",
-      "faltaDestino": "Elige un destino",
-      "faltaDuracion": "Elige cuántas horas",
-      "faltaModalidad": "Elige servicio privado o compartido",
-      "faltaViaje": "Elige solo ida o ida y vuelta",
-      "detalleAeropuerto": "{{opcion}}",
-      "detalleDestino": "Destino: {{opcion}}",
-      "detalleDuracion": "Duración: {{opcion}}"
+      "openOpt1": "4 HRS",
+      "openOpt2": "6 HRS",
+      "openOpt3": "8 HRS",
+      "openOpt4": "10 HRS",
+      "openOpt5": "12 HRS"
     }
   },
   "accommodation": {
     "hero": {
-      "title": "Hospedaje",
-      "subtitle": "Propiedad privada, hotel estándar u hotel todo incluido: te ayudamos a elegir.",
-      "cta": "Pregunta por hospedaje"
+      "title": "HOSPEDAJE",
+      "subtitle": "Hospedaje en propiedad privada / Hospedaje en Hoteles standard / Hospedaje en Hotel All Inclusive"
     },
-    "title": "Servicio de hospedaje",
+    "title": "Servicio de Hospedaje",
     "intro": "Encuentra el alojamiento perfecto para tu estancia en la Riviera Maya. Contamos con opciones para cada tipo de viajero.",
     "types": {
-      "houses": "Propiedad privada",
-      "hoteles": "Hotel estándar",
-      "condos": "Hotel todo incluido"
+      "houses": "HOSPEDAJE PROPIEDAD PRIVADA",
+      "hoteles": "HOSPEDAJE HOTEL ESTANDARD",
+      "condos": "HOSPEDAJE HOTEL ALL INCLUSIVE"
     },
     "features": {
-      "houses": "Vive la privacidad de tu propio espacio en el paraíso tropical, con la mejor ubicación y amenidades que te harán sentir en casa.",
-      "hoteles": "Si buscas un lugar cómodo, auténtico, económico y funcional, esta es la mejor opción: desayuno incluido, alberca y una terraza increíble. Conoce esta opción céntrica e inigualable para tu experiencia en el Caribe Mexicano.",
-      "condos": "Si lo que buscas es consentirte y descansar en un todo incluido, esta opción es para ti. Te damos las mejores opciones y consejos de acuerdo con tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
+      "houses": "Vive la privacidad en tu propio espacio en el paraiso tropical, con la mejor ubicacion y amenidades que te daran sentirte en casa",
+      "hoteles": "Si buscas un lugar, comodo, autentico, economico y funcional, esta es la mejor opcion con desayunos incluidos, alberca y roof incredible. Conoce esta opcion centrica e inigualable que optimizara tu experiencia en el Caribe mexicano",
+      "condos": "Si lo que buscas es apapacharte y descansar en un Todo Incluido, esta opcion es para ti. Tenemos las mejores opciones y consejos acorde a tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
       "directHost": "Contacto directo con anfitriones",
       "cultural": "Experiencia cultural",
-      "comfort": "Comodidad de hogar",
-      "roomService": "Servicio a la habitación",
+      "comfort": "Comodidad hogarena",
+      "roomService": "Servicio de habitacion",
       "amenities": "Amenidades",
-      "personalized": "Atención personalizada",
+      "personalized": "Atencion personalizada",
       "variety": "Variedad de servicios",
       "kitchen": "Cocina equipada",
       "spaces": "Espacios amplios",
@@ -283,249 +214,137 @@
       "longStays": "Ideal para estancias largas"
     },
     "includes": "Incluye",
-    "viewOptions": "Ver opciones",
-    "destinations": "Destinos disponibles",
-    "tiposTitulo": "Elige tu tipo de hospedaje"
+    "viewOptions": "Ver Opciones",
+    "destinations": "Destinos disponibles"
   },
   "mice": {
-    "title": "Grupos y convenciones",
-    "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los más altos estándares de calidad.",
-    "subtitle": "Nos encargamos de cada detalle para que tu evento sea un éxito.",
-    "moreInfo": "Contactar a un ejecutivo",
+    "title": "Grupos & Convenciones",
+    "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los mas altos estandares de calidad.",
+    "subtitle": "Nos encargamos de cada detalle para que tu evento sea un exito.",
+    "moreInfo": "Contactar ejecutivo",
     "hero": {
-      "title": "Grupos y convenciones",
-      "subtitle": "Sabemos que cada grupo es diferente, con su propia planeación y objetivo.",
-      "text": "Nos enfocamos en crear experiencias grupales memorables, con la estructura de coordinación adecuada para cada grupo. Tenemos amplia experiencia en el manejo y la gestión de grupos, y coordinamos todo en el destino hasta su salida y el cierre de tu evento. ¡Déjalo en nuestras manos!",
-      "cta": "Cotiza tu grupo"
+      "title": "GRUPOS & CONVENCIONES",
+      "subtitle": "Sabemos que todos los grupos son diferentes y con distinta planeacion y objetivo.",
+      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinacion adecuada a cada necesidad del grupo. No te despreocupes por la logistica masiva, tenemos una amplia experiencia en el manejo y gestion de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeacion, organizacion, control, gestion, produccion y logistica de todo el grupo en el destino, conclusion hasta su salida y termino de tu evento.<br/><strong>No te despreocupes, dejalo en nuestras manos!</strong>"
     },
     "groups": {
       "mice": "Grupos MICE",
-      "miceDesc": "Reuniones, incentivos, conferencias y exhibiciones: ¡somos tus ojos en el destino! Apóyate en los expertos, desde la búsqueda de la sede hasta toda la coordinación y gestión que requiere tu evento.",
-      "team": "Team building",
-      "teamDesc": "Experiencias corporativas creativas y con un objetivo definido para fortalecer a tu equipo.",
-      "boda": "Grupos de boda",
-      "bodaDesc": "Apóyate en nosotros para la logística de tu evento sin preocuparte por nada ni nadie, y vive el mejor momento de tu vida al lado de tu amor.",
-      "viajeros": "Grupos de viajeros",
-      "viajerosDesc": "No hay mejor vitamina para el alma que los recuerdos de las aventuras. Permítenos presentarte el lado de la Riviera Maya que no conoces.",
-      "familia": "Grupos familiares",
-      "familiaDesc": "«Láak'tsilil» significa familia en maya. Reconéctense en un paraíso lleno de vegetación y experiencias inolvidables.",
-      "escolares": "Grupos escolares",
-      "escolaresDesc": "Vive una de las mejores etapas de tu vida en compañía de tus mejores amigos. Te garantizamos que será parte de las historias que contarán una y otra vez.",
-      "deportivos": "Grupos deportivos",
-      "deportivosDesc": "Te ayudamos a organizar tus torneos y a coordinar a los equipos asistentes."
+      "miceDesc": "Reuniones, Incentivos, Conferencias y Exhibiciones: Somos tus ojos en el destino! Apoyate con los expertos para iniciar la busqueda desde la sede hasta toda la coordinacion y gestion que requieres para tu evento.",
+      "team": "Grupos de Team Building",
+      "teamDesc": "Experiencias corporativas creativas y con un objetivo definido para el fortalecimiento del equipo corporativo.",
+      "boda": "Grupos de Boda",
+      "bodaDesc": "Apoyate con nosotros para la logistica de tu evento sin preocuparte por nada ni nadie, vive el mejor momento de tu vida al lado de tu amor.",
+      "viajeros": "Grupos de Viajeros",
+      "viajerosDesc": "No hay mejor vitamina para el alma que los recuerdos de las aventuras. Permítenos presentarte el lado de la Riviera que no conoces.",
+      "familia": "Grupos de Familia",
+      "familiaDesc": "\"Láak'tsilil\" significa Familia en Maya. Reconectense en un paraiso lleno de vegetacion y experiencias inolvidable.",
+      "escolares": "Grupos Escolares",
+      "escolaresDesc": "Vive una de tus mejores etapas de la vida en compania de tus mejores amigos. Les garantizamos que sera parte de sus historias que tendran que contar una y otra vez.",
+      "deportivos": "Grupos Deportivos",
+      "deportivosDesc": "Te ayudamos a realizar tus torneos y gestionar tu o los equipos asistentes para una coordinacion deportiva."
     },
     "cta": {
-      "title": "¿Planeas un evento corporativo?",
-      "subtitle": "Escríbenos y te ayudamos a organizarlo.",
-      "button": "Contactar ahora"
-    },
-    "texto1": "Nos enfocamos en crear experiencias grupales memorables, con la estructura de coordinación adecuada para cada grupo. No te preocupes por la logística masiva: tenemos amplia experiencia en el manejo y la gestión de grupos.",
-    "texto2": "En Tropical Vitamin coordinamos la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, hasta su salida y el cierre de tu evento. ¡Déjalo en nuestras manos!",
-    "tiposTitulo": "Grupos que coordinamos",
-    "pasosTitulo": "Cotiza tu grupo",
-    "pasosTexto": "Cuéntanos qué tipo de grupo, cuántas personas y cuándo; te dejamos el mensaje listo."
+      "title": "Planeas un evento corporativo?",
+      "subtitle": "Contactanos y te ayudamos a organizarlo",
+      "button": "Contactar Ahora"
+    }
   },
   "thematic": {
-    "title": "Viajes temáticos",
-    "intro": "Celebra tus momentos especiales con experiencias únicas e inolvidables en la Riviera Maya.",
+    "title": "Viajes Tematicos",
+    "intro": "Celebra tus momentos especiales con experiencias unicas e inolvidable en la Riviera Maya.",
     "hero": {
-      "title": "Viajes temáticos",
-      "subtitle": "Todo momento y celebración especial merece ese detalle que lo hace único.",
-      "text": "En Tropical Vitamin coordinamos la planeación, organización, control, gestión, producción y logística de cada evento especializado. ¡Déjanos ayudarte con tu celebración!",
-      "cta": "Cotiza tu celebración"
+      "title": "VIAJES TEMATICOS",
+      "subtitle": "Todo momento y celebracion especial merece ese detalle que lo caracteriza y lo hace unico.",
+      "text": "En <strong>Tropical Vitamin</strong> coordinamos toda la planeacion, organizacion, control, gestion, produccion y logistica de cada evento especializado.<br/><strong>Dejanos ayudarte con tu celebracion!</strong>"
     },
     "trips": {
       "despedida": "Despedidas de soltera y soltero",
-      "despedidaDesc": "Las frases «¿Te quieres casar conmigo?» y «¡Sí, acepto!» son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: playa, fiesta, gastronomía y los mejores lugares para festejar el amor.",
-      "bienvenida": "Bienvenida a la soltería",
-      "bienvenidaDesc": "Como dice el dicho: «En el mar la vida es más sabrosa». Ven a celebrar tus decisiones, lo vivido y lo que está por venir, porque vida solo hay una.",
+      "despedidaDesc": "Las frases de \"Te quieres casar conmigo?\" y \"Si Acepto!\" son las palabras magicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: playa, fiesta, gastronomia y los mejores lugares para festejar el AMOR!",
+      "bienvenida": "Bienvenida de Solter@",
+      "bienvenidaDesc": "Como dice el dicho: \"En el mar la vida es mas sabrosa\", ven a celebrar las decisiones, lo vivido y lo que esta por venir porque vida solo hay una.",
       "graduacion": "Graduaciones",
-      "graduacionDesc": "Te esforzaste mucho para lograrlo, así que un viaje de graduación es lo que mereces. Celebra tu logro y organiza con tus amigos el viaje de graduación más aventurero.",
-      "familia": "Reconexiones familiares",
-      "familiaDesc": "Viajes de conexión, integración y amor familiar. No solo vienen de vacaciones: vienen a vivir una experiencia para conectar con su familia en todos los sentidos.",
-      "cumpleanos": "Cumpleaños",
-      "cumpleanosDesc": "¡Celebra tu vida con los tuyos! Organizamos todos los detalles que mereces en tu día y tu festejo.",
+      "graduacionDesc": "Te esforzaste mucho para lograrlo, asi que un viaje de graduacion es lo que mereces. Celebra tu logro, organiza con tus amigos el viaje de graduacion mas aventurero.",
+      "familia": "Reconexiones de Familia",
+      "familiaDesc": "Viajes de conexion familiar, de integracion y de proposito de amor familiar. No solo vienen de vacaciones, vienen a vivir una experiencia donde conectas con tu familia en todos los sentidos.",
+      "cumpleanos": "Cumpleanos",
+      "cumpleanosDesc": "Celebra tu vida y celebra con los tuyos! Te organizamos todos los detalles que mereces tener en tu dia y tu festejo.",
       "pedida": "Pedidas de matrimonio",
-      "pedidaDesc": "Es uno de los momentos más esperados y tiene que ser único. Te ayudamos a preparar una sorpresa mágica y llena de amor."
+      "pedidaDesc": "Uno de los momentos mas esperados y tiene que ser UNICO. Te ayudamos a tener una sorpresa magica y llena de amor."
     },
-    "description": "Una experiencia diseñada específicamente para hacer de este momento algo especial y memorable.",
-    "moreInfo": "Más información",
+    "description": "Una experiencia disenada especificamente para hacer de este momento algo especial y memorable.",
+    "moreInfo": "Mas informacion",
     "cta": {
-      "title": "¿Tienes alguna celebración en mente?",
-      "subtitle": "Cuéntanos y nosotros nos encargamos de todo.",
-      "button": "Contáctanos"
-    },
-    "texto": "En Tropical Vitamin coordinamos la planeación, organización, control, gestión, producción y logística de cada evento especializado. ¡Déjanos ayudarte con tu celebración!",
-    "tiposTitulo": "Celebraciones que organizamos",
-    "pasosTitulo": "Cotiza tu celebración",
-    "pasosTexto": "Cuéntanos qué celebras, cuántas personas y cuándo; te dejamos el mensaje listo.",
-    "pasosTipo": "¿Qué celebras?"
+      "title": "Tienes alguna celebracion en mente?",
+      "subtitle": "Cuéntanos y nosotros nos encargamos de todo",
+      "button": "Contactanos"
+    }
   },
   "contact": {
-    "title": "Contáctanos",
-    "subtitle": "¿Listo para vivir una experiencia única en la Riviera Maya? Escríbenos y te ayudamos a planear cada detalle de tu viaje.",
+    "title": "Contactanos",
+    "subtitle": "Listo para vivir una experiencia unica en la Riviera Maya? Escribenos y te ayudamos a planear cada detalle de tu viaje.",
     "info": {
-      "location": "Ubicación",
-      "locationValue": "Riviera Maya, México",
-      "phone": "Teléfono",
-      "email": "Correo",
-      "mexico": "México",
-      "netherlands": "Países Bajos",
+      "location": "Ubicacion",
+      "locationValue": "Riviera Maya, Mexico",
+      "phone": "Telefono",
+      "email": "Email",
+      "mexico": "Mexico",
+      "netherlands": "Paises Bajos",
       "mexicoLocation": "Riviera Maya, Quintana Roo",
       "netherlandsLocation": "Amsterdam",
-      "mexicoPhone": "+52 984 168 1263 (México)",
-      "netherlandsPhone": "+31 20 123 4567 (Países Bajos)"
+      "mexicoPhone": "+52 984 168 1263 (Mexico)",
+      "netherlandsPhone": "+31 20 123 4567 (Paises Bajos)"
     },
     "form": {
-      "title": "Envíanos un mensaje",
-      "name": "Nombre completo",
-      "email": "Correo electrónico",
-      "phone": "Teléfono",
-      "service": "Servicio",
-      "destination": "Destino",
-      "travelers": "Número de viajeros",
-      "message": "Cuéntanos tu plan de viaje",
+      "title": "Envianos un mensaje",
+      "name": "Nombre completo *",
+      "email": "Correo electronico *",
+      "phone": "Telefono",
+      "service": "Selecciona un servicio",
+      "destination": "Selecciona destino",
+      "travelers": "Numero de viajeros",
+      "message": "Cuentanos mas sobre tu plan de viaje (fechas, preferencias, etc.)",
       "submit": "Enviar mensaje",
-      "sending": "Enviando…",
-      "success": "¡Mensaje enviado! Te contactaremos pronto.",
-      "error": "No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos por WhatsApp.",
-      "servicePlaceholder": "Selecciona un servicio",
-      "destinationPlaceholder": "Selecciona un destino",
-      "messageAyuda": "Fechas, preferencias y lo que tengas en mente.",
-      "successTitulo": "Recibimos tu mensaje",
-      "errorTitulo": "No se envió el mensaje",
-      "resumen_one": "Revisa {{count}} campo:",
-      "resumen_other": "Revisa {{count}} campos:",
-      "errorName": "Escribe tu nombre",
-      "errorEmail": "Escribe tu correo",
-      "errorEmailFormato": "Escribe un correo válido, por ejemplo nombre@correo.com",
-      "errorMessage": "Escribe tu mensaje"
+      "sending": "Enviando mensaje...",
+      "success": "Mensaje enviado exitosamente! Te contactaremos pronto.",
+      "error": "Ocurrio un error, por favor intenta mas tarde."
     },
     "services": {
-      "transportation": "Transportación",
+      "transportation": "Transportacion",
       "accommodation": "Hospedaje",
       "tours": "Tours",
-      "mice": "Grupos y convenciones",
-      "thematic": "Viajes temáticos",
+      "mice": "Grupos y Convenciones",
+      "thematic": "Viajes Tematicos",
       "other": "Otro"
     },
     "destinations": {
-      "cancun": "Cancún",
+      "cancun": "Cancun",
       "playaCarmen": "Playa del Carmen",
       "rivieraMaya": "Riviera Maya",
       "tulum": "Tulum",
       "bacalar": "Bacalar",
-      "yucatan": "Yucatán",
+      "yucatan": "Yucatan",
       "other": "Otro"
     },
-    "whatsapp": "Escríbenos por WhatsApp",
-    "etiqueta": "Contacto",
-    "datosTitulo": "Habla con nosotros",
-    "whatsappTexto": "La forma más rápida de planear tu viaje."
-  },
-  "paquetes": {
-    "tituloDocumento": "Paquetes · Tropical Vitamin",
-    "hero": {
-      "etiqueta": "Paquetes",
-      "titulo": "Paquetes de viaje",
-      "texto": "Varios servicios en un solo plan: tours, traslados y hospedaje, coordinados por nosotros.",
-      "cta": "Arma tu paquete por WhatsApp"
-    },
-    "vacio": {
-      "titulo": "Estamos armando nuestros paquetes",
-      "texto": "Mientras tanto, cuéntanos qué quieres y te armamos uno a tu medida.",
-      "cta": "Arma tu paquete por WhatsApp"
-    },
-    "dias_one": "{{count}} día",
-    "dias_other": "{{count}} días",
-    "tarjeta": {
-      "verDetalle": "Ver paquete",
-      "incluye": "Incluye",
-      "mas_one": "y {{count}} más",
-      "mas_other": "y {{count}} más"
-    },
-    "detalle": {
-      "etiqueta": "Paquete",
-      "precio": "Precio",
-      "incluye": "Incluye",
-      "noIncluye": "No incluye",
-      "itinerario": "Itinerario",
-      "galeria": "Galería",
-      "relacionados": "Otros paquetes",
-      "cierre": "¿Te late este paquete?",
-      "preguntar": "Preguntar por este paquete",
-      "volver": "Ver todos los paquetes"
-    },
-    "noEncontrado": {
-      "titulo": "No encontramos este paquete",
-      "texto": "Puede que ya no esté disponible. Mira los que tenemos o arma uno a tu medida.",
-      "tituloDocumento": "Paquete no encontrado · Tropical Vitamin"
-    }
+    "whatsapp": "Chatea por WhatsApp"
   },
   "common": {
-    "loading": "Cargando…",
+    "loading": "Cargando...",
     "error": "Error",
-    "success": "Éxito",
+    "success": "Exito",
     "submit": "Enviar",
     "cancel": "Cancelar",
-    "close": "Cerrar",
-    "whatsapp": "WhatsApp",
-    "whatsappAria": "Escribir por WhatsApp (se abre en otra ventana)",
-    "idioma": "Idioma",
-    "espanol": "Español",
-    "ingles": "English",
-    "reintentar": "Reintentar",
-    "preguntarWhatsapp": "Preguntar por WhatsApp",
-    "verServicio": "Ver servicio",
-    "saleDe": "Sale de: {{lugar}}",
-    "duracion": "Duración",
-    "categoria": "Categoría",
-    "cargando": "Cargando…",
-    "obligatorio": "(obligatorio)",
-    "vistaPrevia": "Vista previa del mensaje",
-    "editar": "Editar",
-    "enviarWhatsapp": "Enviar por WhatsApp",
-    "prefieroCorreo": "Prefiero correo",
-    "completo": "completo",
-    "servicio": "Servicio",
-    "grupoTipo": "¿Qué tipo de grupo?",
-    "grupoPersonas": "¿Cuántas personas?",
-    "grupoFechas": "¿Qué fechas aproximadas?",
-    "personas": "Número de personas",
-    "fechas": "Fechas aproximadas",
-    "fechasAyuda": "Por ejemplo: segunda quincena de marzo de 2027",
-    "faltaGrupoTipo": "Elige un tipo",
-    "faltaPersonas": "Escribe cuántas personas viajan (1 o más)",
-    "faltaFechas": "Escribe las fechas aproximadas",
-    "errorPersonas": "Escribe un número de 1 o más"
+    "close": "Cerrar"
   },
   "footer": {
-    "description": "Diseñamos experiencias auténticas en la Riviera Maya, combinando organización europea con calidez mexicana.",
-    "information": "Información",
+    "description": "Diseñamos experiencias autenticas en la Riviera Maya, combinando organizacion europea con calidez mexicana.",
+    "information": "Informacion",
     "registros": "Registros y permisos",
     "cancellations": "Reservas y cancelaciones",
-    "sitePolicies": "Políticas del sitio",
+    "sitePolicies": "Politicas del sitio",
     "sitemap": "Mapa del sitio",
     "contact": "Contacto",
     "legal": "Legal",
-    "privacy": "Aviso de privacidad",
-    "rights": "Todos los derechos reservados.",
-    "servicios": "Servicios",
-    "contacto": "Contacto",
-    "formulario": "Contacto (formulario)",
-    "whatsapp": "Escríbenos por WhatsApp",
-    "idioma": "Idioma",
-    "copyright": "© 2026 Tropical Vitamin",
-    "toursServicio": "Tours y experiencias"
-  },
-  "whatsapp": {
-    "paquete": "Hola, me interesa el paquete «{{nombre}}» ({{duracion}}). ¿Me ayudan a planearlo?",
-    "paqueteMedida": "Hola, quiero armar un paquete a mi medida. ¿Me ayudan?",
-    "general": "Hola, quiero ayuda para planear mi viaje a la Riviera Maya.",
-    "tour": "Hola, me interesa el tour «{{titulo}}» ({{duracion}}). ¿Me ayudan a planearlo?",
-    "servicio": "Hola, quiero información de {{servicio}}.",
-    "transporte": "Hola, quiero cotizar un traslado: {{tipo}}. {{detalle}}. {{modalidad}}, {{viaje}}.",
-    "grupo": "Hola, quiero cotizar {{tipo}} para {{personas}} personas. Fechas aproximadas: {{fechas}}.",
-    "transporteAbierto": "Hola, quiero cotizar un traslado: {{tipo}}. {{detalle}}. {{modalidad}}."
+    "privacy": "Aviso de Privacidad",
+    "rights": "Todos los derechos reservados."
   }
 }
