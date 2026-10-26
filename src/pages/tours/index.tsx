@@ -18,13 +18,16 @@ function formatDuration(minutes: number): string {
 function getCategoryDisplayName(category: Category | undefined, t: (key: string) => string): string {
   if (!category) return '';
 
+  // La API ya filtra la traducción por el idioma activo (?lang=); es la que se edita en el admin
+  const translation = category.translations?.[0];
+  if (translation?.name) return translation.name;
+
   const localized = t(`tours.categories.${category.adminName}`);
   if (localized && localized !== `tours.categories.${category.adminName}`) {
     return localized;
   }
 
-  const translation = category.translations?.[0];
-  return translation?.name || category.adminName;
+  return category.adminName;
 }
 
 export default function Tours() {
