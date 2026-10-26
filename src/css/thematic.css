@@ -167,7 +167,8 @@
   border: none;
   color: #0A0A0A;
   padding: 0.85rem 1.75rem;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
+  min-height: 44px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -210,7 +211,8 @@
   color: #0A0A0A;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
+  min-height: 44px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
