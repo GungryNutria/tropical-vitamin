@@ -172,7 +172,14 @@ export default function Tours() {
                   <h3 className="tour-name">{translation?.title}</h3>
                   <p className="tour-description">{translation?.description}</p>
                   <p className="tour-meta">{[tour.location?.trim(), formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
-                  <button className="tour-button">{t('tours.book')}</button>
+                  <a
+                    className="tour-button"
+                    href={`https://wa.me/529841681263?text=${encodeURIComponent(t('tours.whatsappMessage', { tour: translation?.title }))}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('tours.book')}
+                  </a>
                 </div>
               </div>
             );

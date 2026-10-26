@@ -102,6 +102,7 @@
       "value": "${{price}}"
     },
     "book": "Book Now",
+    "whatsappMessage": "Hi, I'm interested in the {{tour}} tour",
     "categories": {
       "aquatic": "Aquatic",
       "adventure": "Adventure",

@@ -102,6 +102,7 @@
       "value": "${{price}}"
     },
     "book": "Reservar Ahora",
+    "whatsappMessage": "Hola, me interesa el tour {{tour}}",
     "categories": {
       "aquatic": "Acuáticos",
       "adventure": "Aventura",
