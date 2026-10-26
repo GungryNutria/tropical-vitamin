@@ -64,7 +64,7 @@ function Contact() {
 
                     <div className="contact-details">
                         <p><FaLocationDot /> Riviera Maya, México</p>
-                        <p><FaPhone /> +52 558 034 3878</p>
+                        <p><FaPhone /> +52 984 168 1263</p>
                         <p><FaAt /> contacto@tropical-vitamin.com</p>
                     </div>
 
