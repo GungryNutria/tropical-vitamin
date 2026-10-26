@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import '../../css/mice.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import { openWhatsApp } from '../../utils/whatsapp';
 
 export default function Mice() {
   const { t } = useTranslation();
@@ -59,7 +60,7 @@ export default function Mice() {
           <div key={group.key} className="mice-card">
             <h3 className="mice-card-title">{group.title}</h3>
             <p className="mice-card-desc">{group.description}</p>
-            <button className="mice-btn">{t('mice.moreInfo')}</button>
+            <button className="mice-btn" onClick={() => openWhatsApp(t('mice.whatsappMessage', { name: group.title }))}>{t('mice.moreInfo')}</button>
           </div>
         ))}
       </div>
@@ -68,7 +69,7 @@ export default function Mice() {
       <div className="mice-cta">
         <h2>{t('mice.cta.title')}</h2>
         <p>{t('mice.cta.subtitle')}</p>
-        <button className="mice-contact-btn">{t('mice.cta.button')}</button>
+        <button className="mice-contact-btn" onClick={() => openWhatsApp(t('mice.whatsappGeneral'))}>{t('mice.cta.button')}</button>
       </div>
 
       <WhatsappFloat />
