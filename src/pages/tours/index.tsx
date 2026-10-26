@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toursService, type Tour, type Category } from '../../services/toursService';
 import '../../css/tours.css';
-import { FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
 
@@ -116,63 +116,69 @@ export default function Tours() {
         subtitle={t('tours.hero.subtitle')}
         backgroundImage={'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80'} text={t('tours.intro')}      />
       
-      {/* Search & Filter */}
-      <div className="tours-search-filter">
-        {/* Search */}
-        <div className="tours-search">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder={t('tours.search.placeholder') || 'Buscar tours...'}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
-        </div>
-        
-        {/* Category Dropdown */}
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="category-select"
-        >
-          <option value="todos">{t('tours.filter.all')}</option>
-          {categories.map(([adminName, displayName]) => (
-            <option key={adminName} value={adminName}>
-              {displayName}
-            </option>
-          ))}
-        </select>
-      </div>
+      <section className="tours-body">
+        <h2 className="section-title">
+          <span className="title-accent"></span>
+          {t('tours.title')}
+        </h2>
 
-      <div className="tours-grid">
-        {filteredTours.map((tour) => {
-          const translation = tour.translations?.[0];
-          const categoryDisplayName = getCategoryDisplayName(tour.category, t);
-          const imageUrl = (tour as any).imageUrl; // Added by toursService
-          
-          return (
-            <div key={tour.id} className="tour-card">
-              <div className="tour-image">
-                <span className="tour-category">{categoryDisplayName}</span>
-                <img 
-                  src={imageUrl}
-                  alt={translation?.title || 'Tour'}
-                />
-              </div>
-              <div className="tour-content">
-                <h3 className="tour-name">{translation?.title}</h3>
-                <p className="tour-description">{translation?.description}</p>
-                <div className="tour-info">
-                  <span className="tour-location"><FaMapMarkerAlt /> {tour.location}</span>
-                  <span className="tour-duration"><FaClock /> {formatDuration(tour.duration)}</span>
+        {/* Search & Filter */}
+        <div className="tours-search-filter">
+          {/* Search */}
+          <div className="tours-search">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder={t('tours.search.placeholder') || 'Buscar tours...'}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
+          </div>
+
+          {/* Category Dropdown */}
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="category-select"
+          >
+            <option value="todos">{t('tours.filter.all')}</option>
+            {categories.map(([adminName, displayName]) => (
+              <option key={adminName} value={adminName}>
+                {displayName}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <p className="tours-count">{filteredTours.length} {t('tours.count')}</p>
+
+        <div className="tours-grid">
+          {filteredTours.map((tour) => {
+            const translation = tour.translations?.[0];
+            const categoryDisplayName = getCategoryDisplayName(tour.category, t);
+            const imageUrl = (tour as any).imageUrl; // Added by toursService
+
+            return (
+              <div key={tour.id} className="tour-card">
+                <div className="tour-image">
+                  <img
+                    src={imageUrl}
+                    alt={translation?.title || 'Tour'}
+                  />
                 </div>
-                <button className="tour-button">{t('tours.book')}</button>
+                <div className="tour-content">
+                  <span className="tour-category">{categoryDisplayName}</span>
+                  <h3 className="tour-name">{translation?.title}</h3>
+                  <p className="tour-description">{translation?.description}</p>
+                  <p className="tour-meta">{[tour.location?.trim(), formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
+                  <button className="tour-button">{t('tours.book')}</button>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </section>
 
       <WhatsappFloat />
     </div>

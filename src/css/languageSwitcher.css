@@ -4,11 +4,12 @@
 }
 
 .language-select {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid white;
-  color: #333;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--text-main);
+  min-height: var(--control-height);
+  padding: 0 1rem;
+  border-radius: var(--radius-control);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -17,8 +18,8 @@
 }
 
 .language-select:hover {
-  background: white;
-  border-color: var(--orange-sunset);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .language-select option {
