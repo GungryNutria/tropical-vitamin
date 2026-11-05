@@ -56,7 +56,7 @@
         "mice": "MICE & Conventions",
         "miceDesc": "Events, congresses and corporate logistics.",
         "thematic": "Thematic Trips",
-        "thematicDesc": "Experiences made to measure."
+        "thematicDesc": "Tailor-made experiences."
       }
     },
     "faq": {
@@ -93,7 +93,7 @@
       "title": "TOURS & EXPERIENCES",
       "subtitle": "We have the best options, recommendations and personalized experiences for your trip."
     },
-    "intro": "We perfectly understand the objective of each experience so we know our segmentation of the best tours and Experiences. \"We make your experiences authentically memorable\"",
+    "intro": "We perfectly understand the goal of each experience, so discover our selection of the best tours and experiences. \"We make your experiences authentically memorable\"",
     "title": "Tours",
     "loading": "Loading tours...",
     "error": "Error loading tours",
@@ -180,7 +180,7 @@
   "accommodation": {
     "hero": {
       "title": "ACCOMMODATION",
-      "subtitle": "Accommodation in private property / Accommodation in Standard Hotels / Accommodation in All Inclusive Hotel"
+      "subtitle": "Accommodation in private property / Accommodation in standard hotels / Accommodation in an All Inclusive hotel"
     },
     "title": "Accommodation Service",
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
@@ -219,7 +219,7 @@
     "hero": {
       "title": "GROUPS & CONVENTIONS",
       "subtitle": "We know that all groups are different and with different planning and objectives.",
-      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Relax, leave it in our hands!</strong>"
+      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, through to their departure and the close of your event.<br/><strong>Relax, leave it in our hands!</strong>"
     },
     "groups": {
       "mice": "MICE Groups",
@@ -235,7 +235,7 @@
       "escolares": "School Groups",
       "escolaresDesc": "Live one of the best stages of your life in the company of your best friends. We guarantee it will be part of stories they will have to tell over and over again.",
       "deportivos": "Sports Groups",
-      "deportivosDesc": "We help you carry out your tournaments and manage your or the attending teams for sports coordination."
+      "deportivosDesc": "We help you carry out your tournaments and manage your team or the attending teams for sports coordination."
     },
     "cta": {
       "title": "Planning a corporate event?",
@@ -259,7 +259,7 @@
       "graduacion": "Graduation trips",
       "graduacionDesc": "You worked hard for it, so a graduation trip is what you deserve. Celebrate your achievement, organize the most adventurous graduation trip with your friends.",
       "familia": "Family reconnections",
-      "familiaDesc": "Family connection, integration, and love purpose trips. They don't just come for vacation, they come to experience where you connect with your family in every way.",
+      "familiaDesc": "Family connection, integration, and love purpose trips. They don't just come on vacation; they come for an experience that reconnects you with your family in every way.",
       "cumpleanos": "Birthdays",
       "cumpleanosDesc": "Celebrate your life and celebrate with your loved ones! We organize all the details you deserve for your day and celebration.",
       "pedida": "Marriage proposals",
