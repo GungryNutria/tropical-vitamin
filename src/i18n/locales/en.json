@@ -410,12 +410,12 @@
     "rights": "All rights reserved."
   },
   "onsite": {
-    "title": "On-Site Services",
+    "title": "Extra Services",
     "subtitle": "Photos, cleaning, a car and mobility support: we arrange it during your stay so you can just enjoy it.",
     "eyebrow": "Specialized services",
     "cta": "Get a quote on WhatsApp",
     "ctaLabel": "Get a quote on WhatsApp: {{name}} (opens WhatsApp)",
-    "whatsappMessage": "Hello, I would like information about the on-site service: {{name}}",
+    "whatsappMessage": "Hello, I would like information about the extra service: {{name}}",
     "services": {
       "foto": {
         "name": "Photography service",
