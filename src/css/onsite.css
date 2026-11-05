@@ -89,3 +89,9 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .onsite-container .section-brand-title {
+    letter-spacing: 0.03em;
+  }
+}
