@@ -50,6 +50,7 @@
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     backdrop-filter: var(--glass-blur);
+    container-type: inline-size;
 }
 
 .section-brand {
@@ -61,12 +62,18 @@
 }
 
 .section-brand-title {
-    font-size: clamp(1rem, 6vw, 4rem);
+    /* El tope en cqw evita que el titulo se salga de la tarjeta de vidrio */
+    font-size: min(clamp(1rem, 6vw, 4rem), 9.2cqw);
     font-weight: 900;
     color: var(--yellow-main);
     letter-spacing: 0.1em;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     line-height: 1;
+}
+
+/* Palabras largas (TRANSPORTACION) */
+.section-brand-title--long {
+    font-size: min(clamp(1rem, 6vw, 4rem), 7.8cqw);
 }
 
 .section-brand-logo {
