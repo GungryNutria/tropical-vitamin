@@ -8,6 +8,7 @@ import service2 from "../../../assets/services/hospedaje.jpg";
 import service3 from "../../../assets/services/tours.jpg";
 import service4 from "../../../assets/services/convenciones.jpg";
 import service5 from "../../../assets/services/tematicos.jpg";
+import service6 from "../../../assets/destino/home-card.jpg";
 
 
 
@@ -46,6 +47,12 @@ function Services() {
       desc: t('home.services.cards.thematicDesc'),
       img: service5,
       path: '/tematicos',
+    },
+    {
+      title: t('onsite.title'),
+      desc: '',
+      img: service6,
+      path: '/servicios-en-destino',
     },
   ];
 
