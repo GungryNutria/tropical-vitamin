@@ -132,6 +132,7 @@
   .nav-links li {
     width: 100%;
     padding: 1%;
+    min-height: 44px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
