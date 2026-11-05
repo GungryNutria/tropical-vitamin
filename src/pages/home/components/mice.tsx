@@ -1,6 +1,7 @@
 import "../../../css/mice.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 import miceImg from "../../../assets/mice.jpg";
+import { openWhatsApp } from "../../../utils/whatsapp";
 import { FaBriefcase, FaUsers, FaRegCalendarCheck } from "react-icons/fa";
 
 function Mice() {
@@ -38,12 +39,7 @@ function Mice() {
 
           <button
             className="mice-btn fade-up"
-            onClick={() =>
-              window.open(
-                "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20servicios%20MICE%20y%20convenciones",
-                "_blank"
-              )
-            }
+            onClick={() => openWhatsApp("Hola, quiero información sobre servicios MICE y convenciones")}
           >
             Solicitar propuesta
           </button>

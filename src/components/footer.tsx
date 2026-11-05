@@ -2,9 +2,18 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import "../css/footer.css";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useSocial } from "../hooks/useSocial";
+import { whatsappUrl } from "../utils/whatsapp";
+
+const NETWORK_META = {
+    facebook: { Icon: FaFacebookF, label: "Facebook" },
+    instagram: { Icon: FaInstagram, label: "Instagram" },
+    linkedin: { Icon: FaLinkedin, label: "LinkedIn" },
+};
 
 function Footer() {
     const { t } = useTranslation();
+    const { networks } = useSocial();
 
     return (
         <footer className="footer">
@@ -16,15 +25,20 @@ function Footer() {
                     <p>{t('footer.description')}</p>
 
                     <div className="footer-socials">
-                        <a href="#" aria-label="Facebook" className="social-facebook"><FaFacebookF /></a>
-                        <a href="#" aria-label="Instagram" className="social-instagram"><FaInstagram /></a>
-                        <a href="#" aria-label="LinkedIn" className="social-linkedin"><FaLinkedin /></a>
+                        {networks.map(({ network, url }) => {
+                            const { Icon, label } = NETWORK_META[network];
+                            return (
+                                <a key={network} href={url} target="_blank" rel="noopener noreferrer" aria-label={label} className={`social-${network}`}>
+                                    <Icon />
+                                </a>
+                            );
+                        })}
                         <a
-                            href="https://wa.me/529841681263"
+                            href={whatsappUrl()}
                             target="_blank"
                             aria-label="WhatsApp"
                             className="social-whatsapp"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                         >
                             <FaWhatsapp />
                         </a>
