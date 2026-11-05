@@ -113,7 +113,6 @@
       "value": "${{price}}"
     },
     "book": "Reservar Ahora",
-    "whatsappMessage": "Hola, me interesa el tour {{tour}}",
     "categories": {
       "aquatic": "Acuáticos",
       "adventure": "Aventura",
@@ -124,6 +123,72 @@
       "wildlife": "Vida Silvestre",
       "islands": "Islas",
       "night-entertainment": "Entretenimiento Nocturno"
+    },
+    "seeMore": "Ver más",
+    "dialog": {
+      "close": "Cerrar",
+      "gallery": "Galería de fotos",
+      "prev": "Foto anterior",
+      "next": "Foto siguiente",
+      "photoAlt": "{{tour}}, foto {{i}} de {{n}}",
+      "thumb": "Ver foto {{i}} de {{n}}",
+      "counter": "{{i}} / {{n}}"
+    },
+    "quote": {
+      "title": "Cotiza tu tour",
+      "subtitle": "Cuéntanos quiénes van y dónde estás. Te respondemos por WhatsApp.",
+      "date": {
+        "label": "Fecha del tour",
+        "help": "¿Qué día quieres hacer el tour?",
+        "errorEmpty": "Elige la fecha del tour.",
+        "errorPast": "Elige una fecha de hoy en adelante."
+      },
+      "adults": {
+        "label": "Adultos",
+        "add": "Agregar un adulto",
+        "remove": "Quitar un adulto"
+      },
+      "children": {
+        "label": "Menores",
+        "add": "Agregar un menor",
+        "remove": "Quitar un menor"
+      },
+      "age": {
+        "label": "Edad del menor {{n}}",
+        "placeholder": "Selecciona la edad",
+        "option_one": "{{count}} año",
+        "option_other": "{{count}} años",
+        "error": "Indica la edad de este menor."
+      },
+      "companions": {
+        "label": "Acompañantes",
+        "help": "Van en la embarcación pero no hacen la actividad.",
+        "add": "Agregar un acompañante",
+        "remove": "Quitar un acompañante"
+      },
+      "zone": {
+        "label": "Zona donde te encuentras",
+        "placeholder": "Ej. Cancún, Playa del Carmen, Tulum",
+        "error": "Escribe la zona donde te encuentras."
+      },
+      "hotel": {
+        "label": "Hotel donde te hospedas",
+        "placeholder": "Nombre de tu hotel",
+        "help": "Si es Airbnb, escribe la zona o colonia.",
+        "error": "Escribe tu hotel, o la zona si es Airbnb."
+      },
+      "submit": "Enviar por WhatsApp",
+      "note": "Se abrirá WhatsApp con tu mensaje listo para enviar.",
+      "back": "Volver a las fotos",
+      "msg": {
+        "intro": "Hola, me interesa el tour {{tour}}.",
+        "date": "Fecha: {{date}}",
+        "adults": "Adultos: {{n}}",
+        "children": "Menores: {{n}} (edades: {{ages}})",
+        "companions": "Acompañantes (no hacen la actividad): {{n}}",
+        "zone": "Zona: {{zone}}",
+        "hotel": "Hotel: {{hotel}}"
+      }
     }
   },
   "transportation": {

@@ -113,7 +113,6 @@
       "value": "${{price}}"
     },
     "book": "Book Now",
-    "whatsappMessage": "Hi, I'm interested in the {{tour}} tour",
     "categories": {
       "aquatic": "Aquatic",
       "adventure": "Adventure",
@@ -124,6 +123,72 @@
       "wildlife": "Wildlife",
       "islands": "Islands",
       "night-entertainment": "Night Entertainment"
+    },
+    "seeMore": "See more",
+    "dialog": {
+      "close": "Close",
+      "gallery": "Photo gallery",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "photoAlt": "{{tour}}, photo {{i}} of {{n}}",
+      "thumb": "View photo {{i}} of {{n}}",
+      "counter": "{{i}} / {{n}}"
+    },
+    "quote": {
+      "title": "Get a quote",
+      "subtitle": "Tell us who's going and where you're staying. We'll reply on WhatsApp.",
+      "date": {
+        "label": "Tour date",
+        "help": "Which day would you like to go?",
+        "errorEmpty": "Choose the tour date.",
+        "errorPast": "Choose today or a later date."
+      },
+      "adults": {
+        "label": "Adults",
+        "add": "Add an adult",
+        "remove": "Remove an adult"
+      },
+      "children": {
+        "label": "Children",
+        "add": "Add a child",
+        "remove": "Remove a child"
+      },
+      "age": {
+        "label": "Age of child {{n}}",
+        "placeholder": "Select age",
+        "option_one": "{{count}} year old",
+        "option_other": "{{count}} years old",
+        "error": "Enter this child's age."
+      },
+      "companions": {
+        "label": "Companions",
+        "help": "They ride along on the boat but don't do the activity.",
+        "add": "Add a companion",
+        "remove": "Remove a companion"
+      },
+      "zone": {
+        "label": "Area you're staying in",
+        "placeholder": "E.g. Cancún, Playa del Carmen, Tulum",
+        "error": "Enter the area you're staying in."
+      },
+      "hotel": {
+        "label": "Hotel",
+        "placeholder": "Hotel name",
+        "help": "If it's an Airbnb, write the area or neighborhood.",
+        "error": "Enter your hotel, or the area if it's an Airbnb."
+      },
+      "submit": "Send via WhatsApp",
+      "note": "WhatsApp will open with your message ready to send.",
+      "back": "Back to photos",
+      "msg": {
+        "intro": "Hi, I'm interested in the {{tour}} tour.",
+        "date": "Date: {{date}}",
+        "adults": "Adults: {{n}}",
+        "children": "Children: {{n}} (ages: {{ages}})",
+        "companions": "Companions (not doing the activity): {{n}}",
+        "zone": "Area: {{zone}}",
+        "hotel": "Hotel: {{hotel}}"
+      }
     }
   },
   "transportation": {

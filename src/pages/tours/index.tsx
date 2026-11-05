@@ -1,21 +1,13 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { toursService, type Tour, type Category } from '../../services/toursService';
+import { toursService, type TourWithImages, type Category } from '../../services/toursService';
 import '../../css/tours.css';
 import { FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
-import { whatsappUrl } from '../../utils/whatsapp';
+import TourDialog, { type DialogView } from './components/tourDialog';
+import '../../css/tour-dialog.css';
 import { useSocial } from '../../hooks/useSocial';
-
-// Helper to format duration
-function formatDuration(minutes: number): string {
-  if (minutes < 60) return `${minutes} min`;
-  const hours = Math.floor(minutes / 60);
-  const mins = minutes % 60;
-  if (mins === 0) return `${hours} hr${hours > 1 ? 's' : ''}`;
-  return `${hours} hr${hours > 1 ? 's' : ''} ${mins} min`;
-}
 
 function getCategoryDisplayName(category: Category | undefined, t: (key: string) => string): string {
   if (!category) return '';
@@ -35,11 +27,13 @@ function getCategoryDisplayName(category: Category | undefined, t: (key: string)
 export default function Tours() {
   const { t, i18n } = useTranslation();
   useSocial(); // re-render al llegar el número vigente
-  const [tours, setTours] = useState<Tour[]>([]);
+  const [tours, setTours] = useState<TourWithImages[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [open, setOpen] = useState<{ tour: TourWithImages; view: DialogView } | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null); // el botón que abrió el diálogo
 
   useEffect(() => {
     console.log('Fetching tours, language:', i18n.language);
@@ -94,14 +88,23 @@ export default function Tours() {
         const translation = tour.translations?.[0];
         return (
           translation?.title?.toLowerCase().includes(query) ||
-          translation?.description?.toLowerCase().includes(query) ||
-          tour.location?.toLowerCase().includes(query)
+          translation?.description?.toLowerCase().includes(query)
         );
       });
     }
     
     return filtered;
   }, [tours, selectedCategory, searchQuery]);
+
+  const openDialog = (e: React.MouseEvent<HTMLElement>, tour: TourWithImages, view: DialogView) => {
+    openerRef.current = e.currentTarget;
+    setOpen({ tour, view });
+  };
+
+  const closeDialog = () => {
+    setOpen(null);
+    openerRef.current?.focus();
+  };
 
   if (loading) {
     return <div className="tours-loading">{t('tours.loading')}</div>;
@@ -160,13 +163,12 @@ export default function Tours() {
           {filteredTours.map((tour) => {
             const translation = tour.translations?.[0];
             const categoryDisplayName = getCategoryDisplayName(tour.category, t);
-            const imageUrl = (tour as any).imageUrl; // Added by toursService
 
             return (
               <div key={tour.id} className="tour-card">
                 <div className="tour-image">
                   <img
-                    src={imageUrl}
+                    src={tour.imageUrl}
                     alt={translation?.title || 'Tour'}
                   />
                 </div>
@@ -174,21 +176,31 @@ export default function Tours() {
                   <span className="tour-category">{categoryDisplayName}</span>
                   <h3 className="tour-name">{translation?.title}</h3>
                   <p className="tour-description">{translation?.description}</p>
-                  <p className="tour-meta">{[tour.location?.trim(), formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
-                  <a
-                    className="tour-button"
-                    href={whatsappUrl(t('tours.whatsappMessage', { tour: translation?.title }))}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t('tours.book')}
-                  </a>
+                  <div className="tour-actions">
+                    <button type="button" className="tour-button tour-button--secondary" onClick={(e) => openDialog(e, tour, 'gallery')}>
+                      {t('tours.seeMore')}
+                    </button>
+                    <button type="button" className="tour-button" onClick={(e) => openDialog(e, tour, 'quote')}>
+                      {t('tours.book')}
+                    </button>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </section>
+
+      {open && (
+        <TourDialog
+          title={open.tour.translations?.[0]?.title ?? ''}
+          category={getCategoryDisplayName(open.tour.category, t)}
+          description={open.tour.translations?.[0]?.description ?? ''}
+          images={open.tour.imageUrls}
+          initialView={open.view}
+          onClose={closeDialog}
+        />
+      )}
 
       <WhatsappFloat />
     </div>
