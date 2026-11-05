@@ -123,6 +123,8 @@
     align-items: center;
     transform: translateY(-120%);
     transition: transform .3s ease;
+    max-height: calc(100dvh - 78px);
+    overflow-y: auto;
   }
 
   .nav-links.open {
@@ -132,13 +134,18 @@
   .nav-links li {
     width: 100%;
     padding: 1%;
-    min-height: 44px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
   .nav-links a {
     margin: 1%;
     font-size: 16px;
+  }
+
+  .nav-links a:not(.cta-hero) {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
   }
 
   .hamburger {
