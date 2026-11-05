@@ -1,0 +1,471 @@
+/* Diálogo "Ver más" y cotización de un tour (spec 006). Solo variables de variables.css. */
+
+/* El fondo no se desplaza mientras el diálogo está abierto */
+html:has(dialog.tour-dialog[open]) {
+  overflow: hidden;
+}
+
+.tour-dialog {
+  padding: 0;
+  border: 0;
+  color: var(--text-main);
+  background: var(--bg-main);
+  font-family: Arial, sans-serif;
+  /* móvil: pantalla completa */
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.tour-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.td-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.td-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Botones Cerrar / Volver */
+.td-top {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px var(--gutter);
+}
+
+.td-top--over {
+  justify-content: flex-end;
+}
+
+.td-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--control-height);
+  padding: 0 24px;
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-control);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.td-close:hover {
+  border-color: var(--yellow-main);
+}
+
+.td-close:focus-visible,
+.td-arrow:focus-visible,
+.td-thumb:focus-visible,
+.td-stepper button:focus-visible,
+.td-input:focus-visible,
+.td-gallery:focus-visible {
+  outline: 2px solid var(--yellow-main);
+  outline-offset: 2px;
+}
+
+.td-name:focus,
+.td-title:focus {
+  outline: none;
+}
+
+/* Galería */
+.td-stage {
+  position: relative;
+  height: 360px;
+  background: var(--bg-card);
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.td-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.td-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  font-size: 24px;
+  color: var(--text-main);
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.td-arrow:hover {
+  border-color: var(--yellow-main);
+}
+
+.td-arrow--prev { left: 16px; }
+.td-arrow--next { right: 16px; }
+
+.td-counter {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 8px 14px;
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  color: var(--text-main);
+  background: rgba(10, 10, 10, 0.85);
+  border-radius: 999px;
+}
+
+.td-thumbs {
+  list-style: none;
+  margin: 0;
+  padding: 16px 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.td-thumb {
+  display: block;
+  width: 104px;
+  height: 64px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.td-thumb[aria-current='true'] {
+  border-color: var(--yellow-main);
+}
+
+.td-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vista A: texto y CTA */
+.td-info {
+  padding: 20px var(--gutter) 24px;
+}
+
+.td-name {
+  margin: 4px 0 8px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.td-desc {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--fs-body);
+  line-height: 26px;
+}
+
+.td-cta {
+  flex: none;
+  padding: 16px var(--gutter);
+  background: var(--bg-card);
+}
+
+/* Vista B */
+.td-summary {
+  flex: none;
+  padding: 0 var(--gutter) 8px;
+}
+
+.td-summary img {
+  display: none;
+}
+
+.td-summary .td-name {
+  font-size: 22px;
+  margin: 4px 0 0;
+}
+
+.td-form {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.td-form-fields {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px var(--gutter) 16px;
+}
+
+.td-form-footer {
+  flex: none;
+  padding: 16px var(--gutter);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.td-title {
+  margin: 8px 0 12px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.td-subtitle {
+  margin: 0 0 20px;
+  color: var(--text-secondary);
+  font-size: var(--fs-body);
+  line-height: 26px;
+}
+
+.td-field {
+  margin-bottom: 20px;
+}
+
+.td-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--fs-body);
+  font-weight: 700;
+}
+
+.td-counter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.td-counter-row .td-label {
+  margin: 0;
+}
+
+.td-stepper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.td-stepper output {
+  min-width: 28px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.td-stepper button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+  background: var(--bg-main);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.td-stepper button:hover:not(:disabled) {
+  border-color: var(--yellow-main);
+}
+
+.td-stepper button:disabled {
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+  cursor: not-allowed;
+}
+
+.td-input {
+  width: 100%;
+  height: var(--control-height);
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text-main);
+  background: var(--bg-main);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-control);
+  color-scheme: dark;
+}
+
+.td-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.td-input:focus {
+  border-color: var(--yellow-main);
+}
+
+.td-input.is-invalid {
+  border: 2px solid var(--yellow-soft);
+}
+
+.td-select {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23F4B942' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.td-help {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: var(--fs-caption);
+  line-height: 20px;
+}
+
+.td-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+  color: var(--yellow-soft);
+  font-size: var(--fs-caption);
+  line-height: 20px;
+}
+
+.td-error svg {
+  flex: none;
+}
+
+.td-note {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: var(--fs-caption);
+  line-height: 20px;
+}
+
+/* Escritorio: diálogo centrado de 960px, con clic en el fondo para cerrar */
+@media (min-width: 768px) {
+  .tour-dialog {
+    width: min(960px, 100vw - 48px);
+    height: fit-content;
+    max-height: calc(100dvh - 48px);
+    margin: auto;
+    overflow-y: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    background: var(--bg-card);
+  }
+
+  .td-view {
+    height: auto;
+  }
+
+  .td-top {
+    padding: 24px 32px 0;
+  }
+
+  .td-top--over {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px 16px 0 0;
+    z-index: 2;
+  }
+
+  /* Vista A: foto, miniaturas y texto con el CTA a la derecha */
+  .td-view--gallery {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .td-scroll {
+    display: contents;
+  }
+
+  .td-gallery {
+    grid-column: 1 / -1;
+  }
+
+  .td-stage {
+    height: 480px;
+  }
+
+  .td-info {
+    padding: 24px 32px 32px;
+    align-self: end;
+  }
+
+  .td-cta {
+    align-self: end;
+    padding: 0 32px 32px;
+    background: none;
+  }
+
+  .td-cta .tour-button {
+    width: auto;
+    min-width: 175px;
+  }
+
+  /* Vista B: resumen del tour a la izquierda, formulario a la derecha */
+  .td-view--quote {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    column-gap: 40px;
+    padding-bottom: 32px;
+  }
+
+  .td-view--quote .td-top {
+    grid-column: 1 / -1;
+    padding-bottom: 8px;
+  }
+
+  .td-summary {
+    padding: 0 0 0 32px;
+  }
+
+  .td-summary img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--radius-control);
+    margin-bottom: 12px;
+  }
+
+  .td-form {
+    padding-right: 32px;
+  }
+
+  .td-form-fields {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .td-form-footer {
+    padding: 0;
+    background: none;
+  }
+}

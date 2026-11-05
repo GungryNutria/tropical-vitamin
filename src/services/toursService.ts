@@ -24,12 +24,17 @@ export interface TourTranslation {
 export interface Tour {
   id: number;
   price: number;
-  location: string;
-  duration: number;
   img: string | null;
+  images?: Array<{ filename: string }>;
   isActive: boolean;
   category: Category;
   translations: TourTranslation[];
+}
+
+// Lo que arma el servicio sobre el tour de la API
+export interface TourWithImages extends Tour {
+  imageUrls: string[];
+  imageUrl: string;
 }
 
 // Helper to get proper image URL - proxy through API for presigned URLs
@@ -42,18 +47,20 @@ function getImageUrl(img: string | null): string {
 }
 
 class ToursService {
-  async getTours(): Promise<Tour[]> {
+  async getTours(): Promise<TourWithImages[]> {
     const lang = i18n.language || 'es';
     const response = await fetch(`${API_URL}/tours?lang=${lang}`);
     if (!response.ok) {
       throw new Error('Error fetching tours');
     }
     const tours = await response.json();
-    // Add getImageUrl helper to each tour
-    return tours.map((tour: Tour) => ({
-      ...tour,
-      imageUrl: getImageUrl(tour.img),
-    }));
+    // Galería de la API (plan 006); si aún no la trae, solo la portada
+    return tours.map((tour: Tour) => {
+      const imageUrls = tour.images?.length
+        ? tour.images.map((i) => getImageUrl(i.filename))
+        : [getImageUrl(tour.img)];
+      return { ...tour, imageUrls, imageUrl: imageUrls[0] };
+    });
   }
 }
 
