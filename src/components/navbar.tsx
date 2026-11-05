@@ -56,6 +56,11 @@ function Navbar() {
               {t('nav.tematicos')}
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/servicios-en-destino" onClick={closeMenu}>
+              {t('nav.enDestino')}
+            </NavLink>
+          </li>
 
           <li>
             <NavLink to="/contacto" className="cta-hero" onClick={closeMenu}>

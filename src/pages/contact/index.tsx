@@ -160,6 +160,7 @@ function ContactPage() {
                                 <option value="tours">{t('contact.services.tours')}</option>
                                 <option value="mice">{t('contact.services.mice')}</option>
                                 <option value="tematicos">{t('contact.services.thematic')}</option>
+                                <option value="servicios-en-destino">{t('onsite.title')}</option>
                                 <option value="otro">{t('contact.services.other')}</option>
                             </select>
                         </div>

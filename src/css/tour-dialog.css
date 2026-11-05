@@ -330,6 +330,21 @@ html:has(dialog.tour-dialog[open]) {
   border: 2px solid var(--yellow-soft);
 }
 
+.td-date {
+  /* Safari iOS le da al input de fecha un ancho mínimo propio y se desborda */
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+}
+
+.td-date::-webkit-date-and-time-value {
+  text-align: left;
+}
+
 .td-select {
   appearance: none;
   padding-right: 40px;

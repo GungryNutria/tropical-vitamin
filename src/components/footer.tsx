@@ -53,6 +53,7 @@ function Footer() {
                     <NavLink to="/tours">{t('nav.tours')}</NavLink>
                     <NavLink to="/mice">{t('nav.mice')}</NavLink>
                     <NavLink to="/tematicos">{t('nav.tematicos')}</NavLink>
+                    <NavLink to="/servicios-en-destino">{t('onsite.title')}</NavLink>
                     <NavLink to="/contacto">{t('nav.contacto')}</NavLink>
                 </div>
 
