@@ -411,7 +411,7 @@
   },
   "onsite": {
     "title": "Servicios en destino",
-    "subtitle": "Lo que necesitas durante tu estancia, coordinado por nosotros.",
+    "subtitle": "Fotos, limpieza, auto y movilidad: lo coordinamos durante tu estancia para que tú solo disfrutes.",
     "eyebrow": "Servicios especializados",
     "cta": "Cotizar por WhatsApp",
     "ctaLabel": "Cotizar por WhatsApp: {{name}} (abre WhatsApp)",
@@ -419,27 +419,27 @@
     "services": {
       "foto": {
         "name": "Servicio fotográfico",
-        "desc": "Sesiones de fotos durante tu viaje para que te lleves recuerdos de calidad. Cuéntanos qué quieres capturar y lo coordinamos.",
+        "desc": "Fotos de tu viaje en las que salen todos, sin que nadie se quede detrás de la cámara. Cuéntanos qué momento quieres guardar.",
         "alt": "Fotógrafa retrata a una familia descalza en la playa al atardecer"
       },
       "concierge": {
         "name": "Servicio de concierge",
-        "desc": "Nuestro equipo de limpieza deja lista tu casa o departamento para que llegues y solo te ocupes de disfrutar.",
+        "desc": "Nuestro equipo de limpieza deja lista tu casa o departamento para que llegues a descansar, no a acomodar. Dinos cuándo llegas.",
         "alt": "Dos personas del equipo de limpieza preparan una habitación con vista al mar"
       },
       "autos": {
         "name": "Servicio de renta de automóviles",
-        "desc": "Muévete a tu ritmo por la Riviera Maya. Dinos tus fechas y qué tipo de auto buscas, y te cotizamos.",
+        "desc": "Muévete a tu ritmo, sin depender de horarios ni de nadie más. Dinos tus fechas y qué tipo de auto buscas.",
         "alt": "Mujer guarda una maleta en la cajuela de un auto blanco, junto a la selva y el mar"
       },
       "movilidad": {
         "name": "Servicios de renta de aparatos de movilidad",
-        "desc": "Equipo de apoyo para que te muevas con comodidad durante tu viaje. Escríbenos qué necesitas y te cotizamos.",
+        "desc": "Disfruta tu viaje a tu paso y con comodidad. Cuéntanos qué equipo necesitas y para qué fechas.",
         "alt": "Mujer en silla de ruedas conversa con un acompañante en un andador junto al mar"
       },
       "transporte": {
         "name": "Renta de transportación especial para movilidad reducida",
-        "desc": "Traslados pensados para personas con movilidad reducida. Cuéntanos tus necesidades y te cotizamos.",
+        "desc": "Traslados pensados para que tú o quien viaja contigo lleguen con comodidad y tranquilidad. Cuéntanos qué necesitan y lo planeamos juntos.",
         "alt": "Hombre en silla de ruedas sube por la rampa de una van, acompañado por el conductor"
       }
     }

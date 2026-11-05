@@ -411,7 +411,7 @@
   },
   "onsite": {
     "title": "On-Site Services",
-    "subtitle": "What you need during your stay, arranged by us.",
+    "subtitle": "Photos, cleaning, a car and mobility support: we arrange it during your stay so you can just enjoy it.",
     "eyebrow": "Specialized services",
     "cta": "Get a quote on WhatsApp",
     "ctaLabel": "Get a quote on WhatsApp: {{name}} (opens WhatsApp)",
@@ -419,27 +419,27 @@
     "services": {
       "foto": {
         "name": "Photography service",
-        "desc": "Photo sessions during your trip so you take home great memories. Tell us what you want to capture and we'll arrange it.",
+        "desc": "Trip photos with everyone in them, so no one gets stuck behind the camera. Tell us which moment you want to keep.",
         "alt": "Photographer takes a portrait of a barefoot family on the beach at sunset"
       },
       "concierge": {
         "name": "Concierge service",
-        "desc": "Our cleaning team gets your house or apartment ready, so you can arrive and just enjoy it.",
+        "desc": "Our cleaning team gets your house or apartment ready, so you arrive to relax, not to tidy up. Just tell us your arrival date.",
         "alt": "Two cleaning team members prepare a room with an ocean view"
       },
       "autos": {
         "name": "Car rental service",
-        "desc": "Get around the Riviera Maya at your own pace. Tell us your dates and the kind of car you need, and we'll send a quote.",
+        "desc": "Get around at your own pace, on your own schedule. Tell us your dates and the kind of car you're looking for.",
         "alt": "Woman loads a suitcase into the trunk of a white car, by the jungle and the sea"
       },
       "movilidad": {
         "name": "Mobility equipment rental",
-        "desc": "Mobility equipment so you can get around comfortably during your trip. Tell us what you need and we'll send a quote.",
+        "desc": "Enjoy your trip at your own pace and in comfort. Tell us what equipment you need and for which dates.",
         "alt": "Woman in a wheelchair chats with a companion on a boardwalk by the sea"
       },
       "transporte": {
         "name": "Special transportation for reduced mobility",
-        "desc": "Transfers designed for people with reduced mobility. Tell us your needs and we'll send a quote.",
+        "desc": "Transfers planned so you, or whoever is traveling with you, arrive comfortably and at ease. Tell us what you need and we'll plan it together.",
         "alt": "Man in a wheelchair goes up the ramp of a van, accompanied by the driver"
       }
     }
