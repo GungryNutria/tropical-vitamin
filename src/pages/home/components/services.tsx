@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../../../css/services.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 
-import service1 from "../../../assets/services/transportacion.jpg";
+import service1 from "../../../assets/units/navigator.jpg";
 import service2 from "../../../assets/services/hospedaje.jpg";
 import service3 from "../../../assets/services/tours.jpg";
 import service4 from "../../../assets/services/convenciones.jpg";

@@ -129,3 +129,8 @@
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+/* Foto de unidad (navigator): la camioneta queda a la derecha del centro */
+.service-card:first-child .service-image img {
+  object-position: 70% center;
+}
