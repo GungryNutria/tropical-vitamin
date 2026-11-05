@@ -100,7 +100,7 @@ export default function QuoteForm({ tourTitle, titleId, titleRef }: Props) {
           <input
             id="q-date"
             type="date"
-            className={`td-input${dateError ? ' is-invalid' : ''}`}
+            className={`td-input td-date${dateError ? ' is-invalid' : ''}`}
             min={todayLocal()}
             value={data.date}
             aria-invalid={Boolean(dateError)}
