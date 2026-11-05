@@ -1,12 +1,10 @@
 import "../css/whatsapp-float.css";
 import { FaWhatsapp } from "react-icons/fa";
+import { openWhatsApp } from "../utils/whatsapp";
 
 function WhatsappFloat() {
   const handleClick = () => {
-    window.open(
-      "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios%20",
-      "_blank"
-    );
+    openWhatsApp("Hola, quiero información sobre sus servicios ");
   };
 
   return (

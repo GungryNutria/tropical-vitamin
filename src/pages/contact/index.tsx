@@ -4,9 +4,18 @@ import { FaAt, FaFacebookF, FaInstagram, FaLinkedin, FaPhone } from "react-icons
 import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 import WhatsappFloat from "../../components/whatsappFloat";
+import { openWhatsApp } from "../../utils/whatsapp";
+import { useSocial } from "../../hooks/useSocial";
+
+const NETWORK_META = {
+    facebook: { Icon: FaFacebookF, label: "Facebook" },
+    instagram: { Icon: FaInstagram, label: "Instagram" },
+    linkedin: { Icon: FaLinkedin, label: "LinkedIn" },
+};
 
 function ContactPage() {
     const { t } = useTranslation();
+    const { networks } = useSocial();
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -93,26 +102,22 @@ function ContactPage() {
                         </div>
                     </div>
 
-                    <div className="contact-page-socials">
-                        <a href="https://facebook.com" target="_blank" className="social-link">
-                            <FaFacebookF /> Facebook
-                        </a>
-                        <a href="https://instagram.com" target="_blank" className="social-link">
-                            <FaInstagram /> Instagram
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" className="social-link">
-                            <FaLinkedin /> LinkedIn
-                        </a>
-                    </div>
+                    {networks.length > 0 && (
+                        <div className="contact-page-socials">
+                            {networks.map(({ network, url }) => {
+                                const { Icon, label } = NETWORK_META[network];
+                                return (
+                                    <a key={network} href={url} target="_blank" rel="noopener noreferrer" className="social-link">
+                                        <Icon /> {label}
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    )}
 
                     <button
                         className="contact-page-whatsapp"
-                        onClick={() =>
-                            window.open(
-                                "https://wa.me/529841681263?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios%20",
-                                "_blank"
-                            )
-                        }
+                        onClick={() => openWhatsApp("Hola, quiero información sobre sus servicios ")}
                     >
                         <FaPhone /> {t('contact.whatsapp')}
                     </button>

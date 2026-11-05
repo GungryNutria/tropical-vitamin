@@ -5,6 +5,8 @@ import '../../css/tours.css';
 import { FaSearch } from 'react-icons/fa';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import { whatsappUrl } from '../../utils/whatsapp';
+import { useSocial } from '../../hooks/useSocial';
 
 // Helper to format duration
 function formatDuration(minutes: number): string {
@@ -32,6 +34,7 @@ function getCategoryDisplayName(category: Category | undefined, t: (key: string)
 
 export default function Tours() {
   const { t, i18n } = useTranslation();
+  useSocial(); // re-render al llegar el número vigente
   const [tours, setTours] = useState<Tour[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -174,7 +177,7 @@ export default function Tours() {
                   <p className="tour-meta">{[tour.location?.trim(), formatDuration(tour.duration)].filter(Boolean).join(' · ')}</p>
                   <a
                     className="tour-button"
-                    href={`https://wa.me/529841681263?text=${encodeURIComponent(t('tours.whatsappMessage', { tour: translation?.title }))}`}
+                    href={whatsappUrl(t('tours.whatsappMessage', { tour: translation?.title }))}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

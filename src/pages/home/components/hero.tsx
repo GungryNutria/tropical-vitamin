@@ -2,15 +2,13 @@ import { useTranslation } from "react-i18next";
 import "../../../css/hero.css";
 import heroVideo from '../../../assets/hero.mp4';
 import logo from '../../../assets/logo.png';
+import { openWhatsApp } from '../../../utils/whatsapp';
 
 function Hero() {
   const { t } = useTranslation();
 
   const handleWhatsApp = () => {
-    window.open(
-      "https://wa.me/529841681263?text=Hola%2C%20quiero%20ayuda%20para%20planear%20mi%20viaje%20a%20la%20Riviera%20Maya%20",
-      "_blank"
-    );
+    openWhatsApp("Hola, quiero ayuda para planear mi viaje a la Riviera Maya ");
   };
 
   const handleScrollDown = () => {

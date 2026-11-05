@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import '../../css/transportation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import { openWhatsApp } from '../../utils/whatsapp';
 import transporterImg from '../../assets/units/transporter.jpg';
 import navigatorImg from '../../assets/units/navigator.jpg';
 import sprinterImg from '../../assets/units/sprinter.jpg';
@@ -62,8 +63,7 @@ export default function Transportation() {
       ? `Hola, me gustaría cotizar un ${serviceTypeText} de ${segmentName}. ${destinationLabel}: ${selectedOption}. Tipo: ${tripTypeText}`
       : `Hello, I would like to quote a ${serviceTypeText} of ${segmentName}. ${destinationLabel}: ${selectedOption}. Type: ${tripTypeText}`;
 
-    const whatsappUrl = `https://wa.me/529841681263?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    openWhatsApp(message);
   };
 
   const segments = [
