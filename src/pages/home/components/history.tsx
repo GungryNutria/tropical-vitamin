@@ -2,6 +2,12 @@ import { useTranslation } from "react-i18next";
 import "../../../css/history.css";
 import { useFadeUp } from "../../../hooks/useFadeUp";
 
+const pillars = [
+  { key: 'culture', paragraphs: ['p1', 'p2'] },
+  { key: 'trust', paragraphs: ['p1', 'p2'] },
+  { key: 'hospitality', paragraphs: ['p1', 'p2', 'p3'] },
+];
+
 function History() {
   const { t } = useTranslation();
   useFadeUp();
@@ -26,35 +32,32 @@ function History() {
             {/* Mission Card */}
             <div className="history-card mission-card fade-up fade-delay-2">
               <h3>{t('home.history.missionTitle')}</h3>
-              <p>{t('home.history.missionText')}</p>
+              <p>{t('home.history.missionP1')}</p>
+              <p>{t('home.history.missionP2')}</p>
             </div>
 
             {/* Vision Card */}
             <div className="history-card vision-card fade-up fade-delay-3">
               <h3>{t('home.history.visionTitle')}</h3>
-              <p>{t('home.history.visionText')}</p>
+              <p>{t('home.history.visionP1')}</p>
+              <p>{t('home.history.visionP2')}</p>
             </div>
+          </div>
 
-            {/* Values Cards */}
-            <div className="history-card value-card fade-up fade-delay-4">
-              <h3>{t('home.history.values.humanTreatment')}</h3>
-              <p>{t('home.history.values.humanTreatmentDesc')}</p>
-            </div>
+          <h2 className="section-title history-pillars-title fade-up">
+            <span className="title-accent"></span>
+            {t('home.history.pillarsTitle')}
+          </h2>
 
-            <div className="history-card value-card fade-up fade-delay-5">
-              <h3>{t('home.history.values.passion')}</h3>
-              <p>{t('home.history.values.passionDesc')}</p>
-            </div>
-
-            <div className="history-card value-card fade-up fade-delay-6">
-              <h3>{t('home.history.values.excellence')}</h3>
-              <p>{t('home.history.values.excellenceDesc')}</p>
-            </div>
-
-            <div className="history-card value-card fade-up fade-delay-7">
-              <h3>{t('home.history.values.community')}</h3>
-              <p>{t('home.history.values.communityDesc')}</p>
-            </div>
+          <div className="history-pillars">
+            {pillars.map(({ key, paragraphs }, i) => (
+              <div className={`history-card pillar-card fade-up fade-delay-${i + 1}`} key={key}>
+                <h3>{t(`home.history.pillars.${key}.title`)}</h3>
+                {paragraphs.map((p) => (
+                  <p key={p}>{t(`home.history.pillars.${key}.${p}`)}</p>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 

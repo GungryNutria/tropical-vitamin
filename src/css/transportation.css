@@ -343,6 +343,14 @@
   flex-wrap: wrap;
 }
 
+.transport-service-fixed {
+  text-align: center;
+  color: var(--yellow-main);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
 .transport-service-btn {
   padding: 0.75rem 2rem;
   background: transparent;

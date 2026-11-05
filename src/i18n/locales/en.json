@@ -18,18 +18,29 @@
       "title": "Our History",
       "description": "Our story begins when destiny gave us an unexpected turn. As a result of the pandemic, life took us from the big Mexico City to the paradise of the Riviera Maya. Venturing into tourism and hospitality, we understood that modern tourism had become cold and automated. That's why we decided to go against the current: offer a more human, friendly and personal treatment in an increasingly digital world. We firmly believe that a robot cannot hear your dreams or understand what makes a trip special, we realized that the industry had become cold. But we believe that a robot can never replace the embrace of a good host. We are the result of the union of two cultures: the DUTCH structure and the unmatched MEXICAN warmth. This fusion allowed us to build a proudly 100% MEXICAN company.",
       "missionTitle": "Our Mission",
-      "missionText": "Not to make clients, but FRIENDS. My House Is Your House.",
       "visionTitle": "Our Vision",
-      "visionText": "To be the most reliable and beloved tourism experiences company in the Riviera Maya.",
-      "values": {
-        "humanTreatment": "Human Treatment",
-        "humanTreatmentDesc": "Personalized and warm treatment",
-        "passion": "Passion",
-        "passionDesc": "Love for showing the best of Mexico",
-        "excellence": "Excellence",
-        "excellenceDesc": "Quality in every detail of your experience",
-        "community": "Community",
-        "communityDesc": "Building memories together"
+      "missionP1": "To create and operate extraordinary travel experiences in the Riviera Maya, designed to exceed the expectations of every traveler, whether on individual, family or group adventures.",
+      "missionP2": "Our mission is to offer peace of mind, trust and personalized attention at every stage of the journey, caring for every detail with professionalism and passion so that our clients only have to worry about enjoying themselves. We are committed to turning every experience into an unforgettable memory, delivering an excellent service that reflects the natural, cultural and human richness of the Mexican Caribbean.",
+      "visionP1": "To be the leading integrator of tourism services in the Mexican Caribbean, recognized nationally and internationally for delivering the highest quality experiences, where the efficiency, organization and excellence of European standards blend with the warmth, hospitality and authenticity of Mexican service.",
+      "visionP2": "We aspire to become the trusted partner of travelers from around the world, standing out for the innovation, commitment and passion with which we design every experience, positioning ourselves as the most reliable choice for discovering and living the magic of Mexico.",
+      "pillarsTitle": "Our Pillars",
+      "pillars": {
+        "culture": {
+          "title": "Cultural Connection",
+          "p1": "We believe that traveling goes far beyond seeing a destination; it is about building an authentic bond with its history, its people and its traditions. That is why we promote a true connection with the cultural richness of Mexico, bringing every traveler closer to the extraordinary legacy of the Maya civilization, the majesty of nature and the experiences that make this destination unique.",
+          "p2": "Every journey is designed to inspire, stir emotions and turn each trip into an enriching cultural experience, where respect, learning and admiration for our roots stay in the hearts of those who visit us."
+        },
+        "trust": {
+          "title": "Safety and Trust",
+          "p1": "Your peace of mind is our highest priority. From the first contact to the end of your trip, we are by your side with personalized attention, expert advice and constant assistance so you can enjoy every moment with complete confidence.",
+          "p2": "Our commitment is to give you a reliable, professional and transparent service, backed by a team passionate about creating memorable experiences. More than organizing a trip, we become your partner and guide, making sure every detail is carefully planned so you can simply enjoy."
+        },
+        "hospitality": {
+          "title": "Hospitality",
+          "p1": "The essence of Mexico lies in the warmth of its people. We are a country that welcomes the world with open arms, and that hospitality is at the heart of every experience we offer.",
+          "p2": "We are committed to sharing authentic Mexican quality and warmth, inviting you to discover destinations full of history, culture, gastronomy, art and traditions that awaken all the senses. We want every visitor to feel at home and every trip to leave memories so special that there is always a reason to come back.",
+          "p3": "Because traveling with us is experiencing Mexico from its most authentic, human and unforgettable side."
+        }
       }
     },
     "services": {
@@ -45,7 +56,7 @@
         "mice": "MICE & Conventions",
         "miceDesc": "Events, congresses and corporate logistics.",
         "thematic": "Thematic Trips",
-        "thematicDesc": "Experiences made to measure."
+        "thematicDesc": "Tailor-made experiences."
       }
     },
     "faq": {
@@ -82,7 +93,7 @@
       "title": "TOURS & EXPERIENCES",
       "subtitle": "We have the best options, recommendations and personalized experiences for your trip."
     },
-    "intro": "We perfectly understand the objective of each experience so we know our segmentation of the best tours and Experiences. \"We make your experiences authentically memorable\"",
+    "intro": "We perfectly understand the goal of each experience, so discover our selection of the best tours and experiences. \"We make your experiences authentically memorable\"",
     "title": "Tours",
     "loading": "Loading tours...",
     "error": "Error loading tours",
@@ -169,7 +180,7 @@
   "accommodation": {
     "hero": {
       "title": "ACCOMMODATION",
-      "subtitle": "Accommodation in private property / Accommodation in Standard Hotels / Accommodation in All Inclusive Hotel"
+      "subtitle": "Accommodation in private property / Accommodation in standard hotels / Accommodation in an All Inclusive hotel"
     },
     "title": "Accommodation Service",
     "intro": "Find the perfect accommodation for your stay in the Riviera Maya. We have options for every type of traveler.",
@@ -208,7 +219,7 @@
     "hero": {
       "title": "GROUPS & CONVENTIONS",
       "subtitle": "We know that all groups are different and with different planning and objectives.",
-      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, concluding until your departure and the end of your event.<br/><strong>Relax, leave it in our hands!</strong>"
+      "text": "We are focused on creating memorable group experiences and with the coordination structure appropriate to each group need. Don't worry about massive logistics, we have extensive experience in group management and handling!<br/><br/>At <strong>Tropical Vitamin</strong> we coordinate the entire planning, organization, control, management, production and logistics of the entire group at the destination, through to their departure and the close of your event.<br/><strong>Relax, leave it in our hands!</strong>"
     },
     "groups": {
       "mice": "MICE Groups",
@@ -224,7 +235,7 @@
       "escolares": "School Groups",
       "escolaresDesc": "Live one of the best stages of your life in the company of your best friends. We guarantee it will be part of stories they will have to tell over and over again.",
       "deportivos": "Sports Groups",
-      "deportivosDesc": "We help you carry out your tournaments and manage your or the attending teams for sports coordination."
+      "deportivosDesc": "We help you carry out your tournaments and manage your team or the attending teams for sports coordination."
     },
     "cta": {
       "title": "Planning a corporate event?",
@@ -248,7 +259,7 @@
       "graduacion": "Graduation trips",
       "graduacionDesc": "You worked hard for it, so a graduation trip is what you deserve. Celebrate your achievement, organize the most adventurous graduation trip with your friends.",
       "familia": "Family reconnections",
-      "familiaDesc": "Family connection, integration, and love purpose trips. They don't just come for vacation, they come to experience where you connect with your family in every way.",
+      "familiaDesc": "Family connection, integration, and love purpose trips. They don't just come on vacation; they come for an experience that reconnects you with your family in every way.",
       "cumpleanos": "Birthdays",
       "cumpleanosDesc": "Celebrate your life and celebrate with your loved ones! We organize all the details you deserve for your day and celebration.",
       "pedida": "Marriage proposals",
@@ -276,7 +287,7 @@
       "mexicoLocation": "Riviera Maya, Quintana Roo",
       "netherlandsLocation": "Amsterdam",
       "mexicoPhone": "+52 984 168 1263 (Mexico)",
-      "netherlandsPhone": "+31 20 123 4567 (Netherlands)"
+      "netherlandsPhone": "+31 626005849 (Netherlands)"
     },
     "form": {
       "title": "Send us a message",

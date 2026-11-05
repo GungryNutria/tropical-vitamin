@@ -16,20 +16,31 @@
     },
     "history": {
       "title": "Nuestra Historia",
-      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Incursionando en el turismo, y el servicio hospitalario entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso, decidimos ir contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje, nos dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura NEERLANDESA y la inigualable calidez MEXICANA. Esta fusión nos permitió construir una empresa orgullosamente 100% MEXICANA.",
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Incursionando en el turismo y el servicio hospitalario, entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso, decidimos ir contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje; nos dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura NEERLANDESA y la inigualable calidez MEXICANA. Esta fusión nos permitió construir una empresa orgullosamente 100% MEXICANA.",
       "missionTitle": "Nuestra Misión",
-      "missionText": "No hacer clientes, sino AMIGOS. Mi Casa Es Tu Casa.",
       "visionTitle": "Nuestra Visión",
-      "visionText": "Ser la empresa de experiencias turísticas más confiable y querida de la Riviera Maya.",
-      "values": {
-        "humanTreatment": "Trato Humano",
-        "humanTreatmentDesc": "Tratamiento personalizado y cálido",
-        "passion": "Pasión",
-        "passionDesc": "Amor por mostrar lo mejor de México",
-        "excellence": "Excelencia",
-        "excellenceDesc": "Calidad en cada detalle de tu experiencia",
-        "community": "Comunidad",
-        "communityDesc": "Construyendo recuerdos juntos"
+      "missionP1": "Crear y operar experiencias de viaje extraordinarias en la Riviera Maya, diseñadas para superar las expectativas de cada viajero, ya sea en aventuras individuales, familiares o grupales.",
+      "missionP2": "Nuestra misión es brindar tranquilidad, confianza y atención personalizada en cada etapa del viaje, cuidando cada detalle con profesionalismo y pasión para que nuestros clientes solo se preocupen por disfrutar. Nos comprometemos a convertir cada experiencia en un recuerdo inolvidable, ofreciendo un servicio de excelencia que refleje la riqueza natural, cultural y humana del Caribe Mexicano.",
+      "visionP1": "Ser la agencia integradora de servicios turísticos líder del Caribe Mexicano, reconocida nacional e internacionalmente por ofrecer experiencias de la más alta calidad, donde la eficiencia, organización y excelencia de los estándares europeos se fusionan con la calidez, hospitalidad y autenticidad del servicio mexicano.",
+      "visionP2": "Aspiramos a convertirnos en el aliado de confianza de viajeros de todo el mundo, distinguiéndonos por la innovación, el compromiso y la pasión con la que diseñamos cada experiencia, posicionándonos como la opción más confiable para descubrir y vivir la magia de México.",
+      "pillarsTitle": "Nuestros Pilares",
+      "pillars": {
+        "culture": {
+          "title": "Conexión Cultural",
+          "p1": "Creemos que viajar va mucho más allá de conocer un destino; es crear un vínculo auténtico con su historia, su gente y sus tradiciones. Por ello, promovemos una verdadera conexión con la riqueza cultural de México, acercando a cada viajero al extraordinario legado de la civilización maya, a la majestuosidad de la naturaleza y a las experiencias que hacen único a este destino.",
+          "p2": "Cada recorrido está diseñado para inspirar, despertar emociones y transformar cada viaje en una experiencia cultural enriquecedora, donde el respeto, el aprendizaje y la admiración por nuestras raíces permanecen en el corazón de quienes nos visitan."
+        },
+        "trust": {
+          "title": "Seguridad y Confianza",
+          "p1": "Tu tranquilidad es nuestra mayor prioridad. Desde el primer contacto hasta el final de tu viaje, te acompañamos con atención personalizada, asesoría experta y asistencia permanente para que disfrutes cada momento con total confianza.",
+          "p2": "Nuestro compromiso es brindarte un servicio confiable, profesional y transparente, respaldado por un equipo apasionado por crear experiencias memorables. Más que organizar un viaje, nos convertimos en tu aliado y guía, asegurándonos de que cada detalle esté cuidadosamente planeado para que solo te ocupes de disfrutar."
+        },
+        "hospitality": {
+          "title": "Hospitalidad",
+          "p1": "La esencia de México se encuentra en la calidez de su gente. Somos un país que recibe al mundo con los brazos abiertos, y esa hospitalidad es el corazón de cada experiencia que ofrecemos.",
+          "p2": "Estamos comprometidos con compartir la auténtica calidad y calidez mexicana, invitándote a descubrir destinos llenos de historia, cultura, gastronomía, arte y tradiciones que despiertan todos los sentidos. Queremos que cada visitante se sienta como en casa y que cada viaje deje recuerdos tan especiales que siempre exista un motivo para regresar.",
+          "p3": "Porque viajar con nosotros es vivir México desde su lado más auténtico, humano e inolvidable."
+        }
       }
     },
     "services": {
@@ -82,7 +93,7 @@
       "title": "TOURS & EXPERIENCIAS",
       "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje."
     },
-    "intro": "Entendemos perfectamente el objetivo de cada experiencia por lo que conoce nuestra segmentación de los mejores tours y Experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\"",
+    "intro": "Entendemos perfectamente el objetivo de cada experiencia, por lo que conoce nuestra segmentación de los mejores tours y experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\"",
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
@@ -130,7 +141,7 @@
     "options": {
       "title": "Opciones:",
       "shared": "Servicio compartido",
-      "private": "Servicio Privado",
+      "private": "Servicio privado",
       "luxury": "Servicio Luxury",
       "bus": "Servicio de Autobús"
     },
@@ -169,7 +180,7 @@
   "accommodation": {
     "hero": {
       "title": "HOSPEDAJE",
-      "subtitle": "Hospedaje en propiedad privada / Hospedaje en Hoteles estándar / Hospedaje en Hotel All Inclusive"
+      "subtitle": "Hospedaje en propiedad privada / Hospedaje en hoteles estándar / Hospedaje en hotel All Inclusive"
     },
     "title": "Servicio de Hospedaje",
     "intro": "Encuentra el alojamiento perfecto para tu estancia en la Riviera Maya. Contamos con opciones para cada tipo de viajero.",
@@ -274,9 +285,9 @@
       "mexico": "México",
       "netherlands": "Países Bajos",
       "mexicoLocation": "Riviera Maya, Quintana Roo",
-      "netherlandsLocation": "Amsterdam",
+      "netherlandsLocation": "Ámsterdam",
       "mexicoPhone": "+52 984 168 1263 (México)",
-      "netherlandsPhone": "+31 20 123 4567 (Países Bajos)"
+      "netherlandsPhone": "+31 626005849 (Países Bajos)"
     },
     "form": {
       "title": "Envíanos un mensaje",

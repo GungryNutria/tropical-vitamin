@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import miceHeroImg from '../../assets/mice-hero.jpg';
 import '../../css/mice.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
@@ -52,7 +53,7 @@ export default function Mice() {
       <SectionHero
         title={t('mice.hero.title')}
         subtitle={t('mice.hero.subtitle')}
-        text={t('mice.hero.text')} backgroundImage={'https://plus.unsplash.com/premium_photo-1661510831877-e94fff4cc710?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} />
+        text={t('mice.hero.text')} backgroundImage={miceHeroImg} />
 
       {/* Cards Grid */}
       <div className="mice-grid">

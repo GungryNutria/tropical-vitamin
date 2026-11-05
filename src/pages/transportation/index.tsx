@@ -115,7 +115,7 @@ export default function Transportation() {
       <SectionHero 
         title={t('transportation.hero.title')} 
         subtitle={t('transportation.hero.subtitle')} 
-        backgroundImage={'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=1920&q=80'}
+        backgroundImage={navigatorImg}
         text={t('transportation.intro')}
       />
       {/* Hero Section
@@ -164,20 +164,24 @@ export default function Transportation() {
           <p className="transport-segment-subtitle">{segments[activeSegment].subtitle}</p>
           
           <div className="transport-service-selection">
-            <div className="transport-service-buttons">
-              <button 
-                className={`transport-service-btn ${serviceType === 'private' ? 'active' : ''}`}
-                onClick={() => setServiceType('private')}
-              >
-                {t('transportation.options.private')}
-              </button>
-              <button 
-                className={`transport-service-btn ${serviceType === 'shared' ? 'active' : ''}`}
-                onClick={() => setServiceType('shared')}
-              >
-                {t('transportation.options.shared')}
-              </button>
-            </div>
+            {activeSegment === 0 ? (
+              <div className="transport-service-buttons">
+                <button 
+                  className={`transport-service-btn ${serviceType === 'private' ? 'active' : ''}`}
+                  onClick={() => setServiceType('private')}
+                >
+                  {t('transportation.options.private')}
+                </button>
+                <button 
+                  className={`transport-service-btn ${serviceType === 'shared' ? 'active' : ''}`}
+                  onClick={() => setServiceType('shared')}
+                >
+                  {t('transportation.options.shared')}
+                </button>
+              </div>
+            ) : (
+              <p className="transport-service-fixed">{t('transportation.options.private')}</p>
+            )}
           </div>
 
           <div className="transport-segment-options">
