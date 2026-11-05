@@ -4,6 +4,10 @@ import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
 import { openWhatsApp } from '../../utils/whatsapp';
 import { useNavigate } from 'react-router-dom';
+import despedidaImg from '../../assets/thematic/despedida.jpg';
+import bodaImg from '../../assets/thematic/boda.jpg';
+import familiaImg from '../../assets/thematic/familia.jpg';
+import cumpleanosImg from '../../assets/thematic/cumpleanos.jpg';
 export default function Thematic() {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -44,7 +48,7 @@ export default function Thematic() {
   return (
     <div className="thematic-container">
       {/* Hero Section */}
-      <SectionHero  title={t('thematic.hero.title')} subtitle={t('thematic.hero.subtitle')} text={t('thematic.hero.text')} backgroundImage='https://images.unsplash.com/photo-1632429495431-e9bce133028a?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
+      <SectionHero  title={t('thematic.hero.title')} subtitle={t('thematic.hero.subtitle')} text={t('thematic.hero.text')} collage={[despedidaImg, bodaImg, familiaImg, cumpleanosImg]} overlay={0.4} />
 
       {/* Cards Grid */}
       <div className="thematic-grid">
