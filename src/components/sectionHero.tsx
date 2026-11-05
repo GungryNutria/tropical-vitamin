@@ -1,7 +1,7 @@
 import '../css/sectionHero.css';
 import logo from '../assets/logo.png';
 
-export default function SectionHero(props: { title: string, subtitle: string, text: string, backgroundImage?: string, collage?: string[], overlay?: number }) {
+export default function SectionHero(props: { title: string, subtitle: string, text?: string, backgroundImage?: string, collage?: string[], overlay?: number }) {
     const o = props.overlay ?? 0.6;
     const longWord = props.title.split(/\s+/).some((w) => w.length > 13);
     const tint = `linear-gradient(135deg, rgba(10, 10, 10, ${o}) 0%, rgba(20, 20, 20, ${o}) 100%)`;
@@ -20,7 +20,7 @@ export default function SectionHero(props: { title: string, subtitle: string, te
                     </div>
                 </div>
                 <p className="section-hero-subtitle">{props.subtitle}</p>
-                <p className="section-hero-text" dangerouslySetInnerHTML={{ __html: props.text }} />
+                {props.text && <p className="section-hero-text" dangerouslySetInnerHTML={{ __html: props.text }} />}
             </div>
         </div>
     )

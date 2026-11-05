@@ -6,7 +6,9 @@
     "tours": "Tours & Experiencias",
     "mice": "Grupos MICE",
     "tematicos": "Viajes Temáticos",
-    "contacto": "Contáctanos"
+    "contacto": "Contáctanos",
+    "enDestino": "En destino",
+    "languageLabel": "Idioma: {{lang}}"
   },
   "home": {
     "hero": {
@@ -406,5 +408,40 @@
     "legal": "Legal",
     "privacy": "Aviso de Privacidad",
     "rights": "Todos los derechos reservados."
+  },
+  "onsite": {
+    "title": "Servicios en destino",
+    "subtitle": "Lo que necesitas durante tu estancia, coordinado por nosotros.",
+    "eyebrow": "Servicios especializados",
+    "cta": "Cotizar por WhatsApp",
+    "ctaLabel": "Cotizar por WhatsApp: {{name}} (abre WhatsApp)",
+    "whatsappMessage": "Hola, quiero información sobre el servicio en destino: {{name}}",
+    "services": {
+      "foto": {
+        "name": "Servicio fotográfico",
+        "desc": "Sesiones de fotos durante tu viaje para que te lleves recuerdos de calidad. Cuéntanos qué quieres capturar y lo coordinamos.",
+        "alt": "Fotógrafa retrata a una familia descalza en la playa al atardecer"
+      },
+      "concierge": {
+        "name": "Servicio de concierge",
+        "desc": "Nuestro equipo de limpieza deja lista tu casa o departamento para que llegues y solo te ocupes de disfrutar.",
+        "alt": "Dos personas del equipo de limpieza preparan una habitación con vista al mar"
+      },
+      "autos": {
+        "name": "Servicio de renta de automóviles",
+        "desc": "Muévete a tu ritmo por la Riviera Maya. Dinos tus fechas y qué tipo de auto buscas, y te cotizamos.",
+        "alt": "Mujer guarda una maleta en la cajuela de un auto blanco, junto a la selva y el mar"
+      },
+      "movilidad": {
+        "name": "Servicios de renta de aparatos de movilidad",
+        "desc": "Equipo de apoyo para que te muevas con comodidad durante tu viaje. Escríbenos qué necesitas y te cotizamos.",
+        "alt": "Mujer en silla de ruedas conversa con un acompañante en un andador junto al mar"
+      },
+      "transporte": {
+        "name": "Renta de transportación especial para movilidad reducida",
+        "desc": "Traslados pensados para personas con movilidad reducida. Cuéntanos tus necesidades y te cotizamos.",
+        "alt": "Hombre en silla de ruedas sube por la rampa de una van, acompañado por el conductor"
+      }
+    }
   }
 }

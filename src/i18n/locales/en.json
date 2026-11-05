@@ -6,7 +6,9 @@
     "tours": "Tours & Experiences",
     "mice": "MICE Groups",
     "tematicos": "Thematic Trips",
-    "contacto": "Contact Us"
+    "contacto": "Contact Us",
+    "enDestino": "On-site",
+    "languageLabel": "Language: {{lang}}"
   },
   "home": {
     "hero": {
@@ -406,5 +408,40 @@
     "legal": "Legal",
     "privacy": "Privacy Notice",
     "rights": "All rights reserved."
+  },
+  "onsite": {
+    "title": "On-Site Services",
+    "subtitle": "What you need during your stay, arranged by us.",
+    "eyebrow": "Specialized services",
+    "cta": "Get a quote on WhatsApp",
+    "ctaLabel": "Get a quote on WhatsApp: {{name}} (opens WhatsApp)",
+    "whatsappMessage": "Hello, I would like information about the on-site service: {{name}}",
+    "services": {
+      "foto": {
+        "name": "Photography service",
+        "desc": "Photo sessions during your trip so you take home great memories. Tell us what you want to capture and we'll arrange it.",
+        "alt": "Photographer takes a portrait of a barefoot family on the beach at sunset"
+      },
+      "concierge": {
+        "name": "Concierge service",
+        "desc": "Our cleaning team gets your house or apartment ready, so you can arrive and just enjoy it.",
+        "alt": "Two cleaning team members prepare a room with an ocean view"
+      },
+      "autos": {
+        "name": "Car rental service",
+        "desc": "Get around the Riviera Maya at your own pace. Tell us your dates and the kind of car you need, and we'll send a quote.",
+        "alt": "Woman loads a suitcase into the trunk of a white car, by the jungle and the sea"
+      },
+      "movilidad": {
+        "name": "Mobility equipment rental",
+        "desc": "Mobility equipment so you can get around comfortably during your trip. Tell us what you need and we'll send a quote.",
+        "alt": "Woman in a wheelchair chats with a companion on a boardwalk by the sea"
+      },
+      "transporte": {
+        "name": "Special transportation for reduced mobility",
+        "desc": "Transfers designed for people with reduced mobility. Tell us your needs and we'll send a quote.",
+        "alt": "Man in a wheelchair goes up the ramp of a van, accompanied by the driver"
+      }
+    }
   }
 }

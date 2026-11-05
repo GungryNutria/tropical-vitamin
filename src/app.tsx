@@ -6,6 +6,7 @@ import Transportation from "./pages/transportation";
 import Accommodation from "./pages/accommodation";
 import Mice from "./pages/mice";
 import Thematic from "./pages/thematic";
+import OnSite from "./pages/onsite";
 import ContactPage from "./pages/contact";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/hospedaje" element={<Accommodation />} />
             <Route path="/mice" element={<Mice />} />
             <Route path="/tematicos" element={<Thematic />} />
+            <Route path="/servicios-en-destino" element={<OnSite />} />
             <Route path="/contacto" element={<ContactPage />} />
         </Route>    
     </Routes>
