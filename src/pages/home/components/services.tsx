@@ -6,7 +6,7 @@ import { useFadeUp } from "../../../hooks/useFadeUp";
 import service1 from "../../../assets/units/navigator.jpg";
 import service2 from "../../../assets/services/hospedaje.jpg";
 import service3 from "../../../assets/services/tours.jpg";
-import service4 from "../../../assets/services/convenciones.jpg";
+import service4 from "../../../assets/mice-hero.jpg";
 import service5 from "../../../assets/services/tematicos.jpg";
 import service6 from "../../../assets/destino/home-card.jpg";
 
