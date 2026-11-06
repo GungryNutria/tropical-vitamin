@@ -7,7 +7,7 @@
     "mice": "Grupos MICE",
     "tematicos": "Viajes Temáticos",
     "contacto": "Contáctanos",
-    "enDestino": "En destino",
+    "enDestino": "Servicios Extra",
     "languageLabel": "Idioma: {{lang}}"
   },
   "home": {
@@ -410,12 +410,12 @@
     "rights": "Todos los derechos reservados."
   },
   "onsite": {
-    "title": "Servicios en destino",
+    "title": "Servicios Extra",
     "subtitle": "Fotos, limpieza, auto y movilidad: lo coordinamos durante tu estancia para que tú solo disfrutes.",
     "eyebrow": "Servicios especializados",
     "cta": "Cotizar por WhatsApp",
     "ctaLabel": "Cotizar por WhatsApp: {{name}} (abre WhatsApp)",
-    "whatsappMessage": "Hola, quiero información sobre el servicio en destino: {{name}}",
+    "whatsappMessage": "Hola, quiero información sobre el servicio extra: {{name}}",
     "services": {
       "foto": {
         "name": "Servicio fotográfico",
