@@ -194,6 +194,24 @@
       }
     }
   },
+  "quote": {
+    "adults": {
+      "label": "Adultos (6 años en adelante)"
+    },
+    "children": {
+      "label": "Menores (1-5 años)"
+    },
+    "infants": {
+      "label": "Infantes (0-1 año)",
+      "add": "Agregar un infante",
+      "remove": "Quitar un infante"
+    },
+    "msg": {
+      "adults": "Adultos: {{n}}",
+      "children": "Menores (1-5 años): {{n}}",
+      "infants": "Infantes (0-1 año): {{n}}"
+    }
+  },
   "transportation": {
     "title": "Servicio de transportación",
     "hero": {
@@ -218,7 +236,6 @@
       "oneWay": "Solo ida",
       "roundTrip": "Ida y vuelta"
     },
-    "quote": "Solicitar cotización",
     "units": {
       "title": "Nuestras unidades",
       "bus": "Autobús"
@@ -244,6 +261,66 @@
       "openOpt3": "8 horas",
       "openOpt4": "10 horas",
       "openOpt5": "12 horas"
+    },
+    "form": {
+      "tripTitle": "Datos del viaje",
+      "passengers": "Pasajeros",
+      "date": {
+        "label": "Fecha del servicio",
+        "help": "¿Qué día necesitas el servicio?",
+        "errorEmpty": "Elige la fecha del servicio."
+      },
+      "returnDate": {
+        "label": "Fecha de regreso",
+        "help": "¿Qué día es el regreso?",
+        "errorEmpty": "Elige la fecha de regreso.",
+        "errorBefore": "El regreso no puede ser antes de la fecha del servicio."
+      },
+      "carSeat": {
+        "label": "Servicio de car seat",
+        "help": "Silla de seguridad para bebé o niño pequeño.",
+        "no": "No requiero",
+        "yes": "Sí requiero",
+        "count": "Cantidad de car seats",
+        "add": "Agregar un car seat",
+        "remove": "Quitar un car seat"
+      },
+      "hotel": {
+        "label": "Hotel o zona de destino",
+        "placeholder": "Ej. nombre del hotel o Tulum centro",
+        "error": "Escribe el hotel o la zona a la que van."
+      },
+      "optionsError": {
+        "airport": "Elige al menos un aeropuerto.",
+        "point": "Elige al menos un destino.",
+        "open": "Elige al menos una duración."
+      },
+      "msg": {
+        "intro": "Hola, quiero cotizar transportación.",
+        "service": "Servicio: {{value}}",
+        "segment": {
+          "airport": "Aeropuerto",
+          "point": "Punto a punto",
+          "open": "Servicio abierto"
+        },
+        "mode": "Modalidad: {{value}}",
+        "private": "Privado",
+        "shared": "Compartido",
+        "options": {
+          "airport_one": "Aeropuerto: {{options}}",
+          "airport_other": "Aeropuertos: {{options}}",
+          "point_one": "Destino: {{options}}",
+          "point_other": "Destinos: {{options}}",
+          "open_one": "Duración: {{options}}",
+          "open_other": "Duraciones: {{options}}"
+        },
+        "trip": "Viaje: {{value}}",
+        "date": "Fecha del servicio: {{date}}",
+        "returnDate": "Fecha de regreso: {{date}}",
+        "carSeatNo": "Car seat: No requiero",
+        "carSeatYes": "Car seat: Sí requiero ({{n}})",
+        "hotel": "Hotel o zona: {{text}}"
+      }
     }
   },
   "accommodation": {
@@ -275,8 +352,48 @@
       "longStays": "Ideal para estancias largas"
     },
     "includes": "Incluye",
-    "viewOptions": "Ver opciones",
-    "destinations": "Destinos disponibles"
+    "destinations": "Destinos disponibles",
+    "quote": {
+      "cta": "Solicitar cotización",
+      "ctaLabel": "Solicitar cotización: {{type}}",
+      "types": {
+        "houses": "Propiedad privada",
+        "hoteles": "Hotel estándar",
+        "condos": "Hotel all inclusive"
+      },
+      "title": "Cotiza tu hospedaje",
+      "subtitle": "Cuéntanos cuándo llegas, quiénes van y dónde quieres hospedarte. Te respondemos por WhatsApp.",
+      "guests": "Huéspedes",
+      "arrival": {
+        "label": "Fecha de llegada",
+        "help": "¿Qué día llegas?",
+        "errorEmpty": "Elige la fecha de llegada."
+      },
+      "nights": {
+        "label": "Noches",
+        "placeholder": "Ej. 4",
+        "errorEmpty": "Indica cuántas noches.",
+        "errorInvalid": "Escribe un número entero de 1 en adelante."
+      },
+      "zone": {
+        "label": "Zona donde quieres hospedarte",
+        "placeholder": "Selecciona una zona",
+        "other": "Otra",
+        "error": "Elige la zona donde quieres hospedarte."
+      },
+      "otherZone": {
+        "label": "¿Qué zona?",
+        "placeholder": "Ej. Akumal",
+        "error": "Escribe la zona."
+      },
+      "msg": {
+        "intro": "Hola, quiero cotizar hospedaje.",
+        "type": "Tipo: {{type}}",
+        "arrival": "Fecha de llegada: {{date}}",
+        "nights": "Noches: {{n}}",
+        "zone": "Zona: {{zone}}"
+      }
+    }
   },
   "mice": {
     "title": "Grupos & convenciones",
