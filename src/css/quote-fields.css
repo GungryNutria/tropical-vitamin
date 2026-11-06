@@ -1,0 +1,8 @@
+/* Campos compartidos de las cotizaciones de Transportación y Hospedaje (spec 009) */
+.tq-group { border: 0; margin: 0 0 20px; padding: 0; min-width: 0; }
+.tq-group legend { padding: 0; margin-bottom: 12px; }
+.tq-row { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 16px; }
+@media (min-width: 768px) {
+  .tq-row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.tq-nowrap { white-space: nowrap; }

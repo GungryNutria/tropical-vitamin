@@ -194,6 +194,24 @@
       }
     }
   },
+  "quote": {
+    "adults": {
+      "label": "Adults (6 years and up)"
+    },
+    "children": {
+      "label": "Children (1-5 years)"
+    },
+    "infants": {
+      "label": "Infants (0-1 year)",
+      "add": "Add an infant",
+      "remove": "Remove an infant"
+    },
+    "msg": {
+      "adults": "Adults: {{n}}",
+      "children": "Children (1-5 years): {{n}}",
+      "infants": "Infants (0-1 year): {{n}}"
+    }
+  },
   "transportation": {
     "title": "Transportation service",
     "hero": {
@@ -218,7 +236,6 @@
       "oneWay": "One way",
       "roundTrip": "Round trip"
     },
-    "quote": "Request a quote",
     "units": {
       "title": "Our units",
       "bus": "Bus"
@@ -244,6 +261,66 @@
       "openOpt3": "8 hours",
       "openOpt4": "10 hours",
       "openOpt5": "12 hours"
+    },
+    "form": {
+      "tripTitle": "Trip details",
+      "passengers": "Passengers",
+      "date": {
+        "label": "Service date",
+        "help": "Which day do you need the service?",
+        "errorEmpty": "Choose the service date."
+      },
+      "returnDate": {
+        "label": "Return date",
+        "help": "Which day is your return?",
+        "errorEmpty": "Choose the return date.",
+        "errorBefore": "The return can't be before the service date."
+      },
+      "carSeat": {
+        "label": "Car seat service",
+        "help": "Safety seat for a baby or small child.",
+        "no": "Not needed",
+        "yes": "Needed",
+        "count": "Number of car seats",
+        "add": "Add a car seat",
+        "remove": "Remove a car seat"
+      },
+      "hotel": {
+        "label": "Hotel or area you're going to",
+        "placeholder": "E.g. hotel name or downtown Tulum",
+        "error": "Enter the hotel or area you're going to."
+      },
+      "optionsError": {
+        "airport": "Choose at least one airport.",
+        "point": "Choose at least one destination.",
+        "open": "Choose at least one duration."
+      },
+      "msg": {
+        "intro": "Hi, I'd like a transportation quote.",
+        "service": "Service: {{value}}",
+        "segment": {
+          "airport": "Airport",
+          "point": "Point to point",
+          "open": "Open service"
+        },
+        "mode": "Type: {{value}}",
+        "private": "Private",
+        "shared": "Shared",
+        "options": {
+          "airport_one": "Airport: {{options}}",
+          "airport_other": "Airports: {{options}}",
+          "point_one": "Destination: {{options}}",
+          "point_other": "Destinations: {{options}}",
+          "open_one": "Duration: {{options}}",
+          "open_other": "Durations: {{options}}"
+        },
+        "trip": "Trip: {{value}}",
+        "date": "Service date: {{date}}",
+        "returnDate": "Return date: {{date}}",
+        "carSeatNo": "Car seat: Not needed",
+        "carSeatYes": "Car seat: Needed ({{n}})",
+        "hotel": "Hotel or area: {{text}}"
+      }
     }
   },
   "accommodation": {
@@ -275,8 +352,48 @@
       "longStays": "Ideal for long stays"
     },
     "includes": "Includes",
-    "viewOptions": "View options",
-    "destinations": "Available destinations"
+    "destinations": "Available destinations",
+    "quote": {
+      "cta": "Request a quote",
+      "ctaLabel": "Request a quote: {{type}}",
+      "types": {
+        "houses": "Private property",
+        "hoteles": "Standard hotel",
+        "condos": "All-inclusive hotel"
+      },
+      "title": "Get an accommodation quote",
+      "subtitle": "Tell us when you arrive, who's going and where you'd like to stay. We'll reply on WhatsApp.",
+      "guests": "Guests",
+      "arrival": {
+        "label": "Arrival date",
+        "help": "Which day do you arrive?",
+        "errorEmpty": "Choose the arrival date."
+      },
+      "nights": {
+        "label": "Nights",
+        "placeholder": "E.g. 4",
+        "errorEmpty": "Enter how many nights.",
+        "errorInvalid": "Enter a whole number, 1 or more."
+      },
+      "zone": {
+        "label": "Area where you'd like to stay",
+        "placeholder": "Select an area",
+        "other": "Other",
+        "error": "Choose the area where you'd like to stay."
+      },
+      "otherZone": {
+        "label": "Which area?",
+        "placeholder": "E.g. Akumal",
+        "error": "Enter the area."
+      },
+      "msg": {
+        "intro": "Hi, I'd like an accommodation quote.",
+        "type": "Type: {{type}}",
+        "arrival": "Arrival date: {{date}}",
+        "nights": "Nights: {{n}}",
+        "zone": "Area: {{zone}}"
+      }
+    }
   },
   "mice": {
     "title": "Groups & conventions",
