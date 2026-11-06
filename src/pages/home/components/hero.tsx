@@ -51,7 +51,7 @@ function Hero() {
 
         {/* Scroll Indicator */}
         <div className="hero-scroll" onClick={handleScrollDown}>
-          <span>Descubre más</span>
+          <span>{t("home.hero.discover")}</span>
           <div className="hero-scroll-line"></div>
         </div>
       </div>

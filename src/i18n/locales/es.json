@@ -3,37 +3,38 @@
     "inicio": "Inicio",
     "transportacion": "Transportación",
     "hospedaje": "Hospedaje",
-    "tours": "Tours & Experiencias",
+    "tours": "Tours & experiencias",
     "mice": "Grupos MICE",
-    "tematicos": "Viajes Temáticos",
+    "tematicos": "Viajes temáticos",
     "contacto": "Contáctanos",
-    "enDestino": "Servicios Extra",
+    "enDestino": "Servicios extra",
     "languageLabel": "Idioma: {{lang}}"
   },
   "home": {
     "hero": {
       "title": "Creando experiencias auténticamente memorables",
       "subtitle": "La Riviera Maya te espera con experiencias únicas",
-      "cta": "Planea tu viaje"
+      "cta": "Planea tu viaje",
+      "discover": "Descubre más"
     },
     "history": {
-      "title": "Nuestra Historia",
-      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Incursionando en el turismo y el servicio hospitalario, entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso, decidimos ir contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje; nos dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura NEERLANDESA y la inigualable calidez MEXICANA. Esta fusión nos permitió construir una empresa orgullosamente 100% MEXICANA.",
-      "missionTitle": "Nuestra Misión",
-      "visionTitle": "Nuestra Visión",
+      "title": "Nuestra historia",
+      "description": "Nuestra historia comienza cuando el destino nos dio un giro inesperado. A raíz de la pandemia, la vida nos llevó de la gigante Ciudad de México al paraíso de la Riviera Maya. Incursionando en el turismo y el servicio hospitalario, entendimos que el turismo moderno se había vuelto frío y automatizado. Por eso, decidimos ir a contracorriente: ofrecer un trato más humano, amable y personal en un mundo cada vez más digitalizado. Creemos firmemente que un robot no puede escuchar tus sueños ni entender lo que hace especial a un viaje; nos dimos cuenta de que la industria se había vuelto fría. Pero nosotros creemos que un robot nunca podrá reemplazar el abrazo de un buen anfitrión. Somos el resultado de la unión de dos culturas: la estructura NEERLANDESA y la inigualable calidez MEXICANA. Esta fusión nos permitió construir una empresa orgullosamente 100% MEXICANA.",
+      "missionTitle": "Nuestra misión",
+      "visionTitle": "Nuestra visión",
       "missionP1": "Crear y operar experiencias de viaje extraordinarias en la Riviera Maya, diseñadas para superar las expectativas de cada viajero, ya sea en aventuras individuales, familiares o grupales.",
       "missionP2": "Nuestra misión es brindar tranquilidad, confianza y atención personalizada en cada etapa del viaje, cuidando cada detalle con profesionalismo y pasión para que nuestros clientes solo se preocupen por disfrutar. Nos comprometemos a convertir cada experiencia en un recuerdo inolvidable, ofreciendo un servicio de excelencia que refleje la riqueza natural, cultural y humana del Caribe Mexicano.",
       "visionP1": "Ser la agencia integradora de servicios turísticos líder del Caribe Mexicano, reconocida nacional e internacionalmente por ofrecer experiencias de la más alta calidad, donde la eficiencia, organización y excelencia de los estándares europeos se fusionan con la calidez, hospitalidad y autenticidad del servicio mexicano.",
       "visionP2": "Aspiramos a convertirnos en el aliado de confianza de viajeros de todo el mundo, distinguiéndonos por la innovación, el compromiso y la pasión con la que diseñamos cada experiencia, posicionándonos como la opción más confiable para descubrir y vivir la magia de México.",
-      "pillarsTitle": "Nuestros Pilares",
+      "pillarsTitle": "Nuestros pilares",
       "pillars": {
         "culture": {
-          "title": "Conexión Cultural",
+          "title": "Conexión cultural",
           "p1": "Creemos que viajar va mucho más allá de conocer un destino; es crear un vínculo auténtico con su historia, su gente y sus tradiciones. Por ello, promovemos una verdadera conexión con la riqueza cultural de México, acercando a cada viajero al extraordinario legado de la civilización maya, a la majestuosidad de la naturaleza y a las experiencias que hacen único a este destino.",
           "p2": "Cada recorrido está diseñado para inspirar, despertar emociones y transformar cada viaje en una experiencia cultural enriquecedora, donde el respeto, el aprendizaje y la admiración por nuestras raíces permanecen en el corazón de quienes nos visitan."
         },
         "trust": {
-          "title": "Seguridad y Confianza",
+          "title": "Seguridad y confianza",
           "p1": "Tu tranquilidad es nuestra mayor prioridad. Desde el primer contacto hasta el final de tu viaje, te acompañamos con atención personalizada, asesoría experta y asistencia permanente para que disfrutes cada momento con total confianza.",
           "p2": "Nuestro compromiso es brindarte un servicio confiable, profesional y transparente, respaldado por un equipo apasionado por crear experiencias memorables. Más que organizar un viaje, nos convertimos en tu aliado y guía, asegurándonos de que cada detalle esté cuidadosamente planeado para que solo te ocupes de disfrutar."
         },
@@ -46,23 +47,23 @@
       }
     },
     "services": {
-      "title": "Nuestros Servicios",
+      "title": "Nuestros servicios",
       "subtitle": "Diseñamos experiencias, no solo viajes.",
       "cards": {
         "transportation": "Transportación",
         "transportationDesc": "Aeropuerto, punto a punto y servicio abierto.",
         "accommodation": "Hospedaje",
         "accommodationDesc": "Hoteles, casas y condos en la Riviera Maya.",
-        "tours": "Tours & Experiencias",
+        "tours": "Tours & experiencias",
         "toursDesc": "Acuáticos, arqueológicos, parques y más.",
-        "mice": "MICE & Convenciones",
+        "mice": "MICE & convenciones",
         "miceDesc": "Eventos, congresos y logística empresarial.",
-        "thematic": "Viajes Temáticos",
+        "thematic": "Viajes temáticos",
         "thematicDesc": "Experiencias hechas a tu medida."
       }
     },
     "faq": {
-      "title": "Preguntas Frecuentes",
+      "title": "Preguntas frecuentes",
       "q1": {
         "question": "¿Cuál es la mejor época para visitar la Riviera Maya?",
         "answer": "La mejor época es de noviembre a abril, cuando el clima es seco y las temperaturas son agradables. Sin embargo, la región ofrece experiencias únicas durante todo el año."
@@ -86,7 +87,7 @@
     },
     "cta": {
       "title": "Planea tu experiencia en la Riviera Maya",
-      "subtitle": "Despreocúpate por tu viaje, nosotros nos encargamos",
+      "subtitle": "Despreocúpate por tu viaje: nosotros nos encargamos",
       "button": "Hablar por WhatsApp"
     }
   },
@@ -95,7 +96,7 @@
       "title": "TOURS & EXPERIENCIAS",
       "subtitle": "Contamos con las mejores opciones, recomendaciones y experiencias personalizadas para tu viaje."
     },
-    "intro": "Entendemos perfectamente el objetivo de cada experiencia, por lo que conoce nuestra segmentación de los mejores tours y experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\"",
+    "intro": "Entendemos perfectamente el objetivo de cada experiencia. Conoce nuestra segmentación de los mejores tours y experiencias. \"Hacemos que tus experiencias sean auténticamente memorables\".",
     "title": "Tours",
     "loading": "Cargando tours...",
     "error": "Error al cargar los tours",
@@ -114,17 +115,17 @@
       "label": "Desde",
       "value": "${{price}}"
     },
-    "book": "Reservar Ahora",
+    "book": "Reservar ahora",
     "categories": {
       "aquatic": "Acuáticos",
       "adventure": "Aventura",
       "parks": "Parques",
       "archaeological": "Arqueológicos",
-      "extreme-adventure": "Extremos y Aventura",
+      "extreme-adventure": "Extremos y aventura",
       "nature": "Naturaleza",
-      "wildlife": "Vida Silvestre",
+      "wildlife": "Vida silvestre",
       "islands": "Islas",
-      "night-entertainment": "Entretenimiento Nocturno"
+      "night-entertainment": "Entretenimiento nocturno"
     },
     "seeMore": "Ver más",
     "dialog": {
@@ -194,14 +195,14 @@
     }
   },
   "transportation": {
-    "title": "Servicio de Transportación",
+    "title": "Servicio de transportación",
     "hero": {
       "title": "TRANSPORTACIÓN",
       "subtitle": "Aeropuerto, punto a punto y servicio abierto."
     },
     "intro": "Contamos con unidades nuevas y en óptimas condiciones, tanto para servicios convencionales como de alta gama. Cada servicio de transportación que ofrecemos se adapta perfectamente a cada necesidad de viaje, marcando así en el mercado un servicio cómodo, seguro y funcional.",
     "airport": {
-      "title": "Transportación Aeropuerto",
+      "title": "Transportación aeropuerto",
       "subtitle": "Cancún, Playa del Carmen, Tulum, Riviera Maya",
       "description": "Servicio abierto para que organices tu propio itinerario"
     },
@@ -209,20 +210,21 @@
       "title": "Opciones:",
       "shared": "Servicio compartido",
       "private": "Servicio privado",
-      "luxury": "Servicio Luxury",
-      "bus": "Servicio de Autobús"
+      "luxury": "Servicio luxury",
+      "bus": "Servicio de autobús"
     },
     "type": {
       "title": "Tipo de servicio:",
       "oneWay": "Solo ida",
       "roundTrip": "Ida y vuelta"
     },
-    "quote": "Solicitar Cotización",
+    "quote": "Solicitar cotización",
     "units": {
-      "title": "Nuestras Unidades"
+      "title": "Nuestras unidades",
+      "bus": "Autobús"
     },
     "segments": {
-      "optionsTitle": "Opciones de Servicio",
+      "optionsTitle": "Opciones de servicio",
       "airport": "TRANSPORTACIÓN AEROPUERTO",
       "airportSubtitle": "Cancún, Playa del Carmen, Tulum, Riviera Maya",
       "airportOpt1": "Aeropuerto Cancún",
@@ -234,14 +236,14 @@
       "pointOpt2": "Playa del Carmen",
       "pointOpt3": "Tulum",
       "pointOpt4": "Riviera Maya",
-      "pointOpt5": "Península Yucatán",
+      "pointOpt5": "Península de Yucatán",
       "open": "TRANSPORTACIÓN SERVICIO ABIERTO",
       "openSubtitle": "Arma tu propio viaje",
-      "openOpt1": "4 HRS",
-      "openOpt2": "6 HRS",
-      "openOpt3": "8 HRS",
-      "openOpt4": "10 HRS",
-      "openOpt5": "12 HRS"
+      "openOpt1": "4 horas",
+      "openOpt2": "6 horas",
+      "openOpt3": "8 horas",
+      "openOpt4": "10 horas",
+      "openOpt5": "12 horas"
     }
   },
   "accommodation": {
@@ -249,7 +251,7 @@
       "title": "HOSPEDAJE",
       "subtitle": "Hospedaje en propiedad privada / Hospedaje en hoteles estándar / Hospedaje en hotel All Inclusive"
     },
-    "title": "Servicio de Hospedaje",
+    "title": "Servicio de hospedaje",
     "intro": "Encuentra el alojamiento perfecto para tu estancia en la Riviera Maya. Contamos con opciones para cada tipo de viajero.",
     "types": {
       "houses": "HOSPEDAJE PROPIEDAD PRIVADA",
@@ -257,9 +259,9 @@
       "condos": "HOSPEDAJE HOTEL ALL INCLUSIVE"
     },
     "features": {
-      "houses": "Vive la privacidad en tu propio espacio en el paraíso tropical, con la mejor ubicación y amenidades que te harán sentir en casa",
-      "hoteles": "Si buscas un lugar cómodo, auténtico, económico y funcional, esta es la mejor opción con desayunos incluidos, alberca y rooftop increíble. Conoce esta opción céntrica e inigualable que optimizará tu experiencia en el Caribe mexicano",
-      "condos": "Si lo que buscas es apapacharte y descansar en un Todo Incluido, esta opción es para ti. Tenemos las mejores opciones y consejos acorde a tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
+      "houses": "Vive la privacidad en tu propio espacio en el paraíso tropical, con la mejor ubicación y amenidades que te harán sentir en casa.",
+      "hoteles": "Si buscas un lugar cómodo, auténtico, económico y funcional, esta es la mejor opción con desayunos incluidos, alberca y rooftop increíble. Conoce esta opción céntrica e inigualable que optimizará tu experiencia en el Caribe mexicano.",
+      "condos": "Si lo que buscas es apapacharte y descansar en un todo incluido, esta opción es para ti. Tenemos las mejores opciones y consejos acordes con tus necesidades y objetivos de viaje. Consulta las recomendaciones que tenemos para ti.",
       "directHost": "Contacto directo con anfitriones",
       "cultural": "Experiencia cultural",
       "comfort": "Comodidad hogareña",
@@ -273,11 +275,11 @@
       "longStays": "Ideal para estancias largas"
     },
     "includes": "Incluye",
-    "viewOptions": "Ver Opciones",
+    "viewOptions": "Ver opciones",
     "destinations": "Destinos disponibles"
   },
   "mice": {
-    "title": "Grupos & Convenciones",
+    "title": "Grupos & convenciones",
     "intro": "Organizamos eventos corporativos, convenciones y turismo MICE con los más altos estándares de calidad.",
     "subtitle": "Nos encargamos de cada detalle para que tu evento sea un éxito.",
     "moreInfo": "Contactar ejecutivo",
@@ -285,33 +287,33 @@
     "whatsappGeneral": "Hola, quiero información sobre servicios MICE y convenciones",
     "hero": {
       "title": "GRUPOS & CONVENCIONES",
-      "subtitle": "Sabemos que todos los grupos son diferentes y con distinta planeación y objetivo.",
-      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinación adecuada a cada necesidad del grupo. ¡No te preocupes por la logística masiva, tenemos una amplia experiencia en el manejo y gestión de Grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, conclusión hasta su salida y término de tu evento.<br/><strong>¡Despreocúpate, déjalo en nuestras manos!</strong>"
+      "subtitle": "Sabemos que todos los grupos son diferentes, con distinta planeación y distintos objetivos.",
+      "text": "Estamos enfocados en crear experiencias grupales memorables y con la estructura de coordinación adecuada a cada necesidad del grupo. ¡No te preocupes por la logística masiva: tenemos una amplia experiencia en el manejo y gestión de grupos!<br/><br/>En <strong>Tropical Vitamin</strong> coordinamos toda la planeación, organización, control, gestión, producción y logística de todo el grupo en el destino, conclusión hasta su salida y término de tu evento.<br/><strong>¡Despreocúpate, déjalo en nuestras manos!</strong>"
     },
     "groups": {
       "mice": "Grupos MICE",
       "miceDesc": "Reuniones, Incentivos, Conferencias y Exhibiciones: ¡somos tus ojos en el destino! Apóyate con los expertos para iniciar la búsqueda desde la sede hasta toda la coordinación y gestión que requieres para tu evento.",
-      "team": "Grupos de Team Building",
+      "team": "Grupos de team building",
       "teamDesc": "Experiencias corporativas creativas y con un objetivo definido para el fortalecimiento del equipo corporativo.",
-      "boda": "Grupos de Boda",
-      "bodaDesc": "Apóyate con nosotros para la logística de tu evento sin preocuparte por nada ni nadie, vive el mejor momento de tu vida al lado de tu amor.",
-      "viajeros": "Grupos de Viajeros",
+      "boda": "Grupos de boda",
+      "bodaDesc": "Apóyate con nosotros para la logística de tu evento sin preocuparte por nada ni nadie, y vive el mejor momento de tu vida al lado de tu amor.",
+      "viajeros": "Grupos de viajeros",
       "viajerosDesc": "No hay mejor vitamina para el alma que los recuerdos de las aventuras. Permítenos presentarte el lado de la Riviera que no conoces.",
-      "familia": "Grupos de Familia",
-      "familiaDesc": "\"Láak'tsilil\" significa Familia en Maya. Reconéctense en un paraíso lleno de vegetación y experiencias inolvidables.",
-      "escolares": "Grupos Escolares",
+      "familia": "Grupos de familia",
+      "familiaDesc": "\"Láak'tsilil\" significa familia en maya. Reconéctense en un paraíso lleno de vegetación y experiencias inolvidables.",
+      "escolares": "Grupos escolares",
       "escolaresDesc": "Vive una de tus mejores etapas de la vida en compañía de tus mejores amigos. Les garantizamos que será parte de sus historias que tendrán que contar una y otra vez.",
-      "deportivos": "Grupos Deportivos",
+      "deportivos": "Grupos deportivos",
       "deportivosDesc": "Te ayudamos a realizar tus torneos y gestionar tu o los equipos asistentes para una coordinación deportiva."
     },
     "cta": {
       "title": "¿Planeas un evento corporativo?",
       "subtitle": "Contáctanos y te ayudamos a organizarlo",
-      "button": "Contactar Ahora"
+      "button": "Contactar ahora"
     }
   },
   "thematic": {
-    "title": "Viajes Temáticos",
+    "title": "Viajes temáticos",
     "intro": "Celebra tus momentos especiales con experiencias únicas e inolvidables en la Riviera Maya.",
     "hero": {
       "title": "VIAJES TEMÁTICOS",
@@ -320,17 +322,17 @@
     },
     "trips": {
       "despedida": "Despedidas de soltera y soltero",
-      "despedidaDesc": "Las frases de \"¿Te quieres casar conmigo?\" y \"¡Sí, acepto!\" son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe Mexicano: playa, fiesta, gastronomía y los mejores lugares para ¡festejar el AMOR!",
+      "despedidaDesc": "Las frases de \"¿Te quieres casar conmigo?\" y \"¡Sí, acepto!\" son las palabras mágicas para iniciar una nueva etapa. No hay mejor lugar para celebrar que el Caribe mexicano: playa, fiesta, gastronomía y los mejores lugares para ¡festejar el AMOR!",
       "bienvenida": "Bienvenida de Solter@",
-      "bienvenidaDesc": "Como dice el dicho: \"En el mar la vida es más sabrosa\", ven a celebrar las decisiones, lo vivido y lo que está por venir porque vida solo hay una.",
+      "bienvenidaDesc": "Como dice el dicho: \"En el mar la vida es más sabrosa\". Ven a celebrar las decisiones, lo vivido y lo que está por venir, porque vida solo hay una.",
       "graduacion": "Graduaciones",
-      "graduacionDesc": "Te esforzaste mucho para lograrlo, así que un viaje de graduación es lo que mereces. Celebra tu logro, organiza con tus amigos el viaje de graduación más aventurero.",
-      "familia": "Reconexiones de Familia",
-      "familiaDesc": "Viajes de conexión familiar, de integración y de propósito de amor familiar. No solo vienen de vacaciones, vienen a vivir una experiencia donde conectas con tu familia en todos los sentidos.",
+      "graduacionDesc": "Te esforzaste mucho para lograrlo, así que un viaje de graduación es lo que mereces. Celebra tu logro y organiza con tus amigos el viaje de graduación más aventurero.",
+      "familia": "Reconexiones de familia",
+      "familiaDesc": "Viajes de conexión familiar, de integración y de propósito de amor familiar. No solo vienen de vacaciones: vienen a vivir una experiencia donde conectan con su familia en todos los sentidos.",
       "cumpleanos": "Cumpleaños",
       "cumpleanosDesc": "¡Celebra tu vida y celebra con los tuyos! Te organizamos todos los detalles que mereces tener en tu día y tu festejo.",
       "pedida": "Pedidas de matrimonio",
-      "pedidaDesc": "Uno de los momentos más esperados y tiene que ser ÚNICO. Te ayudamos a tener una sorpresa mágica y llena de amor."
+      "pedidaDesc": "Es uno de los momentos más esperados y tiene que ser ÚNICO. Te ayudamos a tener una sorpresa mágica y llena de amor."
     },
     "description": "Una experiencia diseñada específicamente para hacer de este momento algo especial y memorable.",
     "moreInfo": "Más información",
@@ -362,20 +364,20 @@
       "email": "Correo electrónico *",
       "phone": "Teléfono",
       "service": "Selecciona un servicio",
-      "destination": "Selecciona destino",
+      "destination": "Selecciona un destino",
       "travelers": "Número de viajeros",
       "message": "Cuéntanos más sobre tu plan de viaje (fechas, preferencias, etc.)",
       "submit": "Enviar mensaje",
       "sending": "Enviando mensaje...",
       "success": "¡Mensaje enviado exitosamente! Te contactaremos pronto.",
-      "error": "Ocurrió un error, por favor intenta más tarde."
+      "error": "Ocurrió un error. Por favor, intenta más tarde."
     },
     "services": {
       "transportation": "Transportación",
       "accommodation": "Hospedaje",
       "tours": "Tours",
-      "mice": "Grupos y Convenciones",
-      "thematic": "Viajes Temáticos",
+      "mice": "Grupos y convenciones",
+      "thematic": "Viajes temáticos",
       "other": "Otro"
     },
     "destinations": {
@@ -406,11 +408,11 @@
     "sitemap": "Mapa del sitio",
     "contact": "Contacto",
     "legal": "Legal",
-    "privacy": "Aviso de Privacidad",
+    "privacy": "Aviso de privacidad",
     "rights": "Todos los derechos reservados."
   },
   "onsite": {
-    "title": "Servicios Extra",
+    "title": "Servicios extra",
     "subtitle": "Fotos, limpieza, auto y movilidad: lo coordinamos durante tu estancia para que tú solo disfrutes.",
     "eyebrow": "Servicios especializados",
     "cta": "Cotizar por WhatsApp",
@@ -433,7 +435,7 @@
         "alt": "Mujer guarda una maleta en la cajuela de un auto blanco, junto a la selva y el mar"
       },
       "movilidad": {
-        "name": "Servicios de renta de aparatos de movilidad",
+        "name": "Servicio de renta de aparatos de movilidad",
         "desc": "Disfruta tu viaje a tu paso y con comodidad. Cuéntanos qué equipo necesitas y para qué fechas.",
         "alt": "Mujer en silla de ruedas conversa con un acompañante en un paseo junto al mar"
       },

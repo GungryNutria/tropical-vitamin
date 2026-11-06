@@ -35,7 +35,7 @@ export default function Transportation() {
       },
       en: {
         0: 'Airport Transportation',
-        1: 'Point to Point Transportation',
+        1: 'Point-to-Point Transportation',
         2: 'Open Service Transportation'
       }
     };
@@ -61,7 +61,7 @@ export default function Transportation() {
     
     const message = isSpanish
       ? `Hola, me gustaría cotizar un ${serviceTypeText} de ${segmentName}. ${destinationLabel}: ${selectedOption}. Tipo: ${tripTypeText}`
-      : `Hello, I would like to quote a ${serviceTypeText} of ${segmentName}. ${destinationLabel}: ${selectedOption}. Type: ${tripTypeText}`;
+      : `Hello, I would like a quote for ${serviceTypeText}: ${segmentName}. ${destinationLabel}: ${selectedOption}. Type: ${tripTypeText}`;
 
     openWhatsApp(message);
   };
@@ -107,7 +107,7 @@ export default function Transportation() {
     { name: 'Transporter/Van', img: transporterImg },
     { name: 'Navigator/Luxury', img: navigatorImg },
     { name: 'Sprinter/Crafter', img: sprinterImg },
-    { name: 'Autobús', img: autobusImg }
+    { name: t('transportation.units.bus'), img: autobusImg }
   ];
 
   return (
