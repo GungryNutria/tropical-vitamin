@@ -41,7 +41,7 @@ export const hasErrors = (e: QuoteErrors): boolean =>
   Boolean(e.date || e.zone || e.hotel || e.ages.length);
 
 // La fecha se interpreta como local: new Date('2026-11-14') sería UTC y en México saldría el 13
-const formatLongDate = (iso: string, lang: string): string => {
+export const formatLongDate = (iso: string, lang: string): string => {
   const [y, m, d] = iso.split('-').map(Number);
   const text = new Intl.DateTimeFormat(lang, {
     weekday: 'long',

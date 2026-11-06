@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { LuArrowLeft } from 'react-icons/lu';
 import TourGallery from './tourGallery';
 import QuoteForm from './quoteForm';
+import { useModalDialog } from '../../../hooks/useModalDialog';
 
 export type DialogView = 'gallery' | 'quote';
 
@@ -17,18 +18,13 @@ interface Props {
 
 export default function TourDialog({ title, category, description, images, initialView, onClose }: Props) {
   const { t } = useTranslation();
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const { ref: dialogRef, close, onBackdropClick } = useModalDialog();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [view, setView] = useState<DialogView>(initialView);
   const [index, setIndex] = useState(0);
   // "Volver a las fotos" solo si se entró por la galería
   const [fromGallery, setFromGallery] = useState(false);
   const total = images.length;
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (dialog && !dialog.open) dialog.showModal();
-  }, []);
 
   // Al abrir y al cambiar de vista, el foco va al título del diálogo
   useEffect(() => {
@@ -46,15 +42,8 @@ export default function TourDialog({ title, category, description, images, initi
     if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % total);
   };
 
-  const onBackdropClick = (e: React.MouseEvent) => {
-    // El clic en el fondo cierra solo en pantallas anchas
-    if (e.target === dialogRef.current && window.matchMedia('(min-width: 768px)').matches) {
-      dialogRef.current?.close();
-    }
-  };
-
   const closeBtn = (
-    <button type="button" className="td-close" onClick={() => dialogRef.current?.close()}>
+    <button type="button" className="td-close" onClick={close}>
       {t('tours.dialog.close')}
     </button>
   );
