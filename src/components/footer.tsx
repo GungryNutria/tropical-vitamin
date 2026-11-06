@@ -63,7 +63,6 @@ function Footer() {
                     <a href="#">{t('footer.privacy')}</a>
                     <a href="#">{t('footer.cancellations')}</a>
                     <a href="#">{t('footer.sitePolicies')}</a>
-                    <a href="#">{t('footer.sitemap')}</a>
                 </div>
 
                 {/* CONTACT */}
