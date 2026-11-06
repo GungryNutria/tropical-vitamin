@@ -76,7 +76,7 @@ function Services() {
             <div className="service-info">
               <h3>{service.title}</h3>
               <p>{service.desc}</p>
-              <button onClick={() => navigate(service.path)}>Ver más</button>
+              <button onClick={() => navigate(service.path)}>{t("tours.seeMore")}</button>
             </div>
           </div>
         ))}
