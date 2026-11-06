@@ -1,14 +1,46 @@
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../css/accommodation.css';
 import WhatsappFloat from '../../components/whatsappFloat';
 import SectionHero from '../../components/sectionHero';
+import StayQuoteDialog from './components/stayQuoteDialog';
+import { EMPTY_STAY, type StayData, type StayType } from '../../utils/travelQuote';
+
+// Una sola lista para "Destinos disponibles" y la zona del formulario (REQ-7)
+const DESTINATIONS = [
+  'contact.destinations.cancun',
+  'contact.destinations.playaCarmen',
+  'contact.destinations.rivieraMaya',
+  'contact.destinations.tulum',
+  'contact.destinations.bacalar',
+  'Mahahual',
+  'contact.destinations.yucatan',
+  'Holbox',
+  'Isla Mujeres',
+  'Cozumel',
+] as const;
 
 export default function Accommodation() {
   const { t } = useTranslation();
+  // Último formulario: reabrir la misma tarjeta conserva los datos, otra empieza de cero (D-9)
+  const [stay, setStay] = useState<{ type: StayType; data: StayData } | null>(null);
+  const [openType, setOpenType] = useState<StayType | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
 
-  const accommodations = [
+  const openQuote = (e: React.MouseEvent<HTMLElement>, id: StayType) => {
+    openerRef.current = e.currentTarget;
+    if (stay?.type !== id) setStay({ type: id, data: EMPTY_STAY });
+    setOpenType(id);
+  };
+
+  const closeQuote = () => {
+    setOpenType(null);
+    openerRef.current?.focus();
+  };
+
+  const accommodations: { id: StayType; title: string; description: string; features: string[] }[] = [
     {
-      id: 'casas',
+      id: 'houses',
       title: t('accommodation.types.houses'),
       description: t('accommodation.features.houses'),
       features: [
@@ -41,18 +73,7 @@ export default function Accommodation() {
     }
   ];
 
-  const destinations = [
-    t('contact.destinations.cancun'),
-    t('contact.destinations.playaCarmen'),
-    t('contact.destinations.rivieraMaya'),
-    t('contact.destinations.tulum'),
-    t('contact.destinations.bacalar'),
-    'Mahahual',
-    t('contact.destinations.yucatan'),
-    'Holbox',
-    'Isla Mujeres',
-    'Cozumel'
-  ];
+  const destinations = DESTINATIONS.map((d) => (d.startsWith('contact.') ? t(d) : d));
 
   return (
     <div className="accommodation-container">
@@ -70,7 +91,14 @@ export default function Accommodation() {
             <h2 className="accommodation-card-title">{acc.title}</h2>
             <p className="accommodation-card-desc">{acc.description}</p>
 
-            <button className="accommodation-btn">{t('accommodation.viewOptions')}</button>
+            <button
+              type="button"
+              className="accommodation-btn"
+              aria-label={t('accommodation.quote.ctaLabel', { type: t(`accommodation.quote.types.${acc.id}`) })}
+              onClick={(e) => openQuote(e, acc.id)}
+            >
+              {t('accommodation.quote.cta')}
+            </button>
           </div>
         ))}
       </div>
@@ -83,6 +111,16 @@ export default function Accommodation() {
           ))}
         </div>
       </div>
+
+      {openType && stay && (
+        <StayQuoteDialog
+          typeName={t(`accommodation.quote.types.${openType}`)}
+          destinations={destinations}
+          data={stay.data}
+          onChange={(data) => setStay({ type: openType, data })}
+          onClose={closeQuote}
+        />
+      )}
 
       <WhatsappFloat />
     </div>

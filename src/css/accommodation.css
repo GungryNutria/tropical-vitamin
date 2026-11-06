@@ -232,3 +232,14 @@
     padding: 0 1rem 2rem;
   }
 }
+
+/* Cotización (spec 009) */
+.accommodation-btn:focus-visible {
+  outline: 2px solid var(--yellow-main);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .tour-dialog.tour-dialog--narrow { width: min(640px, 100vw - 48px); }
+  .tour-dialog--narrow .td-form { padding: 0 32px 32px; }
+}
