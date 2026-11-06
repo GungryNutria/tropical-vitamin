@@ -5,3 +5,4 @@
 @media (min-width: 768px) {
   .tq-row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.tq-nowrap { white-space: nowrap; }

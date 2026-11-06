@@ -13,11 +13,17 @@ interface CounterProps {
   onChange: (n: number) => void;
 }
 
+// El rango de edad "(1-5 años)" no se parte en dos líneas
+const rangeAtEnd = (label: string) => {
+  const i = label.indexOf(' (');
+  return i < 0 ? label : <>{label.slice(0, i + 1)}<span className="tq-nowrap">{label.slice(i + 1)}</span></>;
+};
+
 export function Counter({ id, label, value, min, addLabel, removeLabel, help, onChange }: CounterProps) {
   return (
     <div className="td-field">
       <div className="td-counter-row">
-        <span className="td-label" id={`${id}-label`}>{label}</span>
+        <span className="td-label" id={`${id}-label`}>{rangeAtEnd(label)}</span>
         <div className="td-stepper" role="group" aria-labelledby={`${id}-label`} aria-describedby={help ? `${id}-help` : undefined}>
           <button type="button" aria-label={removeLabel} disabled={value <= min} onClick={() => onChange(value - 1)}>−</button>
           <output aria-live="polite">{value}</output>

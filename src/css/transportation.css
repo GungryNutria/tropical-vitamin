@@ -462,3 +462,26 @@
   justify-content: center;
   margin: 0 0 1.5rem;
 }
+
+/* Correcciones de UX (spec 009) */
+.transport-service-btn,
+.transport-type-btn,
+.transport-quote-btn {
+  font-family: inherit;
+}
+
+.tq-carseat {
+  flex-wrap: nowrap;
+}
+
+.tq-carseat .transport-type-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-inline: 1rem;
+}
+
+@media (max-width: 480px) {
+  .transport-segment-content {
+    padding: 2rem 1.25rem;
+  }
+}

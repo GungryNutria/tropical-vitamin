@@ -243,3 +243,7 @@
   .tour-dialog.tour-dialog--narrow { width: min(640px, 100vw - 48px); }
   .tour-dialog--narrow .td-form { padding: 0 32px 32px; }
 }
+
+.accommodation-btn {
+  font-family: inherit;
+}
